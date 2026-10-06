@@ -3,6 +3,7 @@ import { THEATERS } from "../data/theaters.ts";
 import type { Layers, MapView, TheaterId } from "../types.ts";
 
 const LAYER_ITEMS: readonly { key: keyof Layers; label: string }[] = [
+  { key: "occupation", label: "Occupation" },
   { key: "fronts", label: "Front lines" },
   { key: "units", label: "Units" },
   { key: "battles", label: "Battles" },

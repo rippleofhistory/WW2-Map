@@ -1,9 +1,20 @@
 import { useEffect, useState, type ReactNode } from "react";
-import type { Battle, FrontLine, Theater, TheaterId, Unit } from "../types.ts";
+import type { Battle, FrontLine, OccupationState, Theater, TheaterId, Unit } from "../types.ts";
 import { MapDataContext } from "./mapContext.ts";
-import { parseBattles, parseFronts, parseTheaterOverlay, parseUnits, type MapData, type TheaterModule } from "./parse.ts";
+import {
+  emptyRegions,
+  parseBattles,
+  parseFronts,
+  parseOccupation,
+  parseRegions,
+  parseTheaterOverlay,
+  parseUnits,
+  type MapData,
+  type TheaterModule,
+} from "./parse.ts";
 import { LABELS } from "./sample.ts";
 import { THEATERS, theaterById } from "./theaters.ts";
+import type { FeatureCollection, Geometry } from "geojson";
 
 function emptyModule(): TheaterModule {
   return { units: [], fronts: [], battles: [], empty: true };
@@ -31,6 +42,8 @@ const LOADING: MapData = {
   message: "Loading Normandy JSON…",
   modules: initialModules(),
   frames: defaultFrames(),
+  occupation: [],
+  regions: emptyRegions(),
 };
 
 async function loadModule(id: TheaterId): Promise<TheaterModule | "missing" | "invalid"> {
@@ -69,12 +82,33 @@ async function loadNormandyFrame(): Promise<Theater | null> {
   }
 }
 
+async function loadOccupation(): Promise<{
+  occupation: OccupationState[];
+  regions: FeatureCollection<Geometry, { id: string; name: string }>;
+} | null> {
+  try {
+    const [occupationResponse, regionsResponse] = await Promise.all([
+      fetch("/data/world/occupation.json"),
+      fetch("/data/world/regions.geojson"),
+    ]);
+    if (!occupationResponse.ok || !regionsResponse.ok) return null;
+    const occupation = parseOccupation(await occupationResponse.json());
+    const regions = parseRegions(await regionsResponse.json());
+    if (!occupation || !regions) return null;
+    return { occupation, regions };
+  } catch {
+    return null;
+  }
+}
+
 function packFrom(
   modules: Record<TheaterId, TheaterModule>,
   origin: MapData["origin"],
   status: MapData["status"],
   message: string,
   frames: Record<TheaterId, Theater>,
+  occupation: OccupationState[],
+  regions: FeatureCollection<Geometry, { id: string; name: string }>,
 ): MapData {
   const units: Unit[] = [];
   const fronts: FrontLine[] = [];
@@ -85,7 +119,7 @@ function packFrom(
     fronts.push(...module.fronts);
     battles.push(...module.battles);
   }
-  return { units, fronts, battles, labels: [...LABELS], origin, status, message, modules, frames };
+  return { units, fronts, battles, labels: [...LABELS], origin, status, message, modules, frames, occupation, regions };
 }
 
 export function DataProvider({ children }: { children: ReactNode }) {
@@ -93,8 +127,12 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     let cancelled = false;
-    Promise.all([Promise.all(THEATERS.map(async (theater) => [theater.id, await loadModule(theater.id)] as const)), loadNormandyFrame()])
-      .then(([rows, normandyFrame]) => {
+    Promise.all([
+      Promise.all(THEATERS.map(async (theater) => [theater.id, await loadModule(theater.id)] as const)),
+      loadNormandyFrame(),
+      loadOccupation(),
+    ])
+      .then(([rows, normandyFrame, world]) => {
         if (cancelled) return;
         const modules = initialModules();
         const frames = defaultFrames();
@@ -119,7 +157,17 @@ export function DataProvider({ children }: { children: ReactNode }) {
           }
           modules[id] = loaded;
         }
-        setData(packFrom(modules, origin, status, message, frames));
+        setData(
+          packFrom(
+            modules,
+            origin,
+            status,
+            message,
+            frames,
+            world?.occupation ?? [],
+            world?.regions ?? emptyRegions(),
+          ),
+        );
       })
       .catch(() => {
         if (cancelled) return;

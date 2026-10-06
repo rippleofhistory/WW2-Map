@@ -1,4 +1,4 @@
-import type { Side } from "../types.ts";
+import type { ControlSide, Side } from "../types.ts";
 
 /** Okabe–Ito colour-blind-safe hues. Axis is vermillion, not the same red as Soviet. */
 export const SIDE_FALLBACK: Record<Side, string> = {
@@ -7,6 +7,15 @@ export const SIDE_FALLBACK: Record<Side, string> = {
   soviet: "#cc79a7",
   japanese: "#e69f00",
 };
+
+export const NEUTRAL_FALLBACK = "#009e73";
+export const COLLAPSED_FALLBACK = "#7a7a70";
+
+export function controlColor(side: ControlSide, status: string, palette: Record<Side, string>, neutral: string, collapsed: string): string {
+  if (status === "collapsed") return collapsed;
+  if (side === "neutral") return neutral;
+  return palette[side];
+}
 
 export function cssVar(el: Element | null, name: string, fallback: string): string {
   if (!el) return fallback;

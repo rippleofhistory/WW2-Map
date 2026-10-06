@@ -10,6 +10,7 @@ import { PLACEHOLDER_SOURCE } from "./data/sample.ts";
 import { theaterById } from "./data/theaters.ts";
 import { SAMPLE_END, SAMPLE_START, WAR_DAYS, dateFromIndex, dayIndex, formatDisplay } from "./lib/dates.ts";
 import { placeUnit, type Placement } from "./lib/position.ts";
+import { occupationById, occupationWatch, paintOccupation } from "./lib/occupation.ts";
 import { battlesForTheater, filterUnits, frontForDate, labelsForTheater, pathUntil } from "./lib/select.ts";
 import { readEmbedOptions, postMapMessage } from "./lib/embed.ts";
 import { readUrl } from "./lib/url.ts";
@@ -112,6 +113,15 @@ export default function App({ embed = false }: { embed?: boolean }) {
 
   const theater = data.frames[state.theater] ?? theaterById(state.theater);
   const front = frontForDate(data.fronts, state.date, state.theater);
+  const occupation = useMemo(
+    () => paintOccupation(data.regions, data.occupation, state.date),
+    [data.regions, data.occupation, state.date],
+  );
+  const compareOccupation = useMemo(
+    () => (state.compareDate ? paintOccupation(data.regions, data.occupation, state.compareDate) : occupation),
+    [data.regions, data.occupation, state.compareDate, occupation],
+  );
+  const selectedOccupation = occupationById(data.occupation, state.regionId, state.date);
   const selectedUnit = data.units.find((unit) => unit.id === state.unitId) ?? null;
   const selectedBattle = data.battles.find((battle) => battle.id === state.battleId) ?? null;
   const nations = useMemo(() => [...new Set(data.units.map((unit) => unit.nation))].sort(), [data.units]);
@@ -295,6 +305,8 @@ export default function App({ embed = false }: { embed?: boolean }) {
       data-path={travelled.map((point) => `${point[0]},${point[1]}`).join("|")}
       data-featured={featuredUnits.map((unit) => unit.id).join(",")}
       data-off-front={offFront ? "1" : "0"}
+      data-occupation={occupationWatch(data.occupation, state.date)}
+      data-region={state.regionId ?? ""}
     >
       <a className="skip" href="#search" onClick={() => setLeftOpen(true)}>
         Skip to unit search
@@ -377,6 +389,9 @@ export default function App({ embed = false }: { embed?: boolean }) {
           alliedLine={front?.allied ?? []}
           axisLine={front?.axis ?? []}
           frontRing={front?.polygon ?? []}
+          occupation={occupation}
+          showOccupation={state.layers.occupation}
+          selectedRegionId={state.regionId}
           travelled={travelled}
           fullTrack={[]}
           camera={state.camera}
@@ -388,6 +403,7 @@ export default function App({ embed = false }: { embed?: boolean }) {
           initialZoom={initialView.zoom}
           onSelectUnit={situation.selectUnit}
           onSelectBattle={situation.selectBattle}
+          onSelectRegion={situation.selectRegion}
           onBackground={situation.clearSelection}
           onUserDrag={() => situation.setCameraLock(false)}
           onDisableBasemap={() => {
@@ -442,6 +458,9 @@ export default function App({ embed = false }: { embed?: boolean }) {
               alliedLine={compareFront?.allied ?? []}
               axisLine={compareFront?.axis ?? []}
               frontRing={compareFront?.polygon ?? []}
+              occupation={compareOccupation}
+              showOccupation={state.layers.occupation}
+              selectedRegionId={state.regionId}
               travelled={compareTravelled}
               fullTrack={[]}
               camera={NO_CAMERA}
@@ -451,6 +470,7 @@ export default function App({ embed = false }: { embed?: boolean }) {
               initialZoom={compareStart?.zoom ?? initialView.zoom}
               onSelectUnit={situation.selectUnit}
               onSelectBattle={situation.selectBattle}
+              onSelectRegion={situation.selectRegion}
               onBackground={situation.clearSelection}
               onUserDrag={() => situation.setCameraLock(false)}
               onDisableBasemap={() => {
@@ -487,6 +507,9 @@ export default function App({ embed = false }: { embed?: boolean }) {
                 alliedLine={front?.allied ?? []}
                 axisLine={front?.axis ?? []}
                 frontRing={front?.polygon ?? []}
+                occupation={occupation}
+                showOccupation={state.layers.occupation}
+                selectedRegionId={state.regionId}
                 travelled={travelled}
                 fullTrack={[]}
                 camera={state.camera}
@@ -497,6 +520,7 @@ export default function App({ embed = false }: { embed?: boolean }) {
                 theaterId={state.theater}
                 onSelectUnit={situation.selectUnit}
                 onSelectBattle={situation.selectBattle}
+                onSelectRegion={situation.selectRegion}
                 onBackground={situation.clearSelection}
                 onUserDrag={() => situation.setCameraLock(false)}
                 onBindExport={(exportPng) => {
@@ -510,6 +534,9 @@ export default function App({ embed = false }: { embed?: boolean }) {
         <div className="map-caption">
           <p>{state.layers.fronts ? frontMessage : "Positions are approximate and sourced."}</p>
           {offFront ? <p>Not yet on the Normandy front.</p> : null}
+          {state.layers.occupation ? (
+            <p>Country occupation is schematic and appears below zoom 6. Play the war from 1939 to 1945 to watch control change. Britain is Allied from 3 September 1939; the United States joins on 8 December 1941.</p>
+          ) : null}
           {datePreset ? <p>{datePreset.note}</p> : null}
           {campaign ? <p>{campaign.note}</p> : null}
           <p>Source: {selectedUnit?.source ?? front?.source ?? PLACEHOLDER_SOURCE}</p>
@@ -533,7 +560,16 @@ export default function App({ embed = false }: { embed?: boolean }) {
             </button>
           </div>
         ) : null}
-        {state.theater === "normandy" && !inSample && !comingSoon && !front && mapUnits.length === 0 ? (
+        {state.layers.occupation && occupation.features.length > 0 ? (
+          <ul className="occupation-legend" aria-label="Occupation colours">
+            <li><span className="swatch side-allied" /> Allied</li>
+            <li><span className="swatch side-axis" /> Axis</li>
+            <li><span className="swatch side-soviet" /> Soviet</li>
+            <li><span className="swatch side-japanese" /> Japanese</li>
+            <li><span className="swatch side-neutral" /> Neutral</li>
+          </ul>
+        ) : null}
+        {state.theater === "normandy" && !inSample && !comingSoon && !front && mapUnits.length === 0 && data.occupation.length === 0 ? (
           <div className="empty-banner">
             <p>No units or front in the sample for {formatDisplay(state.date)}.</p>
             <button type="button" onClick={() => situation.scrub(dayIndex(SAMPLE_START))}>
@@ -584,6 +620,7 @@ export default function App({ embed = false }: { embed?: boolean }) {
               ? data.units.filter((unit) => selectedBattle.units?.includes(unit.id))
               : []
           }
+          occupation={selectedOccupation}
         />
       </main>
       <p className="disclaimer" role="note">
@@ -602,6 +639,7 @@ export default function App({ embed = false }: { embed?: boolean }) {
         onCampaign={situation.playCampaign}
         campaignId={state.campaignId}
         battles={theaterBattles}
+        onOverview={situation.showOverview}
       />
       <div className="sr-only" aria-live="polite">
         {live}

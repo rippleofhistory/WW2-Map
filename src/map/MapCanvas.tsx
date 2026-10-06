@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import type { FeatureCollection, LineString, Polygon } from "geojson";
+import type { FeatureCollection, Geometry, LineString, Polygon } from "geojson";
 import {
   Map as MlMap,
   Marker,
   NavigationControl,
   setWorkerUrl,
+  type DataDrivenPropertyValueSpecification,
   type GeoJSONSource,
   type Map as MapInstance,
 } from "maplibre-gl";
@@ -16,7 +17,8 @@ import { echelonMark } from "../lib/format.ts";
 import { placeUnit } from "../lib/position.ts";
 import { pathUntil } from "../lib/select.ts";
 import { playClock, subscribePlayClock } from "../state/playClock.ts";
-import { cssVar, sideColorsFrom } from "../lib/palette.ts";
+import { COLLAPSED_FALLBACK, NEUTRAL_FALLBACK, cssVar, sideColorsFrom } from "../lib/palette.ts";
+import { OCCUPATION_MAX_ZOOM, OVERVIEW_CENTER, OVERVIEW_ZOOM } from "../lib/occupation.ts";
 import { exportMapPng } from "./exportPng.ts";
 import { layoutUnits, zoomBandFor } from "./markerLayout.ts";
 import { MODERN_STYLE, SITUATION_STYLE } from "./styles.ts";
@@ -61,8 +63,12 @@ interface MapCanvasProps {
   followLat?: number;
   initialCenter: [number, number];
   initialZoom: number;
+  occupation: FeatureCollection<Geometry>;
+  showOccupation: boolean;
+  selectedRegionId: string | null;
   onSelectUnit: (id: string) => void;
   onSelectBattle: (id: string) => void;
+  onSelectRegion: (id: string) => void;
   onBackground: () => void;
   onUserDrag: () => void;
   onDisableBasemap: () => void;
@@ -146,6 +152,85 @@ function upsertPolygon(map: MapInstance, id: string, data: FeatureCollection<Pol
   const visibility = visible ? "visible" : "none";
   setVisibility(map, `${id}-fill`, visibility);
   setVisibility(map, `${id}-line`, visibility);
+}
+
+function occupationColorExpr(
+  palette: Record<"allied" | "axis" | "soviet" | "japanese", string>,
+  neutral: string,
+  collapsed: string,
+): DataDrivenPropertyValueSpecification<string> {
+  return [
+    "case",
+    ["==", ["get", "status"], "collapsed"],
+    collapsed,
+    [
+      "match",
+      ["get", "side"],
+      "allied",
+      palette.allied,
+      "axis",
+      palette.axis,
+      "soviet",
+      palette.soviet,
+      "japanese",
+      palette.japanese,
+      neutral,
+    ],
+  ];
+}
+
+function upsertOccupation(
+  map: MapInstance,
+  data: FeatureCollection<Geometry>,
+  visible: boolean,
+  palette: Record<"allied" | "axis" | "soviet" | "japanese", string>,
+  neutral: string,
+  collapsed: string,
+  selectedId: string | null,
+) {
+  try {
+    const source = map.getSource("occupation") as GeoJSONSource | undefined;
+    if (!source) {
+      map.addSource("occupation", { type: "geojson", data });
+      const fillLayer = {
+        id: "occupation-fill",
+        type: "fill" as const,
+        source: "occupation",
+        maxzoom: OCCUPATION_MAX_ZOOM,
+        paint: {
+          "fill-color": occupationColorExpr(palette, neutral, collapsed),
+          "fill-opacity": 0.46,
+        },
+      };
+      if (map.getLayer("graticule-line")) map.addLayer(fillLayer, "graticule-line");
+      else map.addLayer(fillLayer);
+      map.addLayer({
+        id: "occupation-line",
+        type: "line",
+        source: "occupation",
+        maxzoom: OCCUPATION_MAX_ZOOM,
+        paint: {
+          "line-color": "#121510",
+          "line-width": ["case", ["==", ["get", "id"], selectedId ?? ""], 2.4, 0.7],
+          "line-opacity": 0.75,
+        },
+      });
+    } else {
+      source.setData(data);
+      if (map.getLayer("occupation-fill")) {
+        map.setPaintProperty("occupation-fill", "fill-color", occupationColorExpr(palette, neutral, collapsed));
+      }
+      if (map.getLayer("occupation-line")) {
+        map.setPaintProperty("occupation-line", "line-width", ["case", ["==", ["get", "id"], selectedId ?? ""], 2.4, 0.7]);
+      }
+    }
+    const visibility = visible ? "visible" : "none";
+    setVisibility(map, "occupation-fill", visibility);
+    setVisibility(map, "occupation-line", visibility);
+  } catch (error) {
+    const host = map.getContainer();
+    host.dataset.occupationError = error instanceof Error ? error.message : "occupation layer failed";
+  }
 }
 
 function setVisibility(map: MapInstance, layerId: string, visibility: "visible" | "none") {
@@ -300,6 +385,20 @@ export function MapCanvas(props: MapCanvasProps) {
       const gold = cssVar(host, "--gold", "#f0d78c");
       const line = cssVar(host, "--line", "#3e4a34");
       const fat = current.contrast ? 6 : 4;
+      upsertOccupation(
+        map,
+        current.occupation,
+        current.showOccupation,
+        palette,
+        cssVar(host, "--neutral", NEUTRAL_FALLBACK),
+        cssVar(host, "--collapsed", COLLAPSED_FALLBACK),
+        current.selectedRegionId,
+      );
+      if (host instanceof HTMLElement) {
+        host.dataset.occupationOn = current.showOccupation && map.getZoom() < OCCUPATION_MAX_ZOOM ? "1" : "0";
+        host.dataset.occupationCount = String(current.occupation.features.length);
+        host.dataset.occupationLayer = map.getLayer("occupation-fill") ? "1" : "0";
+      }
       upsertLine(map, "graticule", GRATICULE, line, 1, 0.45, undefined, current.showGraticule, false);
       upsertLine(map, "path-full", lines("full", current.fullTrack), gold, 2, 0.4, [1, 1.4], current.fullTrack.length >= 2, false);
       upsertLine(
@@ -368,6 +467,14 @@ export function MapCanvas(props: MapCanvasProps) {
     props.travelled.join(";"),
     props.fullTrack.join(";"),
     props.contrast ? "1" : "0",
+    props.showOccupation ? "1" : "0",
+    props.selectedRegionId ?? "",
+    props.occupation.features
+      .map((feature) => {
+        const props = feature.properties as { iso?: string; side?: string; status?: string } | null;
+        return `${props?.iso ?? ""}:${props?.side ?? ""}:${props?.status ?? ""}`;
+      })
+      .join("|"),
   ].join("|");
 
   useEffect(() => {
@@ -416,18 +523,31 @@ export function MapCanvas(props: MapCanvasProps) {
     map.on("click", (event) => {
       const target = event.originalEvent.target;
       if (target instanceof Element && target.closest(".map-marker, .maplibregl-marker")) return;
+      if (map.getLayer("occupation-fill")) {
+        const hit = map.queryRenderedFeatures(event.point, { layers: ["occupation-fill"] })[0];
+        const regionId = hit?.properties?.id;
+        if (typeof regionId === "string" && regionId) {
+          propsRef.current.onSelectRegion(regionId);
+          return;
+        }
+      }
       if (ignoreClearRef.current) return;
       propsRef.current.onBackground();
     });
     const onZoom = () => {
       const band = zoomBandFor(map.getZoom());
       setZoomBand((current) => (current === band ? current : band));
+      const current = propsRef.current;
+      container.dataset.occupationOn = current.showOccupation && map.getZoom() < OCCUPATION_MAX_ZOOM ? "1" : "0";
     };
     const publishView = () => {
       const center = map.getCenter();
       container.dataset.lng = center.lng.toFixed(2);
       container.dataset.lat = center.lat.toFixed(2);
       container.dataset.zoom = map.getZoom().toFixed(2);
+      const current = propsRef.current;
+      container.dataset.occupationOn = current.showOccupation && map.getZoom() < OCCUPATION_MAX_ZOOM ? "1" : "0";
+      container.dataset.occupationCount = String(current.occupation.features.length);
     };
     const onMoveEnd = () => {
       publishView();
@@ -441,11 +561,13 @@ export function MapCanvas(props: MapCanvasProps) {
     map.on("moveend", onMoveEnd);
     map.on("zoom", onZoom);
     map.on("style.load", onStyle);
+    map.on("load", onStyle);
     map.on("error", (event) => {
       const url = "url" in event.error ? String(event.error.url ?? "") : "";
       if (url.includes("openfreemap.org/styles")) setStyleError(true);
     });
     mapRef.current = map;
+    Object.assign(container, { __map: map });
     propsRef.current.onBindExport(() => exportMapPng(map, container, propsRef.current.date));
     const cache = cacheRef.current;
     return () => {
@@ -636,7 +758,9 @@ export function MapCanvas(props: MapCanvasProps) {
         const zoom = window.innerWidth < 900 ? Math.max(2, theater.zoom - 1.3) : theater.zoom;
         map.easeTo({ center: theater.center, zoom, duration });
       } else if (command.type === "battle") {
-        map.easeTo({ center: [command.lng, command.lat], zoom: command.zoom, duration });
+        map.easeTo({ center: [command.lng, command.lat], zoom: command.zoom, duration, essential: true });
+      } else if (command.type === "overview") {
+        map.easeTo({ center: OVERVIEW_CENTER, zoom: OVERVIEW_ZOOM, duration, essential: true });
       }
     };
     if (map.isStyleLoaded()) run();

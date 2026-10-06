@@ -1,8 +1,27 @@
 import { isValidWarDate } from "../lib/dates.ts";
-import type { Battle, Confidence, Echelon, FrontCadence, FrontLine, PlaceLabel, Side, Theater, TheaterId, Unit, UnitPosition } from "../types.ts";
+import type {
+  Battle,
+  Confidence,
+  ControlSide,
+  ControlStatus,
+  Echelon,
+  FrontCadence,
+  FrontLine,
+  OccupationPoint,
+  OccupationState,
+  PlaceLabel,
+  Side,
+  Theater,
+  TheaterId,
+  Unit,
+  UnitPosition,
+} from "../types.ts";
+import type { FeatureCollection, Geometry } from "geojson";
 import { THEATERS } from "./theaters.ts";
 
 const SIDES = new Set<Side>(["allied", "axis", "soviet", "japanese"]);
+const CONTROL_SIDES = new Set<ControlSide>(["allied", "axis", "soviet", "japanese", "neutral"]);
+const CONTROL_STATUS = new Set<ControlStatus>(["sovereign", "occupied", "puppet", "cobelligerent", "collapsed"]);
 const ECHELONS = new Set<Echelon>(["army", "corps", "division", "brigade", "regiment", "battalion", "company"]);
 const THEATER_IDS = new Set<TheaterId>(THEATERS.map((theater) => theater.id));
 const CONFIDENCE = new Set<Confidence>(["high", "medium", "low"]);
@@ -29,6 +48,8 @@ export interface MapData extends MapDataset {
   message: string;
   modules: Record<TheaterId, TheaterModule>;
   frames: Record<TheaterId, Theater>;
+  occupation: OccupationState[];
+  regions: FeatureCollection<Geometry, { id: string; name: string }>;
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -234,6 +255,65 @@ export function parseNormandy(value: unknown): MapDataset | null {
   if (!units || !fronts || !battles || !labels) return null;
   if (units.length === 0 && fronts.length === 0 && battles.length === 0) return null;
   return { units, fronts, battles, labels };
+}
+
+export function parseOccupation(value: unknown): OccupationState[] | null {
+  if (!Array.isArray(value)) return null;
+  const states: OccupationState[] = [];
+  for (const item of value) {
+    if (!isRecord(item)) return null;
+    const id = text(item.id);
+    const name = text(item.name);
+    const source = text(item.source);
+    const confidence = parseConfidence(item.confidence);
+    if (!id || !name || !source || !confidence || !Array.isArray(item.codes) || !Array.isArray(item.track)) return null;
+    const codes: string[] = [];
+    for (const code of item.codes) {
+      const iso = text(code);
+      if (!iso) return null;
+      codes.push(iso);
+    }
+    if (codes.length === 0) return null;
+    const track: OccupationPoint[] = [];
+    for (const entry of item.track) {
+      if (!isRecord(entry)) return null;
+      const date = text(entry.date);
+      const side = member(entry.side, CONTROL_SIDES);
+      const status = member(entry.status, CONTROL_STATUS);
+      const note = text(entry.note);
+      const pointSource = text(entry.source);
+      const pointConfidence = parseConfidence(entry.confidence);
+      if (!date || !isValidWarDate(date) || !side || !status || !note || !pointSource || !pointConfidence) continue;
+      track.push({ date, side, status, note, source: pointSource, confidence: pointConfidence });
+    }
+    if (track.length === 0) return null;
+    track.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+    states.push({ id, name, codes, source, confidence, track });
+  }
+  return states;
+}
+
+export function parseRegions(value: unknown): FeatureCollection<Geometry, { id: string; name: string }> | null {
+  if (!isRecord(value) || value.type !== "FeatureCollection" || !Array.isArray(value.features)) return null;
+  const features: FeatureCollection<Geometry, { id: string; name: string }>["features"] = [];
+  for (const item of value.features) {
+    if (!isRecord(item) || item.type !== "Feature" || !isRecord(item.properties) || !item.geometry) return null;
+    const id = text(item.properties.id);
+    const name = text(item.properties.name);
+    if (!id || !name) return null;
+    features.push({
+      type: "Feature",
+      properties: { id, name },
+      geometry: item.geometry as Geometry,
+    });
+  }
+  return { type: "FeatureCollection", features };
+}
+
+const EMPTY_REGIONS: FeatureCollection<Geometry, { id: string; name: string }> = { type: "FeatureCollection", features: [] };
+
+export function emptyRegions(): FeatureCollection<Geometry, { id: string; name: string }> {
+  return EMPTY_REGIONS;
 }
 
 /** Overlay for public/data/normandy/theaters.json. Camera frame only. */

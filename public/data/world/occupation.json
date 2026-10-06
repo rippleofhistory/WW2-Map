@@ -1,0 +1,1833 @@
+[
+  {
+    "id": "united-kingdom",
+    "name": "United Kingdom",
+    "codes": [
+      "GBR"
+    ],
+    "source": "United Kingdom declaration of war on Germany, 3 September 1939.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Not yet at war. Britain declares war two days later.",
+        "source": "United Kingdom declaration of war on Germany, 3 September 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1939-09-03",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "Britain declares war on Germany and stays Allied through 1945. The United States joining in December 1941 expands the Allied bloc; it does not start Britain's war.",
+        "source": "United Kingdom declaration of war on Germany, 3 September 1939.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "ireland",
+    "name": "Ireland",
+    "codes": [
+      "IRL"
+    ],
+    "source": "Irish Emergency / neutrality, 1939–1945.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Neutral for the whole war.",
+        "source": "Irish neutrality during the Emergency, 1939–1945.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "france",
+    "name": "France",
+    "codes": [
+      "FRA"
+    ],
+    "source": "French declaration of war on Germany, 3 September 1939. Franco-German Armistice, 22 June 1940. Liberation of Paris, 25 August 1944.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Not yet at war.",
+        "source": "French declaration of war on Germany, 3 September 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1939-09-03",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "France declares war on Germany.",
+        "source": "French declaration of war on Germany, 3 September 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1940-06-22",
+        "side": "axis",
+        "status": "occupied",
+        "note": "Armistice. Metropolitan France folds: occupied zone and Vichy. Schematic whole-country fill; Vichy was nominally sovereign.",
+        "source": "Franco-German Armistice, 22 June 1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1944-08-25",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "Paris liberated. Provisional government. Pockets on the Atlantic coast remain until 1945.",
+        "source": "Liberation of Paris, 25 August 1944.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "spain",
+    "name": "Spain",
+    "codes": [
+      "ESP"
+    ],
+    "source": "Spanish non-belligerence / neutrality, 1939–1945.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Franco Spain stays out of the war.",
+        "source": "Spanish neutrality and non-belligerence, 1939–1945.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "portugal",
+    "name": "Portugal",
+    "codes": [
+      "PRT"
+    ],
+    "source": "Portuguese neutrality, 1939–1945.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Neutral. Azores agreement with Britain in 1943 does not occupy the mainland.",
+        "source": "Portuguese neutrality, 1939–1945.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "switzerland",
+    "name": "Switzerland",
+    "codes": [
+      "CHE"
+    ],
+    "source": "Swiss neutrality, 1939–1945.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Neutral throughout.",
+        "source": "Swiss neutrality, 1939–1945.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "sweden",
+    "name": "Sweden",
+    "codes": [
+      "SWE"
+    ],
+    "source": "Swedish neutrality, 1939–1945.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Neutral throughout.",
+        "source": "Swedish neutrality, 1939–1945.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "norway",
+    "name": "Norway",
+    "codes": [
+      "NOR"
+    ],
+    "source": "German invasion of Norway, 9 April 1940; Norwegian campaign ends 10 June 1940; restoration 8 May 1945.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Neutral until the German invasion.",
+        "source": "Norwegian neutrality, 1939–1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1940-06-10",
+        "side": "axis",
+        "status": "occupied",
+        "note": "Norwegian campaign ends. Germany occupies Norway.",
+        "source": "End of the Norwegian campaign, 10 June 1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1945-05-08",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "German forces in Norway surrender.",
+        "source": "German Instrument of Surrender, 8 May 1945.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "denmark",
+    "name": "Denmark",
+    "codes": [
+      "DNK"
+    ],
+    "source": "German occupation of Denmark, 9 April 1940.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Neutral until the German invasion.",
+        "source": "Danish neutrality, 1939–1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1940-04-09",
+        "side": "axis",
+        "status": "occupied",
+        "note": "Germany occupies Denmark in a day.",
+        "source": "German invasion of Denmark, 9 April 1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1945-05-08",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "Occupation ends with the German surrender.",
+        "source": "German Instrument of Surrender, 8 May 1945.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "netherlands",
+    "name": "Netherlands",
+    "codes": [
+      "NLD"
+    ],
+    "source": "Dutch surrender, 15 May 1940; German surrender in the Netherlands, 5 May 1945.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Neutral until the German invasion.",
+        "source": "Dutch neutrality, 1939–1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1940-05-15",
+        "side": "axis",
+        "status": "occupied",
+        "note": "Netherlands surrenders.",
+        "source": "Dutch surrender, 15 May 1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1945-05-05",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "German surrender in the Netherlands (Wageningen).",
+        "source": "German surrender in the Netherlands, 5 May 1945.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "belgium",
+    "name": "Belgium",
+    "codes": [
+      "BEL"
+    ],
+    "source": "Belgian surrender, 28 May 1940; Brussels liberated 4 September 1944.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Neutral until the German invasion.",
+        "source": "Belgian neutrality, 1939–1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1940-05-28",
+        "side": "axis",
+        "status": "occupied",
+        "note": "Belgium surrenders.",
+        "source": "Belgian surrender, 28 May 1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1944-09-04",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "Brussels liberated. Schematic whole-country fill.",
+        "source": "Liberation of Brussels, 4 September 1944.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "luxembourg",
+    "name": "Luxembourg",
+    "codes": [
+      "LUX"
+    ],
+    "source": "German invasion of Luxembourg, 10 May 1940; liberation September 1944.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Neutral until the German invasion.",
+        "source": "Luxembourg neutrality, 1939–1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1940-05-10",
+        "side": "axis",
+        "status": "occupied",
+        "note": "Germany invades Luxembourg.",
+        "source": "German invasion of Luxembourg, 10 May 1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1944-09-10",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "Luxembourg City liberated.",
+        "source": "Liberation of Luxembourg City, 10 September 1944.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "germany",
+    "name": "Germany",
+    "codes": [
+      "DEU"
+    ],
+    "source": "German invasion of Poland, 1 September 1939. German Instrument of Surrender, 8 May 1945.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "axis",
+        "status": "sovereign",
+        "note": "Germany invades Poland. Axis core for the European war.",
+        "source": "German invasion of Poland, 1 September 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1945-05-08",
+        "side": "allied",
+        "status": "collapsed",
+        "note": "Unconditional surrender. Allied occupation of a collapsed German state. Schematic single fill; the Soviet zone is not split here.",
+        "source": "German Instrument of Surrender, 8 May 1945.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "austria",
+    "name": "Austria",
+    "codes": [
+      "AUT"
+    ],
+    "source": "Anschluss, 12 March 1938. Already part of Germany when the war opens.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "axis",
+        "status": "occupied",
+        "note": "Annexed in 1938. Drawn with Germany.",
+        "source": "Anschluss, 12 March 1938.",
+        "confidence": "high"
+      },
+      {
+        "date": "1945-05-08",
+        "side": "allied",
+        "status": "collapsed",
+        "note": "German surrender. Allied occupation of Austria.",
+        "source": "German Instrument of Surrender, 8 May 1945.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "italy",
+    "name": "Italy",
+    "codes": [
+      "ITA"
+    ],
+    "source": "Italy enters the war 10 June 1940. Armistice of Cassibile, 8 September 1943.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Not yet a belligerent in the German war.",
+        "source": "Italy non-belligerent, September 1939–June 1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1940-06-10",
+        "side": "axis",
+        "status": "sovereign",
+        "note": "Italy declares war on France and Britain.",
+        "source": "Italian declaration of war, 10 June 1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1943-09-08",
+        "side": "allied",
+        "status": "cobelligerent",
+        "note": "Armistice announced. The Kingdom of Italy folds as an Axis partner and becomes a co-belligerent. German occupation of the north (RSI) continues until 1945; this fill is schematic for the whole peninsula.",
+        "source": "Armistice of Cassibile, 8 September 1943.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "poland",
+    "name": "Poland",
+    "codes": [
+      "POL"
+    ],
+    "source": "German invasion of Poland, 1 September 1939. German–Soviet Boundary and Friendship Treaty, 28 September 1939.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "Germany invades. Poland is at war from day one.",
+        "source": "German invasion of Poland, 1 September 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1939-09-28",
+        "side": "axis",
+        "status": "occupied",
+        "note": "Partition. Modern Poland shape is a schematic occupied fill; the Soviet share sits in today's Belarus and Ukraine.",
+        "source": "German–Soviet Boundary and Friendship Treaty, 28 September 1939.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1945-01-17",
+        "side": "soviet",
+        "status": "occupied",
+        "note": "Warsaw taken by the Red Army. Schematic: Poland under Soviet military control.",
+        "source": "Red Army enters Warsaw, 17 January 1945.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "bohemia-moravia",
+    "name": "Bohemia and Moravia",
+    "codes": [
+      "CZE"
+    ],
+    "source": "German occupation of the Czech lands, 15 March 1939.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "axis",
+        "status": "occupied",
+        "note": "Protectorate of Bohemia and Moravia already in place.",
+        "source": "German occupation of Bohemia and Moravia, 15 March 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1945-05-08",
+        "side": "soviet",
+        "status": "occupied",
+        "note": "Prague uprising / Red Army. Schematic Soviet military control.",
+        "source": "Prague, May 1945.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "slovakia",
+    "name": "Slovakia",
+    "codes": [
+      "SVK"
+    ],
+    "source": "Slovak Republic, Axis client from 14 March 1939.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "axis",
+        "status": "puppet",
+        "note": "Slovak client state.",
+        "source": "Slovak Republic, 14 March 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1945-04-04",
+        "side": "soviet",
+        "status": "occupied",
+        "note": "Bratislava taken by the Red Army.",
+        "source": "Bratislava, 4 April 1945.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "hungary",
+    "name": "Hungary",
+    "codes": [
+      "HUN"
+    ],
+    "source": "Hungary accedes to the Tripartite Pact, 20 November 1940. Budapest 13 February 1945.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Not yet in the Axis pact.",
+        "source": "Hungarian non-belligerence, 1939–1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1940-11-20",
+        "side": "axis",
+        "status": "sovereign",
+        "note": "Hungary joins the Tripartite Pact.",
+        "source": "Hungary accedes to the Tripartite Pact, 20 November 1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1945-02-13",
+        "side": "soviet",
+        "status": "occupied",
+        "note": "Siege of Budapest ends.",
+        "source": "Siege of Budapest ends, 13 February 1945.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "romania",
+    "name": "Romania",
+    "codes": [
+      "ROU"
+    ],
+    "source": "Romania accedes to the Tripartite Pact, 23 November 1940. King Michael's Coup, 23 August 1944.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Not yet in the Axis pact.",
+        "source": "Romanian neutrality, 1939–1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1940-11-23",
+        "side": "axis",
+        "status": "sovereign",
+        "note": "Romania joins the Tripartite Pact.",
+        "source": "Romania accedes to the Tripartite Pact, 23 November 1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1944-08-23",
+        "side": "allied",
+        "status": "cobelligerent",
+        "note": "King Michael's Coup. Romania leaves the Axis and fights with the Allies / Red Army.",
+        "source": "King Michael's Coup, 23 August 1944.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "bulgaria",
+    "name": "Bulgaria",
+    "codes": [
+      "BGR"
+    ],
+    "source": "Bulgaria accedes to the Tripartite Pact, 1 March 1941. Coup of 9 September 1944.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Not yet in the Axis pact.",
+        "source": "Bulgarian neutrality, 1939–1941.",
+        "confidence": "high"
+      },
+      {
+        "date": "1941-03-01",
+        "side": "axis",
+        "status": "sovereign",
+        "note": "Bulgaria joins the Tripartite Pact.",
+        "source": "Bulgaria accedes to the Tripartite Pact, 1 March 1941.",
+        "confidence": "high"
+      },
+      {
+        "date": "1944-09-09",
+        "side": "soviet",
+        "status": "cobelligerent",
+        "note": "9 September coup. Soviet entry and change of sides.",
+        "source": "Bulgarian coup d'état, 9 September 1944.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "greece",
+    "name": "Greece",
+    "codes": [
+      "GRC"
+    ],
+    "source": "German invasion of Greece; Athens 27 April 1941. Athens liberated 13 October 1944.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Not yet invaded.",
+        "source": "Greek neutrality until October 1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1940-10-28",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "Italy invades. Greece is at war with the Axis.",
+        "source": "Italian invasion of Greece, 28 October 1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1941-04-27",
+        "side": "axis",
+        "status": "occupied",
+        "note": "Athens occupied. Schematic whole-country fill.",
+        "source": "German occupation of Athens, 27 April 1941.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-10-13",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "Athens liberated.",
+        "source": "Liberation of Athens, 13 October 1944.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "albania",
+    "name": "Albania",
+    "codes": [
+      "ALB"
+    ],
+    "source": "Italian occupation of Albania, April 1939.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "axis",
+        "status": "occupied",
+        "note": "Already under Italian occupation.",
+        "source": "Italian invasion of Albania, April 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1944-11-29",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "German withdrawal / liberation date used in Albania.",
+        "source": "Liberation of Albania, 29 November 1944.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "finland",
+    "name": "Finland",
+    "codes": [
+      "FIN"
+    ],
+    "source": "Moscow Peace Treaty 13 March 1940. Continuation War 25 June 1941. Moscow Armistice 19 September 1944.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Independent. Winter War begins 30 November 1939.",
+        "source": "Finnish neutrality, September 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1939-11-30",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Winter War against the Soviet Union. Finland is not Axis.",
+        "source": "Soviet invasion of Finland, 30 November 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1941-06-25",
+        "side": "axis",
+        "status": "cobelligerent",
+        "note": "Continuation War. Finland fights beside Germany against the USSR; it does not sign the Tripartite Pact.",
+        "source": "Finnish declaration of war / Continuation War, 25 June 1941.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-09-19",
+        "side": "allied",
+        "status": "cobelligerent",
+        "note": "Moscow Armistice. Finland leaves the war against the USSR.",
+        "source": "Moscow Armistice, 19 September 1944.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "estonia",
+    "name": "Estonia",
+    "codes": [
+      "EST"
+    ],
+    "source": "Soviet occupation June 1940. German occupation 1941. Red Army returns 1944.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Independent republic.",
+        "source": "Estonian independence, 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1940-06-17",
+        "side": "soviet",
+        "status": "occupied",
+        "note": "Soviet occupation.",
+        "source": "Soviet occupation of Estonia, June 1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1941-07-05",
+        "side": "axis",
+        "status": "occupied",
+        "note": "German occupation of Tallinn area. Schematic.",
+        "source": "German occupation of Estonia, summer 1941.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-09-22",
+        "side": "soviet",
+        "status": "occupied",
+        "note": "Tallinn taken by the Red Army.",
+        "source": "Tallinn, 22 September 1944.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "latvia",
+    "name": "Latvia",
+    "codes": [
+      "LVA"
+    ],
+    "source": "Soviet occupation June 1940. German occupation 1941. Riga 13 October 1944.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Independent republic.",
+        "source": "Latvian independence, 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1940-06-17",
+        "side": "soviet",
+        "status": "occupied",
+        "note": "Soviet occupation.",
+        "source": "Soviet occupation of Latvia, June 1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1941-07-01",
+        "side": "axis",
+        "status": "occupied",
+        "note": "German occupation. Schematic.",
+        "source": "German occupation of Latvia, summer 1941.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-10-13",
+        "side": "soviet",
+        "status": "occupied",
+        "note": "Riga taken by the Red Army.",
+        "source": "Riga, 13 October 1944.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "lithuania",
+    "name": "Lithuania",
+    "codes": [
+      "LTU"
+    ],
+    "source": "Soviet occupation June 1940. German occupation 1941. Vilnius 13 July 1944.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Independent republic.",
+        "source": "Lithuanian independence, 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1940-06-15",
+        "side": "soviet",
+        "status": "occupied",
+        "note": "Soviet occupation.",
+        "source": "Soviet occupation of Lithuania, June 1940.",
+        "confidence": "high"
+      },
+      {
+        "date": "1941-06-24",
+        "side": "axis",
+        "status": "occupied",
+        "note": "German occupation. Schematic.",
+        "source": "German occupation of Lithuania, June 1941.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-07-13",
+        "side": "soviet",
+        "status": "occupied",
+        "note": "Vilnius taken by the Red Army.",
+        "source": "Vilnius, 13 July 1944.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "belarus",
+    "name": "Belarus",
+    "codes": [
+      "BLR"
+    ],
+    "source": "Minsk, 28 June 1941 and 3 July 1944 (Bagration).",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "soviet",
+        "status": "sovereign",
+        "note": "Byelorussian SSR. East Poland is annexed later in September.",
+        "source": "Byelorussian SSR, 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1941-06-28",
+        "side": "axis",
+        "status": "occupied",
+        "note": "Minsk falls. Schematic occupation of the modern Belarus shape.",
+        "source": "Minsk, 28 June 1941.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-07-03",
+        "side": "soviet",
+        "status": "sovereign",
+        "note": "Minsk retaken during Bagration.",
+        "source": "Minsk, 3 July 1944.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ukraine",
+    "name": "Ukraine",
+    "codes": [
+      "UKR"
+    ],
+    "source": "Kiev, 19 September 1941 and 6 November 1943.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "soviet",
+        "status": "sovereign",
+        "note": "Ukrainian SSR.",
+        "source": "Ukrainian SSR, 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1941-09-19",
+        "side": "axis",
+        "status": "occupied",
+        "note": "Kiev falls. Schematic occupation of the modern Ukraine shape.",
+        "source": "Kiev, 19 September 1941.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1943-11-06",
+        "side": "soviet",
+        "status": "sovereign",
+        "note": "Kiev retaken. Western Ukraine is still contested into 1944.",
+        "source": "Kiev, 6 November 1943.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "soviet-union",
+    "name": "Soviet Union",
+    "codes": [
+      "RUS",
+      "KAZ",
+      "MDA",
+      "GEO",
+      "ARM",
+      "AZE"
+    ],
+    "source": "Molotov–Ribbentrop period, then the Soviet Union at war from 22 June 1941. Soviet fill stays distinct from Western Allied blue.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "soviet",
+        "status": "sovereign",
+        "note": "Not at war with Germany. Colour stays Soviet, not Western Allied.",
+        "source": "Soviet Union, 1 September 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1941-06-22",
+        "side": "soviet",
+        "status": "sovereign",
+        "note": "Germany invades. The USSR fights as an Allied power with its own colour.",
+        "source": "German invasion of the Soviet Union (Barbarossa), 22 June 1941.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "turkey",
+    "name": "Turkey",
+    "codes": [
+      "TUR"
+    ],
+    "source": "Turkish neutrality until February 1945.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Neutral.",
+        "source": "Turkish neutrality, 1939–1945.",
+        "confidence": "high"
+      },
+      {
+        "date": "1945-02-23",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "Turkey declares war on Germany and Japan.",
+        "source": "Turkish declaration of war, 23 February 1945.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "yugoslavia",
+    "name": "Yugoslavia",
+    "codes": [
+      "HRV",
+      "SVN",
+      "BIH",
+      "SRB",
+      "MNE",
+      "MKD",
+      "KOS"
+    ],
+    "source": "Yugoslav coup 27 March 1941. Axis invasion; Yugoslav army surrenders 17 April 1941. Belgrade 20 October 1944.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Neutral kingdom. Modern republic shapes stand in for Yugoslavia.",
+        "source": "Kingdom of Yugoslavia, 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1941-04-17",
+        "side": "axis",
+        "status": "occupied",
+        "note": "Royal army surrenders. Partitioned by the Axis. Schematic single fill on the successor shapes.",
+        "source": "Yugoslav surrender, 17 April 1941.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-10-20",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "Belgrade taken by Yugoslav Partisans and the Red Army. Schematic.",
+        "source": "Belgrade Offensive, 20 October 1944.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "egypt",
+    "name": "Egypt",
+    "codes": [
+      "EGY"
+    ],
+    "source": "British presence in Egypt. Egypt is not coloured Axis during the desert war.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "Kingdom of Egypt under British treaty influence. El Alamein does not flip the country fill to Axis.",
+        "source": "Anglo-Egyptian Treaty / Western Desert campaign.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "libya",
+    "name": "Libya",
+    "codes": [
+      "LBY"
+    ],
+    "source": "Italian Libya. Tripoli 23 January 1943.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "axis",
+        "status": "occupied",
+        "note": "Italian colony.",
+        "source": "Italian Libya, 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1943-01-23",
+        "side": "allied",
+        "status": "occupied",
+        "note": "Tripoli taken by the Eighth Army.",
+        "source": "Capture of Tripoli, 23 January 1943.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "tunisia",
+    "name": "Tunisia",
+    "codes": [
+      "TUN"
+    ],
+    "source": "Franco-German Armistice, 22 June 1940. Axis surrender in Tunisia, 13 May 1943.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "French protectorate.",
+        "source": "French Tunisia, 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1940-06-22",
+        "side": "axis",
+        "status": "puppet",
+        "note": "Vichy control after the armistice.",
+        "source": "Franco-German Armistice, 22 June 1940.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1942-11-09",
+        "side": "axis",
+        "status": "occupied",
+        "note": "Case Anton / German–Italian occupation after Torch.",
+        "source": "German occupation of Tunisia, November 1942.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1943-05-13",
+        "side": "allied",
+        "status": "occupied",
+        "note": "Axis surrender in Tunisia.",
+        "source": "Axis surrender in Tunisia, 13 May 1943.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "algeria",
+    "name": "Algeria",
+    "codes": [
+      "DZA"
+    ],
+    "source": "Franco-German Armistice, 22 June 1940. Operation Torch landings, 8 November 1942.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "French Algeria.",
+        "source": "French Algeria, 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1940-06-22",
+        "side": "axis",
+        "status": "puppet",
+        "note": "Vichy after the armistice.",
+        "source": "Franco-German Armistice, 22 June 1940.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1942-11-08",
+        "side": "allied",
+        "status": "occupied",
+        "note": "Torch landings at Algiers and Oran.",
+        "source": "Operation Torch landings, 8 November 1942.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "morocco",
+    "name": "Morocco",
+    "codes": [
+      "MAR"
+    ],
+    "source": "Franco-German Armistice, 22 June 1940. Operation Torch landings, 8 November 1942.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "French Morocco (schematic whole-country fill).",
+        "source": "French Morocco, 1939.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1940-06-22",
+        "side": "axis",
+        "status": "puppet",
+        "note": "Vichy after the armistice.",
+        "source": "Franco-German Armistice, 22 June 1940.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1942-11-08",
+        "side": "allied",
+        "status": "occupied",
+        "note": "Torch landings at Casablanca.",
+        "source": "Operation Torch landings, 8 November 1942.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "ethiopia",
+    "name": "Ethiopia",
+    "codes": [
+      "ETH"
+    ],
+    "source": "Italian East Africa. Restoration of Haile Selassie, 5 May 1941.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "axis",
+        "status": "occupied",
+        "note": "Italian occupation.",
+        "source": "Italian East Africa, 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1941-05-05",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "Emperor restored in Addis Ababa.",
+        "source": "Liberation of Addis Ababa, 5 May 1941.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "south-africa",
+    "name": "South Africa",
+    "codes": [
+      "ZAF"
+    ],
+    "source": "South Africa declares war on Germany, 6 September 1939.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Not yet at war.",
+        "source": "Union of South Africa, 1 September 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1939-09-06",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "South Africa declares war on Germany.",
+        "source": "South African declaration of war, 6 September 1939.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "japan",
+    "name": "Japan",
+    "codes": [
+      "JPN"
+    ],
+    "source": "Japanese Instrument of Surrender, 2 September 1945.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "japanese",
+        "status": "sovereign",
+        "note": "Already at war in China. Japanese colour, not German Axis vermillion.",
+        "source": "Second Sino-Japanese War, ongoing in 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1945-09-02",
+        "side": "allied",
+        "status": "collapsed",
+        "note": "Unconditional surrender. Allied occupation.",
+        "source": "Japanese Instrument of Surrender, 2 September 1945.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "china",
+    "name": "China",
+    "codes": [
+      "CHN"
+    ],
+    "source": "Republic of China at war with Japan from 1937. United Nations Declaration, 1 January 1942.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "At war with Japan. Schematic whole-country fill; Manchuria is not split out of this Natural Earth polygon.",
+        "source": "Second Sino-Japanese War, 1937–1945.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "mongolia",
+    "name": "Mongolia",
+    "codes": [
+      "MNG"
+    ],
+    "source": "Mongolian People's Republic, Soviet-aligned.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "soviet",
+        "status": "puppet",
+        "note": "Soviet-aligned. Khalkhin Gol is already over.",
+        "source": "Mongolian People's Republic, 1939.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "korea",
+    "name": "Korea",
+    "codes": [
+      "PRK",
+      "KOR"
+    ],
+    "source": "Japanese rule until 1945.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "japanese",
+        "status": "occupied",
+        "note": "Annexed by Japan. Modern north/south shapes stand in.",
+        "source": "Japanese rule in Korea, 1910–1945.",
+        "confidence": "high"
+      },
+      {
+        "date": "1945-09-02",
+        "side": "allied",
+        "status": "occupied",
+        "note": "Japanese surrender. Allied occupation (US south / Soviet north) not split here.",
+        "source": "Japanese Instrument of Surrender, 2 September 1945.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "taiwan",
+    "name": "Taiwan",
+    "codes": [
+      "TWN"
+    ],
+    "source": "Japanese Taiwan until 1945.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "japanese",
+        "status": "occupied",
+        "note": "Japanese colony.",
+        "source": "Japanese Taiwan, 1895–1945.",
+        "confidence": "high"
+      },
+      {
+        "date": "1945-09-02",
+        "side": "allied",
+        "status": "occupied",
+        "note": "Japanese surrender.",
+        "source": "Japanese Instrument of Surrender, 2 September 1945.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "india",
+    "name": "India",
+    "codes": [
+      "IND"
+    ],
+    "source": "British India at war from 3 September 1939.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "British India is not yet at war.",
+        "source": "United Kingdom declaration of war on Germany, 3 September 1939.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1939-09-03",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "British India enters the war with Britain.",
+        "source": "United Kingdom declaration of war on Germany, 3 September 1939.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "burma",
+    "name": "Burma",
+    "codes": [
+      "MMR"
+    ],
+    "source": "Japanese capture of Rangoon, 8 March 1942. Rangoon retaken 3 May 1945.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-03",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "British Burma.",
+        "source": "United Kingdom declaration of war on Germany, 3 September 1939.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1942-03-08",
+        "side": "japanese",
+        "status": "occupied",
+        "note": "Rangoon falls.",
+        "source": "Japanese capture of Rangoon, 8 March 1942.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1945-05-03",
+        "side": "allied",
+        "status": "occupied",
+        "note": "Rangoon retaken.",
+        "source": "Allied recapture of Rangoon, 3 May 1945.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "thailand",
+    "name": "Thailand",
+    "codes": [
+      "THA"
+    ],
+    "source": "Thailand armistice with Japan, 8 December 1941. Alliance 21 December 1941.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Neutral.",
+        "source": "Thai neutrality, 1939–1941.",
+        "confidence": "high"
+      },
+      {
+        "date": "1941-12-21",
+        "side": "japanese",
+        "status": "cobelligerent",
+        "note": "Alliance with Japan.",
+        "source": "Thai–Japanese alliance, 21 December 1941.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1945-08-16",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "Thailand peels off the Japanese alliance after the Japanese surrender.",
+        "source": "Thai peace declaration, 16 August 1945.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "french-indochina",
+    "name": "French Indochina",
+    "codes": [
+      "VNM",
+      "LAO",
+      "KHM"
+    ],
+    "source": "Japanese occupation of Indochina, September 1940 / July 1941.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "French colony.",
+        "source": "French Indochina, 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1940-09-22",
+        "side": "japanese",
+        "status": "occupied",
+        "note": "Japanese entry into Tonkin. Schematic for Vietnam, Laos, and Cambodia shapes.",
+        "source": "Japanese invasion of French Indochina, 22 September 1940.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1945-09-02",
+        "side": "allied",
+        "status": "occupied",
+        "note": "Japanese surrender. Post-war control is not a new pin set.",
+        "source": "Japanese Instrument of Surrender, 2 September 1945.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "malaya",
+    "name": "Malaya",
+    "codes": [
+      "MYS"
+    ],
+    "source": "Fall of Singapore, 15 February 1942. Japanese surrender 1945.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-03",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "British Malaya. Modern Malaysia shape is schematic.",
+        "source": "United Kingdom declaration of war on Germany, 3 September 1939.",
+        "confidence": "low"
+      },
+      {
+        "date": "1942-02-15",
+        "side": "japanese",
+        "status": "occupied",
+        "note": "Singapore surrenders.",
+        "source": "Fall of Singapore, 15 February 1942.",
+        "confidence": "high"
+      },
+      {
+        "date": "1945-09-02",
+        "side": "allied",
+        "status": "occupied",
+        "note": "Japanese surrender.",
+        "source": "Japanese Instrument of Surrender, 2 September 1945.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "dutch-east-indies",
+    "name": "Dutch East Indies",
+    "codes": [
+      "IDN"
+    ],
+    "source": "Dutch surrender on Java, 9 March 1942. Japanese surrender 1945.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "Dutch colony.",
+        "source": "Netherlands East Indies, 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1942-03-09",
+        "side": "japanese",
+        "status": "occupied",
+        "note": "Dutch forces on Java surrender.",
+        "source": "Japanese occupation of the Dutch East Indies, 9 March 1942.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1945-09-02",
+        "side": "allied",
+        "status": "occupied",
+        "note": "Japanese surrender. Indonesian revolution is not drawn.",
+        "source": "Japanese Instrument of Surrender, 2 September 1945.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "philippines",
+    "name": "Philippines",
+    "codes": [
+      "PHL"
+    ],
+    "source": "Fall of Corregidor, 6 May 1942. MacArthur returns October 1944; Japanese surrender 1945.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "US Commonwealth.",
+        "source": "Commonwealth of the Philippines, 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1942-05-06",
+        "side": "japanese",
+        "status": "occupied",
+        "note": "Corregidor surrenders.",
+        "source": "Fall of Corregidor, 6 May 1942.",
+        "confidence": "high"
+      },
+      {
+        "date": "1945-02-03",
+        "side": "allied",
+        "status": "occupied",
+        "note": "Battle of Manila opens. Schematic Allied return.",
+        "source": "Battle of Manila, 3 February 1945.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "australia",
+    "name": "Australia",
+    "codes": [
+      "AUS"
+    ],
+    "source": "Australia declares war on Germany, 3 September 1939.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Not yet at war.",
+        "source": "United Kingdom declaration of war on Germany, 3 September 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1939-09-03",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "Australia declares war with Britain.",
+        "source": "United Kingdom declaration of war on Germany, 3 September 1939.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "new-zealand",
+    "name": "New Zealand",
+    "codes": [
+      "NZL"
+    ],
+    "source": "New Zealand declaration of war, 3 September 1939.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Not yet at war.",
+        "source": "United Kingdom declaration of war on Germany, 3 September 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1939-09-03",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "New Zealand declares war with Britain.",
+        "source": "United Kingdom declaration of war on Germany, 3 September 1939.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "united-states",
+    "name": "United States",
+    "codes": [
+      "USA"
+    ],
+    "source": "United States declaration of war on Japan, 8 December 1941.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Neutral. Lend-Lease in 1941 does not flip this fill.",
+        "source": "United States neutrality acts / 1 September 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1941-12-08",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "The United States declares war on Japan and joins the Allies. Britain is already Allied; this is the American entry.",
+        "source": "United States declaration of war on Japan, 8 December 1941.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "canada",
+    "name": "Canada",
+    "codes": [
+      "CAN"
+    ],
+    "source": "Canada declares war on Germany, 10 September 1939.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Not yet at war.",
+        "source": "Canada, 1 September 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1939-09-10",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "Canada declares war on Germany.",
+        "source": "Canadian declaration of war, 10 September 1939.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "iran",
+    "name": "Iran",
+    "codes": [
+      "IRN"
+    ],
+    "source": "Anglo-Soviet invasion of Iran, 25 August 1941.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Neutral.",
+        "source": "Iranian neutrality, 1939–1941.",
+        "confidence": "high"
+      },
+      {
+        "date": "1941-08-25",
+        "side": "allied",
+        "status": "occupied",
+        "note": "Anglo-Soviet invasion.",
+        "source": "Anglo-Soviet invasion of Iran, 25 August 1941.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "iraq",
+    "name": "Iraq",
+    "codes": [
+      "IRQ"
+    ],
+    "source": "Anglo-Iraqi War, May 1941.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "Treaty with Britain.",
+        "source": "Anglo-Iraqi Treaty, 1930 / 1939.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1941-05-02",
+        "side": "axis",
+        "status": "cobelligerent",
+        "note": "Rashid Ali coup; brief war with Britain.",
+        "source": "Anglo-Iraqi War, 2 May 1941.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1941-05-31",
+        "side": "allied",
+        "status": "occupied",
+        "note": "Armistice. British occupation.",
+        "source": "Armistice of Baghdad, 31 May 1941.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "iceland",
+    "name": "Iceland",
+    "codes": [
+      "ISL"
+    ],
+    "source": "British occupation of Iceland, 10 May 1940.",
+    "confidence": "high",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Danish realm, neutral.",
+        "source": "Icelandic neutrality, 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1940-05-10",
+        "side": "allied",
+        "status": "occupied",
+        "note": "Britain occupies Iceland.",
+        "source": "British occupation of Iceland, 10 May 1940.",
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "greenland",
+    "name": "Greenland",
+    "codes": [
+      "GRL"
+    ],
+    "source": "Greenland agreement with the United States, 9 April 1941.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "side": "neutral",
+        "status": "sovereign",
+        "note": "Danish realm.",
+        "source": "Greenland under Denmark, 1939.",
+        "confidence": "high"
+      },
+      {
+        "date": "1940-04-09",
+        "side": "allied",
+        "status": "sovereign",
+        "note": "Denmark occupied; Greenland stays outside German control and later hosts US forces.",
+        "source": "Greenland after 9 April 1940 / agreement of 9 April 1941.",
+        "confidence": "medium"
+      }
+    ]
+  }
+]

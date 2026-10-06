@@ -18,6 +18,7 @@ interface TimelineProps {
   onCampaign: (id: string) => void;
   campaignId: string | null;
   battles: readonly Battle[];
+  onOverview: () => void;
 }
 
 const SPEEDS = [1, 5, 30] as const;
@@ -125,6 +126,9 @@ export function Timeline(props: TimelineProps) {
             </button>
           ))}
         </div>
+        <button type="button" onClick={props.onOverview} aria-label="Zoom out to country occupation">
+          War overview
+        </button>
         <p className="readout" id="date-label">
           {formatStencil(props.date)}
           {campaign ? (

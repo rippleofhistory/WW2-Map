@@ -1,5 +1,6 @@
 import { addDays, formatDisplay } from "../lib/dates.ts";
 import { echelonLabel, formatCoord, sideLabel } from "../lib/format.ts";
+import type { OccupationPlacement } from "../lib/occupation.ts";
 import type { Placement } from "../lib/position.ts";
 import type { Battle, Confidence, FrontLine, Theater, Unit, UnitPosition } from "../types.ts";
 
@@ -24,6 +25,7 @@ interface InspectorProps {
   onClose: () => void;
   onSelectUnit: (id: string) => void;
   taggedUnits: readonly Unit[];
+  occupation: OccupationPlacement | null;
 }
 
 function orderedStops(unit: Unit): UnitPosition[] {
@@ -150,6 +152,34 @@ export function Inspector(props: InspectorProps) {
           </div>
         </div>
       ) : null}
+      {!props.unit && !props.battle && props.occupation ? (
+        <div className="sheet">
+          <p className="badge">OCCUPATION</p>
+          <h3>{props.occupation.state.name}</h3>
+          <p className="lede">{formatDisplay(props.date)}</p>
+          <p className="meta">
+            {props.occupation.point.side} · {props.occupation.point.status}
+          </p>
+          {props.occupation.point.date === props.date ? (
+            <p className="meta">Control keyed to this date.</p>
+          ) : (
+            <p className="meta">
+              Holding {formatDisplay(props.occupation.point.date)}. Country fills keep the last sourced control. No extra dates are invented.
+            </p>
+          )}
+          <p>{props.occupation.point.note}</p>
+          <p className="meta">Confidence: {confidenceText(props.occupation.point.confidence)}</p>
+          <p className="source">
+            <span>Source</span>
+            {props.occupation.point.source}
+          </p>
+          <div className="action-row">
+            <button type="button" onClick={props.onClear}>
+              Clear
+            </button>
+          </div>
+        </div>
+      ) : null}
       {!props.unit && props.battle ? (
         <div className="sheet">
           {props.battle.source === "placeholder pending archive geocoding" ? <p className="badge">PLACEHOLDER</p> : null}
@@ -184,12 +214,15 @@ export function Inspector(props: InspectorProps) {
           </div>
         </div>
       ) : null}
-      {!props.unit && !props.battle ? (
+      {!props.unit && !props.battle && !props.occupation ? (
         <div className="sheet">
           <p className="badge">OVERVIEW</p>
           <h3>{props.theater.label}</h3>
           <p className="lede">{formatDisplay(props.date)}</p>
           <p>{props.unitCount} units on the map for this date and the current filters.</p>
+          <p className="meta">
+            Zoom out below 6, or press War overview, for schematic country occupation from 1939 to 1945. Click a country fill for the sourced control row.
+          </p>
           {props.front ? (
             <>
               <p>{props.front.label}</p>

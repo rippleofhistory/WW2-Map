@@ -29,9 +29,11 @@ import { echelonMark } from "../lib/format.ts";
 import { placeUnit } from "../lib/position.ts";
 import { pathUntil } from "../lib/select.ts";
 import { playClock, subscribePlayClock } from "../state/playClock.ts";
-import type { Battle, CameraCommand, PlaceLabel, PositionStatus, TheaterId, Unit } from "../types.ts";
-import { cssVar, sideColorsFrom } from "../lib/palette.ts";
-import { heightForZoom, layoutUnits, zoomForHeight } from "./markerLayout.ts";
+import type { FeatureCollection, Geometry } from "geojson";
+import type { Battle, CameraCommand, ControlSide, PlaceLabel, PositionStatus, TheaterId, Unit } from "../types.ts";
+import { COLLAPSED_FALLBACK, NEUTRAL_FALLBACK, controlColor, cssVar, sideColorsFrom } from "../lib/palette.ts";
+import { OCCUPATION_MAX_ZOOM, OVERVIEW_CENTER, OVERVIEW_ZOOM } from "../lib/occupation.ts";
+import { heightForZoom, layoutUnits, zoomBandFor, zoomForHeight } from "./markerLayout.ts";
 
 type WorldPoint = ReturnType<typeof Cartesian3.fromDegrees>;
 
@@ -47,6 +49,9 @@ export interface GlobeProps {
   showBattles: boolean;
   showLabels: boolean;
   showFronts: boolean;
+  showOccupation: boolean;
+  occupation: FeatureCollection<Geometry>;
+  selectedRegionId: string | null;
   showGraticule: boolean;
   modernBasemap: boolean;
   alliedLine: [number, number][];
@@ -64,6 +69,7 @@ export interface GlobeProps {
   theaterId: TheaterId;
   onSelectUnit: (id: string) => void;
   onSelectBattle: (id: string) => void;
+  onSelectRegion: (id: string) => void;
   onBackground: () => void;
   onUserDrag: () => void;
   onBindExport: (exportPng: () => string | null) => void;
@@ -80,6 +86,12 @@ function ring(coordinates: [number, number][]): [number, number][] {
   if (!first || !last) return coordinates;
   if (first[0] === last[0] && first[1] === last[1]) return coordinates;
   return [...coordinates, first];
+}
+
+function ringsOf(geometry: Geometry): [number, number][][] {
+  if (geometry.type === "Polygon") return [geometry.coordinates[0] as [number, number][]];
+  if (geometry.type === "MultiPolygon") return geometry.coordinates.map((polygon) => polygon[0] as [number, number][]);
+  return [];
 }
 
 function degrees(line: readonly [number, number][]): WorldPoint[] {
@@ -182,6 +194,7 @@ function frameFor(props: GlobeProps): { lng: number; lat: number; zoom: number }
     const zoom = window.innerWidth < 900 ? Math.max(2, theater.zoom - 1.3) : theater.zoom;
     return { lng: theater.center[0], lat: theater.center[1], zoom };
   }
+  if (props.camera.type === "overview") return { lng: OVERVIEW_CENTER[0], lat: OVERVIEW_CENTER[1], zoom: OVERVIEW_ZOOM };
   if (props.followLng !== undefined && props.followLat !== undefined) {
     return { lng: props.followLng, lat: props.followLat, zoom: 11 };
   }
@@ -214,6 +227,7 @@ export default function GlobeCanvas(props: GlobeProps) {
   const lockSeen = useRef(0);
   const skipImagery = useRef(true);
   const [failed, setFailed] = useState("");
+  const [zoomBand, setZoomBand] = useState(() => zoomBandFor(theaterById(props.theaterId).zoom));
 
   useEffect(() => {
     propsRef.current = props;
@@ -268,7 +282,11 @@ export default function GlobeCanvas(props: GlobeProps) {
       propsRef.current.onUserDrag();
     };
     widget.camera.moveStart.addEventListener(onMove);
-    const onMoved = () => stamp(container, widget);
+    const onMoved = () => {
+      stamp(container, widget);
+      const band = zoomBandFor(zoomOf(widget));
+      setZoomBand((current) => (current === band ? current : band));
+    };
     widget.camera.moveEnd.addEventListener(onMoved);
 
     let width = 0;
@@ -345,6 +363,15 @@ export default function GlobeCanvas(props: GlobeProps) {
     props.frontRing.map((point) => point.join(",")).join(" "),
     props.fullTrack.join(";"),
     props.contrast ? "1" : "0",
+    props.showOccupation ? "1" : "0",
+    props.selectedRegionId ?? "",
+    zoomBand,
+    props.occupation.features
+      .map((feature) => {
+        const row = feature.properties as { iso?: string; side?: string; status?: string } | null;
+        return `${row?.iso ?? ""}:${row?.side ?? ""}:${row?.status ?? ""}`;
+      })
+      .join("|"),
   ].join("|");
 
   useEffect(() => {
@@ -447,6 +474,44 @@ function paint(
   const head = moving?.status === "moving" ? ([moving.lng, moving.lat] as [number, number]) : undefined;
   const travelled = trackUnit ? pathUntil(trackUnit.unit, current.date, head) : current.travelled;
   ensureLine("path-travelled", travelled, gold, current.contrast ? 5 : 3, false);
+  if (current.showOccupation && zoom < OCCUPATION_MAX_ZOOM) {
+    const hostEl = widget.container instanceof Element ? widget.container : document.querySelector(".app");
+    const occPalette = sideColorsFrom(hostEl);
+    const neutral = cssVar(hostEl, "--neutral", NEUTRAL_FALLBACK);
+    const collapsed = cssVar(hostEl, "--collapsed", COLLAPSED_FALLBACK);
+    for (const feature of current.occupation.features) {
+      const row = feature.properties as { id?: string; iso?: string; side?: string; status?: string } | null;
+      const stateId = row?.id;
+      const iso = row?.iso ?? "x";
+      if (!stateId || !row?.side) continue;
+      const fill = Color.fromCssColorString(controlColor(row.side as ControlSide, row.status ?? "sovereign", occPalette, neutral, collapsed)).withAlpha(
+        current.selectedRegionId === stateId ? 0.62 : 0.42,
+      );
+      const parts = ringsOf(feature.geometry);
+      parts.forEach((part, index) => {
+        const id = `occ:${stateId}:${iso}:${index}`;
+        wanted.add(id);
+        const positions = degrees(part);
+        let entity = widget.entities.getById(id);
+        if (!entity) {
+          entity = widget.entities.add({
+            id,
+            polygon: {
+              hierarchy: new PolygonHierarchy(positions),
+              material: fill,
+              outline: false,
+            },
+          });
+        } else if (entity.polygon) {
+          entity.polygon.material = new ColorMaterialProperty(fill);
+          if (entity.polygon.hierarchy instanceof ConstantProperty) entity.polygon.hierarchy.setValue(new PolygonHierarchy(positions));
+          else entity.polygon.hierarchy = new ConstantProperty(new PolygonHierarchy(positions));
+        }
+        clicks.set(id, () => current.onSelectRegion(stateId));
+      });
+    }
+  }
+
   if (current.showFronts) {
     ensureLine("front-allied", current.alliedLine, palette.allied, fat, true);
     ensureLine("front-axis", current.axisLine, palette.axis, fat, true);

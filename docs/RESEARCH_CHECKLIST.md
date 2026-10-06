@@ -1,5 +1,7 @@
 # Research checklist
 
+Occupation fills (`public/data/world/occupation.json`) are schematic modern-border country control. Add a row only with `date | side | status | note | source | confidence`. No source, no fill change. Do not interpolate a monthly front across Ukraine or France.
+
 Starter pack for Easy Company, Sherwood Rangers Yeomanry, and 2nd SS Das Reich. Rule for every new row: `date | place | lat | lng | note | source | confidence`. No source, no pin. Do not invent extra dates.
 
 The live files are `public/data/normandy/units.json`, `battles.json`, `fronts.json`, and `theaters.json`. Field definitions are in `docs/SCHEMA.md`.

@@ -59,3 +59,32 @@ Array. Daily theaters use `allied` and `axis` polylines of `[lng, lat]`. Weekly 
 ## theaters.json
 
 One object: `id`, `label`, `center`, `zoom`, `bounds` `[west, south, east, north]`, `start`, `end`, `frontCadence`, `disclaimer`. Bounds aim the default camera. Following a unit may fly outside them.
+
+## world/occupation.json and world/regions.geojson
+
+Zoom-out country fills. Not unit pins. `regions.geojson` is Natural Earth 110m with modern borders used as a schematic canvas. `occupation.json` is an array of states:
+
+```json
+{
+  "id": "france",
+  "name": "France",
+  "codes": ["FRA"],
+  "source": "Franco-German Armistice, 22 June 1940.",
+  "confidence": "high",
+  "track": [
+    {
+      "date": "1940-06-22",
+      "side": "axis",
+      "status": "occupied",
+      "note": "Armistice. Occupied zone and Vichy.",
+      "source": "Franco-German Armistice, 22 June 1940.",
+      "confidence": "high"
+    }
+  ]
+}
+```
+
+`side`: `allied` | `axis` | `soviet` | `japanese` | `neutral`  
+`status`: `sovereign` | `occupied` | `puppet` | `cobelligerent` | `collapsed`
+
+The player keeps the last sourced row on or before the selected date. Missing days do not invent a new control. Fills hide above zoom 6.25. Britain is Allied from 3 September 1939. The United States joins on 8 December 1941.

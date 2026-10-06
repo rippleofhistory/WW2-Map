@@ -25,6 +25,7 @@ interface State {
   view: MapView;
   compareDate: string | null;
   contrast: boolean;
+  regionId: string | null;
 }
 
 type Action =
@@ -63,7 +64,9 @@ type Action =
     }
   | { type: "setView"; view: MapView }
   | { type: "setCompare"; date: string | null }
-  | { type: "setContrast"; value: boolean };
+  | { type: "setContrast"; value: boolean }
+  | { type: "selectRegion"; id: string }
+  | { type: "overview" };
 
 function withDate(state: State, date: string, playing: boolean, keepSegment = false): State {
   const sameBattle = state.battleDate === date;
@@ -130,6 +133,7 @@ function reducer(state: State, action: Action): State {
         unitId: action.id,
         battleId: null,
         battleDate: null,
+        regionId: null,
         cameraLock: true,
         lockNonce: state.lockNonce + 1,
         campaignId: null,
@@ -145,6 +149,7 @@ function reducer(state: State, action: Action): State {
         unitId: null,
         battleId: action.id,
         battleDate: action.date,
+        regionId: null,
         cameraLock: false,
         campaignId: null,
         playUntil: null,
@@ -165,6 +170,7 @@ function reducer(state: State, action: Action): State {
         unitId: null,
         battleId: action.id,
         battleDate: action.date,
+        regionId: null,
         cameraLock: false,
         campaignId: null,
         playUntil: null,
@@ -177,8 +183,22 @@ function reducer(state: State, action: Action): State {
         },
       };
     case "clear":
-      if (!state.unitId && !state.battleId) return state;
-      return { ...state, unitId: null, battleId: null, battleDate: null, cameraLock: false };
+      if (!state.unitId && !state.battleId && !state.regionId) return state;
+      return { ...state, unitId: null, battleId: null, battleDate: null, regionId: null, cameraLock: false };
+    case "selectRegion":
+      if (state.regionId === action.id && !state.unitId && !state.battleId) return state;
+      return { ...state, regionId: action.id, unitId: null, battleId: null, battleDate: null, cameraLock: false };
+    case "overview":
+      return {
+        ...state,
+        unitId: null,
+        battleId: null,
+        battleDate: null,
+        cameraLock: false,
+        campaignId: null,
+        playUntil: null,
+        camera: { type: "overview", nonce: state.camera.nonce + 1 },
+      };
     case "lock":
       if (state.cameraLock === action.value) return state;
       return {
@@ -303,7 +323,8 @@ function createState(): State {
     cameraLock: url.unitId !== null,
     lockNonce: 1,
     camera: url.unitId ? { type: "none", nonce: 1 } : { type: "theater", id: url.theater, nonce: 1 },
-    layers: { fronts: true, units: true, battles: embed.battles !== "off", labels: true, modernBasemap: true },
+    layers: { fronts: true, units: true, battles: embed.battles !== "off", labels: true, modernBasemap: true, occupation: true },
+    regionId: null,
     filters: { query: "", side: "all", nation: "all", echelon: "all" },
     campaignId: url.campaignId,
     playUntil: url.playUntil,
@@ -433,6 +454,8 @@ export function useSituation() {
       });
     },
     clearSelection: () => dispatch({ type: "clear" }),
+    selectRegion: (id: string) => dispatch({ type: "selectRegion", id }),
+    showOverview: () => dispatch({ type: "overview" }),
     setCameraLock: (value: boolean) => dispatch({ type: "lock", value }),
     followSelected: () => dispatch({ type: "follow" }),
     toggleLayer: (layer: keyof Layers) => dispatch({ type: "layer", layer }),

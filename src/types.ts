@@ -1,5 +1,10 @@
 export type Side = "allied" | "axis" | "soviet" | "japanese";
 
+/** Country fill at zoom-out. Neutral is not a unit side. */
+export type ControlSide = Side | "neutral";
+
+export type ControlStatus = "sovereign" | "occupied" | "puppet" | "cobelligerent" | "collapsed";
+
 export type Echelon =
   | "army"
   | "corps"
@@ -123,6 +128,7 @@ export interface Layers {
   battles: boolean;
   labels: boolean;
   modernBasemap: boolean;
+  occupation: boolean;
 }
 
 export interface Filters {
@@ -135,4 +141,24 @@ export interface Filters {
 export type CameraCommand =
   | { type: "none"; nonce: number }
   | { type: "theater"; id: TheaterId; nonce: number }
-  | { type: "battle"; lng: number; lat: number; zoom: number; nonce: number };
+  | { type: "battle"; lng: number; lat: number; zoom: number; nonce: number }
+  | { type: "overview"; nonce: number };
+
+/** Schematic country control. Last sourced row on or before the date is current. */
+export interface OccupationPoint {
+  date: string;
+  side: ControlSide;
+  status: ControlStatus;
+  note: string;
+  source: string;
+  confidence: Confidence;
+}
+
+export interface OccupationState {
+  id: string;
+  name: string;
+  codes: string[];
+  source: string;
+  confidence: Confidence;
+  track: OccupationPoint[];
+}
