@@ -1,0 +1,471 @@
+[
+  {
+    "id": "easy-company-506",
+    "name": "Easy Company, 506th PIR",
+    "abbr": "E/506",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "company",
+    "parent": "506th PIR",
+    "theater": "normandy",
+    "source": "Published Brécourt Manor and Carentan locations. Confirm against 506th PIR S-3 / AAR and 101st G-3 (NARA).",
+    "confidence": "medium",
+    "featured": true,
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Brécourt Manor",
+        "lng": -1.226111,
+        "lat": 49.390056,
+        "note": "6 June, Brécourt Manor. The advance then runs Sainte-Marie-du-Mont and Saint-Côme-du-Mont; those days are not pinned until a diary date exists.",
+        "source": "Published Brécourt Manor site 49.390056, -1.226111. Confirm against 506th PIR S-3 / AAR.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-10",
+        "place": "Carentan",
+        "lng": -1.2464,
+        "lat": 49.3036,
+        "note": "Carentan, 10 June. Same town through 12 June.",
+        "source": "Published commune location, Carentan. Confirm against 506th PIR S-3 / AAR.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-11",
+        "place": "Carentan",
+        "lng": -1.2464,
+        "lat": 49.3036,
+        "note": "Carentan, 11 June.",
+        "source": "Published commune location, Carentan. Confirm against 506th PIR S-3 / AAR.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-12",
+        "place": "Carentan",
+        "lng": -1.2464,
+        "lat": 49.3036,
+        "note": "Carentan, 12 June.",
+        "source": "Published commune location, Carentan. Confirm against 506th PIR S-3 / AAR.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-13",
+        "place": "Bloody Gulch",
+        "lng": -1.268,
+        "lat": 49.292,
+        "note": "Bloody Gulch, south-west of Carentan, 13 June.",
+        "source": "Published location of the Méautis / Bloody Gulch fighting south-west of Carentan. Confirm against 506th PIR S-3 / AAR.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "sherwood-rangers-yeomanry",
+    "name": "Sherwood Rangers Yeomanry",
+    "abbr": "SRY",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "8th Armoured Brigade",
+    "theater": "normandy",
+    "source": "Published Gold / Bayeux / Point 103 locations. Confirm against TNA WO 171 SRY and 8th Armoured Brigade diaries. Not the regiment at Villers-Bocage.",
+    "confidence": "medium",
+    "featured": true,
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Gold Jig (Asnelles / Le Hamel)",
+        "lng": -0.571,
+        "lat": 49.341,
+        "note": "6 June, Gold sector Jig, Asnelles / Le Hamel. A Squadron was first into Bayeux; DD squadrons stay distinct on 6–7 June if squadron files are added.",
+        "source": "Published location of Le Hamel / Gold Jig. Confirm against TNA WO 171 SRY war diary.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-07",
+        "place": "Bayeux",
+        "lng": -0.7039,
+        "lat": 49.2761,
+        "note": "7 June, Bayeux. No 8 June row: hold this point as last reported.",
+        "source": "Published commune location, Bayeux. Confirm against TNA WO 171 SRY war diary.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-09",
+        "place": "Point 103 / Saint-Pierre",
+        "lng": -0.622,
+        "lat": 49.186,
+        "note": "9 June, Point 103 / Saint-Pierre (Calvados), north of Tilly-sur-Seulles.",
+        "source": "Published location of Point 103 near Saint-Pierre, Calvados. Confirm against TNA WO 171 SRY and 8th Armoured Brigade diaries.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-10",
+        "place": "Point 103 / Saint-Pierre",
+        "lng": -0.622,
+        "lat": 49.186,
+        "note": "10 June, Point 103 / Saint-Pierre.",
+        "source": "Published location of Point 103 near Saint-Pierre, Calvados. Confirm against TNA WO 171 SRY and 8th Armoured Brigade diaries.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-11",
+        "place": "Point 103 / Saint-Pierre",
+        "lng": -0.622,
+        "lat": 49.186,
+        "note": "11 June, Point 103 / Saint-Pierre. Laycock is killed at Saint-Pierre on this date.",
+        "source": "Published location of Point 103 near Saint-Pierre, Calvados. Confirm against TNA WO 171 SRY war diary.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-12",
+        "place": "Point 103 / Saint-Pierre",
+        "lng": -0.622,
+        "lat": 49.186,
+        "note": "12 June, Point 103 / Saint-Pierre.",
+        "source": "Published location of Point 103 near Saint-Pierre, Calvados. Confirm against TNA WO 171 SRY and 8th Armoured Brigade diaries.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-13",
+        "place": "Point 103 / Saint-Pierre",
+        "lng": -0.622,
+        "lat": 49.186,
+        "note": "13 June, still Point 103 / Saint-Pierre. This is not Villers-Bocage; 4th County of London Yeomanry and s.SS-Pz.Abt. 101 are the Villers-Bocage tags.",
+        "source": "Published location of Point 103 near Saint-Pierre, Calvados. Confirm against TNA WO 171 SRY war diary.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "de-2-ss-panzer",
+    "name": "2nd SS Panzer Division Das Reich",
+    "abbr": "2 SS",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "parent": "Not in this sample",
+    "theater": "normandy",
+    "source": "Published locations of Montauban, Tulle, and Oradour-sur-Glane. Confirm against division KTB / Gliederung. Do not park this unit in the bocage on 6 June.",
+    "confidence": "medium",
+    "featured": true,
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Montauban",
+        "lng": 1.3542,
+        "lat": 44.0171,
+        "note": "Still at Montauban on D-Day. The march north starts 8 June. No 7 or 8 June town row.",
+        "source": "Published commune location, Montauban. Confirm against Das Reich KTB.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-09",
+        "place": "Tulle",
+        "lng": 1.7717,
+        "lat": 45.2676,
+        "note": "9 June, Tulle. Keep Tulle off the Oradour and Mortain markers.",
+        "source": "Published commune location, Tulle. Confirm against Das Reich KTB.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-10",
+        "place": "Oradour-sur-Glane",
+        "lng": 1.0325,
+        "lat": 45.9289,
+        "note": "10 June, Oradour-sur-Glane. I./Der Führer only. Split Der Führer / Deutschland / the panzer regiment once column dates exist. Loire crossings from 13 June are not pinned until a named crossing is sourced. First Normandy fighting is later in the month.",
+        "source": "Published location of Oradour-sur-Glane. Confirm against I./Der Führer records. Do not treat this pin as the whole division.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-101st-airborne",
+    "name": "101st Airborne Division",
+    "abbr": "101 AB",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "Not in this sample",
+    "theater": "normandy",
+    "source": "Published Sainte-Marie-du-Mont and Carentan locations. Confirm against 101st G-3.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Sainte-Marie-du-Mont",
+        "lng": -1.2256,
+        "lat": 49.3786,
+        "note": "6 June, Utah hinterland around Sainte-Marie-du-Mont. Coarser division pin.",
+        "source": "Published commune location, Sainte-Marie-du-Mont. Confirm against 101st G-3.",
+        "confidence": "low"
+      },
+      {
+        "date": "1944-06-12",
+        "place": "Carentan",
+        "lng": -1.2464,
+        "lat": 49.3036,
+        "note": "12 June, Carentan. Coarser division pin.",
+        "source": "Published commune location, Carentan. Confirm against 101st G-3.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "us-506-pir",
+    "name": "506th PIR",
+    "abbr": "506 PIR",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "101st Airborne Division",
+    "theater": "normandy",
+    "source": "Published DZ C / Sainte-Marie-du-Mont and Carentan locations. Confirm against 506th S-3 / AAR.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Drop Zone C / Sainte-Marie-du-Mont",
+        "lng": -1.217,
+        "lat": 49.395,
+        "note": "6 June, Drop Zone C area, Sainte-Marie-du-Mont. Coarser regiment pin. Next research pins: Upottery, Hiesville, Dead Man's Corner.",
+        "source": "Published location of Drop Zone C near Sainte-Marie-du-Mont. Confirm against 506th PIR S-3 / AAR.",
+        "confidence": "low"
+      },
+      {
+        "date": "1944-06-12",
+        "place": "Carentan",
+        "lng": -1.2464,
+        "lat": 49.3036,
+        "note": "12 June, Carentan. Coarser regiment pin.",
+        "source": "Published commune location, Carentan. Confirm against 506th PIR S-3 / AAR.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "us-1st-infantry",
+    "name": "US 1st Infantry Division",
+    "abbr": "1 INF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "Not in this sample",
+    "theater": "normandy",
+    "source": "Published Omaha / Saint-Laurent-sur-Mer location. Confirm against 1st Infantry Division G-3.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Omaha / Saint-Laurent-sur-Mer",
+        "lng": -0.877,
+        "lat": 49.3594,
+        "note": "6 June, Omaha Beach sector, Saint-Laurent-sur-Mer. Coarser division pin. No extra inland dates until sourced.",
+        "source": "Published commune location, Saint-Laurent-sur-Mer. Confirm against 1st Infantry Division G-3.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "british-3rd-division",
+    "name": "British 3rd Division",
+    "abbr": "3 DIV",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "Not in this sample",
+    "theater": "normandy",
+    "source": "Published Sword / Hermanville-sur-Mer location. Confirm against TNA WO 171 3rd Division war diary.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Sword / Hermanville-sur-Mer",
+        "lng": -0.316,
+        "lat": 49.287,
+        "note": "6 June, Sword sector, Hermanville-sur-Mer. Coarser division pin.",
+        "source": "Published commune location, Hermanville-sur-Mer. Confirm against TNA WO 171 3rd Division war diary.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "british-50th-division",
+    "name": "British 50th Division",
+    "abbr": "50 DIV",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "Not in this sample",
+    "theater": "normandy",
+    "source": "Published Gold and Bayeux locations. Confirm against TNA WO 171 50th Division war diary.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Gold",
+        "lng": -0.54,
+        "lat": 49.338,
+        "note": "6 June, Gold sector. Coarser division pin.",
+        "source": "Published Gold Beach sector location. Confirm against TNA WO 171 50th Division war diary.",
+        "confidence": "low"
+      },
+      {
+        "date": "1944-06-07",
+        "place": "Bayeux",
+        "lng": -0.7039,
+        "lat": 49.2761,
+        "note": "7 June, Bayeux. Coarser division pin.",
+        "source": "Published commune location, Bayeux. Confirm against TNA WO 171 50th Division war diary.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "british-7th-armoured",
+    "name": "7th Armoured Division",
+    "abbr": "7 ARMD",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "Not in this sample",
+    "theater": "normandy",
+    "source": "Published Gold landing and Villers-Bocage locations. Confirm against TNA WO 171 7th Armoured Division war diary. 4th County of London Yeomanry is the Villers-Bocage regiment pin.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-07",
+        "place": "Gold",
+        "lng": -0.53,
+        "lat": 49.34,
+        "note": "7 June, landing in the Gold sector. Coarser division pin. Not ashore on 6 June.",
+        "source": "Published Gold Beach sector location. Confirm against TNA WO 171 7th Armoured Division war diary.",
+        "confidence": "low"
+      },
+      {
+        "date": "1944-06-13",
+        "place": "Villers-Bocage",
+        "lng": -0.655,
+        "lat": 49.078,
+        "note": "13 June, Villers-Bocage at division resolution. The regiment pin is 4th County of London Yeomanry.",
+        "source": "Published commune location, Villers-Bocage. Confirm against TNA WO 171 7th Armoured Division war diary.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "canadian-3rd-division",
+    "name": "3rd Canadian Division",
+    "abbr": "3 Cdn",
+    "nation": "Canada",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "Not in this sample",
+    "theater": "normandy",
+    "source": "Published Juno / Courseulles-sur-Mer location. Confirm against 3rd Canadian Division war diary.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Juno / Courseulles-sur-Mer",
+        "lng": -0.4583,
+        "lat": 49.3356,
+        "note": "6 June, Juno sector, Courseulles-sur-Mer. Coarser division pin.",
+        "source": "Published commune location, Courseulles-sur-Mer. Confirm against 3rd Canadian Division war diary.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "12th-ss",
+    "name": "12th SS Panzer Division",
+    "abbr": "12 SS",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "parent": "Not in this sample",
+    "theater": "normandy",
+    "source": "Published Authie location for 7 June contact. No 6 June lodgement pin.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-07",
+        "place": "Authie",
+        "lng": -0.401,
+        "lat": 49.207,
+        "note": "7 June, Authie, north of Caen. Hidden on 6 June because there is no sourced lodgement row that day.",
+        "source": "Published commune location, Authie. Confirm against 12th SS records.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "21st-panzer",
+    "name": "21st Panzer Division",
+    "abbr": "21 PZ",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "parent": "Not in this sample",
+    "theater": "normandy",
+    "source": "Published Caen-south location for the 6 June counter-attack. Confirm against 21st Panzer KTB.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Caen",
+        "lng": -0.37,
+        "lat": 49.181,
+        "note": "6 June, south of Caen, the division that counter-attacked toward the coast. Coarser division pin.",
+        "source": "Published commune location, Caen. Confirm against 21st Panzer KTB.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "4th-county-of-london-yeomanry",
+    "name": "4th County of London Yeomanry",
+    "abbr": "4 CLY",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "7th Armoured Division",
+    "theater": "normandy",
+    "source": "Published Villers-Bocage location. This is the yeomanry tagged to 13 June, not the Sherwood Rangers.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-13",
+        "place": "Villers-Bocage",
+        "lng": -0.655,
+        "lat": 49.078,
+        "note": "13 June, Villers-Bocage. Tagged with s.SS-Pz.Abt. 101. Play must not glue the Sherwood Rangers onto this fight.",
+        "source": "Published commune location, Villers-Bocage. Confirm against TNA WO 171 4th County of London Yeomanry war diary.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "de-ss-pz-abt-101",
+    "name": "s.SS-Pz.Abt. 101",
+    "abbr": "sSS 101",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "battalion",
+    "parent": "Not in this sample",
+    "theater": "normandy",
+    "source": "Published Villers-Bocage / Hill 213 location. Wittmann's battalion on 13 June, not 2nd SS Das Reich.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-13",
+        "place": "Villers-Bocage / Hill 213",
+        "lng": -0.63,
+        "lat": 49.09,
+        "note": "13 June, Hill 213 / Villers-Bocage. Tagged with 4th County of London Yeomanry.",
+        "source": "Published location of Hill 213 north-east of Villers-Bocage. Confirm against s.SS-Pz.Abt. 101 records.",
+        "confidence": "medium"
+      }
+    ]
+  }
+]

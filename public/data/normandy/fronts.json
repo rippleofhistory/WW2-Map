@@ -1,0 +1,96 @@
+[
+  {
+    "id": "normandy-1944-06-06",
+    "date": "1944-06-06",
+    "theater": "normandy",
+    "label": "Schematic Allied lodgement at dusk, 6 June 1944",
+    "source": "Schematic trace along Utah–Sword. Not a digitized 12th Army Group situation overlay.",
+    "confidence": "low",
+    "allied": [
+      [-1.175, 49.415],
+      [-0.877, 49.372],
+      [-0.54, 49.345],
+      [-0.458, 49.337],
+      [-0.282, 49.343]
+    ],
+    "axis": [
+      [-1.175, 49.36],
+      [-0.877, 49.32],
+      [-0.54, 49.29],
+      [-0.458, 49.28],
+      [-0.282, 49.29]
+    ]
+  },
+  {
+    "id": "normandy-1944-06-07",
+    "date": "1944-06-07",
+    "theater": "normandy",
+    "label": "Schematic Allied lodgement at dusk, 7 June 1944",
+    "source": "Schematic trace, one day inland including Bayeux. Not a digitized situation overlay.",
+    "confidence": "low",
+    "allied": [
+      [-1.22, 49.39],
+      [-1.05, 49.36],
+      [-0.88, 49.34],
+      [-0.704, 49.276],
+      [-0.46, 49.3],
+      [-0.3, 49.3]
+    ],
+    "axis": [
+      [-1.22, 49.33],
+      [-1.05, 49.3],
+      [-0.88, 49.28],
+      [-0.704, 49.22],
+      [-0.46, 49.24],
+      [-0.3, 49.24]
+    ]
+  },
+  {
+    "id": "normandy-1944-06-10",
+    "date": "1944-06-10",
+    "theater": "normandy",
+    "label": "Schematic Allied lodgement at dusk, 10 June 1944",
+    "source": "Schematic trace including Carentan. Not a digitized situation overlay.",
+    "confidence": "low",
+    "allied": [
+      [-1.32, 49.36],
+      [-1.246, 49.304],
+      [-0.9, 49.3],
+      [-0.7, 49.24],
+      [-0.45, 49.26],
+      [-0.3, 49.26]
+    ],
+    "axis": [
+      [-1.32, 49.28],
+      [-1.246, 49.25],
+      [-0.9, 49.24],
+      [-0.7, 49.18],
+      [-0.45, 49.2],
+      [-0.3, 49.2]
+    ]
+  },
+  {
+    "id": "normandy-1944-06-13",
+    "date": "1944-06-13",
+    "theater": "normandy",
+    "label": "Schematic Allied lodgement at dusk, 13 June 1944",
+    "source": "Schematic trace toward Tilly / Villers-Bocage. Not a digitized situation overlay.",
+    "confidence": "low",
+    "allied": [
+      [-1.32, 49.34],
+      [-1.246, 49.29],
+      [-0.9, 49.26],
+      [-0.655, 49.12],
+      [-0.45, 49.2],
+      [-0.3, 49.22]
+    ],
+    "axis": [
+      [-1.32, 49.26],
+      [-1.246, 49.22],
+      [-0.9, 49.18],
+      [-0.655, 49.05],
+      [-0.45, 49.14],
+      [-0.3, 49.16]
+    ]
+  }
+]
