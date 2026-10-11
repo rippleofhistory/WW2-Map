@@ -551,6 +551,7 @@ a.share-button {
 }
 
 .sheet h3 { font-size: 26px; line-height: 1.15; }
+.sheet a { color: var(--gold); }
 
 .badge {
   display: inline-block;

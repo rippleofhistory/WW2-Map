@@ -1,8 +1,9 @@
 import { addDays, formatDisplay } from "../lib/dates.ts";
 import { echelonLabel, formatCoord, sideLabel } from "../lib/format.ts";
+import { hubUnitUrl, type HubUnitRef } from "../lib/hub.ts";
 import type { OccupationPlacement } from "../lib/occupation.ts";
 import type { Placement } from "../lib/position.ts";
-import type { Battle, Confidence, FrontLine, Theater, Unit, UnitPosition } from "../types.ts";
+import type { Battle, Confidence, FrontLine, Theater, TheaterId, Unit, UnitPosition } from "../types.ts";
 
 function confidenceText(value: Confidence | undefined): string {
   return value ?? "not set";
@@ -26,6 +27,8 @@ interface InspectorProps {
   onSelectUnit: (id: string) => void;
   taggedUnits: readonly Unit[];
   occupation: OccupationPlacement | null;
+  hub: HubUnitRef | null;
+  onHubStop: (date: string, theater: TheaterId | null) => void;
 }
 
 function orderedStops(unit: Unit): UnitPosition[] {
@@ -142,6 +145,13 @@ export function Inspector(props: InspectorProps) {
             <span>Source</span>
             {props.unit.source}
           </p>
+          {props.hub ? (
+            <p className="meta">
+              <a href={hubUnitUrl(props.hub.path)} target="_blank" rel="noopener noreferrer">
+                Open {props.hub.name} on WW2Hub
+              </a>
+            </p>
+          ) : null}
           <div className="action-row">
             <button type="button" aria-pressed={props.cameraLock} onClick={() => props.onLock(!props.cameraLock)}>
               {props.cameraLock ? "Camera locked" : "Lock camera"}
@@ -152,7 +162,55 @@ export function Inspector(props: InspectorProps) {
           </div>
         </div>
       ) : null}
-      {!props.unit && !props.battle && props.occupation ? (
+      {!props.unit && props.hub ? (
+        <div className="sheet">
+          <p className="badge">{props.hub.plotted ? "WW2HUB UNIT" : "HUB REFERENCE"}</p>
+          <h3>{props.hub.name}</h3>
+          <p className="lede">
+            {[props.hub.nation, props.hub.branch].filter(Boolean).join(" · ") || "WW2Hub unit"}
+          </p>
+          <p>
+            {props.hub.plotted
+              ? "This formation has a sourced track on the map. Use the dated stops to jump."
+              : "No sourced pin for this unit yet. The map holds country occupation on the selected date. Battle dates below jump the war. No extra coordinates are invented."}
+          </p>
+          <section className="stops" aria-label="WW2Hub path">
+            <h3>Path through the war</h3>
+            {props.hub.battles.length === 0 ? (
+              <p className="meta">No dated battles are linked on WW2Hub yet.</p>
+            ) : (
+              <ol>
+                {props.hub.battles.map((stop) => {
+                  const current = stop.date === props.date;
+                  return (
+                    <li key={`${stop.id}:${stop.date}`}>
+                      <button type="button" data-hub-stop={stop.date} onClick={() => props.onHubStop(stop.date, stop.mapTheater)}>
+                        <span className="stop-date">{formatDisplay(stop.date)}</span>
+                        <span className="stop-meta">
+                          {stop.name}
+                          {stop.location ? ` · ${stop.location}` : ""}
+                          {current ? " · This day" : ""}
+                        </span>
+                      </button>
+                    </li>
+                  );
+                })}
+              </ol>
+            )}
+          </section>
+          <p className="meta">
+            <a href={hubUnitUrl(props.hub.path)} target="_blank" rel="noopener noreferrer">
+              Open this unit on WW2Hub
+            </a>
+          </p>
+          <div className="action-row">
+            <button type="button" onClick={props.onClear}>
+              Clear
+            </button>
+          </div>
+        </div>
+      ) : null}
+      {!props.unit && !props.hub && !props.battle && props.occupation ? (
         <div className="sheet">
           <p className="badge">OCCUPATION</p>
           <h3>{props.occupation.state.name}</h3>
@@ -214,7 +272,7 @@ export function Inspector(props: InspectorProps) {
           </div>
         </div>
       ) : null}
-      {!props.unit && !props.battle && !props.occupation ? (
+      {!props.unit && !props.hub && !props.battle && !props.occupation ? (
         <div className="sheet">
           <p className="badge">OVERVIEW</p>
           <h3>{props.theater.label}</h3>

@@ -5,7 +5,7 @@ import { Timeline } from "./components/Timeline.tsx";
 import { TopBar } from "./components/TopBar.tsx";
 import { CAMPAIGNS } from "./data/campaigns.ts";
 import { CAMPAIGN_PRESETS } from "./data/presets.ts";
-import { isFeaturedUnit } from "./data/catalog.ts";
+import { hubIdForMap, isFeaturedUnit, mapIdForHub } from "./data/catalog.ts";
 import { PLACEHOLDER_SOURCE } from "./data/sample.ts";
 import { theaterById } from "./data/theaters.ts";
 import { SAMPLE_END, SAMPLE_START, WAR_DAYS, dateFromIndex, dayIndex, formatDisplay } from "./lib/dates.ts";
@@ -13,6 +13,7 @@ import { placeUnit, type Placement } from "./lib/position.ts";
 import { occupationById, occupationWatch, paintOccupation } from "./lib/occupation.ts";
 import { battlesForTheater, filterUnits, frontForDate, labelsForTheater, pathUntil } from "./lib/select.ts";
 import { readEmbedOptions, postMapMessage } from "./lib/embed.ts";
+import { fetchHubUnit, isHubOrigin, readHubMessage, stopForDate, type HubUnitRef } from "./lib/hub.ts";
 import { readUrl } from "./lib/url.ts";
 import { MapCanvas } from "./map/MapCanvas.tsx";
 import { useSituation } from "./state/useSituation.ts";
@@ -107,6 +108,9 @@ export default function App({ embed = false }: { embed?: boolean }) {
   const globeExport = useRef<(() => string | null) | null>(null);
   const lastAnnounced = useRef(0);
   const actionsRef = useRef(situation);
+  const [hubRef, setHubRef] = useState<HubUnitRef | null>(null);
+  const appliedHub = useRef<string | null>(null);
+  const dateFromQuery = useRef(readUrl(window.location.search).dateFromQuery === true);
   useEffect(() => {
     actionsRef.current = situation;
   });
@@ -215,6 +219,84 @@ export default function App({ embed = false }: { embed?: boolean }) {
     postMapMessage({ type: "dateChange", date: state.date, theater: state.theater, playing: state.playing });
   }, [embed, state.date, state.theater, state.playing]);
 
+  useEffect(() => {
+    const id = state.unitId;
+    if (!id) {
+      appliedHub.current = null;
+      return undefined;
+    }
+    if (data.status === "loading") return undefined;
+    const mapped = data.units.find((unit) => unit.id === id) ?? null;
+    const lookup = mapped ? hubIdForMap(mapped.id) ?? mapped.id : id;
+    let gone = false;
+    fetchHubUnit(lookup).then((ref) => {
+      if (gone) return;
+      const currentDate = actionsRef.current.state.date;
+      if (ref) {
+        const plotted = Boolean(mapped || mapIdForHub(ref.id) || ref.plotted);
+        setHubRef({ ...ref, plotted });
+        if (!mapped && appliedHub.current !== id) {
+          appliedHub.current = id;
+          const date = dateFromQuery.current ? currentDate : (ref.battles[0]?.date ?? currentDate);
+          const stop = stopForDate(ref, date);
+          actionsRef.current.selectHubUnit(ref.id, stop?.mapTheater ?? null, date);
+          setRightOpen(true);
+        }
+        return;
+      }
+      if (!mapped) {
+        setHubRef({
+          id,
+          name: id,
+          nation: "",
+          branch: "",
+          mapId: null,
+          plotted: false,
+          path: `/unit/${encodeURIComponent(id)}`,
+          battles: [],
+        });
+        if (appliedHub.current !== id) {
+          appliedHub.current = id;
+          actionsRef.current.selectHubUnit(id, null, currentDate);
+          setRightOpen(true);
+        }
+      } else {
+        setHubRef(null);
+      }
+    });
+    return () => {
+      gone = true;
+    };
+  }, [state.unitId, data.status, data.units]);
+
+  useEffect(() => {
+    const onMessage = (event: MessageEvent) => {
+      if (!isHubOrigin(event.origin)) return;
+      const message = readHubMessage(event.data);
+      if (!message) return;
+      const api = actionsRef.current;
+      if (message.unit) {
+        const mapId = message.unit.mapId ?? mapIdForHub(message.unit.id);
+        const mapped = mapId ? api.data.units.find((unit) => unit.id === mapId) ?? null : null;
+        setHubRef({ ...message.unit, plotted: Boolean(mapped || message.unit.plotted) });
+        appliedHub.current = message.unit.id;
+        if (mapped) {
+          api.selectUnit(mapped.id);
+          if (message.date) api.scrub(dayIndex(message.date));
+        } else {
+          const date = message.date ?? stopForDate(message.unit, api.state.date)?.date ?? api.state.date;
+          const stop = stopForDate(message.unit, date);
+          api.selectHubUnit(message.unit.id, message.theater ?? stop?.mapTheater ?? null, date);
+        }
+        setRightOpen(true);
+        return;
+      }
+      if (message.date) api.jumpHubStop(message.date, message.theater);
+    };
+    window.addEventListener("message", onMessage);
+    return () => window.removeEventListener("message", onMessage);
+  }, []);
+
   const unitMessage = useRef({ date: state.date, theater: state.theater, name: selectedUnit?.name ?? null });
 
   useEffect(() => {
@@ -307,6 +389,8 @@ export default function App({ embed = false }: { embed?: boolean }) {
       data-off-front={offFront ? "1" : "0"}
       data-occupation={occupationWatch(data.occupation, state.date)}
       data-region={state.regionId ?? ""}
+      data-hub={hubRef?.id ?? ""}
+      data-hub-plotted={hubRef?.plotted ? "1" : "0"}
     >
       <a className="skip" href="#search" onClick={() => setLeftOpen(true)}>
         Skip to unit search
@@ -534,6 +618,12 @@ export default function App({ embed = false }: { embed?: boolean }) {
         <div className="map-caption">
           <p>{state.layers.fronts ? frontMessage : "Positions are approximate and sourced."}</p>
           {offFront ? <p>Not yet on the Normandy front.</p> : null}
+          {state.unitId && hubRef && !selectedUnit ? (
+            <p>
+              {hubRef.name} is referenced from WW2Hub. No sourced pin on this date. Occupation shows who held the country.
+              Battle dates in the inspector jump the war.
+            </p>
+          ) : null}
           {state.layers.occupation ? (
             <p>Country occupation is schematic and appears below zoom 6. Play the war from 1939 to 1945 to watch control change. Britain is Allied from 3 September 1939; the United States joins on 8 December 1941.</p>
           ) : null}
@@ -546,7 +636,7 @@ export default function App({ embed = false }: { embed?: boolean }) {
             {data.message}
           </p>
         ) : null}
-        {comingSoon ? (
+        {comingSoon && occupation.features.length === 0 && !(state.unitId && hubRef) ? (
           <div className="empty-banner">
             <p>Data coming soon</p>
             {theater.frontCadence === "weekly" ? (
@@ -621,6 +711,8 @@ export default function App({ embed = false }: { embed?: boolean }) {
               : []
           }
           occupation={selectedOccupation}
+          hub={state.unitId ? hubRef : null}
+          onHubStop={situation.jumpHubStop}
         />
       </main>
       <p className="disclaimer" role="note">

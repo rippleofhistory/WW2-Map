@@ -7,7 +7,9 @@ import type { MapView, TheaterId } from "../types.ts";
 export interface UrlState {
   theater: TheaterId;
   date: string;
+  dateFromQuery?: boolean;
   unitId: string | null;
+  hubId?: string | null;
   playing: boolean;
   campaignId: string | null;
   playUntil: string | null;
@@ -21,8 +23,10 @@ export function readUrl(search: string): UrlState {
   const theaterParam = params.get("theater");
   let theater: TheaterId = isTheaterId(theaterParam) ? theaterParam : "normandy";
   const dateParam = params.get("date");
-  const date = dateParam && isValidWarDate(dateParam) ? dateParam : SAMPLE_START;
+  const dateFromQuery = Boolean(dateParam && isValidWarDate(dateParam));
+  const date = dateFromQuery && dateParam ? dateParam : SAMPLE_START;
   const unitId = resolveUnitId(params.get("unit"));
+  const hubId = resolveUnitId(params.get("hub")) ?? unitId;
   const campaign = unitId ? null : campaignById(params.get("campaign"));
   if (campaign) theater = campaign.theater;
   const unitTheater = theaterForUnit(unitId);
@@ -32,7 +36,9 @@ export function readUrl(search: string): UrlState {
   return {
     theater,
     date,
+    dateFromQuery,
     unitId,
+    hubId,
     playing: params.get("play") === "1",
     campaignId: campaign?.id ?? null,
     playUntil: campaign?.end ?? null,

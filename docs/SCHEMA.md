@@ -88,3 +88,7 @@ Zoom-out country fills. Not unit pins. `regions.geojson` is Natural Earth 110m w
 `status`: `sovereign` | `occupied` | `puppet` | `cobelligerent` | `collapsed`
 
 The player keeps the last sourced row on or before the selected date. Missing days do not invent a new control. Fills hide above zoom 6.25. Britain is Allied from 3 September 1939. The United States joins on 8 December 1941.
+
+## WW2Hub unit references
+
+`?unit=` accepts a map id or a WW2Hub unit id. Aliases live in `src/data/catalog.ts`. The map fetches `GET {VITE_HUB_URL}/api/map/units/:id` for the Hub path (battle dates and places, no coordinates). A Hub parent page may also `postMessage` `{ source: "ww2hub", type: "showUnit", unit, date }`. Pins stay in `units.json`. Hub dates without a track only move the slider and occupation fills.

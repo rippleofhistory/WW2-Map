@@ -17,6 +17,8 @@ Deep link:
 ?theater=normandy&date=1944-06-06&unit=easy-company-506&play=1
 ```
 
+WW2Hub.net unit pages embed this map with `unit` set to the Hub unit id and `date` set to a battle start. Hub ids such as `us-101st` resolve to a sourced track when one exists. Any other Hub unit still opens: the inspector lists that unit’s dated path, and country occupation shows who held the territory. No pin is drawn without a source. Set `VITE_HUB_URL` (local default `http://127.0.0.1:5173`, production `https://www.ww2hub.net`). Hub sets `NEXT_PUBLIC_MAP_URL` to this origin.
+
 The page fills its frame. Give an embedding iframe a height.
 
 ## Embed

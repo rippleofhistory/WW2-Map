@@ -66,7 +66,9 @@ type Action =
   | { type: "setCompare"; date: string | null }
   | { type: "setContrast"; value: boolean }
   | { type: "selectRegion"; id: string }
-  | { type: "overview" };
+  | { type: "overview" }
+  | { type: "selectHubUnit"; id: string; theater: TheaterId | null; date: string }
+  | { type: "jumpHubStop"; date: string; theater: TheaterId | null };
 
 function withDate(state: State, date: string, playing: boolean, keepSegment = false): State {
   const sameBattle = state.battleDate === date;
@@ -198,6 +200,31 @@ function reducer(state: State, action: Action): State {
         campaignId: null,
         playUntil: null,
         camera: { type: "overview", nonce: state.camera.nonce + 1 },
+      };
+    case "selectHubUnit":
+      return {
+        ...state,
+        theater: action.theater ?? state.theater,
+        date: action.date,
+        unitId: action.id,
+        battleId: null,
+        battleDate: null,
+        regionId: null,
+        cameraLock: false,
+        campaignId: null,
+        playUntil: null,
+        camera: action.theater
+          ? { type: "theater", id: action.theater, nonce: state.camera.nonce + 1 }
+          : { type: "overview", nonce: state.camera.nonce + 1 },
+      };
+    case "jumpHubStop":
+      return {
+        ...withDate(state, action.date, false),
+        theater: action.theater ?? state.theater,
+        cameraLock: false,
+        camera: action.theater
+          ? { type: "theater", id: action.theater, nonce: state.camera.nonce + 1 }
+          : { type: "overview", nonce: state.camera.nonce + 1 },
       };
     case "lock":
       if (state.cameraLock === action.value) return state;
@@ -414,7 +441,18 @@ export function useSituation() {
   useEffect(() => {
     const onPop = () => {
       const next = readUrl(window.location.search);
-      dispatch({ type: "hydrate", ...next });
+      dispatch({
+        type: "hydrate",
+        theater: next.theater,
+        date: next.date,
+        unitId: next.unitId,
+        playing: next.playing,
+        campaignId: next.campaignId,
+        playUntil: next.playUntil,
+        view: next.view,
+        compareDate: next.compareDate,
+        contrast: next.contrast,
+      });
     };
     window.addEventListener("popstate", onPop);
     return () => window.removeEventListener("popstate", onPop);
@@ -439,6 +477,12 @@ export function useSituation() {
       const unit = dataRef.current.units.find((item) => item.id === id);
       if (!unit) return;
       dispatch({ type: "selectUnit", id: unit.id, theater: unit.theater, dates: unit.track.map((point) => point.date) });
+    },
+    selectHubUnit: (id: string, theater: TheaterId | null, date: string) => {
+      dispatch({ type: "selectHubUnit", id, theater, date });
+    },
+    jumpHubStop: (date: string, theater: TheaterId | null) => {
+      dispatch({ type: "jumpHubStop", date, theater });
     },
     selectBattle: (id: string) => {
       const battle = dataRef.current.battles.find((item) => item.id === id);
