@@ -476,6 +476,10 @@ export const MAP_TO_HUB: Record<string, string> = {
   "bletchley-park": "bletchley-park",
   "oss": "oss",
   "fr-bcra": "fr-bcra",
+  "hmcs-haida": "hmcs-haida",
+  "raf-bomber-command": "raf-bomber-command",
+  "de-29-ss-italia": "de-29-ss-italia",
+  "de-34-ss": "de-34-ss",
 };
 
 export const FEATURED_UNIT_IDS = ["easy-company-506", "sherwood-rangers-yeomanry", "de-2-ss-panzer", "de-4th-army"] as const;
@@ -921,6 +925,10 @@ const UNIT_THEATER: Record<string, TheaterId> = {
   "bletchley-park": "nw-europe",
   "oss": "normandy",
   "fr-bcra": "normandy",
+  "hmcs-haida": "normandy",
+  "raf-bomber-command": "nw-europe",
+  "de-29-ss-italia": "italy",
+  "de-34-ss": "nw-europe",
 };
 
 export function resolveUnitId(id: string | null): string | null {

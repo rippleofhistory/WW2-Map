@@ -67,6 +67,16 @@
     "confidence": "low",
     "track": [
       {
+        "date": "1942-05-26",
+        "place": "Ain el Gazala",
+        "lng": 23.357,
+        "lat": 32.147,
+        "theater": "north-africa",
+        "note": "26 May 1942, Ain el Gazala. Gazala with Panzer Army Africa. Tobruk remains the later pin.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
+      },
+      {
         "date": "1942-06-21",
         "place": "Tobruk",
         "lng": 23.9764,
@@ -82,7 +92,7 @@
         "lng": 28.95,
         "lat": 30.8333,
         "theater": "north-africa",
-        "note": "1 July 1942, El Alamein. First Alamein. Same named place as the later October pin. Gazala is not pinned.",
+        "note": "1 July 1942, El Alamein. First Alamein. Same named place as the later October pin.",
         "source": "Published commune location, El Alamein. Confirm against 21st Panzer KTB.",
         "confidence": "low"
       },
@@ -129,6 +139,26 @@
         "note": "9 December 1940, Sidi Barrani. Compass. Coarser division pin.",
         "source": "Published commune location, Sidi Barrani. Confirm against TNA WO 171 7th Armoured Division war diary.",
         "confidence": "low"
+      },
+      {
+        "date": "1942-05-26",
+        "place": "Ain el Gazala",
+        "lng": 23.357,
+        "lat": 32.147,
+        "theater": "north-africa",
+        "note": "26 May 1942, Ain el Gazala. Gazala. Skip Greece (elements only).",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1942-07-01",
+        "place": "El Alamein",
+        "lng": 28.95,
+        "lat": 30.8333,
+        "theater": "north-africa",
+        "note": "1 July 1942, El Alamein. First Alamein. Second Alamein remains 23 October.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
       },
       {
         "date": "1942-10-23",
@@ -776,6 +806,26 @@
         "confidence": "medium"
       },
       {
+        "date": "1943-01-12",
+        "place": "Shlisselburg",
+        "lng": 31.0386,
+        "lat": 59.939,
+        "theater": "eastern-front",
+        "note": "12 January 1943, Shlisselburg. Operation Iskra land corridor. Leningrad remains the siege pin.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-01-14",
+        "place": "Veliky Novgorod",
+        "lng": 31.2755,
+        "lat": 58.5213,
+        "theater": "eastern-front",
+        "note": "14 January 1944, Veliky Novgorod. Leningrad–Novgorod offensive. Siege lift remains 27 January at Leningrad.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
+      },
+      {
         "date": "1944-01-27",
         "place": "Leningrad",
         "lng": 30.3086,
@@ -783,6 +833,16 @@
         "theater": "eastern-front",
         "note": "27 January 1944, Leningrad. Siege lifted.",
         "source": "Published commune location, Saint Petersburg. Confirm against Leningrad Front records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-09-14",
+        "place": "Riga",
+        "lng": 24.1052,
+        "lat": 56.9496,
+        "theater": "eastern-front",
+        "note": "14 September 1944, Riga. Baltic offensive. Coarser front pin on the named city.",
+        "source": "Published named-place location. Confirm against formation records.",
         "confidence": "medium"
       }
     ]
@@ -2234,6 +2294,16 @@
         "note": "8 March 1944, Imphal. Mutaguchi's U-Go. Kohima is not a second pin. Same date as the 14th Army pin.",
         "source": "Published commune location, Imphal. Confirm against 15th Army records.",
         "confidence": "medium"
+      },
+      {
+        "date": "1945-03-04",
+        "place": "Meiktila",
+        "lng": 95.875,
+        "lat": 20.8778,
+        "theater": "burma",
+        "note": "4 March 1945, Meiktila. 15th Army remnants in the Meiktila–Mandalay battles. Rangoon 1942 and Imphal remain earlier pins.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
       }
     ]
   },
@@ -2376,6 +2446,16 @@
         "note": "25 August 1942, Alotau / Milne Bay.",
         "source": "Published named-place location. Confirm against formation records.",
         "confidence": "medium"
+      },
+      {
+        "date": "1943-03-02",
+        "place": "Lae",
+        "lng": 146.9995,
+        "lat": -6.7333,
+        "theater": "pacific",
+        "note": "2 March 1943, Lae. Bismarck Sea convoy bound for 18th Army at the named harbour.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "low"
       },
       {
         "date": "1944-05-27",
@@ -4400,6 +4480,16 @@
         "confidence": "medium"
       },
       {
+        "date": "1942-05-04",
+        "place": "Port Moresby",
+        "lng": 147.1803,
+        "lat": -9.4438,
+        "theater": "pacific",
+        "note": "4 May 1942, Port Moresby. Shōkaku in the Coral Sea covering the named harbour. Pearl Harbor and the Philippine Sea remain other pins.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "low"
+      },
+      {
         "date": "1944-06-19",
         "place": "Saipan",
         "lng": 145.75,
@@ -4986,6 +5076,16 @@
     "confidence": "medium",
     "track": [
       {
+        "date": "1942-05-04",
+        "place": "Port Moresby",
+        "lng": 147.1803,
+        "lat": -9.4438,
+        "theater": "pacific",
+        "note": "4 May 1942, Port Moresby. Yorktown in the Coral Sea covering the named harbour. Midway remains the later pin.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "low"
+      },
+      {
         "date": "1942-06-04",
         "place": "Midway",
         "lng": -177.35,
@@ -5261,6 +5361,16 @@
     "source": "Published commune location, Arromanches. North Cape is not pinned until a named place on that date is sourced. Confirm against Admiralty records.",
     "confidence": "medium",
     "track": [
+      {
+        "date": "1943-12-26",
+        "place": "North Cape",
+        "lng": 25.7836,
+        "lat": 71.1699,
+        "theater": "nw-europe",
+        "note": "26 December 1943, North Cape. Belfast in the action that sank Scharnhorst. Coarser ship pin on the named cape.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "low"
+      },
       {
         "date": "1944-06-06",
         "place": "Arromanches-les-Bains",
@@ -9384,6 +9494,16 @@
         "confidence": "medium"
       },
       {
+        "date": "1942-01-23",
+        "place": "Rabaul",
+        "lng": 152.1681,
+        "lat": -4.1963,
+        "theater": "pacific",
+        "note": "23 January 1942, Rabaul. 4th Fleet South Seas Force takes the named harbour.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
+      },
+      {
         "date": "1942-05-04",
         "place": "Port Moresby",
         "lng": 147.1803,
@@ -9799,6 +9919,16 @@
         "theater": "burma",
         "note": "8 March 1944, Imphal. 33rd Division in U-Go. Coarser division pin.",
         "source": "Published commune location. Confirm against formation records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1945-03-04",
+        "place": "Meiktila",
+        "lng": 95.875,
+        "lat": 20.8778,
+        "theater": "burma",
+        "note": "4 March 1945, Meiktila. 33rd Division remnants in the 1945 withdrawal.",
+        "source": "Published named-place location. Confirm against formation records.",
         "confidence": "medium"
       }
     ]
@@ -13942,6 +14072,146 @@
         "lat": 52.23,
         "theater": "eastern-front",
         "note": "28 September 1939, Warsaw. Kempf with Third Army in the Poland campaign, not 1 September.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "parent": "Not in this sample",
+    "source": "Published commune locations at Dunkirk, Ain el Gazala, and El Alamein, then Gold / Bayeux in the Normandy file. Confirm against TNA WO 171 50th Division war diary.",
+    "confidence": "low",
+    "id": "british-50th-division",
+    "name": "British 50th Division",
+    "abbr": "50 DIV",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "division",
+    "theater": "normandy",
+    "track": [
+      {
+        "date": "1940-05-26",
+        "place": "Dunkirk",
+        "lng": 2.3775,
+        "lat": 51.0383,
+        "theater": "nw-europe",
+        "note": "26 May 1940, Dunkirk. 50th Division with the BEF. Gold Beach remains the Overlord pin.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1942-05-26",
+        "place": "Ain el Gazala",
+        "lng": 23.357,
+        "lat": 32.147,
+        "theater": "north-africa",
+        "note": "26 May 1942, Ain el Gazala. Gazala line. 150th Brigade was destroyed in the cauldron.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1942-10-23",
+        "place": "El Alamein",
+        "lng": 28.95,
+        "lat": 30.8333,
+        "theater": "north-africa",
+        "note": "23 October 1942, El Alamein. Second Alamein. Coarser division pin.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "parent": "Not in this sample",
+    "source": "Published commune location, Arromanches. Atlantic convoy fights stay unpinned. Confirm against RCN records.",
+    "confidence": "medium",
+    "id": "hmcs-haida",
+    "name": "HMCS Haida",
+    "abbr": "HAIDA",
+    "nation": "Canada",
+    "side": "allied",
+    "echelon": "army",
+    "theater": "normandy",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Arromanches-les-Bains",
+        "lng": -0.6211,
+        "lat": 49.34,
+        "theater": "normandy",
+        "note": "6 June 1944, Arromanches. Haida covering the invasion in the Channel. Coarser ship pin on the Gold commune. Atlantic convoy fights stay unpinned.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "parent": "Not in this sample",
+    "source": "Published commune location, London. Individual squadrons are not duplicated. Confirm against Bomber Command records.",
+    "confidence": "low",
+    "id": "raf-bomber-command",
+    "name": "RAF Bomber Command",
+    "abbr": "BC",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "army",
+    "theater": "nw-europe",
+    "track": [
+      {
+        "date": "1940-09-15",
+        "place": "London",
+        "lng": -0.1275,
+        "lat": 51.5072,
+        "theater": "nw-europe",
+        "note": "15 September 1940, London. Battle of Britain Day. Coarser command pin on the capital, same date as Fighter Command. Individual squadrons are not duplicated.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "parent": "Not in this sample",
+    "source": "Published commune location, Anzio. Confirm against Waffen-SS formation records.",
+    "confidence": "medium",
+    "id": "de-29-ss-italia",
+    "name": "29th Waffen Grenadier Division of the SS (Italia)",
+    "abbr": "29 SS",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "theater": "italy",
+    "track": [
+      {
+        "date": "1944-01-22",
+        "place": "Anzio",
+        "lng": 12.629,
+        "lat": 41.447,
+        "theater": "italy",
+        "note": "22 January 1944, Anzio. Italian SS Legion on the Shingle beachhead. The later division number is the Hub card. Bologna is not a second pin.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "parent": "Not in this sample",
+    "source": "Published commune location, Arnhem. Confirm against Waffen-SS formation records.",
+    "confidence": "medium",
+    "id": "de-34-ss",
+    "name": "34th SS Volunteer Grenadier Division Landstorm Nederland",
+    "abbr": "34 SS",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "theater": "nw-europe",
+    "track": [
+      {
+        "date": "1944-09-17",
+        "place": "Arnhem",
+        "lng": 5.9167,
+        "lat": 51.9833,
+        "theater": "nw-europe",
+        "note": "17 September 1944, Arnhem. Landstorm Nederland on the Market Garden card. Coarser division pin on the named commune.",
         "source": "Published named-place location. Confirm against formation records.",
         "confidence": "medium"
       }
