@@ -1,3 +1,4 @@
+import { FRONT_REACH_KM, kmToContact, type LngLat } from "./contact.ts";
 import { addDays, dayIndex } from "./dates.ts";
 import type { PositionStatus, Unit, UnitPosition } from "../types.ts";
 
@@ -45,4 +46,29 @@ export function placeUnit(unit: Unit, date: string, fraction: number, playing: b
   if (!previous) return null;
   const staleDays = dayIndex(date) - dayIndex(previous.date);
   return { lng: previous.lng, lat: previous.lat, status: "last-reported", anchor: previous, toward: null, staleDays };
+}
+
+/**
+ * Last-reported holds the sourced town across a gap. It stays when it is still
+ * within reach of any live schematic (Leningrad during Stalingrad). It drops
+ * once a newer front exists and the pin is more than about 40 km from every
+ * live line. Pins outside the theater frame (Das Reich at Montauban) stay.
+ * No coordinate is invented.
+ */
+export function lastReportedHolds(
+  placement: Placement,
+  fronts: readonly { date: string; contact: LngLat[] }[],
+  bounds: [number, number, number, number] | null,
+): boolean {
+  if (placement.status !== "last-reported") return true;
+  if (bounds) {
+    const [west, south, east, north] = bounds;
+    if (placement.lng < west || placement.lng > east || placement.lat < south || placement.lat > north) {
+      return true;
+    }
+  }
+  const live = fronts.filter((front) => front.contact.length >= 2);
+  if (live.length === 0) return true;
+  if (live.some((front) => kmToContact(placement.lng, placement.lat, front.contact) <= FRONT_REACH_KM)) return true;
+  return !live.some((front) => front.date > placement.anchor.date);
 }

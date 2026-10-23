@@ -1,1 +1,68 @@
-[]
+[
+  {
+    "id": "france-1940-05-10",
+    "date": "1940-05-10",
+    "theater": "nw-europe",
+    "label": "Schematic Meuse crossings, 10 May 1940 (Sedan–Dinant)",
+    "source": "Schematic trace through named communes Sedan and Dinant. Not a digitized sickle-cut overlay.",
+    "confidence": "low",
+    "allied": [
+      [4.88, 49.7034],
+      [4.85, 50.2611]
+    ],
+    "axis": [
+      [4.99, 49.7034],
+      [4.97, 50.2611]
+    ]
+  },
+  {
+    "id": "dunkirk-1940-05-26",
+    "date": "1940-05-26",
+    "theater": "nw-europe",
+    "label": "Schematic Channel pocket, 26 May 1940 (Dunkirk–Calais)",
+    "source": "Schematic trace through named communes Dunkirk and Calais. Not a digitized situation overlay.",
+    "confidence": "low",
+    "allied": [
+      [2.3775, 51.09],
+      [1.8587, 51.0]
+    ],
+    "axis": [
+      [2.3775, 50.99],
+      [1.8587, 50.9]
+    ]
+  },
+  {
+    "id": "market-garden-1944-09-17",
+    "date": "1944-09-17",
+    "theater": "nw-europe",
+    "label": "Schematic Market Garden, 17 September 1944 (Eindhoven–Nijmegen–Arnhem)",
+    "source": "Schematic trace through named communes Eindhoven, Nijmegen, and Arnhem. Not a digitized 21st Army Group overlay.",
+    "confidence": "low",
+    "allied": [
+      [5.42, 51.4416],
+      [5.8, 51.8425],
+      [5.87, 51.9833]
+    ],
+    "axis": [
+      [5.52, 51.4416],
+      [5.9, 51.8425],
+      [5.97, 51.9833]
+    ]
+  },
+  {
+    "id": "bulge-1944-12-19",
+    "date": "1944-12-19",
+    "theater": "nw-europe",
+    "label": "Schematic Ardennes, 19 December 1944 (Bastogne–St. Vith)",
+    "source": "Schematic trace through named communes Bastogne and St. Vith. Not a digitized 12th Army Group overlay.",
+    "confidence": "low",
+    "allied": [
+      [5.66, 50.0042],
+      [6.07, 50.2803]
+    ],
+    "axis": [
+      [5.78, 50.0042],
+      [6.18, 50.2803]
+    ]
+  }
+]

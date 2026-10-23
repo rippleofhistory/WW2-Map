@@ -20,12 +20,15 @@ export function sideLabel(side: Side): string {
 }
 
 export function echelonLabel(echelon: Echelon): string {
+  if (echelon === "army-group") return "Army group";
   return echelon.charAt(0).toUpperCase() + echelon.slice(1);
 }
 
 /** NATO size mark drawn above the abbreviation. Symbology only. */
 export function echelonMark(echelon: Echelon): string {
   switch (echelon) {
+    case "army-group":
+      return "XXXXX";
     case "army":
       return "XXXX";
     case "corps":

@@ -25,72 +25,158 @@
     "id": "normandy-1944-06-07",
     "date": "1944-06-07",
     "theater": "normandy",
-    "label": "Schematic Allied lodgement at dusk, 7 June 1944",
-    "source": "Schematic trace, one day inland including Bayeux. Not a digitized situation overlay.",
+    "label": "Schematic contact, 7 June 1944 (Bayeux)",
+    "source": "Schematic trace through named communes Saint-Côme-du-Mont, Bayeux, Authie, Ranville. Not a digitized situation overlay.",
     "confidence": "low",
     "allied": [
-      [-1.22, 49.39],
-      [-1.05, 49.36],
-      [-0.88, 49.34],
-      [-0.704, 49.276],
-      [-0.46, 49.3],
-      [-0.3, 49.3]
+      [-1.272, 49.336],
+      [-0.7039, 49.2761],
+      [-0.401, 49.207],
+      [-0.256, 49.231]
     ],
     "axis": [
-      [-1.22, 49.33],
-      [-1.05, 49.3],
-      [-0.88, 49.28],
-      [-0.704, 49.22],
-      [-0.46, 49.24],
-      [-0.3, 49.24]
+      [-1.272, 49.276],
+      [-0.7039, 49.2161],
+      [-0.401, 49.147],
+      [-0.256, 49.171]
     ]
   },
   {
     "id": "normandy-1944-06-10",
     "date": "1944-06-10",
     "theater": "normandy",
-    "label": "Schematic Allied lodgement at dusk, 10 June 1944",
-    "source": "Schematic trace including Carentan. Not a digitized situation overlay.",
+    "label": "Schematic contact, 10 June 1944 (Carentan)",
+    "source": "Schematic trace through named communes Carentan, Point 103 / Saint-Pierre, Authie, Ranville. Not a digitized situation overlay.",
     "confidence": "low",
     "allied": [
-      [-1.32, 49.36],
-      [-1.246, 49.304],
-      [-0.9, 49.3],
-      [-0.7, 49.24],
-      [-0.45, 49.26],
-      [-0.3, 49.26]
+      [-1.2464, 49.3036],
+      [-0.622, 49.186],
+      [-0.401, 49.207],
+      [-0.256, 49.231]
     ],
     "axis": [
-      [-1.32, 49.28],
-      [-1.246, 49.25],
-      [-0.9, 49.24],
-      [-0.7, 49.18],
-      [-0.45, 49.2],
-      [-0.3, 49.2]
+      [-1.2464, 49.2436],
+      [-0.622, 49.126],
+      [-0.401, 49.147],
+      [-0.256, 49.171]
     ]
   },
   {
     "id": "normandy-1944-06-13",
     "date": "1944-06-13",
     "theater": "normandy",
-    "label": "Schematic Allied lodgement at dusk, 13 June 1944",
-    "source": "Schematic trace toward Tilly / Villers-Bocage. Not a digitized situation overlay.",
+    "label": "Schematic contact, 13 June 1944 (Carentan–Tilly–Caen)",
+    "source": "Schematic trace through named communes Carentan, Tilly-sur-Seulles, Caen, Ranville. Not a digitized situation overlay.",
     "confidence": "low",
     "allied": [
-      [-1.32, 49.34],
-      [-1.246, 49.29],
-      [-0.9, 49.26],
-      [-0.655, 49.12],
-      [-0.45, 49.2],
-      [-0.3, 49.22]
+      [-1.2464, 49.3036],
+      [-0.626, 49.175],
+      [-0.3636, 49.1814],
+      [-0.256, 49.231]
     ],
     "axis": [
-      [-1.32, 49.26],
-      [-1.246, 49.22],
-      [-0.9, 49.18],
-      [-0.655, 49.05],
-      [-0.45, 49.14],
-      [-0.3, 49.16]
+      [-1.2464, 49.2436],
+      [-0.626, 49.115],
+      [-0.3636, 49.1214],
+      [-0.256, 49.171]
+    ]
+  },
+  {
+    "id": "normandy-1944-07-08",
+    "date": "1944-07-08",
+    "theater": "normandy",
+    "label": "Schematic contact, 8 July 1944 (Charnwood; northern Caen)",
+    "source": "Schematic trace through named communes Carentan, Tilly-sur-Seulles, Caen, Ranville. Not a digitized situation overlay.",
+    "confidence": "low",
+    "allied": [
+      [-1.2464, 49.3036],
+      [-0.626, 49.175],
+      [-0.3636, 49.1814],
+      [-0.256, 49.231]
+    ],
+    "axis": [
+      [-1.2464, 49.2436],
+      [-0.626, 49.115],
+      [-0.3636, 49.1214],
+      [-0.256, 49.171]
+    ]
+  },
+  {
+    "id": "normandy-1944-07-18",
+    "date": "1944-07-18",
+    "theater": "normandy",
+    "label": "Schematic contact, 18 July 1944 (Goodwood; Caen)",
+    "source": "Schematic trace through named communes Carentan, Tilly-sur-Seulles, Caen, Ranville. Not a digitized situation overlay.",
+    "confidence": "low",
+    "allied": [
+      [-1.2464, 49.3036],
+      [-0.626, 49.175],
+      [-0.3636, 49.1814],
+      [-0.256, 49.231]
+    ],
+    "axis": [
+      [-1.2464, 49.2436],
+      [-0.626, 49.115],
+      [-0.3636, 49.1214],
+      [-0.256, 49.171]
+    ]
+  },
+  {
+    "id": "normandy-1944-07-25",
+    "date": "1944-07-25",
+    "theater": "normandy",
+    "label": "Schematic contact, 25 July 1944 (Cobra; Saint-Lô)",
+    "source": "Schematic trace through named communes Saint-Lô, Tilly-sur-Seulles, Caen, Ranville. Not a digitized situation overlay.",
+    "confidence": "low",
+    "allied": [
+      [-1.09, 49.12],
+      [-0.626, 49.175],
+      [-0.3636, 49.1814],
+      [-0.256, 49.231]
+    ],
+    "axis": [
+      [-1.09, 49.06],
+      [-0.626, 49.115],
+      [-0.3636, 49.1214],
+      [-0.256, 49.171]
+    ]
+  },
+  {
+    "id": "normandy-1944-08-01",
+    "date": "1944-08-01",
+    "theater": "normandy",
+    "label": "Schematic contact, 1 August 1944 (Avranches)",
+    "source": "Schematic trace through named communes Avranches, Saint-Lô, Caen, Ranville. Not a digitized situation overlay. Falaise gap is still open; Alençon is not on this line.",
+    "confidence": "low",
+    "allied": [
+      [-1.3556, 48.685],
+      [-1.09, 49.12],
+      [-0.3636, 49.1814],
+      [-0.256, 49.231]
+    ],
+    "axis": [
+      [-1.2756, 48.645],
+      [-1.01, 49.08],
+      [-0.2836, 49.1214],
+      [-0.176, 49.171]
+    ]
+  },
+  {
+    "id": "normandy-1944-08-25",
+    "date": "1944-08-25",
+    "theater": "normandy",
+    "label": "Schematic contact, 25 August 1944 (Seine; Paris–Elbeuf–Rouen)",
+    "source": "Schematic trace through named communes Paris, Elbeuf, Rouen. Not a digitized situation overlay. Germans withdrawing east of the Seine.",
+    "confidence": "low",
+    "allied": [
+      [2.3522, 48.8567],
+      [1.01, 49.29],
+      [1.0886, 49.4428]
+    ],
+    "axis": [
+      [2.4322, 48.8567],
+      [1.09, 49.29],
+      [1.1686, 49.4428]
     ]
   }
 ]

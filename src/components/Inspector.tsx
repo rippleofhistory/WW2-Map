@@ -1,8 +1,10 @@
+import { theaterById } from "../data/theaters.ts";
 import { addDays, formatDisplay } from "../lib/dates.ts";
 import { echelonLabel, formatCoord, sideLabel } from "../lib/format.ts";
 import { hubUnitUrl, type HubUnitRef } from "../lib/hub.ts";
 import type { OccupationPlacement } from "../lib/occupation.ts";
 import type { Placement } from "../lib/position.ts";
+import { pointTheater } from "../lib/select.ts";
 import type { Battle, Confidence, FrontLine, Theater, TheaterId, Unit, UnitPosition } from "../types.ts";
 
 function confidenceText(value: Confidence | undefined): string {
@@ -15,6 +17,7 @@ interface InspectorProps {
   theater: Theater;
   unit: Unit | null;
   placement: Placement | null;
+  drawn: boolean;
   playing: boolean;
   battle: Battle | null;
   front: FrontLine | null;
@@ -29,6 +32,9 @@ interface InspectorProps {
   occupation: OccupationPlacement | null;
   hub: HubUnitRef | null;
   onHubStop: (date: string, theater: TheaterId | null) => void;
+  opponent: Unit | null;
+  onFront: boolean;
+  hasContact: boolean;
 }
 
 function orderedStops(unit: Unit): UnitPosition[] {
@@ -64,6 +70,7 @@ export function Inspector(props: InspectorProps) {
           {props.unit.source === "placeholder pending archive geocoding" ? <p className="badge">PLACEHOLDER</p> : null}
           {placement?.status === "last-reported" ? <p className="badge">Last reported</p> : null}
           {gliding ? <p className="badge">Moving</p> : null}
+          {props.opponent ? <p className="badge">In contact</p> : null}
           <h3>{props.unit.name}</h3>
           <p className="lede">
             {props.unit.nation} · {sideLabel(props.unit.side)} · {echelonLabel(props.unit.echelon)}
@@ -90,6 +97,11 @@ export function Inspector(props: InspectorProps) {
                     {placement.staleDays >= 3 ? ` (${placement.staleDays} days ago)` : ""}. Last reported.
                   </p>
                 ) : null}
+                {placement.status === "last-reported" && !props.drawn ? (
+                  <p>
+                    Not drawn. The schematic front has moved on. No later coordinate is invented.
+                  </p>
+                ) : null}
                 {gliding ? (
                   <p>Playing. The marker glides toward the next sample day. The line is not a located route.</p>
                 ) : null}
@@ -101,6 +113,18 @@ export function Inspector(props: InspectorProps) {
                 </p>
                 {placement.anchor.source ? (
                   <p className="meta">Point source: {placement.anchor.source}</p>
+                ) : null}
+                {props.hasContact && props.opponent ? (
+                  <p>
+                    Counter posted on the front line, in contact with {props.opponent.name}. The sourced place
+                    stays {placement.anchor.place ?? "the last sourced point"}.
+                  </p>
+                ) : null}
+                {props.hasContact && props.onFront && !props.opponent ? (
+                  <p className="meta">On the front line. No opposing pin within pairing distance on this date.</p>
+                ) : null}
+                {props.hasContact && !props.onFront ? (
+                  <p className="meta">Off the schematic contact. The counter stays at the sourced place.</p>
                 ) : null}
               </>
             ) : (
@@ -120,6 +144,8 @@ export function Inspector(props: InspectorProps) {
             <ol>
               {stops.map((point) => {
                 const current = point.date === props.date;
+                const frame = pointTheater(point) ?? props.unit?.theater;
+                const theaterLabel = frame ? theaterById(frame).label : "";
                 return (
                   <li key={`${point.date}:${point.lng}:${point.lat}`}>
                     <button
@@ -127,12 +153,13 @@ export function Inspector(props: InspectorProps) {
                       data-stop={point.date}
                       data-reached={point.date <= props.date ? "1" : "0"}
                       aria-current={current ? "date" : undefined}
-                      aria-label={`${formatDisplay(point.date)}. ${formatCoord(point.lng, point.lat)}. ${stopState(point, props.date, placement)}`}
+                      aria-label={`${formatDisplay(point.date)}. ${point.place ?? ""} ${theaterLabel}. ${formatCoord(point.lng, point.lat)}. ${stopState(point, props.date, placement)}`}
                       onClick={() => props.onShowStop(point.date)}
                     >
                       <span className="stop-date">{formatDisplay(point.date)}</span>
                       <span className="stop-meta">
                         {point.place ? `${point.place} · ` : ""}
+                        {theaterLabel ? `${theaterLabel} · ` : ""}
                         {formatCoord(point.lng, point.lat)} · {stopState(point, props.date, placement)}
                       </span>
                     </button>
@@ -156,6 +183,17 @@ export function Inspector(props: InspectorProps) {
             <button type="button" aria-pressed={props.cameraLock} onClick={() => props.onLock(!props.cameraLock)}>
               {props.cameraLock ? "Camera locked" : "Lock camera"}
             </button>
+            {props.opponent ? (
+              <button
+                type="button"
+                onClick={() => {
+                  const next = props.opponent;
+                  if (next) props.onSelectUnit(next.id);
+                }}
+              >
+                Open {props.opponent.abbr}
+              </button>
+            ) : null}
             <button type="button" onClick={props.onClear}>
               Clear follow
             </button>
@@ -290,10 +328,13 @@ export function Inspector(props: InspectorProps) {
                 <>
                   <p className="meta">
                     {props.front.date === props.date
-                      ? "This is the schematic front keyed to the selected date."
-                      : `The map holds the ${formatDisplay(props.front.date)} front on this date. Keyed fronts are 6, 7, 10 and 13 June.`}
+                      ? "This is the front line keyed to the selected date."
+                      : `The map holds the ${formatDisplay(props.front.date)} front line on this date. Keyed fronts are 6, 7, 10 and 13 June, then 8, 18 and 25 July, 1 and 25 August.`}
                   </p>
-                  <p className="meta">Blue dashed line: placeholder allied trace. Vermillion dashed line: placeholder axis trace.</p>
+                  <p className="meta">
+                    Control areas sit behind the front. Missing held-area polygons use an 80 km buffer (approximate control).
+                    Counters sit on their side of the line. Zoom in to see which unit is fighting which.
+                  </p>
                 </>
               )}
               <p className="meta">Confidence: {confidenceText(props.front.confidence)}</p>
@@ -301,14 +342,15 @@ export function Inspector(props: InspectorProps) {
           ) : props.theater.frontCadence === "weekly" ? (
             <p>This theater is set up for weekly front polygons, not daily battalion pins.</p>
           ) : props.theater.id === "normandy" ? (
-            <p>No placeholder front for this date. The Normandy sample covers 6–13 June 1944.</p>
+            <p>No placeholder front for this date. The first keyed Normandy front line is 6 June 1944.</p>
           ) : (
             <p>No front for this date.</p>
           )}
           <p>Select a unit to fly to it and draw its path from the first sample stop to this date. The side panel lists every dated stop.</p>
           <p className="meta">
-            Divisions show at theater zoom. Regiments, battalions, and companies show after zoom 9. Below zoom 7 the markers
-            cluster.
+            Zoom shows army groups and armies first, then corps, then divisions, then brigades and regiments, then
+            battalions and companies. A selected unit stays on the map and draws its path. Overlapping markers of the
+            same rank hide at theater zoom and cluster when you zoom in.
           </p>
           {props.front ? (
             <p className="source">

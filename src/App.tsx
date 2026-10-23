@@ -1,17 +1,28 @@
 import { Component, lazy, Suspense, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { Inspector } from "./components/Inspector.tsx";
+import { MapPanel } from "./components/MapPanel.tsx";
 import { SearchPanel } from "./components/SearchPanel.tsx";
 import { Timeline } from "./components/Timeline.tsx";
-import { TopBar } from "./components/TopBar.tsx";
 import { CAMPAIGNS } from "./data/campaigns.ts";
 import { CAMPAIGN_PRESETS } from "./data/presets.ts";
 import { hubIdForMap, isFeaturedUnit, mapIdForHub } from "./data/catalog.ts";
 import { PLACEHOLDER_SOURCE } from "./data/sample.ts";
-import { theaterById } from "./data/theaters.ts";
+import { theaterById, theaterCameraZoom } from "./data/theaters.ts";
 import { SAMPLE_END, SAMPLE_START, WAR_DAYS, dateFromIndex, dayIndex, formatDisplay } from "./lib/dates.ts";
-import { placeUnit, type Placement } from "./lib/position.ts";
+import { lastReportedHolds, placeUnit, type Placement } from "./lib/position.ts";
 import { occupationById, occupationWatch, paintOccupation } from "./lib/occupation.ts";
-import { battlesForTheater, filterUnits, frontForDate, labelsForTheater, pathUntil } from "./lib/select.ts";
+import { paintFront, postUnitsOnFronts } from "./lib/contact.ts";
+import {
+  battlesForTheater,
+  filterUnits,
+  frontForDate,
+  frontsForDate,
+  labelsForTheater,
+  pathUntil,
+  theaterAt,
+  unitTheaters,
+  unitsInCampaign,
+} from "./lib/select.ts";
 import { readEmbedOptions, postMapMessage } from "./lib/embed.ts";
 import { fetchHubUnit, isHubOrigin, readHubMessage, stopForDate, type HubUnitRef } from "./lib/hub.ts";
 import { readUrl } from "./lib/url.ts";
@@ -32,15 +43,24 @@ function sameView(a: { lng: number; lat: number; zoom: number }, b: { lng: numbe
   return Math.abs(a.lng - b.lng) < 0.0008 && Math.abs(a.lat - b.lat) < 0.0008 && Math.abs(a.zoom - b.zoom) < 0.02;
 }
 
-function rowsFor(filtered: readonly Unit[], selected: Unit | null, date: string, unitId: string | null) {
+function rowsFor(
+  filtered: readonly Unit[],
+  selected: Unit | null,
+  date: string,
+  unitId: string | null,
+  holds: readonly { date: string; contact: [number, number][] }[],
+  bounds: [number, number, number, number],
+) {
   const rows: { unit: Unit; placement: Placement; selected: boolean }[] = [];
   const seen = new Set<string>();
   const add = (unit: Unit) => {
     if (seen.has(unit.id)) return;
     const placement = placeUnit(unit, date, 0, false);
     if (!placement) return;
+    const selected = unit.id === unitId;
+    if (!selected && !lastReportedHolds(placement, holds, bounds)) return;
     seen.add(unit.id);
-    rows.push({ unit, placement, selected: unit.id === unitId });
+    rows.push({ unit, placement, selected });
   };
   for (const unit of filtered) add(unit);
   if (selected) add(selected);
@@ -97,15 +117,19 @@ export default function App({ embed = false }: { embed?: boolean }) {
   const battleAllowKey = Array.isArray(embedOptions.battles) ? embedOptions.battles.join(",") : "";
   const { state, data } = situation;
   const wide = useWide();
-  const [leftOpen, setLeftOpen] = useState(false);
-  const [rightOpen, setRightOpen] = useState(false);
+  const [leftOpen, setLeftOpen] = useState(true);
+  const [rightOpen, setRightOpen] = useState(() => Boolean(readUrl(window.location.search).unitId) && !hideChrome);
+  const [mapOpen, setMapOpen] = useState(false);
+  const [fullMap, setFullMap] = useState(false);
+  const [showCampaigns, setShowCampaigns] = useState(true);
+  const [showPresets, setShowPresets] = useState(true);
+  const [showTicks, setShowTicks] = useState(true);
+  const fullMapRef = useRef(false);
+  const mapOpenRef = useRef(false);
+  const hideChromeRef = useRef(hideChrome);
   const [live, setLive] = useState("");
-  const [exportNote, setExportNote] = useState("");
   const [linked, setLinked] = useState<LinkedView | null>(null);
-  const [compareStart, setCompareStart] = useState<{ center: [number, number]; zoom: number } | null>(null);
   const linkedRef = useRef<LinkedView | null>(null);
-  const mapExport = useRef<(() => string | null) | null>(null);
-  const globeExport = useRef<(() => string | null) | null>(null);
   const lastAnnounced = useRef(0);
   const actionsRef = useRef(situation);
   const [hubRef, setHubRef] = useState<HubUnitRef | null>(null);
@@ -113,10 +137,17 @@ export default function App({ embed = false }: { embed?: boolean }) {
   const dateFromQuery = useRef(readUrl(window.location.search).dateFromQuery === true);
   useEffect(() => {
     actionsRef.current = situation;
+    fullMapRef.current = fullMap;
+    mapOpenRef.current = mapOpen;
+    hideChromeRef.current = hideChrome;
   });
 
   const theater = data.frames[state.theater] ?? theaterById(state.theater);
-  const front = frontForDate(data.fronts, state.date, state.theater);
+  const activeFronts = useMemo(
+    () => frontsForDate(data.fronts, state.date, state.theater),
+    [data.fronts, state.date, state.theater],
+  );
+  const front = activeFronts[activeFronts.length - 1] ?? frontForDate(data.fronts, state.date, state.theater);
   const occupation = useMemo(
     () => paintOccupation(data.regions, data.occupation, state.date),
     [data.regions, data.occupation, state.date],
@@ -130,8 +161,8 @@ export default function App({ embed = false }: { embed?: boolean }) {
   const selectedBattle = data.battles.find((battle) => battle.id === state.battleId) ?? null;
   const nations = useMemo(() => [...new Set(data.units.map((unit) => unit.nation))].sort(), [data.units]);
   const filteredUnits = useMemo(
-    () => filterUnits(data.units, state.theater, state.filters),
-    [data.units, state.theater, state.filters],
+    () => filterUnits(data.units, state.theater, state.filters, state.date),
+    [data.units, state.theater, state.filters, state.date],
   );
   const theaterBattles = useMemo(() => {
     const rows = battlesForTheater(data.battles, state.theater);
@@ -144,7 +175,7 @@ export default function App({ embed = false }: { embed?: boolean }) {
     const allied: typeof data.units = [];
     const german: typeof data.units = [];
     for (const unit of data.units) {
-      if (unit.theater !== state.theater) continue;
+      if (theaterAt(unit, state.date) !== state.theater) continue;
       const placement = placeUnit(unit, state.date, 0, false);
       if (!placement || placement.status !== "reported") continue;
       if (unit.side === "allied") allied.push(unit);
@@ -155,24 +186,109 @@ export default function App({ embed = false }: { embed?: boolean }) {
   const datePreset = CAMPAIGN_PRESETS.find((item) => state.theater === "normandy" && item.date === state.date && !item.battleId);
   const campaign = CAMPAIGNS.find((item) => item.id === state.campaignId) ?? null;
   const comingSoon = data.status !== "loading" && data.modules[state.theater].empty;
+  const leftVisible = !fullMap && leftOpen;
+  const rightVisible = !hideChrome && !fullMap && rightOpen;
+  const mapVisible = !hideChrome;
 
+  const openInspector = () => {
+    if (hideChrome) return;
+    setFullMap(false);
+    setRightOpen(true);
+    if (!wide) setLeftOpen(false);
+  };
+
+  const frontTraces = useMemo(
+    () =>
+      activeFronts.map((item) => ({
+        sector: item.sector ?? item.theater,
+        date: item.date,
+        allied: item.allied,
+        axis: item.axis,
+        polygon: item.polygon,
+      })),
+    [activeFronts],
+  );
+  const contactPaint = useMemo(
+    () => paintFront({ allied: front?.allied ?? [], axis: front?.axis ?? [] }),
+    [front],
+  );
+  const holds = useMemo(() => {
+    const rows: { date: string; contact: [number, number][] }[] = [];
+    for (const item of activeFronts) {
+      const painted = paintFront({ allied: item.allied, axis: item.axis });
+      if (painted && painted.contact.length >= 2) rows.push({ date: item.date, contact: painted.contact });
+    }
+    return rows;
+  }, [activeFronts]);
   const mapUnits = useMemo(
-    () => rowsFor(filteredUnits, selectedUnit, state.date, state.unitId),
-    [filteredUnits, selectedUnit, state.date, state.unitId],
+    () => rowsFor(filteredUnits, selectedUnit, state.date, state.unitId, holds, theater.bounds),
+    [filteredUnits, selectedUnit, state.date, state.unitId, holds, theater.bounds],
+  );
+  const compareFronts = useMemo(
+    () => (state.compareDate ? frontsForDate(data.fronts, state.compareDate, state.theater) : []),
+    [state.compareDate, data.fronts, state.theater],
+  );
+  const compareFront = compareFronts[compareFronts.length - 1] ?? null;
+  const compareHold = useMemo(() => {
+    const rows: { date: string; contact: [number, number][] }[] = [];
+    for (const item of compareFronts) {
+      const painted = paintFront({ allied: item.allied, axis: item.axis });
+      if (painted && painted.contact.length >= 2) rows.push({ date: item.date, contact: painted.contact });
+    }
+    return rows;
+  }, [compareFronts]);
+  const compareFiltered = useMemo(
+    () =>
+      state.compareDate ? filterUnits(data.units, state.theater, state.filters, state.compareDate) : [],
+    [data.units, state.theater, state.filters, state.compareDate],
   );
   const compareRows = useMemo(
-    () => (state.compareDate ? rowsFor(filteredUnits, selectedUnit, state.compareDate, state.unitId) : []),
-    [filteredUnits, selectedUnit, state.compareDate, state.unitId],
+    () =>
+      state.compareDate
+        ? rowsFor(compareFiltered, selectedUnit, state.compareDate, state.unitId, compareHold, theater.bounds)
+        : [],
+    [compareFiltered, selectedUnit, state.compareDate, state.unitId, compareHold, theater.bounds],
   );
 
   const [initialView] = useState(() => {
     const url = readUrl(window.location.search);
     const frame = theaterById(url.theater);
     const narrow = window.innerWidth < 900;
-    return { center: frame.center, zoom: narrow ? Math.max(2, frame.zoom - 1.3) : frame.zoom };
+    return { center: frame.center, zoom: theaterCameraZoom(frame, narrow) };
   });
 
   const followPlacement = selectedUnit ? (mapUnits.find((item) => item.unit.id === selectedUnit.id)?.placement ?? null) : null;
+  const inspectorPlacement = selectedUnit ? placeUnit(selectedUnit, state.date, 0, false) : null;
+  const contactPosts = useMemo(
+    () =>
+      postUnitsOnFronts(
+        mapUnits.map((row) => ({
+          unitId: row.unit.id,
+          side: row.unit.side,
+          lng: row.placement.lng,
+          lat: row.placement.lat,
+        })),
+        frontTraces,
+      ),
+    [mapUnits, frontTraces],
+  );
+  const campaignTitles = useMemo(() => {
+    const titles: Record<string, string> = {};
+    for (const item of CAMPAIGNS) {
+      const names = unitsInCampaign(data.units, item)
+        .slice(0, 5)
+        .map((unit) => unit.abbr);
+      const base = item.note.replace(/ No unit pins yet\./g, "");
+      titles[item.id] = names.length > 0 ? `${base} Follow ${names.join(", ")}.` : `${base} Overview pin only.`;
+    }
+    return titles;
+  }, [data.units]);
+  const selectedPost = selectedUnit ? (contactPosts.find((post) => post.unitId === selectedUnit.id) ?? null) : null;
+  const opponentUnit = selectedPost?.opponentId
+    ? (data.units.find((unit) => unit.id === selectedPost.opponentId) ?? null)
+    : null;
+  const followLng = selectedPost?.onFront ? selectedPost.lng : followPlacement?.lng;
+  const followLat = selectedPost?.onFront ? selectedPost.lat : followPlacement?.lat;
   const travelled = selectedUnit ? pathUntil(selectedUnit, state.date) : [];
   const inSample = state.theater === "normandy" && state.date >= SAMPLE_START && state.date <= SAMPLE_END;
   const offFront =
@@ -181,12 +297,11 @@ export default function App({ embed = false }: { embed?: boolean }) {
       followPlacement.lat < theater.bounds[1] ||
       followPlacement.lng > theater.bounds[2] ||
       followPlacement.lat > theater.bounds[3]);
-  const featuredUnits = data.units.filter((unit) => unit.theater === state.theater && (unit.featured || isFeaturedUnit(unit.id)));
-  const leftVisible = wide || leftOpen;
-  const rightVisible = wide || rightOpen;
+  const featuredUnits = data.units.filter(
+    (unit) => unitTheaters(unit).includes(state.theater) && (unit.featured || isFeaturedUnit(unit.id)),
+  );
   const positionAttr = positionText(mapUnits);
   const comparePositionAttr = state.compareDate ? positionText(compareRows) : "";
-  const compareFront = state.compareDate ? frontForDate(data.fronts, state.compareDate, state.theater) : null;
   const compareTravelled = state.compareDate && selectedUnit ? pathUntil(selectedUnit, state.compareDate) : [];
   const onViewChange = (view: { lng: number; lat: number; zoom: number }) => {
     const prev = linkedRef.current;
@@ -205,6 +320,12 @@ export default function App({ embed = false }: { embed?: boolean }) {
       setLeftOpen(false);
     }
   }
+
+  useEffect(() => {
+    if (!selectedUnit) return;
+    const next = theaterAt(selectedUnit, state.date);
+    if (next && next !== state.theater) actionsRef.current.followTheater(next);
+  }, [selectedUnit, state.date, state.theater]);
 
   useEffect(() => {
     const now = Date.now();
@@ -276,13 +397,16 @@ export default function App({ embed = false }: { embed?: boolean }) {
       if (!message) return;
       const api = actionsRef.current;
       if (message.unit) {
-        const mapId = message.unit.mapId ?? mapIdForHub(message.unit.id);
-        const mapped = mapId ? api.data.units.find((unit) => unit.id === mapId) ?? null : null;
-        setHubRef({ ...message.unit, plotted: Boolean(mapped || message.unit.plotted) });
-        appliedHub.current = message.unit.id;
+        const hubUnit = message.unit;
+        const hinted = hubUnit.mapId ?? mapIdForHub(hubUnit.id);
+        const mapped =
+          api.data.units.find((unit) => unit.id === hinted) ??
+          api.data.units.find((unit) => unit.id === hubUnit.id) ??
+          null;
+        setHubRef({ ...hubUnit, plotted: Boolean(mapped || hubUnit.plotted) });
+        appliedHub.current = hubUnit.id;
         if (mapped) {
-          api.selectUnit(mapped.id);
-          if (message.date) api.scrub(dayIndex(message.date));
+          api.selectUnit(mapped.id, message.date ?? undefined);
         } else {
           const date = message.date ?? stopForDate(message.unit, api.state.date)?.date ?? api.state.date;
           const stop = stopForDate(message.unit, date);
@@ -319,15 +443,31 @@ export default function App({ embed = false }: { embed?: boolean }) {
     const onKey = (event: KeyboardEvent) => {
       const api = actionsRef.current;
       if (event.key === "Escape") {
+        if (mapOpenRef.current) {
+          setMapOpen(false);
+          return;
+        }
+        if (fullMapRef.current) {
+          setFullMap(false);
+          return;
+        }
         api.clearSelection();
-        setLeftOpen(false);
+        if (!hideChromeRef.current) setLeftOpen(false);
         setRightOpen(false);
         return;
       }
       const target = event.target;
       if (!(target instanceof HTMLElement)) return;
       const tag = target.tagName;
-      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || tag === "BUTTON" || target.isContentEditable) return;
+      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || target.isContentEditable) return;
+      if ((event.key === "m" || event.key === "M") && !event.metaKey && !event.ctrlKey && !event.altKey) {
+        if (hideChromeRef.current) return;
+        event.preventDefault();
+        setMapOpen(false);
+        setFullMap((open) => !open);
+        return;
+      }
+      if (tag === "BUTTON") return;
       if (target.closest(".maplibregl-canvas, [role='radio']")) return;
       if (event.key === " " || event.code === "Space") {
         event.preventDefault();
@@ -345,6 +485,7 @@ export default function App({ embed = false }: { embed?: boolean }) {
         api.followSelected();
       } else if (event.key === "/") {
         event.preventDefault();
+        setFullMap(false);
         setLeftOpen(true);
         document.getElementById("unit-search")?.focus();
       }
@@ -353,11 +494,21 @@ export default function App({ embed = false }: { embed?: boolean }) {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  const frontMessage = !front
-    ? "No schematic front for this date."
-    : front.date === state.date
-      ? `Schematic front for ${formatDisplay(state.date)}.`
-      : `Schematic front keyed to ${formatDisplay(front.date)}, held on ${formatDisplay(state.date)}.`;
+  const approximateControl =
+    state.layers.controlAreas &&
+    activeFronts.some(
+      (item) => !(item.polygon && item.polygon.length >= 4) && (item.allied.length >= 2 || item.axis.length >= 2),
+    );
+  const frontMessage =
+    activeFronts.length === 0
+      ? "No front line for this date."
+      : activeFronts.length > 1
+        ? `${activeFronts.length} front lines in this theater. Distant sectors stay on the map together.`
+        : front?.polygon && front.polygon.length >= 4
+          ? `Weekly front polygon for ${formatDisplay(front.date)}.`
+          : front && front.date === state.date
+            ? `Front line for ${formatDisplay(state.date)}.`
+            : `Front line keyed to ${formatDisplay(front?.date ?? state.date)}, held on ${formatDisplay(state.date)}.`;
 
   return (
     <div
@@ -368,6 +519,7 @@ export default function App({ embed = false }: { embed?: boolean }) {
       data-unit={state.unitId ?? ""}
       data-battle={state.battleId ?? ""}
       data-front={front?.id ?? ""}
+      data-fronts={activeFronts.map((item) => item.id).join("|")}
       data-front-lat={front ? String(front.allied[0]?.[1] ?? "") : ""}
       data-positions={positionAttr}
       data-speed={state.speed}
@@ -384,6 +536,7 @@ export default function App({ embed = false }: { embed?: boolean }) {
       data-compare={state.compareDate ?? ""}
       data-compare-positions={comparePositionAttr}
       data-contrast={state.contrast ? "1" : ""}
+      data-control={state.layers.controlAreas ? "1" : "0"}
       data-path={travelled.map((point) => `${point[0]},${point[1]}`).join("|")}
       data-featured={featuredUnits.map((unit) => unit.id).join(",")}
       data-off-front={offFront ? "1" : "0"}
@@ -391,6 +544,15 @@ export default function App({ embed = false }: { embed?: boolean }) {
       data-region={state.regionId ?? ""}
       data-hub={hubRef?.id ?? ""}
       data-hub-plotted={hubRef?.plotted ? "1" : "0"}
+      data-contact={contactPaint && contactPaint.contact.length >= 2 ? String(contactPaint.contact.length) : "0"}
+      data-opponent={opponentUnit?.id ?? ""}
+      data-on-front={selectedPost?.onFront ? "1" : "0"}
+      data-fullmap={fullMap ? "1" : "0"}
+      data-left={leftVisible ? "1" : "0"}
+      data-right={rightVisible ? "1" : "0"}
+      data-basemap={state.basemap}
+      data-echelon-cap={state.echelonCap}
+      data-map-open={mapOpen ? "1" : "0"}
     >
       <a className="skip" href="#search" onClick={() => setLeftOpen(true)}>
         Skip to unit search
@@ -398,49 +560,6 @@ export default function App({ embed = false }: { embed?: boolean }) {
       <a className="skip" href="#timeline">
         Skip to timeline
       </a>
-      <TopBar
-        theater={state.theater}
-        mode={state.compareDate ? "Compare" : state.unitId ? "Unit follow" : "Overview"}
-        layers={state.layers}
-        leftOpen={leftVisible}
-        rightOpen={rightVisible}
-        onTheater={situation.setTheater}
-        onToggleLayer={situation.toggleLayer}
-        onToggleLeft={() => {
-          setLeftOpen((open) => !open);
-          setRightOpen(false);
-        }}
-        onToggleRight={() => {
-          setRightOpen((open) => !open);
-          setLeftOpen(false);
-        }}
-        exportNote={exportNote}
-        showBrand={!hideChrome}
-        showEmbedLink={!embed}
-        view={state.view}
-        onView={situation.setView}
-        comparing={state.compareDate !== null}
-        contrast={state.contrast}
-        onToggleContrast={() => situation.setContrast(!state.contrast)}
-        onToggleCompare={() => {
-          if (state.compareDate) {
-            situation.setCompare(null);
-            setCompareStart(null);
-            return;
-          }
-          const live = linkedRef.current;
-          if (live) setLinked({ ...live, nonce: live.nonce + 1 });
-          setCompareStart(
-            live ? { center: [live.lng, live.lat], zoom: live.zoom } : { center: initialView.center, zoom: initialView.zoom },
-          );
-          situation.setCompare(state.date === SAMPLE_START ? SAMPLE_END : SAMPLE_START);
-        }}
-        onExport={() => {
-          const exporter = state.view === "globe" ? globeExport.current : mapExport.current;
-          const message = exporter?.() ?? null;
-          setExportNote(message === null ? "Saved the map image." : (message ?? "Map is not ready."));
-        }}
-      />
       <main className={state.compareDate ? "stage compare" : "stage"}>
         <div className="compare-pane" data-pane="primary">
           {state.compareDate ? (
@@ -468,11 +587,16 @@ export default function App({ embed = false }: { embed?: boolean }) {
           showBattles={state.layers.battles}
           showLabels={state.layers.labels}
           showFronts={state.layers.fronts}
-          showGraticule={!state.layers.modernBasemap}
-          modernBasemap={state.layers.modernBasemap}
+          showControlAreas={state.layers.controlAreas}
+          showGraticule={false}
+          basemap={state.basemap}
+          echelonCap={state.echelonCap}
+          showNav={!hideChrome}
           alliedLine={front?.allied ?? []}
           axisLine={front?.axis ?? []}
           frontRing={front?.polygon ?? []}
+          frontTraces={frontTraces}
+          theaterId={state.theater}
           occupation={occupation}
           showOccupation={state.layers.occupation}
           selectedRegionId={state.regionId}
@@ -481,21 +605,26 @@ export default function App({ embed = false }: { embed?: boolean }) {
           camera={state.camera}
           cameraLock={state.cameraLock && state.unitId !== null}
           lockNonce={state.lockNonce}
-          followLng={followPlacement?.lng}
-          followLat={followPlacement?.lat}
+          followLng={followLng}
+          followLat={followLat}
           initialCenter={initialView.center}
           initialZoom={initialView.zoom}
-          onSelectUnit={situation.selectUnit}
-          onSelectBattle={situation.selectBattle}
-          onSelectRegion={situation.selectRegion}
+          onSelectUnit={(id) => {
+            situation.selectUnit(id);
+            openInspector();
+          }}
+          onSelectBattle={(id) => {
+            situation.selectBattle(id);
+            openInspector();
+          }}
+          onSelectRegion={(id) => {
+            situation.selectRegion(id);
+            openInspector();
+          }}
           onBackground={situation.clearSelection}
           onUserDrag={() => situation.setCameraLock(false)}
-          onDisableBasemap={() => {
-            if (state.layers.modernBasemap) situation.toggleLayer("modernBasemap");
-          }}
-          onBindExport={(exportPng) => {
-            mapExport.current = exportPng;
-          }}
+          onDisableBasemap={() => situation.setBasemap("dark")}
+          onBindExport={() => undefined}
           hidden={state.view === "globe"}
           contrast={state.contrast}
         />
@@ -537,11 +666,22 @@ export default function App({ embed = false }: { embed?: boolean }) {
               showBattles={state.layers.battles}
               showLabels={state.layers.labels}
               showFronts={state.layers.fronts}
-              showGraticule={!state.layers.modernBasemap}
-              modernBasemap={state.layers.modernBasemap}
+              showControlAreas={state.layers.controlAreas}
+              showGraticule={false}
+              basemap={state.basemap}
+              echelonCap={state.echelonCap}
+              showNav={false}
               alliedLine={compareFront?.allied ?? []}
               axisLine={compareFront?.axis ?? []}
               frontRing={compareFront?.polygon ?? []}
+              frontTraces={compareFronts.map((item) => ({
+                sector: item.sector ?? item.theater,
+                date: item.date,
+                allied: item.allied,
+                axis: item.axis,
+                polygon: item.polygon,
+              }))}
+              theaterId={state.theater}
               occupation={compareOccupation}
               showOccupation={state.layers.occupation}
               selectedRegionId={state.regionId}
@@ -550,16 +690,23 @@ export default function App({ embed = false }: { embed?: boolean }) {
               camera={NO_CAMERA}
               cameraLock={false}
               lockNonce={0}
-              initialCenter={compareStart?.center ?? initialView.center}
-              initialZoom={compareStart?.zoom ?? initialView.zoom}
-              onSelectUnit={situation.selectUnit}
-              onSelectBattle={situation.selectBattle}
-              onSelectRegion={situation.selectRegion}
+              initialCenter={initialView.center}
+              initialZoom={initialView.zoom}
+              onSelectUnit={(id) => {
+                situation.selectUnit(id);
+                openInspector();
+              }}
+              onSelectBattle={(id) => {
+                situation.selectBattle(id);
+                openInspector();
+              }}
+              onSelectRegion={(id) => {
+                situation.selectRegion(id);
+                openInspector();
+              }}
               onBackground={situation.clearSelection}
               onUserDrag={() => situation.setCameraLock(false)}
-              onDisableBasemap={() => {
-                if (state.layers.modernBasemap) situation.toggleLayer("modernBasemap");
-              }}
+              onDisableBasemap={() => situation.setBasemap("dark")}
               onBindExport={() => undefined}
               hidden={false}
               contrast={state.contrast}
@@ -586,11 +733,14 @@ export default function App({ embed = false }: { embed?: boolean }) {
                 showBattles={state.layers.battles}
                 showLabels={state.layers.labels}
                 showFronts={state.layers.fronts}
-                showGraticule={!state.layers.modernBasemap}
-                modernBasemap={state.layers.modernBasemap}
+                showControlAreas={state.layers.controlAreas}
+                showGraticule={false}
+                basemap={state.basemap}
+                echelonCap={state.echelonCap}
                 alliedLine={front?.allied ?? []}
                 axisLine={front?.axis ?? []}
                 frontRing={front?.polygon ?? []}
+                frontTraces={frontTraces}
                 occupation={occupation}
                 showOccupation={state.layers.occupation}
                 selectedRegionId={state.regionId}
@@ -599,38 +749,76 @@ export default function App({ embed = false }: { embed?: boolean }) {
                 camera={state.camera}
                 cameraLock={state.cameraLock && state.unitId !== null}
                 lockNonce={state.lockNonce}
-                followLng={followPlacement?.lng}
-                followLat={followPlacement?.lat}
+                followLng={followLng}
+                followLat={followLat}
                 theaterId={state.theater}
-                onSelectUnit={situation.selectUnit}
-                onSelectBattle={situation.selectBattle}
-                onSelectRegion={situation.selectRegion}
+                onSelectUnit={(id) => {
+                  situation.selectUnit(id);
+                  openInspector();
+                }}
+                onSelectBattle={(id) => {
+                  situation.selectBattle(id);
+                  openInspector();
+                }}
+                onSelectRegion={(id) => {
+                  situation.selectRegion(id);
+                  openInspector();
+                }}
                 onBackground={situation.clearSelection}
                 onUserDrag={() => situation.setCameraLock(false)}
-                onBindExport={(exportPng) => {
-                  globeExport.current = exportPng;
-                }}
+                onBindExport={() => undefined}
                 contrast={state.contrast}
               />
             </Suspense>
           </GlobeBoundary>
         ) : null}
+        {mapVisible ? (
+          <MapPanel
+            open={mapOpen}
+            layers={state.layers}
+            echelonCap={state.echelonCap}
+            basemap={state.basemap}
+            onToggle={() => setMapOpen((open) => !open)}
+            onClose={() => setMapOpen(false)}
+            onToggleLayer={situation.toggleLayer}
+            onEchelonCap={situation.setEchelonCap}
+            onBasemap={situation.setBasemap}
+          />
+        ) : null}
+        {!leftVisible && !fullMap ? (
+          <button
+            type="button"
+            className="search-toggle"
+            aria-controls="search"
+            aria-expanded="false"
+            onClick={() => {
+              setFullMap(false);
+              setLeftOpen(true);
+            }}
+          >
+            Search
+          </button>
+        ) : null}
+        {fullMap || hideChrome ? null : (
         <div className="map-caption">
           <p>{state.layers.fronts ? frontMessage : "Positions are approximate and sourced."}</p>
+          {approximateControl ? <p>Approximate control.</p> : null}
           {offFront ? <p>Not yet on the Normandy front.</p> : null}
+          {selectedUnit && selectedPost && !selectedPost.onFront && !offFront ? (
+            <p>Off the schematic contact. The counter stays at the sourced place.</p>
+          ) : null}
+          {opponentUnit ? <p>In contact with {opponentUnit.name}.</p> : null}
           {state.unitId && hubRef && !selectedUnit ? (
             <p>
               {hubRef.name} is referenced from WW2Hub. No sourced pin on this date. Occupation shows who held the country.
               Battle dates in the inspector jump the war.
             </p>
           ) : null}
-          {state.layers.occupation ? (
-            <p>Country occupation is schematic and appears below zoom 6. Play the war from 1939 to 1945 to watch control change. Britain is Allied from 3 September 1939; the United States joins on 8 December 1941.</p>
-          ) : null}
           {datePreset ? <p>{datePreset.note}</p> : null}
           {campaign ? <p>{campaign.note}</p> : null}
           <p>Source: {selectedUnit?.source ?? front?.source ?? PLACEHOLDER_SOURCE}</p>
         </div>
+        )}
         {data.status !== "ready" ? (
           <p className="load-banner" role="status">
             {data.message}
@@ -650,7 +838,7 @@ export default function App({ embed = false }: { embed?: boolean }) {
             </button>
           </div>
         ) : null}
-        {state.layers.occupation && occupation.features.length > 0 ? (
+        {!fullMap && !hideChrome && state.layers.occupation && occupation.features.length > 0 ? (
           <ul className="occupation-legend" aria-label="Occupation colours">
             <li><span className="swatch side-allied" /> Allied</li>
             <li><span className="swatch side-axis" /> Axis</li>
@@ -682,8 +870,14 @@ export default function App({ embed = false }: { embed?: boolean }) {
           onNation={situation.setNation}
           onEchelon={situation.setEchelon}
           onResetFilters={situation.resetFilters}
-          onSelectUnit={situation.selectUnit}
-          onSelectBattle={situation.selectBattle}
+          onSelectUnit={(id) => {
+            situation.selectUnit(id);
+            openInspector();
+          }}
+          onSelectBattle={(id) => {
+            situation.selectBattle(id);
+            openInspector();
+          }}
           onClose={() => setLeftOpen(false)}
           alliedPresent={order.allied}
           germanPresent={order.german}
@@ -694,7 +888,8 @@ export default function App({ embed = false }: { embed?: boolean }) {
           date={state.date}
           theater={theater}
           unit={selectedUnit}
-          placement={followPlacement}
+          placement={inspectorPlacement}
+          drawn={followPlacement !== null}
           playing={state.playing}
           battle={selectedBattle}
           front={front}
@@ -704,7 +899,10 @@ export default function App({ embed = false }: { embed?: boolean }) {
           onShowStop={(date) => situation.scrub(dayIndex(date))}
           onClear={situation.clearSelection}
           onClose={() => setRightOpen(false)}
-          onSelectUnit={situation.selectUnit}
+          onSelectUnit={(id) => {
+            situation.selectUnit(id);
+            openInspector();
+          }}
           taggedUnits={
             selectedBattle?.units
               ? data.units.filter((unit) => selectedBattle.units?.includes(unit.id))
@@ -713,11 +911,16 @@ export default function App({ embed = false }: { embed?: boolean }) {
           occupation={selectedOccupation}
           hub={state.unitId ? hubRef : null}
           onHubStop={situation.jumpHubStop}
+          opponent={opponentUnit}
+          onFront={Boolean(selectedPost?.onFront)}
+          hasContact={Boolean(holds.length > 0 && state.layers.fronts)}
         />
       </main>
+      {fullMap || hideChrome ? null : (
       <p className="disclaimer" role="note">
         {theater.disclaimer ?? "Positions are approximate and sourced. Not a complete order of battle."}
       </p>
+      )}
       <Timeline
         date={state.date}
         playing={state.playing}
@@ -726,12 +929,32 @@ export default function App({ embed = false }: { embed?: boolean }) {
         onTogglePlay={situation.togglePlay}
         onSpeed={situation.setSpeed}
         onStep={situation.step}
-        onBattle={situation.selectBattle}
+        onBattle={(id) => {
+          situation.selectBattle(id);
+          openInspector();
+        }}
         onPreset={situation.jumpPreset}
         onCampaign={situation.playCampaign}
         campaignId={state.campaignId}
+        campaignTitles={campaignTitles}
         battles={theaterBattles}
         onOverview={situation.showOverview}
+        compact={fullMap || hideChrome}
+        showTicks={showTicks && !fullMap && !hideChrome}
+        showCampaigns={showCampaigns && !fullMap && !hideChrome}
+        showPresets={showPresets && !fullMap && !hideChrome}
+        onToggleTicks={() => {
+          setFullMap(false);
+          setShowTicks((open) => !open);
+        }}
+        onToggleCampaigns={() => {
+          setFullMap(false);
+          setShowCampaigns((open) => !open);
+        }}
+        onTogglePresets={() => {
+          setFullMap(false);
+          setShowPresets((open) => !open);
+        }}
       />
       <div className="sr-only" aria-live="polite">
         {live}

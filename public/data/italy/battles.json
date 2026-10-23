@@ -1,1 +1,134 @@
-[]
+[
+  {
+    "id": "greece-crete",
+    "name": "Greece and Crete",
+    "theater": "italy",
+    "date": "1941-04-06",
+    "lng": 23.7281,
+    "lat": 37.9842,
+    "zoom": 7,
+    "summary": "6 April 1941, Athens. Overview of the German attack on Greece and later Crete. Not a unit pin.",
+    "source": "Published commune location, Athens. Wikipedia Battle of Greece. Confirm against Greek and Commonwealth campaign maps.",
+    "confidence": "medium"
+  },
+  {
+    "id": "husky",
+    "name": "Husky",
+    "theater": "italy",
+    "date": "1943-07-09",
+    "lng": 14.25,
+    "lat": 37.0667,
+    "zoom": 8,
+    "summary": "9 July 1943, Gela. Overview of the Allied invasion of Sicily. Not a unit pin.",
+    "source": "Published commune location, Gela. Wikipedia Allied invasion of Sicily. Confirm against Seventh Army and Eighth Army records.",
+    "confidence": "medium"
+  },
+  {
+    "id": "avalanche",
+    "name": "Avalanche",
+    "theater": "italy",
+    "date": "1943-09-09",
+    "lng": 14.7594,
+    "lat": 40.6806,
+    "zoom": 9,
+    "summary": "9 September 1943, Salerno. Overview of the mainland landings. Not a unit pin.",
+    "source": "Published commune location, Salerno. Wikipedia Allied invasion of Italy. Confirm against Fifth Army records.",
+    "confidence": "medium"
+  },
+  {
+    "id": "cassino",
+    "name": "Monte Cassino",
+    "theater": "italy",
+    "date": "1944-01-17",
+    "lng": 13.8139,
+    "lat": 41.49,
+    "zoom": 10,
+    "summary": "17 January 1944, Monte Cassino. Overview of the four battles for the abbey and the Liri valley. Not a unit pin.",
+    "source": "Published location, Monte Cassino. Wikipedia Battle of Monte Cassino. Confirm against Fifth Army records.",
+    "confidence": "medium"
+  },
+  {
+    "id": "anzio",
+    "name": "Anzio",
+    "theater": "italy",
+    "date": "1944-01-22",
+    "lng": 12.629,
+    "lat": 41.447,
+    "zoom": 10,
+    "summary": "22 January 1944, Anzio. Overview of the Shingle beachhead. Not a unit pin.",
+    "source": "Published commune location, Anzio. Wikipedia Battle of Anzio. Confirm against Fifth Army records.",
+    "confidence": "medium"
+  },
+  {
+    "id": "italian-campaign",
+    "name": "Italian campaign",
+    "theater": "italy",
+    "date": "1943-09-03",
+    "lng": 14.7594,
+    "lat": 40.6806,
+    "zoom": 7,
+    "summary": "3 September 1943, Salerno. Overview of the mainland campaign through May 1945. Avalanche is the 9 September landing pin. Not a unit pin.",
+    "source": "Published commune location, Salerno. Wikipedia Italian campaign (World War II). Confirm against 15th Army Group records.",
+    "confidence": "medium"
+  },
+  {
+    "id": "taranto",
+    "name": "Taranto",
+    "theater": "italy",
+    "date": "1940-11-11",
+    "lng": 17.2406,
+    "lat": 40.4644,
+    "zoom": 10,
+    "summary": "11 November 1940, Taranto. Overview of the Fleet Air Arm night attack on the named harbour. Not a unit pin.",
+    "source": "Published commune location, Taranto. Wikipedia Battle of Taranto. Confirm against Fleet Air Arm and Regia Marina records.",
+    "confidence": "medium"
+  },
+  {
+    "id": "cape-matapan",
+    "name": "Battle of Cape Matapan",
+    "theater": "italy",
+    "date": "1941-03-27",
+    "lng": 22.4825,
+    "lat": 36.385,
+    "zoom": 7,
+    "summary": "27 March 1941, Cape Matapan. Overview of the fleet action on the named cape. Not a unit pin.",
+    "source": "Published location, Cape Matapan (Tainaron). Wikipedia Battle of Cape Matapan. Confirm against Mediterranean Fleet records.",
+    "confidence": "low"
+  },
+  {
+    "id": "italy-end",
+    "name": "Italy campaign end",
+    "theater": "italy",
+    "date": "1945-04-21",
+    "lng": 11.3426,
+    "lat": 44.4949,
+    "zoom": 8,
+    "summary": "21 April 1945, Bologna. Overview of the spring offensive that ended the Italian campaign. Coarser pin on the named city. Not a unit pin.",
+    "source": "Published commune location, Bologna. Wikipedia Spring 1945 offensive in Italy. Confirm against 15th Army Group records.",
+    "confidence": "medium"
+  },
+  {
+    "id": "harling",
+    "name": "Operation Harling",
+    "theater": "italy",
+    "date": "1942-11-25",
+    "lng": 22.387,
+    "lat": 38.917,
+    "zoom": 10,
+    "summary": "25 November 1942, Gorgopotamos. Overview of the named-place fight. Not a unit pin.",
+    "source": "Published location, Gorgopotamos. Wikipedia Operation Harling. Confirm against campaign records.",
+    "confidence": "medium"
+  },
+  {
+    "id": "gran-sasso",
+    "name": "Gran Sasso raid",
+    "theater": "italy",
+    "date": "1943-09-12",
+    "lng": 13.5583,
+    "lat": 42.4425,
+    "zoom": 11,
+    "summary": "12 September 1943, Campo Imperatore. Overview of the named-place fight. Not a unit pin.",
+    "source": "Published location, Campo Imperatore. Wikipedia Gran Sasso raid. Confirm against campaign records.",
+    "confidence": "medium"
+  }
+]

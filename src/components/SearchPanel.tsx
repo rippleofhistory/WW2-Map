@@ -1,10 +1,11 @@
 import { useRef } from "react";
 import type { KeyboardEvent } from "react";
 import { echelonLabel, echelonMark, sideLabel } from "../lib/format.ts";
+import { pathSummary } from "../lib/select.ts";
 import type { Battle, Echelon, Filters, Side, Unit } from "../types.ts";
 
 const SIDES = ["all", "allied", "axis", "soviet", "japanese"] as const;
-const ECHELONS = ["all", "army", "corps", "division", "brigade", "regiment", "battalion", "company"] as const;
+const ECHELONS = ["all", "army-group", "army", "corps", "division", "brigade", "regiment", "battalion", "company"] as const;
 
 interface SearchPanelProps {
   open: boolean;
@@ -155,7 +156,8 @@ export function SearchPanel(props: SearchPanelProps) {
               <span>
                 <span className="unit-name">{unit.name}</span>
                 <span className="unit-meta">
-                  {sideLabel(unit.side)} · {unit.nation} · {echelonLabel(unit.echelon)}
+                  {pathSummary(unit) ? `${pathSummary(unit)} · ` : ""}
+                  {sideLabel(unit.side)} · {unit.nation}
                 </span>
               </span>
             </button>
@@ -187,6 +189,7 @@ export function SearchPanel(props: SearchPanelProps) {
             <span>
               <span className="unit-name">{unit.name}</span>
               <span className="unit-meta">
+                {pathSummary(unit) ? `${pathSummary(unit)} · ` : ""}
                 {sideLabel(unit.side)} · {unit.nation} · {echelonLabel(unit.echelon)}
               </span>
             </span>

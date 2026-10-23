@@ -1,11 +1,18 @@
-import { useEffect, useReducer, useRef } from "react";
+import { useEffect, useLayoutEffect, useReducer, useRef } from "react";
 import { CAMPAIGNS } from "../data/campaigns.ts";
+import { resolveBattleId } from "../data/catalog.ts";
 import { useMapData } from "../data/mapContext.ts";
 import { SAMPLE_START, WAR_DAYS, dateFromIndex, dayIndex, formatStencil, isValidWarDate } from "../lib/dates.ts";
 import { readEmbedOptions } from "../lib/embed.ts";
+import { theaterAt, unitTheaters } from "../lib/select.ts";
 import { readUrl, writeUrl } from "../lib/url.ts";
-import type { CameraCommand, Echelon, Filters, Layers, MapView, Side, Speed, TheaterId } from "../types.ts";
+import { controlAreasDefault } from "../lib/frontStyle.ts";
+import type { Basemap, CameraCommand, Echelon, EchelonCap, Filters, Layers, MapView, Side, Speed, TheaterId } from "../types.ts";
 import { setPlayClock } from "./playClock.ts";
+
+function theaterLayers(layers: Layers, theater: TheaterId): Layers {
+  return { ...layers, controlAreas: controlAreasDefault(theater) };
+}
 
 interface State {
   theater: TheaterId;
@@ -19,6 +26,8 @@ interface State {
   lockNonce: number;
   camera: CameraCommand;
   layers: Layers;
+  basemap: Basemap;
+  echelonCap: EchelonCap;
   filters: Filters;
   campaignId: string | null;
   playUntil: string | null;
@@ -29,18 +38,22 @@ interface State {
 }
 
 type Action =
-  | { type: "setTheater"; id: TheaterId; unitTheater: TheaterId | null }
+  | { type: "setTheater"; id: TheaterId; keepUnit: boolean }
+  | { type: "followTheater"; id: TheaterId }
   | { type: "scrub"; index: number }
   | { type: "tick"; steps: number }
-  | { type: "togglePlay" }
+  | { type: "togglePlay"; followUntil?: string | null }
+  | { type: "setPlayUntil"; date: string }
   | { type: "setSpeed"; speed: Speed }
   | { type: "step"; delta: number }
-  | { type: "selectUnit"; id: string; theater: TheaterId; dates: string[] }
+  | { type: "selectUnit"; id: string; theater: TheaterId; dates: string[]; date?: string }
   | { type: "selectBattle"; id: string; theater: TheaterId; date: string; lng: number; lat: number; zoom: number }
   | { type: "clear" }
   | { type: "lock"; value: boolean }
   | { type: "follow" }
   | { type: "layer"; layer: keyof Layers }
+  | { type: "basemap"; basemap: Basemap }
+  | { type: "echelonCap"; cap: EchelonCap }
   | { type: "query"; query: string }
   | { type: "side"; side: Side | "all" }
   | { type: "nation"; nation: string }
@@ -48,7 +61,14 @@ type Action =
   | { type: "resetFilters" }
   | { type: "jumpSample" }
   | { type: "jumpPreset"; date: string }
-  | { type: "playCampaign"; id: string; theater: TheaterId; start: string; end: string }
+  | {
+      type: "playCampaign";
+      id: string;
+      theater: TheaterId;
+      start: string;
+      end: string;
+      battle?: { id: string; lng: number; lat: number; zoom: number };
+    }
   | { type: "openUrlBattle"; id: string; theater: TheaterId; date: string; lng: number; lat: number; zoom: number; playing: boolean }
   | {
       type: "hydrate";
@@ -70,6 +90,15 @@ type Action =
   | { type: "selectHubUnit"; id: string; theater: TheaterId | null; date: string }
   | { type: "jumpHubStop"; date: string; theater: TheaterId | null };
 
+function lastTrackDate(dates: readonly string[]): string | null {
+  if (dates.length === 0) return null;
+  let last = dates[0];
+  for (const date of dates) {
+    if (date > last) last = date;
+  }
+  return last;
+}
+
 function withDate(state: State, date: string, playing: boolean, keepSegment = false): State {
   const sameBattle = state.battleDate === date;
   return {
@@ -87,7 +116,7 @@ function reducer(state: State, action: Action): State {
   switch (action.type) {
     case "setTheater": {
       if (action.id === state.theater) return state;
-      const keepUnit = action.unitTheater === action.id;
+      const keepUnit = action.keepUnit;
       return {
         ...state,
         theater: action.id,
@@ -98,6 +127,18 @@ function reducer(state: State, action: Action): State {
         campaignId: null,
         playUntil: null,
         camera: keepUnit ? state.camera : { type: "theater", id: action.id, nonce: state.camera.nonce + 1 },
+        layers: theaterLayers(state.layers, action.id),
+      };
+    }
+    case "followTheater": {
+      if (action.id === state.theater) return state;
+      return {
+        ...state,
+        theater: action.id,
+        camera: state.cameraLock
+          ? state.camera
+          : { type: "theater", id: action.id, nonce: state.camera.nonce + 1 },
+        layers: theaterLayers(state.layers, action.id),
       };
     }
     case "scrub":
@@ -110,12 +151,19 @@ function reducer(state: State, action: Action): State {
       const nextIndex = Math.min(limitIndex, current + action.steps);
       return withDate(state, dateFromIndex(nextIndex), nextIndex < limitIndex, true);
     }
-    case "togglePlay":
+    case "togglePlay": {
       if (!state.playing && state.date === dateFromIndex(WAR_DAYS)) return state;
       if (!state.playing && state.playUntil && state.date >= state.playUntil) {
-        return { ...state, playing: true, playUntil: null, campaignId: null };
+        return { ...state, playing: true, playUntil: dateFromIndex(WAR_DAYS), campaignId: null };
       }
-      return { ...state, playing: !state.playing };
+      if (!state.playing) {
+        return { ...state, playing: true, playUntil: action.followUntil ?? state.playUntil };
+      }
+      return { ...state, playing: false };
+    }
+    case "setPlayUntil":
+      if (state.playUntil === action.date) return state;
+      return { ...state, playUntil: action.date };
     case "setSpeed":
       return state.speed === action.speed ? state : { ...state, speed: action.speed };
     case "step": {
@@ -127,7 +175,8 @@ function reducer(state: State, action: Action): State {
       for (const date of action.dates) {
         if (date < first) first = date;
       }
-      const date = state.date < first ? first : state.date;
+      const requested = action.date ?? state.date;
+      const date = requested < first ? first : requested;
       return {
         ...state,
         theater: action.theater,
@@ -139,7 +188,7 @@ function reducer(state: State, action: Action): State {
         cameraLock: true,
         lockNonce: state.lockNonce + 1,
         campaignId: null,
-        playUntil: null,
+        playUntil: state.playing ? lastTrackDate(action.dates) : null,
       };
     }
     case "selectBattle":
@@ -238,6 +287,12 @@ function reducer(state: State, action: Action): State {
       return { ...state, cameraLock: true, lockNonce: state.lockNonce + 1 };
     case "layer":
       return { ...state, layers: { ...state.layers, [action.layer]: !state.layers[action.layer] } };
+    case "basemap":
+      if (state.basemap === action.basemap) return state;
+      return { ...state, basemap: action.basemap };
+    case "echelonCap":
+      if (state.echelonCap === action.cap) return state;
+      return { ...state, echelonCap: action.cap };
     case "query":
       return { ...state, filters: { ...state.filters, query: action.query } };
     case "side":
@@ -261,6 +316,7 @@ function reducer(state: State, action: Action): State {
         campaignId: null,
         playUntil: null,
         camera: { type: "theater", id: "normandy", nonce: state.camera.nonce + 1 },
+        layers: theaterLayers(state.layers, "normandy"),
       };
     case "jumpPreset":
       return {
@@ -275,20 +331,31 @@ function reducer(state: State, action: Action): State {
         campaignId: null,
         playUntil: null,
         camera: { type: "theater", id: "normandy", nonce: state.camera.nonce + 1 },
+        layers: theaterLayers(state.layers, "normandy"),
       };
     case "playCampaign":
       return {
         ...state,
         theater: action.theater,
+        layers: theaterLayers(state.layers, action.theater),
         date: action.start,
         playing: true,
         unitId: null,
-        battleId: null,
-        battleDate: null,
+        battleId: action.battle?.id ?? null,
+        battleDate: action.battle ? action.start : null,
+        regionId: null,
         cameraLock: false,
         campaignId: action.id,
         playUntil: action.end,
-        camera: { type: "theater", id: action.theater, nonce: state.camera.nonce + 1 },
+        camera: action.battle
+          ? {
+              type: "battle",
+              lng: action.battle.lng,
+              lat: action.battle.lat,
+              zoom: action.battle.zoom,
+              nonce: state.camera.nonce + 1,
+            }
+          : { type: "theater", id: action.theater, nonce: state.camera.nonce + 1 },
       };
     case "hydrate":
       return {
@@ -309,6 +376,7 @@ function reducer(state: State, action: Action): State {
         view: action.view,
         compareDate: action.compareDate,
         contrast: action.contrast,
+        layers: theaterLayers(state.layers, action.theater),
       };
     case "setView":
       if (state.view === action.view && (action.view !== "globe" || state.compareDate === null)) return state;
@@ -350,7 +418,16 @@ function createState(): State {
     cameraLock: url.unitId !== null,
     lockNonce: 1,
     camera: url.unitId ? { type: "none", nonce: 1 } : { type: "theater", id: url.theater, nonce: 1 },
-    layers: { fronts: true, units: true, battles: embed.battles !== "off", labels: true, modernBasemap: true, occupation: true },
+    layers: {
+      fronts: true,
+      units: true,
+      battles: embed.battles !== "off",
+      labels: true,
+      occupation: true,
+      controlAreas: controlAreasDefault(url.theater),
+    },
+    basemap: "dark",
+    echelonCap: "auto",
     regionId: null,
     filters: { query: "", side: "all", nation: "all", echelon: "all" },
     campaignId: url.campaignId,
@@ -378,7 +455,10 @@ export function useSituation() {
       return;
     }
     const battle = options.battles
-      .map((id) => data.battles.find((item) => item.id === id))
+      .map((id) => {
+        const canonical = resolveBattleId(id) ?? id;
+        return data.battles.find((item) => item.id === canonical);
+      })
       .find((item) => item !== undefined);
     if (!battle) {
       if (data.status !== "loading") openedUrlBattle.current = true;
@@ -462,21 +542,47 @@ export function useSituation() {
     document.title = `${formatStencil(state.date)} · WW2Hub Map`;
   }, [state.date]);
 
+  useLayoutEffect(() => {
+    if (!state.playing || state.campaignId || state.playUntil || !state.unitId) return;
+    const unit = data.units.find((item) => item.id === state.unitId);
+    if (!unit) return;
+    const last = lastTrackDate(unit.track.map((point) => point.date));
+    if (last) dispatch({ type: "setPlayUntil", date: last });
+  }, [state.playing, state.campaignId, state.playUntil, state.unitId, data.units]);
+
   return {
     state,
     data,
     setTheater: (id: TheaterId) => {
       const unit = dataRef.current.units.find((item) => item.id === state.unitId);
-      dispatch({ type: "setTheater", id, unitTheater: unit?.theater ?? null });
+      dispatch({ type: "setTheater", id, keepUnit: unit ? unitTheaters(unit).includes(id) : false });
     },
+    followTheater: (id: TheaterId) => dispatch({ type: "followTheater", id }),
     scrub: (index: number) => dispatch({ type: "scrub", index }),
-    togglePlay: () => dispatch({ type: "togglePlay" }),
+    togglePlay: () => {
+      const unit = dataRef.current.units.find((item) => item.id === state.unitId);
+      const followUntil = unit ? lastTrackDate(unit.track.map((point) => point.date)) : undefined;
+      dispatch({ type: "togglePlay", followUntil });
+    },
     setSpeed: (speed: Speed) => dispatch({ type: "setSpeed", speed }),
     step: (delta: number) => dispatch({ type: "step", delta }),
-    selectUnit: (id: string) => {
+    selectUnit: (id: string, atDate?: string) => {
       const unit = dataRef.current.units.find((item) => item.id === id);
       if (!unit) return;
-      dispatch({ type: "selectUnit", id: unit.id, theater: unit.theater, dates: unit.track.map((point) => point.date) });
+      const dates = unit.track.map((point) => point.date);
+      let first = dates[0] ?? state.date;
+      for (const date of dates) {
+        if (date < first) first = date;
+      }
+      const requested = atDate && isValidWarDate(atDate) ? atDate : state.date;
+      const date = requested < first ? first : requested;
+      dispatch({
+        type: "selectUnit",
+        id: unit.id,
+        theater: theaterAt(unit, date) ?? unit.theater,
+        dates,
+        date,
+      });
     },
     selectHubUnit: (id: string, theater: TheaterId | null, date: string) => {
       dispatch({ type: "selectHubUnit", id, theater, date });
@@ -503,6 +609,8 @@ export function useSituation() {
     setCameraLock: (value: boolean) => dispatch({ type: "lock", value }),
     followSelected: () => dispatch({ type: "follow" }),
     toggleLayer: (layer: keyof Layers) => dispatch({ type: "layer", layer }),
+    setBasemap: (basemap: Basemap) => dispatch({ type: "basemap", basemap }),
+    setEchelonCap: (cap: EchelonCap) => dispatch({ type: "echelonCap", cap }),
     setQuery: (query: string) => dispatch({ type: "query", query }),
     setSide: (side: Side | "all") => dispatch({ type: "side", side }),
     setNation: (nation: string) => dispatch({ type: "nation", nation }),
@@ -516,12 +624,18 @@ export function useSituation() {
     playCampaign: (id: string) => {
       const campaign = CAMPAIGNS.find((item) => item.id === id);
       if (!campaign) return;
+      const battle = campaign.battleId
+        ? dataRef.current.battles.find((item) => item.id === campaign.battleId && item.theater === campaign.theater)
+        : undefined;
       dispatch({
         type: "playCampaign",
         id: campaign.id,
         theater: campaign.theater,
         start: campaign.start,
         end: campaign.end,
+        battle: battle
+          ? { id: battle.id, lng: battle.lng, lat: battle.lat, zoom: battle.zoom }
+          : undefined,
       });
     },
   };

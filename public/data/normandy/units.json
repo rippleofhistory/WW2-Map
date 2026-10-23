@@ -362,7 +362,7 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "normandy",
-    "source": "Published Juno / Courseulles-sur-Mer location. Confirm against 3rd Canadian Division war diary.",
+    "source": "Published Juno / Falaise / Rouen locations. Confirm against 3rd Canadian Division war diary.",
     "confidence": "low",
     "track": [
       {
@@ -373,6 +373,24 @@
         "note": "6 June, Juno sector, Courseulles-sur-Mer. Coarser division pin.",
         "source": "Published commune location, Courseulles-sur-Mer. Confirm against 3rd Canadian Division war diary.",
         "confidence": "low"
+      },
+      {
+        "date": "1944-08-16",
+        "place": "Falaise",
+        "lng": -0.1975,
+        "lat": 48.8972,
+        "note": "16 August, Falaise. Overlord names the Canadian capture; tagged to this division already in the pack. 2nd Canadian Division is not pinned.",
+        "source": "Published commune location, Falaise. Wikipedia Operation Overlord (Wilmot). Confirm against 3rd Canadian Division war diary.",
+        "confidence": "low"
+      },
+      {
+        "date": "1944-08-30",
+        "place": "Rouen",
+        "lng": 1.0886,
+        "lat": 49.4428,
+        "note": "30 August, crossed the Seine near Elbeuf and entered Rouen. Coarser division pin.",
+        "source": "Published commune location, Rouen. Wikipedia Operation Overlord (Stacey). Confirm against 3rd Canadian Division war diary.",
+        "confidence": "medium"
       }
     ]
   },
@@ -464,6 +482,557 @@
         "lat": 49.09,
         "note": "13 June, Hill 213 / Villers-Bocage. Tagged with 4th County of London Yeomanry.",
         "source": "Published location of Hill 213 north-east of Villers-Bocage. Confirm against s.SS-Pz.Abt. 101 records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-4th-infantry",
+    "name": "US 4th Infantry Division",
+    "abbr": "4 INF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "VII Corps",
+    "theater": "normandy",
+    "source": "Published Utah / Cherbourg / Paris locations. Confirm against 4th Infantry Division G-3.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Utah / La Madeleine",
+        "lng": -1.175,
+        "lat": 49.416,
+        "note": "6 June, Utah Beach, La Madeleine. Coarser division pin.",
+        "source": "Published Utah Beach sector location, La Madeleine. Confirm against 4th Infantry Division G-3.",
+        "confidence": "low"
+      },
+      {
+        "date": "1944-06-26",
+        "place": "Cherbourg",
+        "lng": -1.625,
+        "lat": 49.639,
+        "note": "26 June, Cherbourg with the 9th and 79th Infantry Divisions. Coarser division pin.",
+        "source": "Published commune location, Cherbourg-en-Cotentin. Wikipedia Operation Overlord (Ford & Zaloga). Confirm against 4th Infantry Division G-3.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-08-25",
+        "place": "Paris",
+        "lng": 2.3522,
+        "lat": 48.8567,
+        "note": "25 August, Paris from the south with 2e DB. Coarser division pin.",
+        "source": "Published commune location, Paris. Wikipedia Operation Overlord (Wilmot). Confirm against 4th Infantry Division G-3.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-29th-infantry",
+    "name": "US 29th Infantry Division",
+    "abbr": "29 INF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "V Corps",
+    "theater": "normandy",
+    "source": "Published Omaha / Vierville-sur-Mer location. Confirm against 29th Infantry Division G-3.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Omaha / Vierville-sur-Mer",
+        "lng": -0.905,
+        "lat": 49.374,
+        "note": "6 June, western Omaha, Vierville-sur-Mer. Coarser division pin.",
+        "source": "Published commune location, Vierville-sur-Mer. Confirm against 29th Infantry Division G-3.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "us-82nd-airborne",
+    "name": "82nd Airborne Division",
+    "abbr": "82 AB",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "VII Corps",
+    "theater": "normandy",
+    "source": "Published Sainte-Mère-Église location. Confirm against 82nd Airborne G-3.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Sainte-Mère-Église",
+        "lng": -1.3175,
+        "lat": 49.4089,
+        "note": "6 June, Sainte-Mère-Église. Coarser division pin.",
+        "source": "Published commune location, Sainte-Mère-Église. Confirm against 82nd Airborne G-3.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "british-6th-airborne",
+    "name": "British 6th Airborne Division",
+    "abbr": "6 AB",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "I Corps",
+    "theater": "normandy",
+    "source": "Published Ranville / Pegasus Bridge location. Confirm against TNA WO 171 6th Airborne Division war diary.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Ranville",
+        "lng": -0.256,
+        "lat": 49.231,
+        "note": "6 June, Ranville east of the Orne. Coarser division pin.",
+        "source": "Published commune location, Ranville. Confirm against TNA WO 171 6th Airborne Division war diary.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "us-2nd-rangers",
+    "name": "2nd Ranger Battalion",
+    "abbr": "2 RGR",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "Provisional Ranger Group",
+    "theater": "normandy",
+    "source": "Published Pointe du Hoc location. Confirm against 2nd Ranger Battalion AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Pointe du Hoc",
+        "lng": -0.9872,
+        "lat": 49.3964,
+        "note": "6 June, Pointe du Hoc cliff assault.",
+        "source": "Published location of Pointe du Hoc. Confirm against 2nd Ranger Battalion AAR.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-2nd-infantry",
+    "name": "US 2nd Infantry Division",
+    "abbr": "2 INF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "V Corps",
+    "theater": "normandy",
+    "source": "Published Omaha / Saint-Laurent-sur-Mer location for 7 June landing. Confirm against 2nd Infantry Division G-3.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-07",
+        "place": "Omaha / Saint-Laurent-sur-Mer",
+        "lng": -0.877,
+        "lat": 49.3594,
+        "note": "7 June, landed over Omaha. Hidden on 6 June. Coarser division pin.",
+        "source": "Published commune location, Saint-Laurent-sur-Mer. Confirm against 2nd Infantry Division G-3.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "us-90th-infantry",
+    "name": "US 90th Infantry Division",
+    "abbr": "90 INF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "VII Corps",
+    "theater": "normandy",
+    "source": "Published Sainte-Mère-Église location for 8 June. Confirm against 90th Infantry Division G-3.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-08",
+        "place": "Sainte-Mère-Église",
+        "lng": -1.3175,
+        "lat": 49.4089,
+        "note": "8 June, assembling inland of Utah around Sainte-Mère-Église. Hidden on 6–7 June. Coarser division pin.",
+        "source": "Published commune location, Sainte-Mère-Église. Confirm against 90th Infantry Division G-3.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "uk-47-rm-commando",
+    "name": "47 Royal Marine Commando",
+    "abbr": "47 RM",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "4th Special Service Brigade",
+    "theater": "normandy",
+    "source": "Published Port-en-Bessin location for 7 June. Confirm against 47 RM Commando war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-07",
+        "place": "Port-en-Bessin",
+        "lng": -0.754,
+        "lat": 49.348,
+        "note": "7 June, Port-en-Bessin taken after the march from Gold. Hidden on 6 June.",
+        "source": "Published commune location, Port-en-Bessin. Confirm against 47 RM Commando war diary.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "de-716-inf",
+    "name": "716th Static Infantry Division",
+    "abbr": "716 INF",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "parent": "LXXXIV Corps",
+    "theater": "normandy",
+    "source": "Published Luc-sur-Mer coastal location. Confirm against 716th Infantry Division KTB.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Luc-sur-Mer",
+        "lng": -0.355,
+        "lat": 49.315,
+        "note": "6 June, static coastal division on the Sword–Juno front. Coarser division pin.",
+        "source": "Published commune location, Luc-sur-Mer. Confirm against 716th Infantry Division KTB.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "de-352nd",
+    "name": "352nd Infantry Division",
+    "abbr": "352 INF",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "parent": "LXXXIV Corps",
+    "theater": "normandy",
+    "source": "Published Formigny location behind Omaha. Confirm against 352nd Infantry Division KTB.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Formigny",
+        "lng": -0.898,
+        "lat": 49.336,
+        "note": "6 June, hinterland of Omaha around Formigny. Coarser division pin.",
+        "source": "Published commune location, Formigny. Confirm against 352nd Infantry Division KTB.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "de-709-inf",
+    "name": "709th Static Infantry Division",
+    "abbr": "709 INF",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "parent": "LXXXIV Corps",
+    "theater": "normandy",
+    "source": "Published Montebourg location on the east Cotentin. Confirm against 709th Infantry Division KTB.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Montebourg",
+        "lng": -1.38,
+        "lat": 49.488,
+        "note": "6 June, east Cotentin around Montebourg facing Utah. Coarser division pin.",
+        "source": "Published commune location, Montebourg. Confirm against 709th Infantry Division KTB.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "de-91-inf",
+    "name": "91st Luftlande Division",
+    "abbr": "91 LL",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "parent": "LXXXIV Corps",
+    "theater": "normandy",
+    "source": "Published Picauville location. Confirm against 91st Luftlande Division KTB.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Picauville",
+        "lng": -1.4,
+        "lat": 49.38,
+        "note": "6 June, Cotentin around Picauville against the 82nd Airborne. Coarser division pin.",
+        "source": "Published commune location, Picauville. Confirm against 91st Luftlande Division KTB.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "de-fjr-6",
+    "name": "Fallschirmjäger-Regiment 6",
+    "abbr": "FJR 6",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "regiment",
+    "parent": "91st Luftlande Division",
+    "theater": "normandy",
+    "source": "Published Saint-Côme-du-Mont and Carentan locations. Confirm against FJR 6 records.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Saint-Côme-du-Mont",
+        "lng": -1.272,
+        "lat": 49.336,
+        "note": "6 June, Saint-Côme-du-Mont covering the approaches to Carentan.",
+        "source": "Published commune location, Saint-Côme-du-Mont. Confirm against FJR 6 records.",
+        "confidence": "low"
+      },
+      {
+        "date": "1944-06-10",
+        "place": "Carentan",
+        "lng": -1.2464,
+        "lat": 49.3036,
+        "note": "10 June, Carentan against the 101st Airborne.",
+        "source": "Published commune location, Carentan. Confirm against FJR 6 records.",
+        "confidence": "low"
+      },
+      {
+        "date": "1944-06-13",
+        "place": "Méautis / Bloody Gulch",
+        "lng": -1.268,
+        "lat": 49.292,
+        "note": "13 June, Méautis / Bloody Gulch with 17th SS against the 101st.",
+        "source": "Published location of the Méautis / Bloody Gulch fighting. Confirm against FJR 6 records.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "de-243-inf",
+    "name": "243rd Static Infantry Division",
+    "abbr": "243 INF",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "parent": "LXXXIV Corps",
+    "theater": "normandy",
+    "source": "Published La Haye-du-Puits location on the west Cotentin. Confirm against 243rd Infantry Division KTB.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "La Haye-du-Puits",
+        "lng": -1.545,
+        "lat": 49.29,
+        "note": "6 June, west Cotentin around La Haye-du-Puits. May sit off the lodgement contact.",
+        "source": "Published commune location, La Haye-du-Puits. Confirm against 243rd Infantry Division KTB.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "de-346-inf",
+    "name": "346th Infantry Division",
+    "abbr": "346 INF",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "parent": "LXXXI Corps",
+    "theater": "normandy",
+    "source": "Published Sallenelles location east of the Orne. Confirm against 346th Infantry Division KTB.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Sallenelles",
+        "lng": -0.229,
+        "lat": 49.265,
+        "note": "6 June, east of the Orne against 6th Airborne. Coarser division pin.",
+        "source": "Published commune location, Sallenelles. Confirm against 346th Infantry Division KTB.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "de-panzer-lehr",
+    "name": "Panzer Lehr Division",
+    "abbr": "LEHR",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "parent": "I SS Panzer Corps",
+    "theater": "normandy",
+    "source": "Published Tilly-sur-Seulles location for 11 June. No 6 June lodgement pin.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-11",
+        "place": "Tilly-sur-Seulles",
+        "lng": -0.626,
+        "lat": 49.175,
+        "note": "11 June, Tilly-sur-Seulles after the approach from the south. Hidden before this date.",
+        "source": "Published commune location, Tilly-sur-Seulles. Confirm against Panzer Lehr KTB.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "de-17-ss",
+    "name": "17th SS Panzergrenadier Division",
+    "abbr": "17 SS",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "parent": "LXXXIV Corps",
+    "theater": "normandy",
+    "source": "Published Méautis / Bloody Gulch location for 13 June. Confirm against 17th SS records.",
+    "confidence": "low",
+    "track": [
+      {
+        "date": "1944-06-13",
+        "place": "Méautis / Bloody Gulch",
+        "lng": -1.268,
+        "lat": 49.292,
+        "note": "13 June, counter-attack south-west of Carentan with FJR 6. Hidden before this date.",
+        "source": "Published location of the Méautis / Bloody Gulch fighting. Confirm against 17th SS records.",
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "uk-1-hampshires",
+    "name": "1st Battalion, Hampshire Regiment",
+    "abbr": "1 HANTS",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "50th Division",
+    "theater": "normandy",
+    "source": "Published Arromanches location for 6 June. Confirm against TNA WO 171 1st Hampshire war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Arromanches-les-Bains",
+        "lng": -0.6211,
+        "lat": 49.34,
+        "note": "6 June, captured Arromanches on the western Gold flank. Later Mulberry B.",
+        "source": "Published commune location, Arromanches-les-Bains. Wikipedia Operation Overlord (Wilmot). Confirm against TNA WO 171 1st Hampshire war diary.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-9th-infantry",
+    "name": "US 9th Infantry Division",
+    "abbr": "9 INF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "VII Corps",
+    "theater": "normandy",
+    "source": "Published Cherbourg location for 26 June. Confirm against 9th Infantry Division G-3.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-26",
+        "place": "Cherbourg",
+        "lng": -1.625,
+        "lat": 49.639,
+        "note": "26 June, Cherbourg with the 4th and 79th Infantry Divisions. Hidden before this date. The 17 June west-coast cut-off is unnamed in Overlord and is not pinned.",
+        "source": "Published commune location, Cherbourg-en-Cotentin. Wikipedia Operation Overlord (Ford & Zaloga). Confirm against 9th Infantry Division G-3.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-79th-infantry",
+    "name": "US 79th Infantry Division",
+    "abbr": "79 INF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "VII Corps",
+    "theater": "normandy",
+    "source": "Published Cherbourg location for 26 June. Confirm against 79th Infantry Division G-3.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-26",
+        "place": "Cherbourg",
+        "lng": -1.625,
+        "lat": 49.639,
+        "note": "26 June, Cherbourg with the 4th and 9th Infantry Divisions. Hidden before this date.",
+        "source": "Published commune location, Cherbourg-en-Cotentin. Wikipedia Operation Overlord (Ford & Zaloga). Confirm against 79th Infantry Division G-3.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "fr-2e-db",
+    "name": "2e Division Blindée",
+    "abbr": "2e DB",
+    "nation": "France",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "Not in this sample",
+    "theater": "normandy",
+    "source": "Published Paris locations for 24–25 August. Confirm against 2e DB records.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-08-24",
+        "place": "Paris",
+        "lng": 2.3522,
+        "lat": 48.8567,
+        "note": "24 August, arrived in Paris from the west under Leclerc. Hidden before this date.",
+        "source": "Published commune location, Paris. Wikipedia Operation Overlord (Wilmot). Confirm against 2e DB records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-08-25",
+        "place": "Paris",
+        "lng": 2.3522,
+        "lat": 48.8567,
+        "note": "25 August, Paris liberated with the U.S. 4th Infantry Division from the south.",
+        "source": "Published commune location, Paris. Wikipedia Operation Overlord (Wilmot). Confirm against 2e DB records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-2nd-armored",
+    "name": "US 2nd Armored Division",
+    "abbr": "2 ARMD",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "Not in this sample",
+    "theater": "normandy",
+    "source": "Published Elbeuf location for 25 August. Confirm against 2nd Armored Division G-3.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-08-25",
+        "place": "Elbeuf",
+        "lng": 1.01,
+        "lat": 49.29,
+        "note": "25 August, fought into Elbeuf and met British and Canadian armour. Hidden before this date.",
+        "source": "Published commune location, Elbeuf. Wikipedia Operation Overlord (Stacey). Confirm against 2nd Armored Division G-3.",
         "confidence": "medium"
       }
     ]

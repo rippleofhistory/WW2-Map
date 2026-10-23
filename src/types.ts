@@ -6,6 +6,7 @@ export type ControlSide = Side | "neutral";
 export type ControlStatus = "sovereign" | "occupied" | "puppet" | "cobelligerent" | "collapsed";
 
 export type Echelon =
+  | "army-group"
   | "army"
   | "corps"
   | "division"
@@ -42,6 +43,8 @@ export interface UnitPosition {
   place?: string;
   source?: string;
   confidence?: Confidence;
+  /** Frame for this stop when the unit crosses theaters. Inferred from bounds if omitted. */
+  theater?: TheaterId;
 }
 
 /** Same record as UnitPosition. */
@@ -61,6 +64,8 @@ export interface Unit {
   source: string;
   confidence?: Confidence;
   featured?: boolean;
+  /** 0–1 remaining strength. Omit when the archive does not give a figure. */
+  strength?: number;
   track: UnitPosition[];
 }
 
@@ -71,6 +76,14 @@ export interface FrontLine {
   label: string;
   source: string;
   confidence?: Confidence;
+  /**
+   * Independent line inside a theater. Same sector: later date replaces earlier.
+   * Different sectors stay on the map together (Leningrad during Stalingrad).
+   * Defaults to the theater id.
+   */
+  sector?: string;
+  /** Exclusive end date. After this the sector is empty until a later front in the same sector. */
+  until?: string;
   /** Daily situation trace. Empty when the front is a weekly polygon. */
   allied: [number, number][];
   axis: [number, number][];
@@ -122,13 +135,19 @@ export interface Theater {
   disclaimer?: string;
 }
 
+export type Basemap = "terrain" | "satellite" | "dark";
+
+/** Zoom-filter override for counters. Auto follows zoom. Army+ and Division+ cap the finest rank. */
+export type EchelonCap = "auto" | "army+" | "division+" | "all";
+
 export interface Layers {
   fronts: boolean;
   units: boolean;
   battles: boolean;
   labels: boolean;
-  modernBasemap: boolean;
   occupation: boolean;
+  /** HoI4-style held-area fills behind the front. Default on for Eastern Front. */
+  controlAreas: boolean;
 }
 
 export interface Filters {

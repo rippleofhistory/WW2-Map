@@ -81,7 +81,7 @@ The player does **not** interpolate across a missing day.
 - During Play, it glides in a straight line only when **the next calendar day also has a point**. 7 June glides toward 8 June only if both 7 June and 8 June exist in `track`.
 - If 8 June is missing, 7 June stays put through 8 June and shows **last reported**.
 - Before the first track date, the unit is hidden.
-- After the last track date, the unit holds the last point as **last reported**.
+- After the last track date, the unit holds the last point as **last reported** until a newer schematic front is out of reach. No later coordinate is invented.
 
 So: copy days the diary locates; omit days it does not. A week of silence in the diary should be a week of gaps in `track`.
 

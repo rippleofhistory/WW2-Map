@@ -3,6 +3,7 @@ import type { Battle, FrontLine, OccupationState, Theater, TheaterId, Unit } fro
 import { MapDataContext } from "./mapContext.ts";
 import {
   emptyRegions,
+  mergeUnitLists,
   parseBattles,
   parseFronts,
   parseOccupation,
@@ -101,6 +102,16 @@ async function loadOccupation(): Promise<{
   }
 }
 
+async function loadWorldUnits(): Promise<Unit[]> {
+  try {
+    const response = await fetch("/data/world/units.json");
+    if (!response.ok) return [];
+    return parseUnits(await response.json()) ?? [];
+  } catch {
+    return [];
+  }
+}
+
 function packFrom(
   modules: Record<TheaterId, TheaterModule>,
   origin: MapData["origin"],
@@ -109,6 +120,7 @@ function packFrom(
   frames: Record<TheaterId, Theater>,
   occupation: OccupationState[],
   regions: FeatureCollection<Geometry, { id: string; name: string }>,
+  worldUnits: Unit[] = [],
 ): MapData {
   const units: Unit[] = [];
   const fronts: FrontLine[] = [];
@@ -119,7 +131,19 @@ function packFrom(
     fronts.push(...module.fronts);
     battles.push(...module.battles);
   }
-  return { units, fronts, battles, labels: [...LABELS], origin, status, message, modules, frames, occupation, regions };
+  return {
+    units: mergeUnitLists(units, worldUnits),
+    fronts,
+    battles,
+    labels: [...LABELS],
+    origin,
+    status,
+    message,
+    modules,
+    frames,
+    occupation,
+    regions,
+  };
 }
 
 export function DataProvider({ children }: { children: ReactNode }) {
@@ -131,8 +155,9 @@ export function DataProvider({ children }: { children: ReactNode }) {
       Promise.all(THEATERS.map(async (theater) => [theater.id, await loadModule(theater.id)] as const)),
       loadNormandyFrame(),
       loadOccupation(),
+      loadWorldUnits(),
     ])
-      .then(([rows, normandyFrame, world]) => {
+      .then(([rows, normandyFrame, world, worldUnits]) => {
         if (cancelled) return;
         const modules = initialModules();
         const frames = defaultFrames();
@@ -166,6 +191,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
             frames,
             world?.occupation ?? [],
             world?.regions ?? emptyRegions(),
+            worldUnits,
           ),
         );
       })

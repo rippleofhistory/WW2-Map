@@ -13,8 +13,9 @@ export const NORMANDY_CAMPAIGN_END = "1944-08-31";
 
 /**
  * Normandy campaign jumps, 6 June–31 August 1944.
- * D-Day and Carentan reuse the sample markers.
- * The later operations set the date only. They have no coordinates in this sample.
+ * D-Day, Carentan, Charnwood, Goodwood, and Cobra open a sourced battle marker.
+ * Epsom has no named commune in Operation Overlord. Falaise (12 August) is the
+ * pocket-forming date; the town pin is 16 August.
  */
 export const CAMPAIGN_PRESETS: readonly CampaignPreset[] = [
   {
@@ -35,30 +36,33 @@ export const CAMPAIGN_PRESETS: readonly CampaignPreset[] = [
     id: "epsom",
     name: "Epsom",
     date: "1944-06-26",
-    note: "Date preset for 26 June 1944. No plotted position in this sample.",
+    note: "Date preset for 26 June 1944. Overlord names the Odon, not a commune. Cherbourg that day is a separate battle marker.",
   },
   {
     id: "charnwood",
     name: "Charnwood",
     date: "1944-07-08",
-    note: "Date preset for 8 July 1944. No plotted position in this sample.",
+    battleId: "caen-charnwood",
+    note: "8 July 1944. Northern Caen. Overlord commune pin.",
   },
   {
     id: "goodwood",
     name: "Goodwood",
     date: "1944-07-18",
-    note: "Date preset for 18 July 1944. No plotted position in this sample.",
+    battleId: "caen-goodwood",
+    note: "18 July 1944. Caen. Overlord commune pin.",
   },
   {
     id: "cobra",
     name: "Cobra",
     date: "1944-07-25",
-    note: "Date preset for 25 July 1944. No plotted position in this sample.",
+    battleId: "saint-lo",
+    note: "25 July 1944. Saint-Lô. Overlord commune pin.",
   },
   {
     id: "falaise",
     name: "Falaise",
     date: "1944-08-12",
-    note: "Date preset for 12 August 1944. No plotted position in this sample.",
+    note: "Date preset for 12 August 1944. The Falaise town pin is 16 August, when Overlord names the Canadian capture.",
   },
 ];

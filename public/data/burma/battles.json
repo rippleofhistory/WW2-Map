@@ -1,1 +1,86 @@
-[]
+[
+  {
+    "id": "singapore",
+    "name": "Singapore",
+    "theater": "burma",
+    "date": "1942-02-08",
+    "lng": 103.8333,
+    "lat": 1.2833,
+    "zoom": 9,
+    "summary": "8 February 1942, Singapore. Overview of the fall of the city. Not a unit pin.",
+    "source": "Published commune location, Singapore. Wikipedia Fall of Singapore. Confirm against Malaya Command records.",
+    "confidence": "medium"
+  },
+  {
+    "id": "imphal-kohima",
+    "name": "Imphal and Kohima",
+    "theater": "burma",
+    "date": "1944-03-08",
+    "lng": 93.9384,
+    "lat": 24.8074,
+    "zoom": 8,
+    "summary": "8 March 1944, Imphal. Overview of the Imphal–Kohima campaign. Kohima is a later named-place pin on 5 April. Not a unit pin.",
+    "source": "Published commune location, Imphal. Wikipedia Battle of Imphal. Confirm against 14th Army records.",
+    "confidence": "medium"
+  },
+  {
+    "id": "malaya",
+    "name": "Malaya",
+    "theater": "burma",
+    "date": "1941-12-08",
+    "lng": 102.2386,
+    "lat": 6.1236,
+    "zoom": 7,
+    "summary": "8 December 1941, Kota Bharu. Overview of the Malayan campaign. Singapore is a later pin. Not a unit pin.",
+    "source": "Published commune location, Kota Bharu. Wikipedia Malayan campaign. Confirm against 25th Army records.",
+    "confidence": "medium"
+  },
+  {
+    "id": "kohima",
+    "name": "Battle of Kohima",
+    "theater": "burma",
+    "date": "1944-04-05",
+    "lng": 94.1086,
+    "lat": 25.6747,
+    "zoom": 10,
+    "summary": "5 April 1944, Kohima. Overview of the siege. Imphal remains the Imphal–Kohima campaign pin. Not a unit pin.",
+    "source": "Published commune location, Kohima. Wikipedia Battle of Kohima. Confirm against 2nd Infantry Division and 14th Army records.",
+    "confidence": "medium"
+  },
+  {
+    "id": "burma-1942",
+    "name": "Japanese invasion of Burma",
+    "theater": "burma",
+    "date": "1941-12-14",
+    "lng": 96.1565,
+    "lat": 16.8409,
+    "zoom": 7,
+    "summary": "14 December 1941, Rangoon. Overview of the named-place fight. Not a unit pin.",
+    "source": "Published location, Rangoon. Wikipedia Japanese invasion of Burma. Confirm against campaign records.",
+    "confidence": "medium"
+  },
+  {
+    "id": "meiktila",
+    "name": "Battle of Meiktila and Mandalay",
+    "theater": "burma",
+    "date": "1945-03-04",
+    "lng": 95.875,
+    "lat": 20.8778,
+    "zoom": 8,
+    "summary": "4 March 1945, Meiktila. Overview of the named-place fight. Not a unit pin.",
+    "source": "Published location, Meiktila. Wikipedia Battle of Meiktila and Mandalay. Confirm against campaign records.",
+    "confidence": "medium"
+  },
+  {
+    "id": "jaywick",
+    "name": "Operation Jaywick",
+    "theater": "burma",
+    "date": "1943-09-26",
+    "lng": 103.8333,
+    "lat": 1.2833,
+    "zoom": 11,
+    "summary": "26 September 1943, Singapore. Overview of the named-place fight. Not a unit pin.",
+    "source": "Published location, Singapore. Wikipedia Operation Jaywick. Confirm against campaign records.",
+    "confidence": "medium"
+  }
+]

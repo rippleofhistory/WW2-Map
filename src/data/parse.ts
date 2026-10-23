@@ -17,12 +17,13 @@ import type {
   UnitPosition,
 } from "../types.ts";
 import type { FeatureCollection, Geometry } from "geojson";
+import { parseStrength } from "../lib/counter.ts";
 import { THEATERS } from "./theaters.ts";
 
 const SIDES = new Set<Side>(["allied", "axis", "soviet", "japanese"]);
 const CONTROL_SIDES = new Set<ControlSide>(["allied", "axis", "soviet", "japanese", "neutral"]);
 const CONTROL_STATUS = new Set<ControlStatus>(["sovereign", "occupied", "puppet", "cobelligerent", "collapsed"]);
-const ECHELONS = new Set<Echelon>(["army", "corps", "division", "brigade", "regiment", "battalion", "company"]);
+const ECHELONS = new Set<Echelon>(["army-group", "army", "corps", "division", "brigade", "regiment", "battalion", "company"]);
 const THEATER_IDS = new Set<TheaterId>(THEATERS.map((theater) => theater.id));
 const CONFIDENCE = new Set<Confidence>(["high", "medium", "low"]);
 const CADENCE = new Set<FrontCadence>(["daily", "weekly"]);
@@ -96,11 +97,39 @@ function parseTrack(value: unknown): UnitPosition[] | null {
     const place = text(item.place) ?? undefined;
     const confidence = parseConfidence(item.confidence);
     if (confidence === null) return null;
-    track.push({ date, lng: point[0], lat: point[1], note, place, source, confidence });
+    let pointTheater: TheaterId | undefined;
+    if (item.theater !== undefined) {
+      const parsed = member(item.theater, THEATER_IDS);
+      if (!parsed) return null;
+      pointTheater = parsed;
+    }
+    track.push({ date, lng: point[0], lat: point[1], note, place, source, confidence, theater: pointTheater });
   }
   if (track.length === 0) return null;
   track.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
   return track;
+}
+
+/** Later files add dated stops to a unit that already exists. Same calendar date keeps the first row. */
+export function mergeUnitLists(primary: Unit[], extra: Unit[]): Unit[] {
+  const byId = new Map(primary.map((unit) => [unit.id, unit]));
+  for (const unit of extra) {
+    const existing = byId.get(unit.id);
+    if (!existing) {
+      byId.set(unit.id, unit);
+      continue;
+    }
+    const seen = new Set(existing.track.map((point) => point.date));
+    const track = [...existing.track];
+    for (const point of unit.track) {
+      if (seen.has(point.date)) continue;
+      seen.add(point.date);
+      track.push(point);
+    }
+    track.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+    byId.set(unit.id, { ...existing, track });
+  }
+  return [...byId.values()];
 }
 
 export function parseUnits(value: unknown): Unit[] | null {
@@ -120,10 +149,11 @@ export function parseUnits(value: unknown): Unit[] | null {
     const confidence = parseConfidence(item.confidence);
     const track = parseTrack(item.track);
     const featured = item.featured === true;
+    const strength = parseStrength(item.strength);
     if (!id || !name || !abbr || !nation || !side || !echelon || !parent || !theater || !source || confidence === null || !track) {
       return null;
     }
-    units.push({ id, name, abbr, nation, side, echelon, parent, theater, source, confidence, featured, track });
+    units.push({ id, name, abbr, nation, side, echelon, parent, theater, source, confidence, featured, strength, track });
   }
   return units;
 }
@@ -191,7 +221,19 @@ export function parseFronts(value: unknown): FrontLine[] | null {
       axis = axisLine;
     }
     if (!hasPolygon && !hasLines) return null;
-    fronts.push({ id, date, theater, label, source, confidence, allied, axis, polygon });
+    let sector: string | undefined;
+    if (item.sector !== undefined) {
+      const name = text(item.sector);
+      if (!name || !/^[a-z][a-z0-9-]{0,39}$/.test(name)) return null;
+      sector = name;
+    }
+    let until: string | undefined;
+    if (item.until !== undefined) {
+      const end = text(item.until);
+      if (!end || !isValidWarDate(end) || end <= date) return null;
+      until = end;
+    }
+    fronts.push({ id, date, theater, label, source, confidence, sector, until, allied, axis, polygon });
   }
   fronts.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
   return fronts;

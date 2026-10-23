@@ -1,1 +1,98 @@
-[]
+[
+  {
+    "id": "compass",
+    "name": "Compass",
+    "theater": "north-africa",
+    "date": "1940-12-09",
+    "lng": 25.9256,
+    "lat": 31.6108,
+    "zoom": 8,
+    "summary": "9 December 1940, Sidi Barrani. Overview of the Western Desert Force offensive. Not a unit pin.",
+    "source": "Published commune location, Sidi Barrani. Wikipedia Operation Compass. Confirm against Western Desert Force records.",
+    "confidence": "medium"
+  },
+  {
+    "id": "el-alamein",
+    "name": "Second El Alamein",
+    "theater": "north-africa",
+    "date": "1942-10-23",
+    "lng": 28.95,
+    "lat": 30.8333,
+    "zoom": 8,
+    "summary": "23 October 1942, El Alamein. Overview of Lightfoot and Supercharge. Not a unit pin.",
+    "source": "Published commune location, El Alamein. Wikipedia Second Battle of El Alamein. Confirm against Eighth Army records.",
+    "confidence": "medium"
+  },
+  {
+    "id": "torch",
+    "name": "Torch",
+    "theater": "north-africa",
+    "date": "1942-11-08",
+    "lng": 3.0872,
+    "lat": 36.7325,
+    "zoom": 8,
+    "summary": "8 November 1942, Algiers. Overview of the Allied landings in French North Africa. Not a unit pin.",
+    "source": "Published commune location, Algiers. Wikipedia Operation Torch. Confirm against Allied Force Headquarters records.",
+    "confidence": "medium"
+  },
+  {
+    "id": "tunisia",
+    "name": "Tunisia",
+    "theater": "north-africa",
+    "date": "1942-11-17",
+    "lng": 10.1817,
+    "lat": 36.8064,
+    "zoom": 8,
+    "summary": "17 November 1942, Tunis. Overview of the Tunisia campaign through the 13 May 1943 surrender. Not a unit pin.",
+    "source": "Published commune location, Tunis. Wikipedia Tunisia Campaign. Confirm against 18th Army Group records.",
+    "confidence": "medium"
+  },
+  {
+    "id": "tobruk",
+    "name": "Tobruk",
+    "theater": "north-africa",
+    "date": "1941-04-10",
+    "lng": 23.9764,
+    "lat": 32.0836,
+    "zoom": 9,
+    "summary": "10 April 1941, Tobruk. Overview of the 1941 siege. Not a unit pin.",
+    "source": "Published commune location, Tobruk. Wikipedia Siege of Tobruk. Confirm against 9th Australian Division records.",
+    "confidence": "medium"
+  },
+  {
+    "id": "first-el-alamein",
+    "name": "First El Alamein",
+    "theater": "north-africa",
+    "date": "1942-07-01",
+    "lng": 28.95,
+    "lat": 30.8333,
+    "zoom": 9,
+    "summary": "1 July 1942, El Alamein. Overview of the first Alamein battle. Not the 23 October Lightfoot pin. Not a unit pin.",
+    "source": "Published commune location, El Alamein. Wikipedia First Battle of El Alamein. Confirm against Eighth Army records.",
+    "confidence": "medium"
+  },
+  {
+    "id": "mers-el-kebir",
+    "name": "Mers-el-Kébir",
+    "theater": "north-africa",
+    "date": "1940-07-03",
+    "lng": -0.6331,
+    "lat": 35.6969,
+    "zoom": 10,
+    "summary": "3 July 1940, Oran. Overview of the attack on the French fleet at Mers-el-Kébir. Coarser pin on the named harbour commune already used for Torch. Not a unit pin.",
+    "source": "Published commune location, Oran. Wikipedia Attack on Mers-el-Kébir. Confirm against Force H and Marine nationale records.",
+    "confidence": "low"
+  },
+  {
+    "id": "gazala",
+    "name": "Battle of Gazala",
+    "theater": "north-africa",
+    "date": "1942-05-26",
+    "lng": 23.357,
+    "lat": 32.147,
+    "zoom": 9,
+    "summary": "26 May 1942, Ain el Gazala. Overview of the Gazala battle on the named place. Tobruk remains a later pin. Not a unit pin.",
+    "source": "Published location, Ain el Gazala. Wikipedia Battle of Gazala. Confirm against Eighth Army and Panzer Army Africa records.",
+    "confidence": "medium"
+  }
+]

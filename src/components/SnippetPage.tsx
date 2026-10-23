@@ -87,7 +87,7 @@ export function SnippetPage() {
         </label>
         <label className="snippet-check">
           <input type="checkbox" checked={hideChrome} onChange={(event) => setHideChrome(event.target.checked)} />
-          Hide WW2Hub header
+          Hide chrome (timeline and search only)
         </label>
         <label className="snippet-check">
           <input type="checkbox" checked={globe} onChange={(event) => setGlobe(event.target.checked)} />

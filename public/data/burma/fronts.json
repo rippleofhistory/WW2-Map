@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": "singapore-1942-02-08",
+    "date": "1942-02-08",
+    "until": "1942-02-16",
+    "theater": "burma",
+    "sector": "malaya",
+    "label": "Schematic Singapore assault, 8 February 1942 (Johor Bahru–Singapore)",
+    "source": "Schematic trace through named communes Johor Bahru and Singapore. Not a digitized Malaya Command overlay.",
+    "confidence": "low",
+    "allied": [
+      [103.8, 1.4927],
+      [103.89, 1.2833]
+    ],
+    "axis": [
+      [103.68, 1.4927],
+      [103.77, 1.2833]
+    ]
+  }
+]

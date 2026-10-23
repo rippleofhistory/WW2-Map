@@ -17,8 +17,16 @@ interface TimelineProps {
   onPreset: (date: string) => void;
   onCampaign: (id: string) => void;
   campaignId: string | null;
+  campaignTitles?: Record<string, string>;
   battles: readonly Battle[];
   onOverview: () => void;
+  compact: boolean;
+  showTicks: boolean;
+  showCampaigns: boolean;
+  showPresets: boolean;
+  onToggleTicks: () => void;
+  onToggleCampaigns: () => void;
+  onTogglePresets: () => void;
 }
 
 const SPEEDS = [1, 5, 30] as const;
@@ -129,6 +137,17 @@ export function Timeline(props: TimelineProps) {
         <button type="button" onClick={props.onOverview} aria-label="Zoom out to country occupation">
           War overview
         </button>
+        {props.compact ? null : (
+          <button
+            type="button"
+            className="rail-toggle"
+            aria-expanded={props.showTicks}
+            aria-controls="op-ticks"
+            onClick={props.onToggleTicks}
+          >
+            {props.showTicks ? "Hide names" : "Show names"}
+          </button>
+        )}
         <p className="readout" id="date-label">
           {formatStencil(props.date)}
           {campaign ? (
@@ -140,7 +159,11 @@ export function Timeline(props: TimelineProps) {
           ) : null}
         </p>
       </div>
-      <OperationScale date={props.date} campaignId={props.campaignId} onCampaign={props.onCampaign} onPreset={props.onPreset} />
+      {props.showTicks ? (
+        <div id="op-ticks">
+          <OperationScale date={props.date} campaignId={props.campaignId} onCampaign={props.onCampaign} onPreset={props.onPreset} />
+        </div>
+      ) : null}
       <div className="scrub">
         <div className="sprockets" aria-hidden="true" />
         {operationTicks().map((tick) => (
@@ -155,7 +178,7 @@ export function Timeline(props: TimelineProps) {
           <span
             className="segment-window"
             style={{ left: `${segmentLeft}%`, width: `${segmentWidth}%` }}
-            title={campaign.note}
+            title={props.campaignTitles?.[campaign.id] ?? campaign.note}
           />
         ) : null}
         <span className="sample-window" style={{ left: `${sampleLeft}%` }} title="Normandy sample, 6–13 June 1944" />
@@ -170,41 +193,71 @@ export function Timeline(props: TimelineProps) {
           onChange={(event) => props.onScrub(Number(event.target.value))}
         />
       </div>
-      <div className="ops" aria-label="Campaigns">
-        <span className="ops-label">Campaigns</span>
-        {CAMPAIGNS.map((item) => (
+      {props.compact ? null : (
+        <div className={props.showCampaigns ? "ops" : "ops ops-min"} aria-label="Campaigns">
+          <span className="ops-label">Campaigns</span>
           <button
-            key={item.id}
             type="button"
-            aria-current={props.campaignId === item.id ? "true" : undefined}
-            aria-label={`${item.name}, ${item.start} to ${item.end}`}
-            title={item.note}
-            onClick={() => props.onCampaign(item.id)}
+            className="rail-toggle"
+            aria-expanded={props.showCampaigns}
+            onClick={props.onToggleCampaigns}
           >
-            <span>{formatDisplay(item.start)}</span>
-            {item.name}
+            {props.showCampaigns ? "Hide" : "Show"}
           </button>
-        ))}
-      </div>
-      <div className="ops" aria-label="Normandy campaign presets">
-        <span className="ops-label">Normandy</span>
-        {CAMPAIGN_PRESETS.map((item) => (
+          {props.showCampaigns
+            ? CAMPAIGNS.map((item) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  aria-current={props.campaignId === item.id ? "true" : undefined}
+                  aria-label={`${item.name}, ${item.start} to ${item.end}`}
+                  title={props.campaignTitles?.[item.id] ?? item.note}
+                  onClick={() => props.onCampaign(item.id)}
+                >
+                  <span>{formatDisplay(item.start)}</span>
+                  {item.name}
+                </button>
+              ))
+            : campaign
+              ? <span className="ops-current">{campaign.name}</span>
+              : null}
+        </div>
+      )}
+      {props.compact ? null : (
+        <div className={props.showPresets ? "ops" : "ops ops-min"} aria-label="Normandy campaign presets">
+          <span className="ops-label">Normandy</span>
           <button
-            key={item.id}
             type="button"
-            aria-current={props.date === item.date ? "date" : undefined}
-            title={item.note}
-            onClick={() => {
-              if (item.battleId) props.onBattle(item.battleId);
-              else props.onPreset(item.date);
-            }}
+            className="rail-toggle"
+            aria-expanded={props.showPresets}
+            onClick={props.onTogglePresets}
           >
-            <span>{formatDisplay(item.date)}</span>
-            {item.name}
+            {props.showPresets ? "Hide" : "Show"}
           </button>
-        ))}
-      </div>
-      <p className="keys-hint">Space plays or pauses. Left and right arrows step one day. F follows the selected unit.</p>
+          {props.showPresets
+            ? CAMPAIGN_PRESETS.map((item) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  aria-current={props.date === item.date ? "date" : undefined}
+                  title={item.note}
+                  onClick={() => {
+                    if (item.battleId) props.onBattle(item.battleId);
+                    else props.onPreset(item.date);
+                  }}
+                >
+                  <span>{formatDisplay(item.date)}</span>
+                  {item.name}
+                </button>
+              ))
+            : preset
+              ? <span className="ops-current">{preset.name}</span>
+              : null}
+        </div>
+      )}
+      {props.compact ? null : (
+        <p className="keys-hint">Space plays or pauses. Left and right arrows step one day. F follows the selected unit. M opens the full map. Escape shows the chrome again.</p>
+      )}
       <p className="range-ends" aria-hidden="true">
         <span>{formatDisplay(WAR_START)}</span>
         <span>{formatDisplay(dateFromIndex(WAR_DAYS))}</span>

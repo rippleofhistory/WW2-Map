@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": "husky-1943-07-10",
+    "date": "1943-07-10",
+    "until": "1943-08-18",
+    "theater": "italy",
+    "sector": "sicily",
+    "label": "Schematic Husky landings, 10 July 1943 (Gela–Syracuse)",
+    "source": "Schematic coastal trace through named communes Gela and Syracuse. Not a digitized Seventh/Eighth Army overlay.",
+    "confidence": "low",
+    "allied": [
+      [14.25, 37.12],
+      [15.2875, 37.13]
+    ],
+    "axis": [
+      [14.25, 37.01],
+      [15.2875, 37.02]
+    ]
+  }
+]

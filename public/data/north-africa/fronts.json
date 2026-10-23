@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "id": "alamein-1942-10-23",
+    "date": "1942-10-23",
+    "until": "1942-11-12",
+    "theater": "north-africa",
+    "sector": "egypt",
+    "label": "Schematic El Alamein, 23 October 1942 (El Alamein–Tel el Eisa)",
+    "source": "Schematic coastal trace through named places El Alamein and Tel el Eisa. Not a digitized Eighth Army overlay.",
+    "confidence": "low",
+    "allied": [
+      [28.88, 30.8333],
+      [28.88, 30.9]
+    ],
+    "axis": [
+      [29.02, 30.8333],
+      [29.02, 30.9]
+    ]
+  },
+  {
+    "id": "torch-1942-11-08",
+    "date": "1942-11-08",
+    "until": "1942-11-17",
+    "theater": "north-africa",
+    "sector": "maghreb",
+    "label": "Schematic Torch landings, 8 November 1942 (Oran–Algiers)",
+    "source": "Schematic trace through named communes Oran and Algiers. Not a digitized AFHQ overlay. Casablanca is not a third vertex until sourced on this line.",
+    "confidence": "low",
+    "allied": [
+      [-0.633, 35.78],
+      [3.0872, 36.81]
+    ],
+    "axis": [
+      [-0.633, 35.61],
+      [3.0872, 36.65]
+    ]
+  }
+]

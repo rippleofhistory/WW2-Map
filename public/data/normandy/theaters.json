@@ -3,9 +3,9 @@
   "label": "Normandy",
   "center": [-0.7, 49.3],
   "zoom": 8.2,
-  "bounds": [-2.2, 48.6, 0.8, 50],
+  "bounds": [-2.2, 48.3, 2.5, 50],
   "start": "1944-06-06",
   "end": "1944-08-31",
   "frontCadence": "daily",
-  "disclaimer": "Positions are approximate and sourced. Not a complete order of battle. 2nd SS Das Reich is still in southern France on D-Day; following it flies the camera off the Normandy frame."
+  "disclaimer": "Positions are approximate and sourced. Not a complete order of battle. Overlord pins run from the beaches through Paris, Elbeuf, and Rouen. 2nd SS Das Reich is still in southern France on D-Day; following it flies the camera off the Normandy frame."
 }

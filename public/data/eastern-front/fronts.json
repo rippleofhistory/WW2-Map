@@ -1,1 +1,162 @@
-[]
+[
+  {
+    "id": "warsaw-1939-09-28",
+    "date": "1939-09-28",
+    "until": "1939-10-07",
+    "theater": "eastern-front",
+    "sector": "poland",
+    "label": "Schematic end of the Polish campaign, 28 September 1939 (Warsaw–Modlin)",
+    "source": "Schematic trace through named places Warsaw and Modlin. Not a digitized September campaign overlay.",
+    "confidence": "low",
+    "allied": [
+      [21.0111, 52.28],
+      [20.6833, 52.48]
+    ],
+    "axis": [
+      [21.0111, 52.18],
+      [20.6833, 52.38]
+    ]
+  },
+  {
+    "id": "barbarossa-1941-06-22",
+    "date": "1941-06-22",
+    "until": "1941-10-02",
+    "theater": "eastern-front",
+    "sector": "center",
+    "label": "Schematic Barbarossa, 22 June 1941 (Brest–Białystok)",
+    "source": "Schematic trace through named communes Brest and Białystok. Not a digitized OKH overlay.",
+    "confidence": "low",
+    "allied": [
+      [23.72, 52.1347],
+      [23.23, 53.1325]
+    ],
+    "axis": [
+      [23.59, 52.1347],
+      [23.1, 53.1325]
+    ]
+  },
+  {
+    "id": "leningrad-1941-09-08",
+    "date": "1941-09-08",
+    "until": "1944-01-28",
+    "theater": "eastern-front",
+    "sector": "leningrad",
+    "label": "Schematic siege of Leningrad, 8 September 1941 (Leningrad–Kronstadt)",
+    "source": "Schematic trace through named communes Leningrad and Kronstadt. Not a digitized siege overlay.",
+    "confidence": "low",
+    "allied": [
+      [30.35, 59.9375],
+      [29.81, 59.9917]
+    ],
+    "axis": [
+      [30.26, 59.9375],
+      [29.72, 59.9917]
+    ]
+  },
+  {
+    "id": "moscow-1941-10-02",
+    "date": "1941-10-02",
+    "until": "1942-01-08",
+    "theater": "eastern-front",
+    "sector": "moscow",
+    "label": "Schematic Battle of Moscow, 2 October 1941 (Moscow–Klin)",
+    "source": "Schematic trace through named communes Moscow and Klin. Not a digitized Typhoon overlay.",
+    "confidence": "low",
+    "allied": [
+      [37.7, 55.7558],
+      [36.82, 56.3333]
+    ],
+    "axis": [
+      [37.53, 55.7558],
+      [36.65, 56.3333]
+    ]
+  },
+  {
+    "id": "stalingrad-1942-07-17",
+    "date": "1942-07-17",
+    "theater": "eastern-front",
+    "sector": "stalingrad",
+    "label": "Schematic Volga front, 17 July 1942 (Tractor Factory–Stalingrad)",
+    "source": "Schematic north–south trace through named places Volgograd Tractor Plant and Stalingrad city centre. Not a digitized kessel overlay.",
+    "confidence": "low",
+    "allied": [
+      [44.7, 48.8081],
+      [44.58, 48.7086]
+    ],
+    "axis": [
+      [44.56, 48.8081],
+      [44.45, 48.7086]
+    ]
+  },
+  {
+    "id": "stalingrad-1943-02-02",
+    "date": "1943-02-02",
+    "until": "1943-02-03",
+    "theater": "eastern-front",
+    "sector": "stalingrad",
+    "label": "Schematic Volga front, 2 February 1943 (Tractor Factory–Stalingrad)",
+    "source": "Schematic north–south trace through named places Volgograd Tractor Plant and Stalingrad city centre. Held from the July schematic. Not a digitized kessel overlay.",
+    "confidence": "low",
+    "allied": [
+      [44.7, 48.8081],
+      [44.58, 48.7086]
+    ],
+    "axis": [
+      [44.56, 48.8081],
+      [44.45, 48.7086]
+    ]
+  },
+  {
+    "id": "kursk-1943-07-12",
+    "date": "1943-07-12",
+    "until": "1943-08-24",
+    "theater": "eastern-front",
+    "sector": "kursk",
+    "label": "Schematic Kursk southern face, 12 July 1943 (Kursk–Prokhorovka)",
+    "source": "Schematic trace through named communes Kursk and Prokhorovka. Not a digitized Citadel overlay.",
+    "confidence": "low",
+    "allied": [
+      [36.12, 51.7167],
+      [36.93, 51.037]
+    ],
+    "axis": [
+      [36.25, 51.7167],
+      [37.05, 51.037]
+    ]
+  },
+  {
+    "id": "bagration-1944-06-22",
+    "date": "1944-06-22",
+    "until": "1944-08-20",
+    "theater": "eastern-front",
+    "sector": "center",
+    "label": "Schematic Bagration, 22 June 1944 (Vitebsk–Minsk)",
+    "source": "Schematic trace through named communes Vitebsk and Minsk. Not a digitized STAVKA overlay.",
+    "confidence": "low",
+    "allied": [
+      [30.14, 55.1904],
+      [27.5, 53.9006]
+    ],
+    "axis": [
+      [30.27, 55.1904],
+      [27.62, 53.9006]
+    ]
+  },
+  {
+    "id": "berlin-1945-04-16",
+    "date": "1945-04-16",
+    "theater": "eastern-front",
+    "sector": "berlin",
+    "label": "Schematic Berlin assault, 16 April 1945 (Seelow–Berlin)",
+    "source": "Schematic trace through named communes Seelow and Berlin. Not a digitized Zhukov overlay.",
+    "confidence": "low",
+    "allied": [
+      [14.3811, 52.58],
+      [13.405, 52.57]
+    ],
+    "axis": [
+      [14.3811, 52.48],
+      [13.405, 52.47]
+    ]
+  }
+]

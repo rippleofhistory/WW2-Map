@@ -30,7 +30,7 @@ export function readUrl(search: string): UrlState {
   const campaign = unitId ? null : campaignById(params.get("campaign"));
   if (campaign) theater = campaign.theater;
   const unitTheater = theaterForUnit(unitId);
-  if (unitTheater) theater = unitTheater;
+  if (unitTheater && !dateFromQuery) theater = unitTheater;
   const compareParam = params.get("compare");
   const compareDate = compareParam && isValidWarDate(compareParam) ? compareParam : null;
   return {
