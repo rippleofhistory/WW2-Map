@@ -50,6 +50,7 @@ One Hub id, one track, many theaters. Extra dates merge from `world/units.json`.
 - Named-place leftover batch (Hub battles and skip-list units at published cities/harbours/capes): battle pins `bzura` (Kutno), `saar-offensive` (Saarbrücken), `suomussalmi`, `river-plate` (Montevideo harbour), `royal-oak-scapa` (Scapa Flow), `narvik`, `taranto`, `cape-matapan` (Cape Tainaron), `gazala` (Ain el Gazala), `java-sea` (Surabaya harbour), `coral-sea` (Port Moresby harbour), `bismarck-sea` (Lae), `kohima`, `philippine-sea` (Saipan), `italy-end` (Bologna), `north-cape`, `khalkhin-gol` (Nomonhan), `bessarabia-1940` (Chișinău), `smolensk-1941`, `odessa-1941`, `sevastopol`, `rostov-1941`, `case-blue` (Voronezh), `caucasus` (Novorossiysk), `rzhev`, `operation-iskra` (Shlisselburg), `dnieper` (Dnipro), `korsun`, `leningrad-novgorod` (Veliky Novgorod), `crimea-1944` (Sevastopol 9 May 1944), `lvov-sandomierz` (Lviv), `jassy-kishinev` (Iași), `belgrade-1944`, `baltic-offensive` (Riga), `budapest`, `petsamo-kirkenes` (Kirkenes), `east-prussia` (Königsberg), `vienna`, `prague`, `manchuria` (Mukden). Units include `no-6th-div` Narvik, `in-7th-div` / extra `uk-2nd-inf` Kohima, `us-7th-armored` St. Vith, `us-9th-army` Rheinberg, `us-30th-inf` Mortain, `us-99th-inf` Elsenborn, `us-442nd` / `us-10th-mountain` Bologna, `nl-princess-irene` Arromanches, `be-piron` Courseulles, `gr-epirus` Ioannina, `uk-12th-eastern` Abbeville, `uk-beauman` Rouen, Poland 1939 leftover armies, `de-ag-south` Kraków, `de-10th-army` Radom, `de-14th-army` Lviv, leftover Soviet fronts/armies, Kwantung / 6th Army at Nomonhan, harbour ships at Scapa / Taranto / Montevideo / Surabaya / North Cape. Extra dates: Eighth Army / Afrika Korps / Ariete / 1st SA / LRDG at Gazala; II Corps / Fifth Army / 6th Armoured / 56th London / 6th SA Armoured at Bologna. Theater frames widened: NW Europe north 70 / east 18.5, Eastern Front north 72, Italy south 36, Pacific north 50. Prague and Vienna tracks tagged `eastern-front`. Campaign rail adds Saar, River Plate, Taranto, Java Sea, Coral Sea, Gazala, Bismarck Sea, Italy end.
 - China / Pacific leftover battles at named places: `changsha-1939` / `1941` / `1942` and `ichi-go` (Changsha), `indochina-1940` (Lạng Sơn), `wake-island`, `guam-1941` / `guam-1944` (Hagåtña), `dutch-east-indies` (Batavia), `rabaul-1942`, `burma-1942` (Rangoon), `kokoda`, `milne-bay` (Alotau), `aleutians` (Dutch Harbor), `new-georgia` (Munda), `bougainville` (Cape Torokina), `kwajalein`, `biak`, `saipan`, `tinian`, `peleliu`, `luzon` (Lingayen), `manila-1945`, `meiktila`. Special-ops pins: `chariot` (Saint-Nazaire), `claymore` (Svolvær), `archery` (Måløy), `gunnerside` / `freshman` (Rjukan), `frankton` (Bordeaux), `harling` (Gorgopotamos), `gran-sasso` (Campo Imperatore), `anthropoid` (Prague 27 May 1942), `jaywick` (Singapore harbour). Soviet leftover numbered armies and Guards/tank/air armies follow existing Eastern Front commune pins. Japanese leftover area armies, South Seas Detachment, 2nd Tank, 1st Raiding (Palembang), 64th Sentai, Tainan / 201st air groups. Special forces `soe` / `oss` / `bletchley-park` / `de-brandenburg` / `su-partisans` / `pl-cichociemni` / `fr-bcra` / `au-z-special`. SS leftovers at Leningrad / Warsaw Uprising / Berlin. Named panzer Müncheberg / Kurmark / Jüterbog / Kempf. Polish 1939 air force and navy. Pacific frame west 100 / north 55 (Changsha, Lạng Sơn, Dutch Harbor). NW Europe south 44 (Bordeaux).
 - Leftover-3 extra dates on existing tracks at leftover-1/2 named places: `21st-panzer` / `british-7th-armoured` / `british-50th-division` at Gazala (50th also Dunkirk and Second Alamein), `hms-belfast` North Cape, `uss-yorktown-cv5` / `ijn-shokaku` Coral Sea (Port Moresby harbour), `jp-15th-army` / `jp-33rd-div` Meiktila, `jp-18th-army` Lae (Bismarck Sea convoy), `jp-4th-fleet` Rabaul, `su-leningrad-front` Shlisselburg / Veliky Novgorod / Riga. New Hub identity units: `hmcs-haida` Arromanches, `raf-bomber-command` London 15 Sep 1940, `de-29-ss-italia` Anzio, `de-34-ss` Arnhem.
+- Leftover-4 extra dates on existing tracks at leftover-1/2 named places: `british-3rd-division` Dunkirk, `de-panzer-lehr` Bastogne, `de-7th-panzer` Dunkirk and Moscow (skip Sedan and Brest), `us-5th-army` Anzio, `su-western-front` Smolensk and Rzhev, `su-8th-guards` / `su-1st-guards-tank` Warsaw (Vistula–Oder; skip `su-5th-guards-tank` Warsaw — East Prussia with 2nd Belorussian), `de-8th-army` Kutno (Bzura; skip `de-4th-army` Kutno), `su-volkhov-front` Veliky Novgorod (skip `su-2nd-shock` Novgorod — Oranienbaum/Iskra axis), `de-9-ss` / `de-10-ss` Arnhem (skip Bastogne), `su-voronezh-front` / `su-steppe-front` / `su-central-front` / `su-13th-guards-rifle` Dnipro, `su-1st-ukrainian` Korsun and Lviv (skip Dnieper before the October 1943 rename; skip Warsaw), `su-8th-air` Korsun and Iași, `su-51st-army` Riga. No new Hub identity units. Skip AA divisions on London, Remagen-vs-Plunder, Gela-vs-Syracuse, Bastogne for northern-shoulder units, parent fleets, 2nd Marines at Honiara 7 Aug (Tulagi), and Bologna stacking on Fifth Army.
 - Still skipped: Finnish army / `fi-9th-div` (no `side` enum). `de-23-panzer` / `de-27-panzer` (no Hub unit cards). `uk-52nd-lowland` (Dunkirk is the wrong fight; Cherbourg 17 Jun 1940 is outside the Hub dunkirk window). `uk-11th-east-africa` / `uk-36th-inf` / `uk-81st-west-africa` / `uk-82nd-west-africa` (Arakan / NCAC, not Imphal or Kohima). `us-37th-inf` / `us-43rd-inf` (New Georgia, not Guadalcanal — Hub cards still only list Guadalcanal). `us-5th-inf` unnamed Overlord commune. `us-7th-army` Dragoon (no Hub Dragoon battleId). `us-15th-af` (Foggia is not the Italy-end fight). `au-7th-div` / `us-avg` / `us-14th-af` / `nl-knil` empty battleIds. AA and UK county/home divisions with empty battleIds. Individual BoB squadrons. `uk-commandos` stays aliased to `uk-47-rm-commando`. Mid-ocean Denmark Strait / sinking of Bismarck / Battle of the Atlantic (no named shore). `sino-japanese-war` 7 July 1937 is before the war-window parser (`1939-09-01`). `de-7-ss` and later SS mountain/anti-partisan cards with empty battleIds. Tirpitz / HMAS Sydney. Parent HQ/service cards (`de-okw`, `de-okh`, `uk-cos`, `us-shaef`, `su-stavka`, `jp-ighq`, `su-red-army`, `su-vvs`, `jp-ija`, `jp-ijn`, `jp-ija-air`, `jp-ijn-air`, `de-heer`, `us-coast-guard`). `fj-infantry` (Hub lists Guadalcanal 7 Aug, not Bougainville). `pl-army-prusy` / `pl-army-karpaty` / `pl-nog-narew` (no named commune on 1 Sep). `uk-y-division` (Tunisia campaign-start date is too early). `de-14-ss` Brody is not the Bagration Minsk pin. `de-20-ss` / `de-26-ss` / `de-30-ss` / `de-38-ss` Hub battle places are the wrong fight. `hist-*` people in specialOps. `it-decima-mas` Hub battles are Taranto/Matapan (wrong fight). Unnamed towns. Wikipedia overlays.
 
 Schematic fronts (named communes only): Sedan–Dinant 10 May 1940, Dunkirk–Calais 26 May 1940, Warsaw–Modlin 28 Sep 1939, Brest–Białystok 22 Jun 1941, Leningrad–Kronstadt 8 Sep 1941, Moscow–Klin 2 Oct 1941, Stalingrad Tractor Factory–city 17 Jul 1942 and 2 Feb 1943, Kursk–Prokhorovka 12 Jul 1943, Vitebsk–Minsk 22 Jun 1944, Seelow–Berlin 16 Apr 1945, El Alamein–Tel el Eisa 23 Oct 1942, Oran–Algiers 8 Nov 1942, Johor Bahru–Singapore 8 Feb 1942, Gela–Syracuse 10 Jul 1943, Eindhoven–Nijmegen–Arnhem 17 Sep 1944, Bastogne–St. Vith 19 Dec 1944. Eastern Front sectors stay simultaneous (Leningrad during Stalingrad).
@@ -66,7 +67,9 @@ Starter pins already in the pack:
 
 Named on the advance but **not** pinned until a diary date exists: Sainte-Marie-du-Mont, Saint-Côme-du-Mont.
 
-Next pins: Upottery, DZ C, Hiesville, Dead Man’s Corner, then later Eindhoven and Bois Jacques in other theater files (`nw-europe`). Do not put those in the Normandy file.
+World extra date (not in the Normandy file): 5 June RAF Upottery (`theater: "nw-europe"`) from the airfield Wikipedia page — Easy Company / 506th PIR boarded C-47s here for the first combat jump. Confirm against 506th S-3 / AAR. Band of Brothers is television.
+
+Next pins: DZ C, Hiesville, Dead Man’s Corner, then later Bois Jacques. Do not put those in the Normandy file. Eindhoven 17 Sep and Bastogne 19 Dec are already on the world stub.
 
 ## Sherwood Rangers Yeomanry (`sherwood-rangers-yeomanry`)
 
@@ -85,6 +88,26 @@ They are **not** the regiment in Villers-Bocage. That fight is tagged to `4th-co
 After 13 June: Tilly, Fontenay, Rauray, Hottot, Mont Pinçon. Keep A Squadron (first into Bayeux) separate from the DD squadrons on 6–7 June if you want squadron resolution.
 
 Deep link alias: `?unit=sherwood-rangers` still opens this unit.
+
+## 1st Battalion, Hampshire Regiment (`uk-1-hampshires`)
+
+TNA WO 171/1305 June 1944, transcribed at Normandy War Guide. Parent 50th Division / 231st Brigade. One track object per Place-column day at a named commune. Sheet 7F/1 six-figure grids are quoted, not converted.
+
+- 6 June Arromanches (landed Jig Green / Le Hamel, stormed Arromanches; Bn HQ Saint-Côme-de-Fresné is not a second pin)
+- no 7–8 June row (Place RUBERSY)
+- 9 June Bayeux (south-west of the town, took over from 2nd Essex)
+- 10 June Saint-Paul-du-Vernay (Bn HQ grid 749698)
+- 11–12 June Bernières-Bocage
+- no 13–18 June row (Place LA SENAUDIERE, a lieu-dit)
+- 19 June Lingèvres (then dug in north of Hottot)
+- 20–30 June Hottot-les-Bagues (Place HOTTOT AREA)
+
+German opposite units from Ziegelmann Ia Fernsprech-Meldebuch 6 June 1944 (MS B-388 / BArch ZA 1/738; Wikisource French transcription). Map-only ids; no Hub cards, no MAP_TO_HUB.
+
+- 6 June Arromanches: Grenadier-Regiment 726 (`de-726-gr`), parent 716th Infantry Division. 05.06 WNs toward Arromanches; 07.35 landing imminent near Arromanches on the division right boundary. Same-day WN/Asnelles reports are not a second pin. `de-716-inf` stays at Luc-sur-Mer.
+- 6 June Asnelles (Gold Jig coords): I./Grenadier-Regiment 916 (`de-916-i`), parent 352nd Infantry Division. 11.14 I./916 attack on cote 22 east of Asnelles. 14.05 redirect toward Saint-Côme-de-Fresné is the same calendar day, not a second pin. 1 June garrison CP at Ryes is not a 6 June fight. II./916 stays on the Omaha hinterland; do not smear Formigny onto Gold. `de-352nd` stays at Formigny.
+
+Skip until a German Place/KTB names the commune: 8–9 June Bayeux (Essex ID of 1 Bn 916 GR is Allied, not German Place); 10 June Saint-Paul-du-Vernay (1 June GR 915 CP; Kampfgruppe Meyer ordered west on 6 June 03.15); 11–12 June Bernières-Bocage; 13–18 June La Senaudière (lieu-dit); 19 June Lingèvres for Panzer Lehr (British took the village 14 June; Hants used it as a start line); 12th SS (eastern Tilly/Fontenay, not 231 Bde west of Tilly); 276 Inf at Hottot (July). Panzer Lehr stays on the existing 11 June Tilly pin; no extra Hottot date until Bayerlein/KTB names that commune on a dated row.
 
 ## 2nd SS Panzer Das Reich (`de-2-ss-panzer`)
 
@@ -111,8 +134,86 @@ Tagged units only: 4th County of London Yeomanry and s.SS-Pz.Abt. 101. Play does
 
 Added D-Day / lodgement pins on both sides, still coarser commune or beach locations:
 
-- Allied: US 4th (Utah / La Madeleine), US 29th (Vierville), 82nd (Sainte-Mère-Église), British 6th Airborne (Ranville), 2nd Rangers (Pointe du Hoc), US 2nd Infantry (Saint-Laurent, 7 June), US 90th (Sainte-Mère, 8 June), 47 RM Commando (Port-en-Bessin, 7 June)
-- Axis: 716th (Luc-sur-Mer), 352nd (Formigny), 709th (Montebourg), 91st Luftlande (Picauville), FJR 6 (Saint-Côme-du-Mont / Carentan / Méautis), 243rd (La Haye-du-Puits), 346th (Sallenelles), Panzer Lehr (Tilly-sur-Seulles, 11 June), 17th SS (Méautis, 13 June)
+- Allied: US 4th (Utah / La Madeleine), US 29th (Vierville), 82nd (Sainte-Mère-Église), British 6th Airborne (Ranville), 2nd Rangers (Pointe du Hoc), US 2nd Infantry (Saint-Laurent, 7 June), US 90th (Sainte-Mère, 8 June), 47 RM Commando (Asnelles 6 June / Port-en-Bessin 7 June)
+- Axis: 716th (Luc-sur-Mer), GR 726 (Arromanches, 6 June; Ziegelmann Ia), 352nd (Formigny), I./GR 916 (Asnelles, 6 June; Ziegelmann Ia 11.14), 709th (Montebourg), 91st Luftlande (Picauville), FJR 6 (Saint-Côme-du-Mont / Carentan / Méautis), 243rd (La Haye-du-Puits), 346th (Sallenelles), Panzer Lehr (Tilly-sur-Seulles, 11 June), 17th SS (Méautis, 13 June)
+
+D-Day −1 airborne takeoff and battalion fights (map-only; keep `british-6th-airborne` at Ranville):
+
+- `cdn-1-para` 5 June RAF Down Ampney (`theater: "nw-europe"`, WO 179/2950 emplane 2245/2300) then 6 June Varaville (C Company). Skip Bulford barracks as the combat pin. Skip Robehomme / Le Mesnil extra 6 June pins.
+- `uk-2-oxf-bucks` 5 June RAF Tarrant Rushton (`theater: "nw-europe"`) then 6 June Bénouville (00:16 coup-de-main). Harwell/Keevil lift is the same 6 June calendar day, not a second pin.
+- `uk-9-para` 6 June Merville-Franceville-Plage. No 5 June English-airfield pin until the diary names the field.
+- Easy Company 5 June Upottery lives on the world stub (`theater: "nw-europe"`). Do not put it in the Normandy file.
+
+Canadian Juno battalions (map-only; keep `canadian-3rd-division` at Courseulles). Bernières-sur-Mer is not Bernières-Bocage:
+
+- `cdn-qor` 6 June Bernières-sur-Mer (Nan White).
+- `cdn-north-shore` 6 June Saint-Aubin-sur-Mer (Nan Red).
+- `cdn-regina-rifles` 6 June Courseulles (Nan Green), battalion grain on the same commune as the division.
+- `cdn-rwr` 6 June Graye-sur-Mer (Mike; A and C Companies, D-Day Overlord). Ste-Croix / Banville / Creully same day not a second pin.
+- `cdn-c-scot` 6 June Graye-sur-Mer (reinforced from 08:05).
+- `cdn-1-hussars` 6 June Graye-sur-Mer (DD tanks). Distinct from Regina at Courseulles.
+- `cdn-chaudiere` 6 June Bény-sur-Mer (C Company; Juno Beach Centre / D-Day Overlord). Bernières landing same day not a second pin.
+- `cdn-fort-garry` 6 June Bény-sur-Mer (tanks with Chaudière). Distinct from QOR at Bernières.
+- `cdn-nnsh` 6 June Villons-les-Buissons (northern outskirts late afternoon; village seized 7 June, same commune).
+
+Sword / Gold extras (map-only):
+
+- `uk-4-commando` 6 June Ouistreham. `fr-kieffer` is a separate Ouistreham pin (battalion grain).
+- `uk-6-commando` 6 June Colleville-Montgomery (passed through toward Pegasus). Queen Red landing / Bénouville link-up same day not a second pin.
+- `uk-1-suffolks` 6 June Colleville-Montgomery (WN19 / Hillman). British 3rd Division stays at Hermanville.
+- `uk-1-south-lancs` 6 June Hermanville-sur-Mer only (WO 171/1332 Place Hermanville). Skip 8 June Bénouville and later Le Landel / Cazelle so last-reported does not park there.
+- `uk-41-rm-commando` 6 June Lion-sur-Mer (Queen White / WN21 Trout).
+- `uk-48-rm-commando` 6 June Langrune-sur-Mer (WN26). Saint-Aubin landing same day not a second pin.
+- `uk-6-green-howards` 6 June Ver-sur-Mer (Mare Fontaine WN32). `uk-7-green-howards` same commune via D112. 1 Hants stays at Arromanches; SRY stays Gold Jig / Asnelles.
+
+British airborne remainder (map-only; keep `british-6th-airborne` at Ranville):
+
+- `uk-7-para` 5 June RAF Keevil (`theater: "nw-europe"`, Wikipedia RAF Keevil 5th Para Bde) then 6 June Bénouville (west-bank defence). Ox and Bucks stays at the bridge.
+- `uk-12-para` 5 June Keevil then 6 June Ranville (WO 171 Place Ranville). Le Bas de Ranville is a hamlet, not pinned.
+- `uk-13-para` 5 June Keevil then 6 June Ranville (village cleared 0300). Battalion grain vs 6th AB / 12 Para.
+- `uk-8-para` 6 June Touffréville (WO 171/1240 Place). Troarn / Bures bridges same day not a second pin. Bois de Bavent is a wood, not pinned.
+
+US airborne remainder (map-only; keep `us-101st-airborne` at Sainte-Marie-du-Mont and `us-82nd-airborne` at Sainte-Mère-Église; 506 PIR stays DZ C):
+
+- `us-501-pir` 6 June Angoville-au-Plain (DZ D). No 5 June Merryfield pin: Wikipedia Merryfield names 101st Airborne, not 501 PIR.
+- `us-502-pir` 5 June RAF Greenham Common (`theater: "nw-europe"`, Eisenhower / Company E 502nd about 20:30) then 6 June Saint-Martin-de-Varreville (Exit 4 / WN108).
+- `us-505-pir` 6 June Sainte-Mère-Église (3/505). No 5 June Cottesmore pin: Wikipedia RAF Cottesmore does not name the regiment.
+- `us-507-pir` 6 June Chef-du-Pont (Ostberg 1/507). La Fière is a lieu-dit, not pinned.
+- `us-508-pir` 6 June Picauville (DZ N). US vs 91st Luftlande on the same commune is allowed.
+
+US beach remainder (regiment grain vs parent division): `us-16-inf` Saint-Laurent with 1st ID; `us-116-inf` Vierville with 29th; `us-8-inf` La Madeleine with 4th ID; `us-5th-rangers` Vierville (distinct from 2nd Rangers at Pointe du Hoc).
+
+German opposite: `de-736-gr` 6 June Graye-sur-Mer (II./736 at WN31). `de-716-inf` stays at Luc-sur-Mer. `de-726-gr` stays at Arromanches. `de-744-gr` 6 June Cabourg (711th, east of the Dives). `de-914-gr` 6 June Pointe du Hoc (II./914 behind the battery; Wikipedia 352nd). `de-pzgren-192` 7 June Villons-les-Buissons (opposite NNSH / Sherbrooke). Do not smear 12th SS onto 6 June (Authie is 7 June). `de-352nd` stays Formigny. `de-916-i` stays Asnelles.
+
+Overlord OOB remainder (map-only; battalion grain on a parent commune is allowed when the diary names it):
+
+- `uk-2-east-yorks` 6 June Saint-Aubin-d'Arquenay (WO 171/1397 Place after Daimler). Night west of Hermanville same day not a second pin. 1 S Lancs stays Hermanville.
+- `uk-5-east-yorks` 6 June Ver-sur-Mer (King Red / La Rivière is a hamlet of Ver). Grain vs Green Howards.
+- `uk-2-devons` 6 June Ryes (WO 171/1278 B Coy 1625) then 7 June Longues-sur-Mer battery (C Coy 1053). Asnelles bypass same day not a second pin.
+- `uk-1-dorsets` 6 June Asnelles (WO 171/1284 / D-Day Overlord). Grain vs 47 RM and GR 916. 1 Hants stays Arromanches.
+- `uk-45-rm-commando` 6 June Sallenelles (D-Day Overlord; reached then driven back to Le Plein). 9 Para stays Merville.
+- `uk-3-commando` 6 June Amfreville, Calvados (3 Troop ~1400; Pegasus Archive). La Brèche landing same day not a second pin. Not the Manche Amfreville.
+- `uk-13-18-hussars` 6 June Colleville-Montgomery (B Sqn at Daimler with 2 EY, WO 171/1397). Grain vs Suffolks / 6 Commando.
+- `uk-4-7-rdg` 6 June Ver-sur-Mer with 7th Green Howards.
+- `us-18-inf` 6 June Colleville-sur-Mer (Omaha Beachhead; 2nd Bn 1233). Distinct from Colleville-Montgomery.
+- `us-115-inf` 6 June Saint-Laurent-sur-Mer (115th AAR Fox Green then south of the town). Grain vs 16th Inf.
+- `us-12-inf` 6 June Beuzeville-au-Plain (Utah Beach to Cherbourg, left of 502 PIR).
+- `us-22-inf` 6 June Saint-Germain-de-Varreville (relieved 502 PIR). Distinct from Saint-Martin-de-Varreville.
+- `us-325-gir` 7 June Carquebut (HMDB D+1 Hackensack). No 6 June pin.
+- `us-327-gir` 6 June Sainte-Marie-du-Mont (HMDB amphibious Utah then link-up). Grain vs 101st.
+- `cdn-sherbrooke` 7 June Villons-les-Buissons (D-Day Overlord dawn seizure with NNSH). No 6 June Bernières pin.
+
+Sword inland / Omaha follow-up (map-only):
+
+- `uk-2-ksli` 6 June Biéville-Beuville (D-Day Overlord Biéville-sur-Orne / Soldiers of Shropshire). Lébisey wood same day is a lieu-dit, not pinned. 3rd Division stays Hermanville.
+- `uk-1-norfolks` 6 June Biéville-Beuville (D-Day Overlord: Royal Norfolk took Beuville). Grain vs 2 KSLI.
+- `uk-staffs-yeo` 6 June Biéville-Beuville (27th Armoured Brigade tanks with 185th Brigade).
+- `de-pzgren-125` 6 June Colombelles (II./125 CP, D-Day Overlord). I./125 Vimont same day not a second pin. 21st Panzer stays Caen. 6th AB stays Ranville.
+- `de-pz-22` 6 June Biéville-Beuville (II./Panzer-Regiment 22 afternoon counter-attack). Lion-sur-Mer coastal reach same day not a second pin.
+- `us-175-inf` 9 June Isigny-sur-Mer (175th AAR 0430 9 June). No 7 June Vierville landing pin.
+- `us-26-inf` 6 June Colleville-sur-Mer (landed ~2100 E-3; D-Day Overlord / Omaha Beachhead). Formigny later days not pinned. 16th Inf stays Saint-Laurent. de-352nd stays Formigny.
+
+Skip until a distinct named commune is sourced: Highland Light Infantry of Canada / Stormont, Dundas and Glengarry (9th Bde stuck at Bernières then Bény assembly — smear); 1st Royal Ulster Rifles / 12th Devons airlanding LZ until the diary names Ranville vs LZ W; 2nd Royal Warwickshire (Bénouville evening smear vs Ox and Bucks / 7 Para); 12th SS as a 6 June Juno opposite; 711th Division HQ at Vauville (Calvados vs Manche ambiguous); GR 915 Kampfgruppe Meyer inland of Omaha (Saint-Paul-du-Vernay is the 1 June garrison list).
 
 Panzer Lehr and 17th SS have no 6 June lodgement pin. FJR 6 is the regiment (`de-fjr-6`), not 6th Fallschirmjäger Division (`de-6-fj`). Villers-Bocage stays 4 CLY and s.SS-Pz.Abt. 101 only.
 
@@ -122,7 +223,7 @@ Wikipedia [Operation Overlord](https://en.wikipedia.org/wiki/Operation_Overlord)
 
 Added commune pins:
 
-- 6 June Arromanches: 1st Battalion, Hampshire Regiment (`uk-1-hampshires`)
+- 6 June Arromanches: 1st Battalion, Hampshire Regiment (`uk-1-hampshires`). Extra June dates from TNA WO 171/1305 (Normandy War Guide): 9 June Bayeux, 10 June Saint-Paul-du-Vernay, 11–12 June Bernières-Bocage, 19 June Lingèvres, 20–30 June Hottot-les-Bagues (Place HOTTOT AREA). Skip 7–8 June Place RUBERSY until the commune is identified. Skip 13–18 June Place LA SENAUDIERE (lieu-dit). Sheet 7F/1 grids (749698 Bn HQ, 778684 Point 110, 813664 / 813668 / 811668 / 808604) are quoted in notes and not converted.
 - 26 June Cherbourg: US 9th, 4th, and 79th Infantry. No pin for the 17 June west-coast cut-off (unnamed town in Overlord)
 - 8 July Caen (Charnwood) and 18 July Caen (Goodwood): battle markers. Overlord does not name the Allied divisions those days. 21st Panzer and 12th SS stay on last-reported Caen/Authie pins
 - 25 July Saint-Lô (Cobra start), 30 July Vire (Bluecoat objective, not a sourced capture), 1 August Avranches, 11 August Alençon: battle markers without a named division
@@ -132,6 +233,39 @@ Added commune pins:
 - 30 August Rouen: 3rd Canadian Division
 
 Skipped: Epsom communes (Cheux / Baron-sur-Odon not in Overlord), 1st/9th/10th SS and 2nd Panzer (no named commune), army HQ at Le Mans, beach-arrival-only divisions from the Allied list, Das Reich at Mortain.
+
+## Other WW2 battles (battalion grain at published communes)
+
+Same honesty as Overlord: named commune + source, no invented coords. Theater files other than Normandy stay empty; extra ids and extra dates live in `public/data/world/units.json`. This pass is not every battalion of every battle.
+
+- Market Garden: `uk-2-para` 17 September Arnhem road bridge (Pegasus Archive / ParaData). `uk-1st-airborne` extra 19 September Oosterbeek (Hartenstein). `us-504-pir` Salerno 14 September 1943 then Nijmegen 17 September 1944. `us-506-pir` world extra Eindhoven 17 September. `us-505-pir` world extra Groesbeek 17 September. `pl-1-sbs` 21 September Driel. `uk-irish-guards` 17 September Valkenswaard (Guards Armoured stays Nijmegen 20 September). 9th/10th SS stay Arnhem.
+- Cassino: `de-1-fj` 15 March 1944 Monte Cassino (third battle; occupied the ruins after the 15 February bombing). Opposite 2nd NZ / 4th Indian on the same commune. `pl-3-carpathian` 18 May grain vs Polish II Corps on the abbey capture.
+- Ardennes: `de-kg-peiper` 17 December Malmedy (Baugnez, Bévercé district) then 24 December La Gleize (US Army Ardennes ch. XVI breakout). `us-327-gir` and `us-501-pir` world extra Bastogne 19 December. `de-1-ss` still has no Bastogne pin.
+- Anzio: `us-1-rangers` 30 January 1944 Cisterna di Latina (Battle of Cisterna). 3rd Infantry stays at Anzio.
+- Tarawa: `us-8-marines` 20 November 1943 Betio, grain vs 2nd Marine Division.
+- Iwo Jima: `us-28-marines` 23 February 1945 (Suribachi). `us-27-marines` 19 February grain vs 5th Marine Division on the landing pin (Red/Green beaches; 26th Marines was the afternoon reserve).
+- Rhine / Varsity: `us-17th-airborne` extra 24 March 1945 Wesel. `british-6th-airborne` world extra Hamminkeln (Normandy file keeps Ranville). Distinct communes; infobox midpoint unused.
+- Dieppe: `cdn-ssr` 19 August 1942 Hautot-sur-Mer (Pourville / Green Beach). `uk-4-commando` world extra Varengeville-sur-Mer (Orange / Hess). 2nd Canadian Division stays Dieppe town.
+- Crete / Maleme: `de-7-flieger` and `nz-22-bn` 20 May 1941 Maleme (`theater: "italy"`; lat is south of the Italy bound). Do not alias 7 Flieger to `de-1-fj`. Do not smear `nz-2nd-div` onto the airfield.
+- Calais 1940: `uk-30-bde` 23 May Calais. Distinct from Dunkirk.
+- Ardennes extra: `us-2nd-infantry` world extra 17 December Büllingen (Rocherath/Krinkelt in the municipality). Distinct from 99th Infantry at Elsenborn. Normandy file keeps Saint-Laurent 7 June.
+- Pearl Harbor grain: `uss-oklahoma` and `uss-west-virginia` 7 December on the Arizona harbour pin. Do not use Oklahoma's 1947 tow-sinking coords.
+- Guadalcanal grain: `us-7th-marines` 18 September 1942 Honiara. Map-only vs Hub `us-1st-marines` (Guadalcanal-only card).
+- El Alamein grain: `de-90-light` 23 October 1942 vs 21st Panzer / Ariete.
+- Kohima opposite: `jp-31st-div` 5 April 1944. Distinct from Hub `jp-31st-army` (Marianas). `in-7th-div` already has Kohima 5 April.
+- Sicily / Anzio: `de-hg` 11 July 1943 Gela then 30 January 1944 Cisterna opposite `us-1-rangers`. `it-livorno` 11 July Gela (counter-attack). `de-4-fj` 22 January 1944 Anzio (first combat; distinct from 1st FJ Cassino).
+- Pacific islands: `us-1-raiders` 7 August 1942 Tulagi (Edson; do not smear onto Hub 2nd Marine Division). `us-7th-marines` extra Cape Gloucester 26 December 1943 and Peleliu 15 September 1944 (map-only; skip Cape Gloucester on Hub `us-1st-marines`). `us-1st-def-bn` 8 December 1941 Wake. `us-philippine-div` extra 9 April 1942 Mariveles (Bataan surrender; Corregidor 6 May stays).
+- North Africa: `au-6th-div` extra 3 January 1941 Bardia. `au-9th-div` extra 4 July 1942 First Alamein (entered the northern line that day). `nz-2nd-div` extra 1 July 1942 First Alamein (XIII Corps southern sector). `fr-1-bfl` 26 May 1942 Bir Hakeim (map-only; do not extra onto Hub `fr-1e-dfl`). `us-1st-infantry` extra 23 March 1943 El Guettar and 31 July 1943 Troina.
+- Italy: `uk-78th-inf` extra 2 August 1943 Centuripe and 3 October 1943 Termoli. `uk-3-commando` world extra Termoli (Devon landing; Amfreville stays 6 June). `us-36th-inf` extra 8 December 1943 San Pietro Infine (Paestum is same-date as Salerno, unused). `us-10th-mountain` extra 3 March 1945 Castel d'Aiano (Encore).
+- Deep-dive (world 460): `au-18-bde` map-only 18th Australian Brigade — Jaghbub 21 March 1941, Alotau (Milne Bay) 27 August 1942, Sanananda 21 January 1943, Balikpapan 1 July 1945. Do not extra onto Hub `au-7th-div` (Kokoda-only). `us-172-inf` 5 August 1943 Munda (43rd Division Hub card is Guadalcanal-only). `us-148-inf` 8 November 1943 Cape Torokina (37th Division Hub card is Guadalcanal-only; skip 3rd MarDiv Torokina). `uk-52nd-lowland` 15 June 1940 Cherbourg (`theater: "nw-europe"`, Operation Aerial 2BEF; not Dunkirk town). `de-14-ss` 13 July 1944 Brody (Hub bagration card names Brody).
+- HOLD follow-up (world 463): `uk-52nd-lowland` extra 26 March 1945 Ringenberg (from the Bislich bridgehead; 15th Scottish made the 24 March assault crossing). `uk-78th-inf` extra 22 April 1943 Heidous (38th Irish Brigade; not the Longstop hill). New Hub armies: `pl-army-prusy` 5 September 1939 Tomaszów Mazowiecki (still assembling 1 September); `pl-army-karpaty` 1 September Czorsztyn; `pl-nog-narew` 1 September Łomża.
+- Continue pass (world 464): new Hub `us-5th-inf` — Caumont-l'Éventé 13 July 1944 (Utah Beach 9 July is a beach, not a commune), Angers 9 August (`theater: "nw-europe"`), Echternach 26 December, Oppenheim 22 March 1945. Extras: `uk-5th-inf` Cassibile 10 July 1943 (Acid North; skip italy-end, the division had left Italy); `us-2nd-armored` Safi 8 November 1942 (Blackstone / Harmon); `nz-2nd-div` Trieste 2 May 1945 (italy-end last day; 22 Bn stays Maleme). Skip 9th Infantry at Bizerte (hills north of the city; official entry was Corps Franc 8 May).
+- Continue extras (world still 464): `uk-15th-scottish` Bislich 24 March 1945 (Torchlight; German Wikipedia village, not Wesel / 17th Airborne). `british-51st-highland` Rees 23 March 1945 (Turnscrew assault opening; street fighting continued). `uk-1st-armoured` Abbeville 27 May 1940 (Evans, south of the Somme bridgehead; reuse pack coords; not Dunkirk). `us-30th-inf` Stavelot 18 December 1944 (1/117 two-thirds NW of the Amblève; Peiper at Stavelot stays skipped).
+- Diary / unit-data extras (world still 464): `us-4th-armored` Coutances 28 July 1944 (CCB Dager; AAR city under control by 1800; Hub `normandy`) then Worms 21 March 1945 (seized 0135; Hub `rhine`; distinct from 5th Inf Oppenheim 22 March). Bastogne 26 December stays. `us-28th-inf` Wiltz 16 December 1944 (CP when the Ardennes opened; HQ to Sibret 19 December; Hub `bulge`). Paris 29 August stays; the old “northern Ardennes shoulder” note was wrong (Luxembourg / Our). Skip `uk-53rd-welsh` Rhine (crossed 26 March after the Hub window). Skip 4th Armored at Oppenheim. `us-82nd-airborne` Nijmegen, `british-7th-armoured` Sidi Barrani, and `us-101st-airborne` Eindhoven/Bastogne already exist.
+- All-sides diary pass (world 468): British `uk-1-worcesters` Crépon 22 June 1944 (WO 171/1396 1715 Mont Fleury then assembly Crépon; 214th Bde / 43rd Wessex; do not smear onto `british-3rd-division` Sword / Hermanville). French `fr-2e-db` extra Alençon 12 August (took the town overnight 11–12 August; skip Argentan). US `us-29th-infantry` extra Saint-Lô 18 July (Task Force Cota; Vierville stays 6 June; distinct from 3rd Armored Cobra 25 July). German `de-302-inf` Dieppe 19 August 1942 (RH 26-302 KTB; opposite 2nd Canadian). Soviet `su-64th` extra 2 February 1943 Stalingrad (Hub `stalingrad-surrender`). Japanese `jp-32nd-army` extra Shuri 27 May 1945 (HQ under the castle; withdrew to Mabuni that night; Naha stays 1 April). Skip 12th SS at Krinkelt (village in Büllingen commune, already 2nd Infantry). Skip 11th Armoured Rhine (crossed 27–28 March after the Hub window). Skip 21st Panzer Lion-sur-Mer (KG Rauch smear onto the division; Caen 6 June stays).
+- North Africa campaign (Italy then Germany, world 469): Compass vs Italy — `it-10th-army` extra Beda Fomm 7 February 1941 (surrender); `british-7th-armoured` extra Beda Fomm 5 February (Combeforce cut the Via Balbia); `au-6th-div` extra Benghazi 6 February (19th Brigade entered unopposed). German phase — `de-afrika-korps` extra Tobruk 10 April 1941 (investment; 9th Australian stays 11 April); `de-15th-panzer` extra Gazala 26 May 1942; `de-90-light` extra First Alamein 1 July and Tunis 13 May 1943; `uk-8th-army` extra First Alamein 1 July, Tripoli 23 January 1943, Mareth 20 March; `za-1st-div` extra First Alamein 1 July; `british-7th-armoured` extra Tripoli 23 January; `british-51st-highland` extra Mareth 20 March (XXX Corps Pugilist; skip 50th Division, no Hub tunisia); `in-4th-inf` / `uk-1st-armoured` extra El Hamma 26 March (left hook; not Wadi Akarit). NEW Hub `de-164-inf` El Alamein 23 October 1942 and Tunis 13 May 1943. Skip Italian invasion of Egypt 13 September 1940 (before Compass window). Skip Sonnenblume Benghazi (before Hub tobruk window on Afrika Korps). Skip NZ at El Hamma (no Hub tunisia). Skip 9th Infantry at Bizerte.
+
+Still skipped until a distinct named commune is sourced: HLI of Canada / SDG; 1 RUR / 12 Devon LZ; 2nd Warwicks Bénouville smear; Finnish army; mid-ocean naval fights; Peiper at Stavelot / Stoumont (Malmedy then La Gleize are the sourced pins). `uk-1-para` 17 September Oosterbeek (remnants later, not 17 September). `us-508-pir` Overasselt / DZ T until the regiment article names it. `uk-10-para` Ede / Ginkel Heath until the battalion article names it. 1st Marines Naha and Cape Gloucester (Hub card is Guadalcanal-only). 2nd Marine Division at Tulagi (Raiders / 1/2 Florida, not the division). 7th Inf Attu/Kwajalein; 27th Inf Makin/Saipan; 77th Inf Guam; 3rd MarDiv Torokina; 4th MarDiv Betio smear. 7th Marines Okinawa Dakeshi/Wana until a distinct commune. Winnipeg Grenadiers Stanley until distinct from C Force Hong Kong. `uk-36th-inf` (Maungdaw tunnels 27 March 1944 are not a commune; Myitkyina landing is month-only). `uk-11th-east-africa` Kalewa 3–4 December 1944 is after the Hub imphal-kohima window (8 March–18 July). `uk-81st-west-africa` Kyauktaw 26 February 1944 is before that window. `uk-82nd-west-africa` Buthidaung 15 December 1944 is after. `uk-y-division` until a named Tunisia commune. Hill 609 for `us-34th-inf` (Djebel Tahent is a hill, not a commune). `us-9th-infantry` Bizerte (hills north of the city; official entry was Corps Franc 8 May).
 
 Schematic fronts after 6 June use named-commune vertices only (Saint-Côme-du-Mont, Bayeux, Authie, Ranville, Carentan, Point 103 / Saint-Pierre, Tilly-sur-Seulles, Caen, Saint-Lô, Avranches, Paris, Elbeuf, Rouen). 6 June stays the beach lodgement. 13 June through 18 July share Carentan–Tilly–Caen–Ranville. Confidence low. No Falaise-pocket ring: a single polyline would close the gap before 21 August.
 

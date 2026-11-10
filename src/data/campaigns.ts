@@ -123,7 +123,7 @@ export const CAMPAIGNS: readonly Campaign[] = [
     start: "1940-12-09",
     end: "1941-02-09",
     battleId: "compass",
-    note: "9 December 1940–9 February 1941. Overview at Sidi Barrani. No unit pins yet.",
+    note: "9 December 1940–9 February 1941. Overview at Sidi Barrani.",
   },
   {
     id: "greece-crete",
@@ -303,7 +303,7 @@ export const CAMPAIGNS: readonly Campaign[] = [
     start: "1942-10-23",
     end: "1942-11-11",
     battleId: "el-alamein",
-    note: "23 October–11 November 1942. Overview at El Alamein. No unit pins yet.",
+    note: "23 October–11 November 1942. Overview at El Alamein.",
   },
   {
     id: "torch",
@@ -312,7 +312,7 @@ export const CAMPAIGNS: readonly Campaign[] = [
     start: "1942-11-08",
     end: "1942-11-16",
     battleId: "torch",
-    note: "8–16 November 1942. Overview at Algiers. No unit pins yet.",
+    note: "8–16 November 1942. Overview at Algiers.",
   },
   {
     id: "tunisia",
@@ -321,7 +321,7 @@ export const CAMPAIGNS: readonly Campaign[] = [
     start: "1942-11-17",
     end: "1943-05-13",
     battleId: "tunisia",
-    note: "17 November 1942–13 May 1943. Overview at Tunis. No unit pins yet.",
+    note: "17 November 1942–13 May 1943. Overview at Tunis.",
   },
   {
     id: "bismarck-sea",

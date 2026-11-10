@@ -674,16 +674,25 @@
     "echelon": "battalion",
     "parent": "4th Special Service Brigade",
     "theater": "normandy",
-    "source": "Published Port-en-Bessin location for 7 June. Confirm against 47 RM Commando war diary.",
+    "source": "Wikipedia No. 47 (Royal Marine) Commando: landed Gold near Asnelles 09:50 6 June; Port-en-Bessin 7 June. Confirm against 47 RM Commando war diary.",
     "confidence": "medium",
     "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Asnelles",
+        "lng": -0.571,
+        "lat": 49.341,
+        "note": "6 June, landed Gold Beach at 09:50 near Asnelles. Five LCAs sunk; 76 of 420 men lost on the run-in. La Rosière and Escures on the same calendar day are not a second pin. The Port-en-Bessin assault is 7 June.",
+        "source": "Wikipedia No. 47 (Royal Marine) Commando, June 1944. Published Gold Jig / Asnelles location.",
+        "confidence": "medium"
+      },
       {
         "date": "1944-06-07",
         "place": "Port-en-Bessin",
         "lng": -0.754,
         "lat": 49.348,
-        "note": "7 June, Port-en-Bessin taken after the march from Gold. Hidden on 6 June.",
-        "source": "Published commune location, Port-en-Bessin. Confirm against 47 RM Commando war diary.",
+        "note": "7 June, Port-en-Bessin taken after the march from Gold (Operation Aubery).",
+        "source": "Published commune location, Port-en-Bessin. Wikipedia No. 47 (Royal Marine) Commando. Confirm against 47 RM Commando war diary.",
         "confidence": "medium"
       }
     ]
@@ -712,6 +721,29 @@
     ]
   },
   {
+    "id": "de-726-gr",
+    "name": "Grenadier-Regiment 726",
+    "abbr": "GR 726",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "regiment",
+    "parent": "716th Infantry Division",
+    "theater": "normandy",
+    "source": "Ziegelmann, 352nd Infantry Division Ia Fernsprech-Meldebuch, 6 June 1944, 05.06 and 07.35 hrs (MS B-388 / BArch ZA 1/738; Wikisource French transcription). Published commune location, Arromanches-les-Bains.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Arromanches-les-Bains",
+        "lng": -0.6211,
+        "lat": 49.34,
+        "note": "6 June, 726 GR reported air attack on WNs toward Arromanches, Saint-Honorine and Colleville (05.06) and landing craft imminent near Arromanches on the division right boundary (07.35). Same-day WN/Asnelles reports are not a second pin. The 716th division pin stays at Luc-sur-Mer.",
+        "source": "Ziegelmann, 352nd Infantry Division Ia Fernsprech-Meldebuch, 6 June 1944, 05.06 and 07.35 hrs (MS B-388 / BArch ZA 1/738; Wikisource French transcription). Published commune location, Arromanches-les-Bains.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
     "id": "de-352nd",
     "name": "352nd Infantry Division",
     "abbr": "352 INF",
@@ -731,6 +763,29 @@
         "note": "6 June, hinterland of Omaha around Formigny. Coarser division pin.",
         "source": "Published commune location, Formigny. Confirm against 352nd Infantry Division KTB.",
         "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "de-916-i",
+    "name": "I./Grenadier-Regiment 916",
+    "abbr": "I/916",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "battalion",
+    "parent": "352nd Infantry Division",
+    "theater": "normandy",
+    "source": "Ziegelmann, 352nd Infantry Division Ia Fernsprech-Meldebuch, 6 June 1944, 11.14 hrs (MS B-388 / BArch ZA 1/738; Wikisource French transcription). Published Gold Jig / Asnelles location.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Asnelles",
+        "lng": -0.571,
+        "lat": 49.341,
+        "note": "6 June, 726 GR reported I./916 began an attack at 11.10 hrs on the enemy on cote 22 east of Asnelles; the enemy appeared to have captured Asnelles (Ziegelmann Ia 11.14). The same log later redirected that attack toward Saint-Côme-de-Fresné (14.05); that is the same calendar day, not a second pin. The 1 June garrison CP at Ryes is not a 6 June fight. II./916 stayed on the Omaha hinterland at Formigny and is not this pin. The 352nd division pin stays at Formigny.",
+        "source": "Ziegelmann, 352nd Infantry Division Ia Fernsprech-Meldebuch, 6 June 1944, 11.14 hrs (MS B-388 / BArch ZA 1/738; Wikisource French transcription). Published Gold Jig / Asnelles location.",
+        "confidence": "medium"
       }
     ]
   },
@@ -922,7 +977,7 @@
     "echelon": "battalion",
     "parent": "50th Division",
     "theater": "normandy",
-    "source": "Published Arromanches location for 6 June. Confirm against TNA WO 171 1st Hampshire war diary.",
+    "source": "TNA WO 171/1305 1st Battalion Hampshire Regiment war diary, June 1944 (Normandy War Guide transcription). Named communes geocoded; sheet 7F/1 grids not converted this pass.",
     "confidence": "medium",
     "track": [
       {
@@ -930,9 +985,153 @@
         "place": "Arromanches-les-Bains",
         "lng": -0.6211,
         "lat": 49.34,
-        "note": "6 June, captured Arromanches on the western Gold flank. Later Mulberry B.",
-        "source": "Published commune location, Arromanches-les-Bains. Wikipedia Operation Overlord (Wilmot). Confirm against TNA WO 171 1st Hampshire war diary.",
+        "note": "6 June, Place LE HAMEL: landed Jig Green east of Le Hamel, captured Le Hamel and Asnelles-sur-Mer, then stormed Arromanches-les-Bains. Bn HQ established at Saint-Côme-de-Fresné (not a second pin). No 7–8 June row: Place RUBERSY is not pinned until the commune is identified.",
+        "source": "TNA WO 171/1305 1st Hampshire war diary, 6 June 1944 (Normandy War Guide). Published commune location, Arromanches-les-Bains.",
         "confidence": "medium"
+      },
+      {
+        "date": "1944-06-09",
+        "place": "Bayeux",
+        "lng": -0.7039,
+        "lat": 49.2761,
+        "note": "9 June, Place BAYEUX: battalion moved forward to south-west of Bayeux and took over positions held by 2nd Essex. Fighting and recce patrols.",
+        "source": "TNA WO 171/1305 1st Hampshire war diary, 9 June 1944 (Normandy War Guide). Published commune location, Bayeux.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-10",
+        "place": "Saint-Paul-du-Vernay",
+        "lng": -0.7606,
+        "lat": 49.1883,
+        "note": "10 June, Place ST. PAUL DU VERNAY: mopping-up to the 69 northings on sheet 7F/1. Bn HQ established at grid 749698 (not converted this pass). 2nd Devon counter-attacked on the left at 1830 hrs.",
+        "source": "TNA WO 171/1305 1st Hampshire war diary, 10 June 1944 (Normandy War Guide). Published commune location, Saint-Paul-du-Vernay. Grid 749698 sheet 7F/1 not converted.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-11",
+        "place": "Bernières-Bocage",
+        "lng": -0.686,
+        "lat": 49.1933,
+        "note": "11 June, Place BERNIERES BOCAGE: left Saint-Paul-du-Vernay; attacked the enemy pocket south-west of the village and dug in in a defensive arc there. 2nd Devon were south of Trungy.",
+        "source": "TNA WO 171/1305 1st Hampshire war diary, 11 June 1944 (Normandy War Guide). Published hamlet location, Bernières-Bocage (Juaye-Mondaye).",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-12",
+        "place": "Bernières-Bocage",
+        "lng": -0.686,
+        "lat": 49.1933,
+        "note": "12 June, still Bernières-Bocage. Attempt on Point 110 at grid 778684 failed; battalion regained the position south-west of the village. No 13–18 June row: Place LA SENAUDIERE is a lieu-dit, not pinned.",
+        "source": "TNA WO 171/1305 1st Hampshire war diary, 12 June 1944 (Normandy War Guide). Published hamlet location, Bernières-Bocage (Juaye-Mondaye).",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-19",
+        "place": "Lingèvres",
+        "lng": -0.6717,
+        "lat": 49.1756,
+        "note": "19 June, Place LINGEVRES: left La Senaudière for a start-line about 600 yards south of the Lingèvres–Tilly road, then advanced and dug in north of Hottot.",
+        "source": "TNA WO 171/1305 1st Hampshire war diary, 19 June 1944 (Normandy War Guide). Published commune location, Lingèvres.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-20",
+        "place": "Hottot-les-Bagues",
+        "lng": -0.6478,
+        "lat": 49.1533,
+        "note": "20 June, Place HOTTOT AREA: remained north of Hottot. Fighting and recce patrols against the enemy defences.",
+        "source": "TNA WO 171/1305 1st Hampshire war diary, 20–23 June 1944 (Normandy War Guide). Published commune location, Hottot-les-Bagues. Place column is HOTTOT AREA.",
+        "confidence": "low"
+      },
+      {
+        "date": "1944-06-21",
+        "place": "Hottot-les-Bagues",
+        "lng": -0.6478,
+        "lat": 49.1533,
+        "note": "21 June, still Hottot area. Diary groups 20–23 June as remaining in that area.",
+        "source": "TNA WO 171/1305 1st Hampshire war diary, 20–23 June 1944 (Normandy War Guide). Published commune location, Hottot-les-Bagues.",
+        "confidence": "low"
+      },
+      {
+        "date": "1944-06-22",
+        "place": "Hottot-les-Bagues",
+        "lng": -0.6478,
+        "lat": 49.1533,
+        "note": "22 June, still Hottot area.",
+        "source": "TNA WO 171/1305 1st Hampshire war diary, 20–23 June 1944 (Normandy War Guide). Published commune location, Hottot-les-Bagues.",
+        "confidence": "low"
+      },
+      {
+        "date": "1944-06-23",
+        "place": "Hottot-les-Bagues",
+        "lng": -0.6478,
+        "lat": 49.1533,
+        "note": "23 June, still Hottot area.",
+        "source": "TNA WO 171/1305 1st Hampshire war diary, 20–23 June 1944 (Normandy War Guide). Published commune location, Hottot-les-Bagues.",
+        "confidence": "low"
+      },
+      {
+        "date": "1944-06-24",
+        "place": "Hottot-les-Bagues",
+        "lng": -0.6478,
+        "lat": 49.1533,
+        "note": "24 June, still Hottot area. Patrol under Lt Blackmore to the enemy orchard at grid 813664 sheet 7F/1 (grid not converted).",
+        "source": "TNA WO 171/1305 1st Hampshire war diary, 24–26 June 1944 (Normandy War Guide). Published commune location, Hottot-les-Bagues.",
+        "confidence": "low"
+      },
+      {
+        "date": "1944-06-25",
+        "place": "Hottot-les-Bagues",
+        "lng": -0.6478,
+        "lat": 49.1533,
+        "note": "25 June, still Hottot area.",
+        "source": "TNA WO 171/1305 1st Hampshire war diary, 24–26 June 1944 (Normandy War Guide). Published commune location, Hottot-les-Bagues.",
+        "confidence": "low"
+      },
+      {
+        "date": "1944-06-26",
+        "place": "Hottot-les-Bagues",
+        "lng": -0.6478,
+        "lat": 49.1533,
+        "note": "26 June, still Hottot area.",
+        "source": "TNA WO 171/1305 1st Hampshire war diary, 24–26 June 1944 (Normandy War Guide). Published commune location, Hottot-les-Bagues.",
+        "confidence": "low"
+      },
+      {
+        "date": "1944-06-27",
+        "place": "Hottot-les-Bagues",
+        "lng": -0.6478,
+        "lat": 49.1533,
+        "note": "27 June, still Hottot area. Patrol under 2/Lt Bennett via hedge and road junction 813668 sheet 7F/1. Relieved forward positions of 8th DLI.",
+        "source": "TNA WO 171/1305 1st Hampshire war diary, 27–28 June 1944 (Normandy War Guide). Published commune location, Hottot-les-Bagues.",
+        "confidence": "low"
+      },
+      {
+        "date": "1944-06-28",
+        "place": "Hottot-les-Bagues",
+        "lng": -0.6478,
+        "lat": 49.1533,
+        "note": "28 June, still Hottot area.",
+        "source": "TNA WO 171/1305 1st Hampshire war diary, 27–28 June 1944 (Normandy War Guide). Published commune location, Hottot-les-Bagues.",
+        "confidence": "low"
+      },
+      {
+        "date": "1944-06-29",
+        "place": "Hottot-les-Bagues",
+        "lng": -0.6478,
+        "lat": 49.1533,
+        "note": "29 June, still Hottot area. Patrols under Lt Ricketts (hedge junction 811668) and 2/Lt Dugmore (Château de Cordillon grid 808604 sheet 7F/1, not converted).",
+        "source": "TNA WO 171/1305 1st Hampshire war diary, 29–30 June 1944 (Normandy War Guide). Published commune location, Hottot-les-Bagues.",
+        "confidence": "low"
+      },
+      {
+        "date": "1944-06-30",
+        "place": "Hottot-les-Bagues",
+        "lng": -0.6478,
+        "lat": 49.1533,
+        "note": "30 June, still Hottot area.",
+        "source": "TNA WO 171/1305 1st Hampshire war diary, 29–30 June 1944 (Normandy War Guide). Published commune location, Hottot-les-Bagues.",
+        "confidence": "low"
       }
     ]
   },
@@ -1033,6 +1232,1455 @@
         "lat": 49.29,
         "note": "25 August, fought into Elbeuf and met British and Canadian armour. Hidden before this date.",
         "source": "Published commune location, Elbeuf. Wikipedia Operation Overlord (Stacey). Confirm against 2nd Armored Division G-3.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "cdn-1-para",
+    "name": "1st Canadian Parachute Battalion",
+    "abbr": "1 CDN PARA",
+    "nation": "Canada",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "6th Airborne Division",
+    "theater": "normandy",
+    "source": "TNA WO 179/2950 / LAC MIKAN 928089 1st Canadian Parachute Battalion war diary, 5–6 June 1944 (Pegasus Archive transcription). Named airfield and commune geocoded.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-05",
+        "place": "RAF Down Ampney",
+        "lng": -1.83944,
+        "lat": 51.66694,
+        "theater": "nw-europe",
+        "note": "5 June, remainder of the battalion to Down Ampney; emplaned 2245, airborne 2300. Place column still Carter Barracks Bulford; that barracks is not the combat/airborne pin. C Company left separately for their airport. The drop is calendar 6 June.",
+        "source": "TNA WO 179/2950 1st Canadian Parachute Battalion war diary, 5 June 1944 (Pegasus Archive). Published airfield location, RAF Down Ampney.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-06",
+        "place": "Varaville",
+        "lng": -0.1569,
+        "lat": 49.2542,
+        "note": "6 June, drop about 0100 with 3rd Parachute Brigade. C Company fought at Varaville. A Company Merville flank and B Company Dives bridges / Robehomme are the same calendar day, not a second pin. Le Mesnil later that day is a lieu-dit, not pinned. The 6th Airborne division pin stays at Ranville.",
+        "source": "TNA WO 179/2950 1st Canadian Parachute Battalion war diary, 6 June 1944 (Pegasus Archive / LAC MIKAN 928089). Published commune location, Varaville.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-2-oxf-bucks",
+    "name": "2nd Battalion, Oxfordshire and Buckinghamshire Light Infantry",
+    "abbr": "2 OXF BUCKS",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "6th Airborne Division",
+    "theater": "normandy",
+    "source": "TNA WO 171/1357 2nd Ox and Bucks war diary (Hub wo171-ox-bucks). Coup-de-main takeoff from Tarrant Rushton 5 June; Bénouville Bridge 00:16 6 June. Named airfield and commune geocoded.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-05",
+        "place": "RAF Tarrant Rushton",
+        "lng": -2.075,
+        "lat": 50.85,
+        "theater": "nw-europe",
+        "note": "5 June, D Company and two platoons of B Company took off from Tarrant Rushton in Horsas for the Caen Canal and Orne bridges. The rest of the battalion took off from Harwell and Keevil on 6 June; that is the same calendar day as the bridge, not a second 6 June pin.",
+        "source": "Wikipedia RAF Tarrant Rushton (Operation Tonga / Pegasus Bridge Horsas). Confirm against TNA WO 171/1357. Published airfield location, RAF Tarrant Rushton.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-06",
+        "place": "Bénouville",
+        "lng": -0.2786,
+        "lat": 49.2417,
+        "note": "6 June, first glider at Bénouville Bridge (Pegasus) 00:16. D Company, 2nd Ox and Bucks, seized the Caen Canal bridge. The 6th Airborne division pin stays at Ranville.",
+        "source": "TNA WO 171/1357 2nd Ox and Bucks war diary (Hub wo171-ox-bucks). Published commune location, Bénouville, Calvados.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-9-para",
+    "name": "9th Parachute Battalion",
+    "abbr": "9 PARA",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "6th Airborne Division",
+    "theater": "normandy",
+    "source": "TNA WO 171/1242 9th Parachute Battalion war diary (Hub wo171-6-airborne related file). 6 June Merville Battery at the named commune. Confirm the battalion Place column against Kew.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Merville-Franceville-Plage",
+        "lng": -0.2033,
+        "lat": 49.2781,
+        "note": "6 June, 9th Parachute Battalion neutralized the Merville Battery. Pin at the named commune, not an unsourced battery grid. The 6th Airborne division pin stays at Ranville. No 5 June English-airfield pin until the takeoff field is named in the diary.",
+        "source": "Published commune location, Merville-Franceville-Plage. Wikipedia Merville-Franceville-Plage / D-Day Overlord. Confirm against TNA WO 171/1242.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "cdn-qor",
+    "name": "Queen's Own Rifles of Canada",
+    "abbr": "QOR",
+    "nation": "Canada",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "3rd Canadian Division",
+    "theater": "normandy",
+    "source": "Wikipedia Juno Beach (Stacey, The Victory Campaign, 1966). Nan White, Bernières-sur-Mer, 08:12 6 June. D-Day Overlord Bernières-sur-Mer names QOR first wave. Confirm against the battalion war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Bernières-sur-Mer",
+        "lng": -0.4206,
+        "lat": 49.3331,
+        "note": "6 June, Nan White, Bernières-sur-Mer. QOR landed 08:12 as 8th Brigade first wave. Chaudière and Fort Garry Horse landed behind QOR then fought at Bény-sur-Mer (separate pins). This is not Bernières-Bocage (1 Hants, 11–12 June). The 3rd Canadian division pin stays at Courseulles.",
+        "source": "Wikipedia Juno Beach (Stacey 1966). D-Day Overlord, Bernières-sur-Mer. Published commune location, Bernières-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "cdn-north-shore",
+    "name": "North Shore (New Brunswick) Regiment",
+    "abbr": "N SHORE",
+    "nation": "Canada",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "3rd Canadian Division",
+    "theater": "normandy",
+    "source": "Wikipedia Juno Beach (Stacey, The Victory Campaign, 1966). Nan Red, Saint-Aubin-sur-Mer, 08:10 6 June. Confirm against the battalion war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Saint-Aubin-sur-Mer",
+        "lng": -0.3886,
+        "lat": 49.3292,
+        "note": "6 June, Nan Red, Saint-Aubin-sur-Mer. A and B Companies touched down 08:10. No. 48 Commando landed here then fought at Langrune-sur-Mer (separate pin). The 3rd Canadian division pin stays at Courseulles.",
+        "source": "Wikipedia Juno Beach (Stacey 1966). Published commune location, Saint-Aubin-sur-Mer, Calvados.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "cdn-regina-rifles",
+    "name": "Regina Rifle Regiment",
+    "abbr": "REGINA",
+    "nation": "Canada",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "3rd Canadian Division",
+    "theater": "normandy",
+    "source": "Wikipedia Juno Beach (Stacey, The Victory Campaign, 1966). Nan Green, Courseulles, 08:09 6 June. Battalion grain on the same commune as the 3rd Canadian division pin. Confirm against the battalion war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Courseulles-sur-Mer",
+        "lng": -0.4583,
+        "lat": 49.3356,
+        "note": "6 June, Nan Green, Courseulles. A Company reported touchdown 08:09; B Company 08:15. 1st Hussars fought at Graye-sur-Mer (separate pin). The 3rd Canadian division pin stays at Courseulles.",
+        "source": "Wikipedia Juno Beach (Stacey 1966). Published commune location, Courseulles-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-4-commando",
+    "name": "No. 4 Commando",
+    "abbr": "4 CDO",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "1st Special Service Brigade",
+    "theater": "normandy",
+    "source": "Wikipedia No. 4 Commando: landed Sword 6 June; first objectives a German strongpoint and gun battery in Ouistreham. Confirm against the commando war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Ouistreham",
+        "lng": -0.26,
+        "lat": 49.28,
+        "note": "6 June, landed Sword 30 minutes before the rest of 1st Special Service Brigade and took the Ouistreham strongpoint and gun battery. Kieffer / 1er BFMC is a separate Ouistreham pin. British 3rd Division stays at Hermanville-sur-Mer.",
+        "source": "Wikipedia No. 4 Commando, Normandy landings. Published commune location, Ouistreham.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "cdn-rwr",
+    "name": "Royal Winnipeg Rifles",
+    "abbr": "RWR",
+    "nation": "Canada",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "3rd Canadian Division",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Graye-sur-Mer: Companies A and C captured Graye-sur-Mer in the early afternoon of 6 June. Confirm against the battalion war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Graye-sur-Mer",
+        "lng": -0.4711,
+        "lat": 49.33,
+        "note": "6 June, Mike Red/Green, Graye-sur-Mer. A and C Companies captured the village in the early afternoon. Ste-Croix-sur-Mer, Banville, and Creully on the same calendar day are not a second pin. The 3rd Canadian division pin stays at Courseulles.",
+        "source": "D-Day Overlord, Graye-sur-Mer. Published commune location, Graye-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "cdn-c-scot",
+    "name": "1st Battalion, Canadian Scottish Regiment",
+    "abbr": "1 C SCOT",
+    "nation": "Canada",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "3rd Canadian Division",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Graye-sur-Mer: 1st Canadian Scottish reinforced the Graye assault from 08:05. Confirm against the battalion war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Graye-sur-Mer",
+        "lng": -0.4711,
+        "lat": 49.33,
+        "note": "6 June, Mike sector, Graye-sur-Mer. Reinforced the Royal Winnipeg Rifles assault from 08:05. Same named commune as RWR; both assault battalions are sourced here. The 3rd Canadian division pin stays at Courseulles.",
+        "source": "D-Day Overlord, Graye-sur-Mer. Published commune location, Graye-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "cdn-1-hussars",
+    "name": "6th Canadian Armoured Regiment (1st Hussars)",
+    "abbr": "1 HUSSARS",
+    "nation": "Canada",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "3rd Canadian Division",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Graye-sur-Mer: 1st Hussars DD tanks supported the Graye infantry assault. Confirm against the regiment war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Graye-sur-Mer",
+        "lng": -0.4711,
+        "lat": 49.33,
+        "note": "6 June, Mike sector, Graye-sur-Mer. DD tanks of the 1st Hussars supported the Winnipeg Rifles and Canadian Scottish. Distinct from Regina Rifles at Courseulles. The 3rd Canadian division pin stays at Courseulles.",
+        "source": "D-Day Overlord, Graye-sur-Mer. Published commune location, Graye-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "cdn-chaudiere",
+    "name": "Le Régiment de la Chaudière",
+    "abbr": "CHAUDIÈRE",
+    "nation": "Canada",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "3rd Canadian Division",
+    "theater": "normandy",
+    "source": "Juno Beach Centre, Le Régiment de la Chaudière on D-Day: C Company captured Bény-sur-Mer. D-Day Overlord, Bény-sur-Mer: seized in the early afternoon. Confirm against the battalion war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Bény-sur-Mer",
+        "lng": -0.4342,
+        "lat": 49.29,
+        "note": "6 June, C Company captured Bény-sur-Mer after landing behind QOR at Bernières-sur-Mer. Bernières landing, Basly, La Mare, and Colomby-sur-Thaon on the same calendar day are not a second pin. The 3rd Canadian division pin stays at Courseulles.",
+        "source": "Juno Beach Centre, Le Régiment de la Chaudière on D-Day. D-Day Overlord, Bény-sur-Mer. Published commune location, Bény-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "cdn-fort-garry",
+    "name": "10th Canadian Armoured Regiment (Fort Garry Horse)",
+    "abbr": "FGH",
+    "nation": "Canada",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "3rd Canadian Division",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Bény-sur-Mer: Fort Garry Horse tanks supported Chaudière and seized Bény in the early afternoon. Confirm against the regiment war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Bény-sur-Mer",
+        "lng": -0.4342,
+        "lat": 49.29,
+        "note": "6 June, tanks supporting Chaudière at Bény-sur-Mer. Distinct from QOR at Bernières-sur-Mer. The 3rd Canadian division pin stays at Courseulles.",
+        "source": "D-Day Overlord, Bény-sur-Mer. Published commune location, Bény-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "cdn-nnsh",
+    "name": "North Nova Scotia Highlanders",
+    "abbr": "NNSH",
+    "nation": "Canada",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "3rd Canadian Division",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Villons-les-Buissons: 9th Brigade objective; reached the northern outskirts late on 6 June. Confirm against the battalion war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Villons-les-Buissons",
+        "lng": -0.4081,
+        "lat": 49.2411,
+        "note": "6 June, reached the northern outskirts of Villons-les-Buissons late in the afternoon after landing at Bernières-sur-Mer. Bernières landing and Bény assembly on the same calendar day are not a second pin. The village was seized at dawn 7 June; that is the same commune, not a second pin. The 3rd Canadian division pin stays at Courseulles.",
+        "source": "D-Day Overlord, Villons-les-Buissons. Published commune location, Villons-les-Buissons.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-7-para",
+    "name": "7th Parachute Battalion",
+    "abbr": "7 PARA",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "6th Airborne Division",
+    "theater": "normandy",
+    "source": "Wikipedia RAF Keevil: 5th Parachute Brigade Group emplaned 5 June. D-Day Overlord, Bénouville: 7 Para held the west-bank village after the coup-de-main. Confirm against TNA WO 171.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-05",
+        "place": "RAF Keevil",
+        "lng": -2.11306,
+        "lat": 51.31278,
+        "theater": "nw-europe",
+        "note": "5 June, 5th Parachute Brigade Group emplaned at Keevil for the Normandy drop. The combat drop is calendar 6 June.",
+        "source": "Wikipedia RAF Keevil (5th Parachute Brigade Group, evening 5 June 1944). Published airfield location, RAF Keevil.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-06",
+        "place": "Bénouville",
+        "lng": -0.2786,
+        "lat": 49.2417,
+        "note": "6 June, dropped DZ N then held Bénouville and the west bank of the Caen Canal after the Ox and Bucks coup-de-main. The 6th Airborne division pin stays at Ranville. Ox and Bucks stays at Bénouville Bridge.",
+        "source": "D-Day Overlord, Bénouville. Published commune location, Bénouville, Calvados.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-12-para",
+    "name": "12th (Yorkshire) Parachute Battalion",
+    "abbr": "12 PARA",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "6th Airborne Division",
+    "theater": "normandy",
+    "source": "TNA WO 171 12th Parachute Battalion war diary (Pegasus Archive): Place Ranville 6 June. Wikipedia RAF Keevil: 5th Parachute Brigade Group emplaned 5 June. Confirm against Kew.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-05",
+        "place": "RAF Keevil",
+        "lng": -2.11306,
+        "lat": 51.31278,
+        "theater": "nw-europe",
+        "note": "5 June, 5th Parachute Brigade Group emplaned at Keevil. Diary Place Keevil 2–3 June; the combat drop is calendar 6 June.",
+        "source": "Wikipedia RAF Keevil (5th Parachute Brigade Group, evening 5 June 1944). TNA WO 171 12th Parachute Battalion war diary Place Keevil (Pegasus Archive). Published airfield location, RAF Keevil.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-06",
+        "place": "Ranville",
+        "lng": -0.256,
+        "lat": 49.231,
+        "note": "6 June, Place Ranville. Tasked with Le Bas de Ranville and the high ground south; Le Bas de Ranville is a hamlet of Ranville, not a second pin. The 6th Airborne division pin stays at Ranville.",
+        "source": "TNA WO 171 12th Parachute Battalion war diary, 6 June 1944 (Pegasus Archive). Published commune location, Ranville.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-13-para",
+    "name": "13th (Lancashire) Parachute Battalion",
+    "abbr": "13 PARA",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "6th Airborne Division",
+    "theater": "normandy",
+    "source": "6th Airborne Division HQ war diary, 6 June (Normandy War Guide): 13 Para dropped DZ N; Ranville cleared of enemy 0300. Wikipedia RAF Keevil: 5th Parachute Brigade Group emplaned 5 June.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-05",
+        "place": "RAF Keevil",
+        "lng": -2.11306,
+        "lat": 51.31278,
+        "theater": "nw-europe",
+        "note": "5 June, 5th Parachute Brigade Group emplaned at Keevil. The combat drop is calendar 6 June.",
+        "source": "Wikipedia RAF Keevil (5th Parachute Brigade Group, evening 5 June 1944). Published airfield location, RAF Keevil.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-06",
+        "place": "Ranville",
+        "lng": -0.256,
+        "lat": 49.231,
+        "note": "6 June, dropped DZ N 0050; village of Ranville cleared of enemy 0300. Battalion grain on the same commune as the 6th Airborne division pin.",
+        "source": "6th Airborne Division HQ war diary, 6 June 1944 (Normandy War Guide). D-Day Overlord, Ranville. Published commune location, Ranville.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-8-para",
+    "name": "8th (Midlands) Parachute Battalion",
+    "abbr": "8 PARA",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "6th Airborne Division",
+    "theater": "normandy",
+    "source": "TNA WO 171/1240 8th Parachute Battalion war diary, 6 June 1944 (Pegasus Archive / Normandy War Guide): Place Normandy, Touffréville. Troarn and Bures bridges are patrols the same calendar day, not a second pin.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Touffréville",
+        "lng": -0.2231,
+        "lat": 49.1906,
+        "note": "6 June, Place Touffréville. Dropped 0050; pathfinders and some sticks scattered to Ranville. Troarn and Bures bridge demolitions are the same calendar day, not a second pin. Bois de Bavent is a wood, not pinned. The 6th Airborne division pin stays at Ranville.",
+        "source": "TNA WO 171/1240 8th Parachute Battalion war diary, 6 June 1944 (Pegasus Archive). Published commune location, Touffréville.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-48-rm-commando",
+    "name": "No. 48 (Royal Marine) Commando",
+    "abbr": "48 RM",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "4th Special Service Brigade",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Langrune-sur-Mer: 48 RM landed Saint-Aubin 08:55 and assaulted WN26 at Langrune. Confirm against the commando war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Langrune-sur-Mer",
+        "lng": -0.3717,
+        "lat": 49.3231,
+        "note": "6 June, landed Nan Red then assaulted WN26 at Langrune-sur-Mer. Saint-Aubin landing on the same calendar day is not a second pin. Liberation listed 7 June is the same commune, not a second pin. North Shore stays at Saint-Aubin.",
+        "source": "D-Day Overlord, Langrune-sur-Mer. Published commune location, Langrune-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-41-rm-commando",
+    "name": "No. 41 (Royal Marine) Commando",
+    "abbr": "41 RM",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "4th Special Service Brigade",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Lion-sur-Mer: 41 RM landed Queen White 08:45 and entered Lion-sur-Mer. Wikipedia 41 Commando: landed west of Sword 6 June. Confirm against the commando war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Lion-sur-Mer",
+        "lng": -0.3175,
+        "lat": 49.3019,
+        "note": "6 June, landed Queen White 08:45 and entered Lion-sur-Mer (WN21 Trout). Queen White landing on the same calendar day is not a second pin. Liberation listed 7 June is the same commune, not a second pin. British 3rd Division stays at Hermanville-sur-Mer.",
+        "source": "D-Day Overlord, Lion-sur-Mer. Wikipedia 41 Commando. Published commune location, Lion-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-6-commando",
+    "name": "No. 6 Commando",
+    "abbr": "6 CDO",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "1st Special Service Brigade",
+    "theater": "normandy",
+    "source": "Pegasus Archive, Operation Overlord account of No.1 Special Service Brigade: advanced through Colleville-sur-Orne. D-Day Overlord, Colleville-Montgomery. Confirm against the commando war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Colleville-Montgomery",
+        "lng": -0.3,
+        "lat": 49.2833,
+        "note": "6 June, landed Queen Red then advanced through Colleville-sur-Orne (now Colleville-Montgomery) toward Bénouville. Queen Red landing and the Pegasus link-up on the same calendar day are not a second pin. No. 4 Commando stays at Ouistreham. British 3rd Division stays at Hermanville-sur-Mer.",
+        "source": "Pegasus Archive, An Account of the Part taken by No.1 Special Service Brigade, 6 June 1944. D-Day Overlord, Colleville-Montgomery. Published commune location, Colleville-Montgomery.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "fr-kieffer",
+    "name": "1er Bataillon de Fusiliers Marins Commandos",
+    "abbr": "1er BFMC",
+    "nation": "France",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "1st Special Service Brigade",
+    "theater": "normandy",
+    "source": "Wikipedia No. 4 Commando / 1er Bataillon de Fusiliers Marins Commandos: Kieffer commandos landed Sword with No. 4 Commando and fought in Ouistreham. Confirm against the commando war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Ouistreham",
+        "lng": -0.26,
+        "lat": 49.28,
+        "note": "6 June, landed Sword with No. 4 Commando and fought the Ouistreham casino / strongpoint. Battalion grain on the same commune as No. 4 Commando. British 3rd Division stays at Hermanville-sur-Mer.",
+        "source": "Wikipedia No. 4 Commando, Normandy landings. Published commune location, Ouistreham.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-501-pir",
+    "name": "501st Parachute Infantry Regiment",
+    "abbr": "501 PIR",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "101st Airborne Division",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Angoville-au-Plain: DZ D vicinity; 501st PIR seized the village 6 June. Confirm against 501st S-3 / AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Angoville-au-Plain",
+        "lng": -1.2528,
+        "lat": 49.3492,
+        "note": "6 June, DZ D vicinity, Angoville-au-Plain. 2/501 medics Wright and Moore set up in the church. Les Droueries on the same calendar day is a lieu-dit, not a second pin. The 101st division pin stays at Sainte-Marie-du-Mont. 506 PIR stays at DZ C.",
+        "source": "D-Day Overlord, Angoville-au-Plain. Published commune location, Angoville-au-Plain.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-502-pir",
+    "name": "502nd Parachute Infantry Regiment",
+    "abbr": "502 PIR",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "101st Airborne Division",
+    "theater": "normandy",
+    "source": "Wikipedia RAF Greenham Common: Eisenhower addressed Company E, 502nd PIR at Greenham Common about 20:30 5 June. D-Day Overlord, Saint-Martin-de-Varreville: 2/502 took the battery, 1/502 the village 6 June. Confirm against 502nd S-3 / AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-05",
+        "place": "RAF Greenham Common",
+        "lng": -1.28222,
+        "lat": 51.37861,
+        "theater": "nw-europe",
+        "note": "5 June, Company E, 502nd PIR at Greenham Common about 20:30 before the drop. The combat drop is calendar 6 June. Do not smear the whole 101st onto Upottery (Easy Company).",
+        "source": "Wikipedia RAF Greenham Common (Eisenhower addresses Company E, 502nd PIR, about 20:30 5 June 1944). Published airfield location, RAF Greenham Common.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-06",
+        "place": "Saint-Martin-de-Varreville",
+        "lng": -1.2358,
+        "lat": 49.4272,
+        "note": "6 June, 2/502 took the WN108 battery; 1/502 occupied the village (Utah Exit 4). Saint-Germain-de-Varreville on the same calendar day is not a second pin. The 101st division pin stays at Sainte-Marie-du-Mont.",
+        "source": "D-Day Overlord, Saint-Martin-de-Varreville. Published commune location, Saint-Martin-de-Varreville.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-505-pir",
+    "name": "505th Parachute Infantry Regiment",
+    "abbr": "505 PIR",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "82nd Airborne Division",
+    "theater": "normandy",
+    "source": "Wikipedia 505th Infantry Regiment: 3rd Battalion tasked to capture Sainte-Mère-Église. Confirm against 505th S-3 / AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Sainte-Mère-Église",
+        "lng": -1.3175,
+        "lat": 49.4089,
+        "note": "6 June, 3/505 seized Sainte-Mère-Église. Battalion grain on the same commune as the 82nd Airborne division pin. No 5 June English-airfield pin until the takeoff field is named for this regiment.",
+        "source": "Wikipedia 505th Infantry Regiment, World War II. Published commune location, Sainte-Mère-Église.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-507-pir",
+    "name": "507th Parachute Infantry Regiment",
+    "abbr": "507 PIR",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "82nd Airborne Division",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Chef-du-Pont: Lt. Col. Ostberg, 1/507, reached the station about 10:00 and held the Merderet crossing. Confirm against 507th S-3 / AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Chef-du-Pont",
+        "lng": -1.3431,
+        "lat": 49.3853,
+        "note": "6 June, 1/507 (Ostberg) seized Chef-du-Pont and the Merderet bridge. La Fière is a lieu-dit, not a second pin. The 82nd division pin stays at Sainte-Mère-Église.",
+        "source": "D-Day Overlord, Chef-du-Pont. Published commune location, Chef-du-Pont.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-508-pir",
+    "name": "508th Parachute Infantry Regiment",
+    "abbr": "508 PIR",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "82nd Airborne Division",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Picauville: DZ N north of Picauville; 508th PIR tasked to seize the village. Confirm against 508th S-3 / AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Picauville",
+        "lng": -1.4,
+        "lat": 49.38,
+        "note": "6 June, DZ N north of Picauville. The regiment was scattered; Group W fought east of Picauville. Hill 30 / Port-Filiolet are hamlets, not a second pin. US vs German (91st Luftlande) on the same commune is allowed. The 82nd division pin stays at Sainte-Mère-Église.",
+        "source": "D-Day Overlord, Picauville. Published commune location, Picauville.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-16-inf",
+    "name": "16th Infantry Regiment",
+    "abbr": "16 INF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "1st Infantry Division",
+    "theater": "normandy",
+    "source": "Wikipedia 16th Infantry Regiment (United States): assaulted Omaha Beach 6 June with 1st Infantry Division. Confirm against 16th Infantry AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Omaha / Saint-Laurent-sur-Mer",
+        "lng": -0.877,
+        "lat": 49.3594,
+        "note": "6 June, eastern Omaha, Saint-Laurent-sur-Mer. Regiment grain on the same commune as the 1st Infantry division pin.",
+        "source": "Wikipedia 16th Infantry Regiment (United States), World War II. Published commune location, Saint-Laurent-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-116-inf",
+    "name": "116th Infantry Regiment",
+    "abbr": "116 INF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "29th Infantry Division",
+    "theater": "normandy",
+    "source": "Wikipedia 116th Infantry Regiment (United States): led the 29th Infantry Division assault on Omaha Beach 6 June. Confirm against 116th Infantry AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Omaha / Vierville-sur-Mer",
+        "lng": -0.905,
+        "lat": 49.374,
+        "note": "6 June, western Omaha, Vierville-sur-Mer. Regiment grain on the same commune as the 29th Infantry division pin.",
+        "source": "Wikipedia 116th Infantry Regiment (United States), World War II. Published commune location, Vierville-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-8-inf",
+    "name": "8th Infantry Regiment",
+    "abbr": "8 INF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "4th Infantry Division",
+    "theater": "normandy",
+    "source": "Wikipedia 8th Infantry Regiment (United States): first 4th Infantry Division unit ashore at Utah Beach 6 June. Confirm against 8th Infantry AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Utah / La Madeleine",
+        "lng": -1.175,
+        "lat": 49.416,
+        "note": "6 June, Utah Beach, La Madeleine. Regiment grain on the same commune as the 4th Infantry division pin. Link-up with 507 PIR at Chef-du-Pont is the same calendar day, not a second pin.",
+        "source": "Wikipedia 8th Infantry Regiment (United States), World War II. Published Utah / La Madeleine location.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-5th-rangers",
+    "name": "5th Ranger Battalion",
+    "abbr": "5 RGR",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "Provisional Ranger Group",
+    "theater": "normandy",
+    "source": "Wikipedia 5th Ranger Battalion: landed Omaha Dog White 6 June and fought through Vierville. Confirm against 5th Ranger Battalion AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Omaha / Vierville-sur-Mer",
+        "lng": -0.905,
+        "lat": 49.374,
+        "note": "6 June, landed Omaha Dog White and fought through Vierville-sur-Mer. Distinct from 2nd Rangers at Pointe du Hoc. The 29th Infantry division pin stays at Vierville.",
+        "source": "Wikipedia 5th Ranger Battalion, World War II. Published commune location, Vierville-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-1-south-lancs",
+    "name": "1st Battalion, South Lancashire Regiment",
+    "abbr": "1 S LANCS",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "3rd Infantry Division",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Lion-sur-Mer: 1st South Lancs landed Sword with 8th Brigade. TNA WO 171/1332 Place Hermanville 6–7 June. Later hamlets (Le Landel, Cazelle) are omitted so last-reported does not park at those unsourced pins. Confirm against Kew.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Hermanville-sur-Mer",
+        "lng": -0.316,
+        "lat": 49.287,
+        "note": "6 June, Queen White, Hermanville-sur-Mer. Battalion grain on the same commune as British 3rd Division. 7 June Place Hermanville is the same commune, not a second pin. Later Place columns (Bénouville 8 June, Le Landel, Cazelle) are omitted this pass.",
+        "source": "D-Day Overlord, Lion-sur-Mer. TNA WO 171/1332 1st South Lancs war diary Place Hermanville 6 June. Published commune location, Hermanville-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-1-suffolks",
+    "name": "1st Battalion, Suffolk Regiment",
+    "abbr": "1 SUFFOLK",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "3rd Infantry Division",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Colleville-Montgomery: 1st Suffolks captured WN19 then Hillman (WN17) 6 June. Confirm against the battalion war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Colleville-Montgomery",
+        "lng": -0.3,
+        "lat": 49.2833,
+        "note": "6 June, captured WN19 then Hillman (WN17) at Colleville-sur-Orne, now Colleville-Montgomery. Sword landing on the same calendar day is not a second pin. British 3rd Division stays at Hermanville-sur-Mer. No. 6 Commando passed through this commune (separate pin).",
+        "source": "D-Day Overlord, Colleville-Montgomery. Published commune location, Colleville-Montgomery.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-6-green-howards",
+    "name": "6th Battalion, Green Howards",
+    "abbr": "6 GH",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "50th Division",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Ver-sur-Mer: 6th Green Howards captured the Mare Fontaine battery (WN32) 6 June. Confirm against TNA WO 223/31.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Ver-sur-Mer",
+        "lng": -0.5283,
+        "lat": 49.3319,
+        "note": "6 June, captured the Mare Fontaine battery (WN32) at Ver-sur-Mer. Gold landing on the same calendar day is not a second pin. 1 Hants stays at Arromanches. Sherwood Rangers stay at Gold Jig / Asnelles. Crépon on the same calendar day is not a second pin.",
+        "source": "D-Day Overlord, Ver-sur-Mer. Published commune location, Ver-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-7-green-howards",
+    "name": "7th Battalion, Green Howards",
+    "abbr": "7 GH",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "50th Division",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Ver-sur-Mer: 7th Green Howards entered Ver-sur-Mer late morning via D112. Confirm against the battalion war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Ver-sur-Mer",
+        "lng": -0.5283,
+        "lat": 49.3319,
+        "note": "6 June, entered Ver-sur-Mer late morning via D112, D Company leading with 4th/7th Royal Dragoon Guards. Same named commune as 6th Green Howards; both 69th Brigade battalions are sourced here. 1 Hants stays at Arromanches.",
+        "source": "D-Day Overlord, Ver-sur-Mer. Published commune location, Ver-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "de-736-gr",
+    "name": "Grenadier-Regiment 736",
+    "abbr": "GR 736",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "regiment",
+    "parent": "716th Infantry Division",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Graye-sur-Mer: II./Grenadier-Regiment 736 held WN31 at Graye. Distinct from 716th Infantry at Luc-sur-Mer. Confirm against 716th KTB / Ziegelmann.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Graye-sur-Mer",
+        "lng": -0.4711,
+        "lat": 49.33,
+        "note": "6 June, II./GR 736 at WN31, Graye-sur-Mer, against the Royal Winnipeg Rifles. Courseulles, Langrune, and Luc-sur-Mer companies on the same calendar day are not a second pin. de-716-inf stays at Luc-sur-Mer. de-726-gr stays at Arromanches.",
+        "source": "D-Day Overlord, Graye-sur-Mer. Published commune location, Graye-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-2-east-yorks",
+    "name": "2nd Battalion, East Yorkshire Regiment",
+    "abbr": "2 EY",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "3rd Infantry Division",
+    "theater": "normandy",
+    "source": "TNA WO 171/1397 (TracesOfWar): after Daimler the battalion moved to Saint-Aubin-d'Arquenay, empty and in ruins, then withdrew west of Hermanville. Confirm against Kew.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Saint-Aubin-d'Arquenay",
+        "lng": -0.2875,
+        "lat": 49.2631,
+        "note": "6 June, Queen Red then Daimler; Place Saint-Aubin-d'Arquenay, empty and in ruins, until relieved by 1 KOSB. Night west of Hermanville is the same calendar day, not a second pin. 1st South Lancs stays at Hermanville-sur-Mer.",
+        "source": "TNA WO 171/1397 2nd East Yorkshire Regiment war diary, June 1944 (TracesOfWar). Published commune location, Saint-Aubin-d'Arquenay.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-5-east-yorks",
+    "name": "5th Battalion, East Yorkshire Regiment",
+    "abbr": "5 EY",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "50th Division",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Ver-sur-Mer: 5th East Yorks assaulted King Red at La Rivière, a hamlet of Ver-sur-Mer. Confirm against TNA WO 171.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Ver-sur-Mer",
+        "lng": -0.5283,
+        "lat": 49.3319,
+        "note": "6 June, King Red at La Rivière, hamlet of Ver-sur-Mer. Battalion grain on the same commune as 6th and 7th Green Howards. 1 Hants stays at Arromanches. Sherwood Rangers stay at Gold Jig / Asnelles.",
+        "source": "D-Day Overlord, Ver-sur-Mer. Published commune location, Ver-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-2-devons",
+    "name": "2nd Battalion, Devonshire Regiment",
+    "abbr": "2 DEVON",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "50th Division",
+    "theater": "normandy",
+    "source": "TNA WO 171/1278 (Normandy War Guide): landed west of Le Hamel 0810; bypassed Asnelles still in enemy hands; B Company occupied Ryes 1625 6 June; C Company took Longues-sur-Mer battery 1053 7 June.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Ryes",
+        "lng": -0.6225,
+        "lat": 49.3125,
+        "note": "6 June, B Company reached Ryes 1625 and occupied it; battalion night north-west of Ryes. Gold landing west of Le Hamel and the Asnelles bypass on the same calendar day are not a second pin. 1 Hants stays at Arromanches. 1st Dorsets stay at Asnelles.",
+        "source": "TNA WO 171/1278 2nd Devonshire Regiment war diary, 6 June 1944 (Normandy War Guide). Published commune location, Ryes.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-07",
+        "place": "Longues-sur-Mer",
+        "lng": -0.6942,
+        "lat": 49.3367,
+        "note": "7 June, C Company captured the Longues-sur-Mer battery 1053; about 90 prisoners. Masse de Cradalle on the same calendar day is not a second pin.",
+        "source": "TNA WO 171/1278 2nd Devonshire Regiment war diary, 7 June 1944 (Normandy War Guide). Published commune location, Longues-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-1-dorsets",
+    "name": "1st Battalion, Dorsetshire Regiment",
+    "abbr": "1 DORSET",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "50th Division",
+    "theater": "normandy",
+    "source": "TNA WO 171/1284 (Normandy War Guide) and D-Day Overlord, Asnelles: 1st Dorsets landed Gold with 231st Brigade and fought through Asnelles. Confirm against Kew.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Asnelles",
+        "lng": -0.571,
+        "lat": 49.341,
+        "note": "6 June, Gold Jig with 231st Brigade; C Company cooperated with 1 Hants to take Asnelles, then pushed toward Buhot. Les Roquettes and Buhot are hamlets of this commune, not a second pin. 1 Hants stays at Arromanches. 47 RM extra 6 June pin stays at Asnelles. de-916-i stays at Asnelles.",
+        "source": "TNA WO 171/1284 1st Dorsetshire Regiment war diary, 6 June 1944 (Normandy War Guide). D-Day Overlord, Asnelles. Published commune location, Asnelles.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-45-rm-commando",
+    "name": "45 Royal Marine Commando",
+    "abbr": "45 RM",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "1st Special Service Brigade",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Sallenelles: 45 RM reached Sallenelles 6 June, then driven back toward Le Plein. Confirm against the commando war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Sallenelles",
+        "lng": -0.2281,
+        "lat": 49.2639,
+        "note": "6 June, reached Sallenelles then driven back by GR 736 toward Le Plein. Sword landing and the later Le Plein stand on the same calendar day are not a second pin. 9 Para stays at Merville-Franceville-Plage. 4 Commando stays at Ouistreham.",
+        "source": "D-Day Overlord, Sallenelles. Published commune location, Sallenelles.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-3-commando",
+    "name": "No. 3 Commando",
+    "abbr": "3 CDO",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "1st Special Service Brigade",
+    "theater": "normandy",
+    "source": "Wikipedia No. 3 Commando and Pegasus Archive 3 Troop account: landed La Brèche 09:05; 3 Troop reached Amfreville / Le Plein about 1400. Confirm against TNA WO 218.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Amfreville",
+        "lng": -0.235,
+        "lat": 49.2483,
+        "note": "6 June, 3 Troop reached Amfreville / Le Plein about 1400 and attacked with 9 Para and 45 RM. Sword landing at La Brèche (Colleville-Montgomery) on the same calendar day is not a second pin. 6th Airborne stays at Ranville. This is Amfreville in Calvados, east of the Orne, not the Manche commune of the same name.",
+        "source": "Wikipedia No. 3 Commando, D-Day. Pegasus Archive, Report on the Activities of 3 Troop, No 3 Commando, 6 June 1944. Published commune location, Amfreville, Calvados.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-13-18-hussars",
+    "name": "13th/18th Royal Hussars",
+    "abbr": "13/18 H",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "27th Armoured Brigade",
+    "theater": "normandy",
+    "source": "TNA WO 171/1397 2nd East Yorks: A and C Companies took Daimler supported by B Squadron 13th/18th Hussars. Daimler sits in Colleville-Montgomery. Confirm against the 13th/18th Hussars war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Colleville-Montgomery",
+        "lng": -0.3,
+        "lat": 49.2833,
+        "note": "6 June, B Squadron supported 2nd East Yorks onto Daimler (WN) in Colleville-sur-Orne, now Colleville-Montgomery. Sword landing on the same calendar day is not a second pin. 1st Suffolks and No. 6 Commando stay on this commune. 2nd East Yorks stays at Saint-Aubin-d'Arquenay.",
+        "source": "TNA WO 171/1397 2nd East Yorkshire Regiment war diary, 6 June 1944 (TracesOfWar). Published commune location, Colleville-Montgomery.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-4-7-rdg",
+    "name": "4th/7th Royal Dragoon Guards",
+    "abbr": "4/7 RDG",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "8th Armoured Brigade",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Ver-sur-Mer: 4th/7th Royal Dragoon Guards entered Ver-sur-Mer with 7th Green Howards. Confirm against the regiment war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Ver-sur-Mer",
+        "lng": -0.5283,
+        "lat": 49.3319,
+        "note": "6 June, entered Ver-sur-Mer with D Company 7th Green Howards. Battalion grain on the same commune as 6th and 7th Green Howards and 5th East Yorks. 1 Hants stays at Arromanches.",
+        "source": "D-Day Overlord, Ver-sur-Mer. Published commune location, Ver-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-18-inf",
+    "name": "18th Infantry Regiment",
+    "abbr": "18 INF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "1st Infantry Division",
+    "theater": "normandy",
+    "source": "US Army Omaha Beachhead (CMH) and D-Day Overlord, Colleville-sur-Mer: 2nd Battalion in Colleville 1233 6 June. Confirm against 18th Infantry AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Colleville-sur-Mer",
+        "lng": -0.8422,
+        "lat": 49.3492,
+        "note": "6 June, 2nd Battalion in Colleville-sur-Mer by 1233; by 2100 cut the Vierville–Colleville road. Distinct from Colleville-Montgomery (Sword). 16th Infantry stays at Saint-Laurent-sur-Mer. 116th Infantry stays at Vierville-sur-Mer.",
+        "source": "US Army, Omaha Beachhead (6 June–13 June 1944), Historical Division. D-Day Overlord, Colleville-sur-Mer. Published commune location, Colleville-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-115-inf",
+    "name": "115th Infantry Regiment",
+    "abbr": "115 INF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "29th Infantry Division",
+    "theater": "normandy",
+    "source": "115th Infantry Regiment AAR (D-Day Overlord / Eisenhower Library): 1st and 2nd Battalions landed Fox Green 1025; 1st Battalion south of Saint-Laurent about dark. Confirm against NARA.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Omaha / Saint-Laurent-sur-Mer",
+        "lng": -0.877,
+        "lat": 49.3594,
+        "note": "6 June, landed Fox Green about 1025; 1st Battalion reached south of Saint-Laurent-sur-Mer about dark. Battalion grain on the same commune as 16th Infantry. 116th Infantry stays at Vierville-sur-Mer. 18th Infantry stays at Colleville-sur-Mer.",
+        "source": "115th Infantry Regiment After Action Report, June 1944 (D-Day Overlord transcript; Eisenhower Library NAID 12004462). Published commune location, Saint-Laurent-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-12-inf",
+    "name": "12th Infantry Regiment",
+    "abbr": "12 INF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "4th Infantry Division",
+    "theater": "normandy",
+    "source": "US Army Utah Beach to Cherbourg (CMH): 12th Infantry came up on the left of 502 PIR south of Beuzeville-au-Plain late on D-Day. Confirm against 12th Infantry AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Beuzeville-au-Plain",
+        "lng": -1.285,
+        "lat": 49.4314,
+        "note": "6 June, after wading the inundation the regiment came up on the left of 502 PIR south of Beuzeville-au-Plain and remained there for the night. Utah landing on the same calendar day is not a second pin. 4th Infantry Division stays at La Madeleine. 502 PIR stays at Saint-Martin-de-Varreville.",
+        "source": "US Army, Utah Beach to Cherbourg (6 June–27 June 1944), Historical Division. Published commune location, Beuzeville-au-Plain.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-22-inf",
+    "name": "22nd Infantry Regiment",
+    "abbr": "22 INF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "4th Infantry Division",
+    "theater": "normandy",
+    "source": "US Army Utah Beach to Cherbourg (CMH): 1st and 2nd Battalions spent D-Day crossing the inundation and reached Saint-Germain-de-Varreville, relieving 502 PIR. Confirm against 22nd Infantry AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Saint-Germain-de-Varreville",
+        "lng": -1.2556,
+        "lat": 49.4386,
+        "note": "6 June, 1st and 2nd Battalions reached Saint-Germain-de-Varreville and relieved 502 PIR. 3rd Battalion clearing beach strongpoints on the same calendar day is not a second pin. Distinct from Saint-Martin-de-Varreville (502 PIR). 8th Infantry stays at La Madeleine.",
+        "source": "US Army, Utah Beach to Cherbourg (6 June–27 June 1944), Historical Division. Published commune location, Saint-Germain-de-Varreville.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-325-gir",
+    "name": "325th Glider Infantry Regiment",
+    "abbr": "325 GIR",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "82nd Airborne Division",
+    "theater": "normandy",
+    "source": "HMDB 325th GIR marker: glider serial HACKENSACK landed D+1; by 1500 7 June driven Germans from the area near Carquebut. No 6 June pin. Confirm against 325th GIR AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-07",
+        "place": "Carquebut",
+        "lng": -1.3286,
+        "lat": 49.3733,
+        "note": "7 June, D+1 glider landing (Operation Hackensack); by 1500 driven the enemy from the area near Carquebut. 82nd Airborne stays at Sainte-Mère-Église. 507 PIR stays at Chef-du-Pont.",
+        "source": "HMDB, 325th Glider Infantry Regiment, 82nd Airborne Division. Published commune location, Carquebut.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-327-gir",
+    "name": "327th Glider Infantry Regiment",
+    "abbr": "327 GIR",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "101st Airborne Division",
+    "theater": "normandy",
+    "source": "HMDB 327th GIR marker: amphibious landing Utah 6 June; linked up near Sainte-Marie-du-Mont. Confirm against 327th GIR AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Sainte-Marie-du-Mont",
+        "lng": -1.2256,
+        "lat": 49.3786,
+        "note": "6 June, initial elements landed Utah by sea and linked up near Sainte-Marie-du-Mont. Battalion grain on the same commune as 101st Airborne. 506 PIR stays at Sainte-Marie-du-Mont / Carentan later. 8th Infantry stays at La Madeleine.",
+        "source": "HMDB, 327th Glider Infantry Regiment, 101st Airborne Division. Published commune location, Sainte-Marie-du-Mont.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "cdn-sherbrooke",
+    "name": "27th Armoured Regiment (Sherbrooke Fusiliers)",
+    "abbr": "SFR",
+    "nation": "Canada",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "2nd Canadian Armoured Brigade",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Villons-les-Buissons: Sherbrooke Fusiliers supported the North Nova Scotia Highlanders into the village at dawn 7 June. Confirm against the Sherbrooke war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-07",
+        "place": "Villons-les-Buissons",
+        "lng": -0.4081,
+        "lat": 49.2411,
+        "note": "7 June, supported the North Nova Scotia Highlanders into Villons-les-Buissons at dawn, then toward Buron. No 6 June pin: the Bernières-sur-Mer landing is not a second commune for this regiment. NNSH stays at Villons 6 June. 12th SS stays at Authie 7 June.",
+        "source": "D-Day Overlord, Villons-les-Buissons. Published commune location, Villons-les-Buissons.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "de-744-gr",
+    "name": "Grenadier-Regiment 744",
+    "abbr": "GR 744",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "regiment",
+    "parent": "711th Infantry Division",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Cabourg: GR 744 of 711th Infantry occupied Cabourg on 6 June. II./744 CP at Cabourg (Wn Cab 09). Confirm against 711th KTB.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Cabourg",
+        "lng": -0.1163,
+        "lat": 49.288,
+        "note": "6 June, occupied Cabourg east of the Dives; II./744 CP at Wn Cab 09. 711th Division HQ at Vauville is not a second pin this pass. 6th Airborne stays at Ranville. 45 RM stays at Sallenelles.",
+        "source": "D-Day Overlord, Cabourg. D-Day Overlord, 711. Infanterie-Division order of battle 1 June 1944. Published commune location, Cabourg.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "de-914-gr",
+    "name": "Grenadier-Regiment 914",
+    "abbr": "GR 914",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "regiment",
+    "parent": "352nd Infantry Division",
+    "theater": "normandy",
+    "source": "Wikipedia 352nd Infantry Division: 2nd Battalion GR 914 was positioned behind the gun emplacement at Pointe du Hoc. Distinct from de-352nd at Formigny and de-916-i at Asnelles. Confirm against Ziegelmann / 352nd KTB.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Pointe du Hoc",
+        "lng": -0.9872,
+        "lat": 49.3964,
+        "note": "6 June, II./GR 914 behind the Pointe du Hoc battery, opposite 2nd Rangers. Regiment CP at Neuilly-la-Forêt on the same calendar day is not a second pin. de-352nd stays at Formigny. de-916-i stays at Asnelles. 2nd Rangers stay at Pointe du Hoc.",
+        "source": "Wikipedia 352nd Infantry Division, D-Day deployment. Published location of Pointe du Hoc.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "de-pzgren-192",
+    "name": "Panzergrenadier-Regiment 192",
+    "abbr": "PG 192",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "regiment",
+    "parent": "21st Panzer Division",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Villons-les-Buissons: Panzergrenadier-Regiment 192 of 21st Panzer fired on the Canadian advance from Villons toward Buron 7 June. Confirm against 21st Panzer KTB.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-07",
+        "place": "Villons-les-Buissons",
+        "lng": -0.4081,
+        "lat": 49.2411,
+        "note": "7 June, opposite the North Nova Scotia Highlanders and Sherbrooke Fusiliers at Villons-les-Buissons / Buron. No 6 June pin on this id: 21st Panzer stays at Caen. 12th SS stays at Authie.",
+        "source": "D-Day Overlord, Villons-les-Buissons. Published commune location, Villons-les-Buissons.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-2-ksli",
+    "name": "2nd Battalion, King's Shropshire Light Infantry",
+    "abbr": "2 KSLI",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "185th Infantry Brigade",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Biéville-sur-Orne: 2nd KSLI with 185th Brigade reached Beuville / Biéville-sur-Orne 6 June; one company pushed to Lébisey wood the same afternoon. Soldiers of Shropshire D-Day route. Confirm against TNA WO 171/1325.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Biéville-Beuville",
+        "lng": -0.3258,
+        "lat": 49.2364,
+        "note": "6 June, Beuville then Biéville-sur-Orne (now one commune). Lébisey wood the same afternoon is a lieu-dit of Hérouville-Saint-Clair, not a second pin. Sword landing at Hermanville the same day is not a second pin. British 3rd Division stays at Hermanville. 1 Suffolks stay at Colleville-Montgomery.",
+        "source": "D-Day Overlord, Biéville-sur-Orne. Wikipedia Biéville-Beuville. Soldiers of Shropshire, In the D-Day footsteps of 2nd KSLI. Confirm against TNA WO 171/1325.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-1-norfolks",
+    "name": "1st Battalion, Royal Norfolk Regiment",
+    "abbr": "1 NORFOLK",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "185th Infantry Brigade",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Biéville-sur-Orne: Royal Norfolk took Beuville on 6 June after 2nd KSLI was held, then both battalions of 185th Brigade held the commune. Confirm against TNA WO 171.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Biéville-Beuville",
+        "lng": -0.3258,
+        "lat": 49.2364,
+        "note": "6 June, Beuville. Battalion grain on the same commune as 2nd KSLI. Hermanville landing the same day is not a second pin. British 3rd Division stays at Hermanville.",
+        "source": "D-Day Overlord, Biéville-sur-Orne. Wikipedia Biéville-Beuville. Confirm against TNA WO 171 1st Royal Norfolk war diary.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-staffs-yeo",
+    "name": "Staffordshire Yeomanry",
+    "abbr": "STAFFS YEO",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "27th Armoured Brigade",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Biéville-sur-Orne: Staffordshire Yeomanry (27th Armoured Brigade) listed with 185th Brigade at Biéville-Beuville 6 June. Confirm against TNA WO 171.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Biéville-Beuville",
+        "lng": -0.3258,
+        "lat": 49.2364,
+        "note": "6 June, tanks with 185th Brigade at Beuville / Biéville-sur-Orne. Grain vs 2nd KSLI on the same commune. Hermanville landing the same day is not a second pin.",
+        "source": "D-Day Overlord, Biéville-sur-Orne. Wikipedia Biéville-Beuville. Confirm against TNA WO 171 Staffordshire Yeomanry war diary.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "de-pzgren-125",
+    "name": "Panzergrenadier-Regiment 125",
+    "abbr": "PG 125",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "regiment",
+    "parent": "21st Panzer Division",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Colombelles: II./Panzergrenadier-Regiment 125 command post (Hauptmann Kuron) at Colombelles on 6 June, with 8. and 10. companies also on the commune. Confirm against 21st Panzer KTB.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Colombelles",
+        "lng": -0.2961,
+        "lat": 49.205,
+        "note": "6 June, II./PzGren 125 command post at Colombelles. I./125 at Vimont / Fierville-la-Campagne the same day is not a second pin. 21st Panzer stays at Caen. 6th Airborne stays at Ranville. de-pzgren-192 stays on the 7 June Villons pin.",
+        "source": "D-Day Overlord, Colombelles. Wikipedia Colombelles. Confirm against 21st Panzer KTB / von Luck.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "de-pz-22",
+    "name": "Panzer-Regiment 22",
+    "abbr": "PZ 22",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "regiment",
+    "parent": "21st Panzer Division",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Biéville-sur-Orne: II./Panzer-Regiment 22 counter-attacked at Biéville on the afternoon of 6 June, opposite 185th Brigade. Confirm against 21st Panzer KTB.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Biéville-Beuville",
+        "lng": -0.3258,
+        "lat": 49.2364,
+        "note": "6 June, II./Panzer-Regiment 22 afternoon counter-attack at Biéville. Lion-sur-Mer coastal reach the same day is not a second pin. 21st Panzer stays at Caen. de-pzgren-125 stays at Colombelles. 2nd KSLI stays on this commune.",
+        "source": "D-Day Overlord, Biéville-sur-Orne. Wikipedia Biéville-Beuville. Confirm against 21st Panzer KTB.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-175-inf",
+    "name": "175th Infantry Regiment",
+    "abbr": "175 INF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "29th Infantry Division",
+    "theater": "normandy",
+    "source": "175th Infantry Regiment AAR June 1944 (D-Day Overlord transcription): 1st Battalion reached Isigny at 0430 9 June and was through the town by 0730. D-Day Overlord, Isigny-sur-Mer, liberation 9 June. Confirm against 175th AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-09",
+        "place": "Isigny-sur-Mer",
+        "lng": -1.1008,
+        "lat": 49.3186,
+        "note": "9 June, 1st Battalion entered Isigny about 0430. No 7 June Omaha landing pin (Vierville smear vs 116th Infantry). La Cambe 8 June is not a second pin. 29th Infantry stays at Vierville 6 June.",
+        "source": "175th Infantry Regiment After Action Report, June 1944, Phase 1 (D-Day Overlord transcription). D-Day Overlord, Isigny-sur-Mer. Wikipedia Isigny-sur-Mer.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-26-inf",
+    "name": "26th Infantry Regiment",
+    "abbr": "26 INF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "1st Infantry Division",
+    "theater": "normandy",
+    "source": "D-Day Overlord, Colleville-sur-Mer: 26th Infantry landed about 2100 6 June near E-3; 1st Battalion placed on the left of 16th Infantry east of the Mills valley. Grain vs 16th Inf at Saint-Laurent and 18th Inf at Colleville. Confirm against Omaha Beachhead / 26th Infantry AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Colleville-sur-Mer",
+        "lng": -0.8422,
+        "lat": 49.3492,
+        "note": "6 June, landed about 2100 near E-3 on the Colleville-sur-Mer coast. Formigny / Tour-en-Bessin on later days are not pinned this pass. 16th Infantry stays at Saint-Laurent. 18th Infantry stays on this commune. de-352nd stays at Formigny.",
+        "source": "D-Day Overlord, Colleville-sur-Mer. US Army Omaha Beachhead (6 June–13 June 1944). Wikipedia Colleville-sur-Mer. Confirm against 26th Infantry AAR.",
         "confidence": "medium"
       }
     ]

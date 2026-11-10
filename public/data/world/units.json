@@ -127,7 +127,7 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "normandy",
-    "source": "Published commune locations at Sidi Barrani, El Alamein, Tunis, and Salerno, then Gold / Villers-Bocage in the Normandy file. Skip Greece (elements only). Skip Remagen. Confirm against TNA WO 171 7th Armoured Division war diary.",
+    "source": "Published commune locations at Sidi Barrani, Beda Fomm, El Alamein, Tripoli, Tunis, and Salerno, then Gold / Villers-Bocage in the Normandy file. Skip Greece (elements only). Skip Remagen. Confirm against TNA WO 171 7th Armoured Division war diary.",
     "confidence": "low",
     "track": [
       {
@@ -139,6 +139,16 @@
         "note": "9 December 1940, Sidi Barrani. Compass. Coarser division pin.",
         "source": "Published commune location, Sidi Barrani. Confirm against TNA WO 171 7th Armoured Division war diary.",
         "confidence": "low"
+      },
+      {
+        "date": "1941-02-05",
+        "place": "Beda Fomm",
+        "lng": 20.30861,
+        "lat": 31.24111,
+        "theater": "north-africa",
+        "note": "5 February 1941, Beda Fomm. Combeforce of 7th Armoured cut the Via Balbia; the rest of the division closed as 10th Army surrendered on 7 February. Compass. Distinct from 6th Australian at Benghazi.",
+        "source": "Wikipedia Battle of Beda Fomm (Combeforce arrived 5 February; 7th Armoured Division). Wikipedia Beda Fomm (31.24111 N, 20.30861 E). Confirm against TNA WO 169 7th Armoured Division war diary.",
+        "confidence": "medium"
       },
       {
         "date": "1942-05-26",
@@ -169,6 +179,16 @@
         "note": "23 October 1942, El Alamein. Second Alamein. Coarser division pin.",
         "source": "Published commune location, El Alamein. Confirm against TNA WO 171 7th Armoured Division war diary.",
         "confidence": "low"
+      },
+      {
+        "date": "1943-01-23",
+        "place": "Tripoli",
+        "lng": 13.1875,
+        "lat": 32.8875,
+        "theater": "north-africa",
+        "note": "23 January 1943, Tripoli. 7th Armoured spearhead entered the city with Eighth Army. Hub tunisia. Distinct from Tunis 13 May.",
+        "source": "Wikipedia 7th Armoured Division (United Kingdom) (entered Tripoli 23 January 1943). Wikipedia Tripoli, Libya (32.88750 N, 13.18750 E). Confirm against TNA WO 169 7th Armoured Division war diary.",
+        "confidence": "medium"
       },
       {
         "date": "1943-05-13",
@@ -223,6 +243,16 @@
         "note": "19 December 1944, Bastogne. Arrived by road during the Ardennes offensive.",
         "source": "Published commune location, Bastogne. Confirm against 101st G-3.",
         "confidence": "low"
+      },
+      {
+        "date": "1944-12-22",
+        "place": "Bastogne",
+        "lng": 5.72,
+        "lat": 50.0042,
+        "theater": "nw-europe",
+        "note": "22 December 1944, Bastogne. Still in the town. Division after-action records the 22 December Nuts reply from the 327th/401st perimeter. Same commune as the 19 December arrival pin.",
+        "source": "Published commune location, Bastogne. Confirm against 101st G-3 / RG 407 operations reports.",
+        "confidence": "medium"
       }
     ]
   },
@@ -314,6 +344,16 @@
         "confidence": "medium"
       },
       {
+        "date": "1942-11-19",
+        "place": "Stalingrad",
+        "lng": 44.5147,
+        "lat": 48.7086,
+        "theater": "eastern-front",
+        "note": "19 November 1942, Stalingrad. Uranus opens against the flanks of 6th Army. Coarser army pin on the city. Same named place as the July and February pins.",
+        "source": "Published commune location, Volgograd. Confirm against Tessin / 6th Army KTB.",
+        "confidence": "medium"
+      },
+      {
         "date": "1943-02-02",
         "place": "Stalingrad",
         "lng": 44.5147,
@@ -345,6 +385,16 @@
         "lat": 48.7086,
         "theater": "eastern-front",
         "note": "17 July 1942, Stalingrad. 62nd Army on the west bank of the Volga.",
+        "source": "Published commune location, Volgograd. Confirm against Soviet 62nd Army records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1942-09-13",
+        "place": "Stalingrad",
+        "lng": 44.5147,
+        "lat": 48.7086,
+        "theater": "eastern-front",
+        "note": "13 September 1942, Stalingrad. 62nd Army combat journal for the street fighting; Chuikov in command. Same named place as the July pin.",
         "source": "Published commune location, Volgograd. Confirm against Soviet 62nd Army records.",
         "confidence": "medium"
       },
@@ -459,10 +509,20 @@
     "echelon": "company",
     "parent": "506th PIR",
     "theater": "normandy",
-    "source": "Published Eindhoven and Bastogne locations after the Normandy file. Confirm against 506th S-3 / AAR.",
+    "source": "Published Upottery (D−1 takeoff), Eindhoven, and Bastogne locations after the Normandy file. Confirm against 506th S-3 / AAR.",
     "confidence": "low",
     "featured": true,
     "track": [
+      {
+        "date": "1944-06-05",
+        "place": "RAF Upottery",
+        "lng": -3.15278,
+        "lat": 50.88389,
+        "theater": "nw-europe",
+        "note": "5 June, RAF Upottery. Easy Company, 506th PIR, boarded C-47s here for the first combat jump on 6 June. The 6 June Normandy pin stays at Brécourt. Band of Brothers is television; this row is the airfield page, not Ambrose.",
+        "source": "Wikipedia RAF Upottery. Published airfield location. Confirm against 506th PIR S-3 / AAR.",
+        "confidence": "medium"
+      },
       {
         "date": "1944-09-17",
         "place": "Eindhoven",
@@ -538,7 +598,7 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "normandy",
-    "source": "Published Oran and Gela locations before Omaha in the Normandy file. Confirm against 1st Infantry Division G-3.",
+    "source": "Published Oran, El Guettar, Gela, and Troina locations before Omaha in the Normandy file. Confirm against 1st Infantry Division G-3.",
     "confidence": "low",
     "track": [
       {
@@ -552,6 +612,16 @@
         "confidence": "low"
       },
       {
+        "date": "1943-03-23",
+        "place": "El Guettar",
+        "lng": 8.95278,
+        "lat": 34.33722,
+        "theater": "north-africa",
+        "note": "23 March 1943, El Guettar. 1st Infantry Division (Allen) met 10th Panzer in the valley. Distinct from Oran (Torch) and from 9th Infantry on the later Hill 772 fight.",
+        "source": "Wikipedia Battle of El Guettar (1st Infantry Division, 23 March – 3 April 1943). Wikipedia El Guettar, Tunisia. Confirm against 1st Infantry Division G-3.",
+        "confidence": "medium"
+      },
+      {
         "date": "1943-07-10",
         "place": "Gela",
         "lng": 14.25,
@@ -560,6 +630,16 @@
         "note": "10 July 1943, Gela. Husky landing. Coarser division pin.",
         "source": "Published commune location, Gela. Confirm against 1st Infantry Division G-3.",
         "confidence": "low"
+      },
+      {
+        "date": "1943-07-31",
+        "place": "Troina",
+        "lng": 14.6,
+        "lat": 37.783,
+        "theater": "italy",
+        "note": "31 July 1943, Troina. 1st Infantry Division (Allen) opened the inland fight for the Etna Line town. Distinct from the 10 July Gela landing. 9th Infantry took up the pursuit after the Germans evacuated.",
+        "source": "Wikipedia Battle of Troina (1st Infantry Division, 31 July – 6 August 1943). Wikipedia Troina. Confirm against 1st Infantry Division G-3.",
+        "confidence": "medium"
       }
     ]
   },
@@ -607,10 +687,20 @@
     "echelon": "corps",
     "parent": "Not in this sample",
     "theater": "north-africa",
-    "source": "Published commune locations at Tobruk, El Alamein, and Tunis. Confirm against Afrikakorps KTB.",
+    "source": "Published commune locations at Tobruk (siege 1941 and fall 1942), Gazala, El Alamein, and Tunis. Confirm against Afrikakorps KTB.",
     "confidence": "low",
     "featured": true,
     "track": [
+      {
+        "date": "1941-04-10",
+        "place": "Tobruk",
+        "lng": 23.9764,
+        "lat": 32.0836,
+        "theater": "north-africa",
+        "note": "10 April 1941, Tobruk. Afrika Korps invested the fortress (Hub tobruk window opens). Opposite 9th Australian Division 11 April. Not the 21 June 1942 fall.",
+        "source": "Hub Afrika Korps card (tobruk). Wikipedia Siege of Tobruk (investment April 1941). Published commune location, Tobruk. Confirm against Afrikakorps KTB.",
+        "confidence": "medium"
+      },
       {
         "date": "1942-05-26",
         "place": "Ain el Gazala",
@@ -747,7 +837,7 @@
     "echelon": "army",
     "parent": "Not in this sample",
     "theater": "eastern-front",
-    "source": "Published commune locations at Brest, Moscow, and Berlin. Confirm against Soviet Western Front records.",
+    "source": "Published commune locations at Brest, Smolensk, Rzhev, Moscow, and Berlin. Confirm against Soviet Western Front records.",
     "confidence": "medium",
     "featured": true,
     "track": [
@@ -762,6 +852,16 @@
         "confidence": "medium"
       },
       {
+        "date": "1941-07-10",
+        "place": "Smolensk",
+        "lng": 32.0401,
+        "lat": 54.7818,
+        "theater": "eastern-front",
+        "note": "10 July 1941, Smolensk. Western Front on the Moscow highway after Brest. Coarser front pin on the city.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
+      },
+      {
         "date": "1941-10-02",
         "place": "Moscow",
         "lng": 37.6178,
@@ -769,6 +869,16 @@
         "theater": "eastern-front",
         "note": "2 October 1941, Moscow. Defence of the capital.",
         "source": "Published commune location, Moscow. Confirm against Soviet Western Front records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1942-01-08",
+        "place": "Rzhev",
+        "lng": 32.8487,
+        "lat": 56.2629,
+        "theater": "eastern-front",
+        "note": "8 January 1942, Rzhev. Western Front in the Rzhev–Vyazma fighting. Coarser front pin on the named town.",
+        "source": "Published named-place location. Confirm against formation records.",
         "confidence": "medium"
       },
       {
@@ -870,6 +980,16 @@
         "confidence": "medium"
       },
       {
+        "date": "1942-07-01",
+        "place": "El Alamein",
+        "lng": 28.95,
+        "lat": 30.8333,
+        "theater": "north-africa",
+        "note": "1 July 1942, El Alamein. First Alamein. Hub first-el-alamein. Second Alamein remains 23 October.",
+        "source": "Hub Eighth Army card (first-el-alamein). Published commune location, El Alamein. Confirm against Eighth Army records.",
+        "confidence": "medium"
+      },
+      {
         "date": "1942-10-23",
         "place": "El Alamein",
         "lng": 28.95,
@@ -878,6 +998,26 @@
         "note": "23 October 1942, El Alamein. Second Alamein.",
         "source": "Published commune location, El Alamein. Confirm against Eighth Army records.",
         "confidence": "low"
+      },
+      {
+        "date": "1943-01-23",
+        "place": "Tripoli",
+        "lng": 13.1875,
+        "lat": 32.8875,
+        "theater": "north-africa",
+        "note": "23 January 1943, Tripoli. Eighth Army entered the city. Hub tunisia. Distinct from 7th Armoured on the same commune and from Tunis 13 May.",
+        "source": "Wikipedia Eighth Army (United Kingdom) / capture of Tripoli 23 January 1943. Wikipedia Tripoli, Libya (32.88750 N, 13.18750 E). Confirm against Eighth Army records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1943-03-20",
+        "place": "Mareth",
+        "lng": 10.3,
+        "lat": 33.633,
+        "theater": "north-africa",
+        "note": "20 March 1943, Mareth. Eighth Army Operation Pugilist against the Mareth Line. Coarser army pin on the named commune. Distinct from 51st Highland on the same town and from 4th Indian at El Hamma.",
+        "source": "Wikipedia Battle of the Mareth Line (16–31 March 1943). Wikipedia Mareth (33.633 N, 10.300 E). Confirm against Eighth Army records.",
+        "confidence": "medium"
       },
       {
         "date": "1943-05-13",
@@ -930,7 +1070,7 @@
     "echelon": "army",
     "parent": "Not in this sample",
     "theater": "italy",
-    "source": "Published commune locations at Salerno and Monte Cassino.",
+    "source": "Published commune locations at Salerno, Anzio, Monte Cassino, and Bologna. Confirm against Fifth Army records.",
     "confidence": "low",
     "track": [
       {
@@ -952,6 +1092,16 @@
         "note": "17 January 1944, Monte Cassino.",
         "source": "Published location, Monte Cassino. Confirm against Fifth Army records.",
         "confidence": "low"
+      },
+      {
+        "date": "1944-01-22",
+        "place": "Anzio",
+        "lng": 12.629,
+        "lat": 41.447,
+        "theater": "italy",
+        "note": "22 January 1944, Anzio. Fifth Army commanded the Shingle landing (VI Corps). Coarser army pin on the beachhead commune.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
       },
       {
         "date": "1945-04-21",
@@ -986,6 +1136,16 @@
         "note": "17 September 1944, Arnhem. Market Garden.",
         "source": "Published commune location, Arnhem. Confirm against 1st Airborne Division war diary.",
         "confidence": "medium"
+      },
+      {
+        "date": "1944-09-19",
+        "place": "Oosterbeek",
+        "lng": 5.8444,
+        "lat": 51.9847,
+        "theater": "nw-europe",
+        "note": "19 September 1944, Oosterbeek. Division headquarters at Hotel Hartenstein after the failed attempts to reach Frost at the Arnhem road bridge. Distinct from the 17 September Arnhem pin and from 2nd Para at the bridge.",
+        "source": "Published commune location, Oosterbeek. Wikipedia Oosterbeek / Airborne Museum Hartenstein. Confirm against 1st Airborne Division war diary.",
+        "confidence": "medium"
       }
     ]
   },
@@ -998,9 +1158,19 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "north-africa",
-    "source": "Published commune locations at El Alamein and Monte Cassino. Greece is not pinned on Athens at the 6 April campaign start.",
+    "source": "Published commune locations at El Alamein (First and Second), Monte Cassino, and Trieste. Greece is not pinned on Athens at the 6 April campaign start. Crete/Maleme stays on nz-22-bn.",
     "confidence": "low",
     "track": [
+      {
+        "date": "1942-07-01",
+        "place": "El Alamein",
+        "lng": 28.95,
+        "lat": 30.8333,
+        "theater": "north-africa",
+        "note": "1 July 1942, El Alamein. First Alamein. XIII Corps (2nd New Zealand Division and 4th Indian) held the southern sector when Rommel reached the line. Distinct from 9th Australian (entered the northern line 4 July) and from Second Alamein 23 October. Maleme stays on 22nd Battalion.",
+        "source": "Wikipedia First Battle of El Alamein (XIII Corps: 2nd New Zealand Division on the left of the line). Published commune location, El Alamein. Confirm against 2nd New Zealand Division records.",
+        "confidence": "medium"
+      },
       {
         "date": "1942-10-23",
         "place": "El Alamein",
@@ -1020,6 +1190,16 @@
         "note": "17 January 1944, Monte Cassino.",
         "source": "Published location, Monte Cassino. Confirm against 2nd New Zealand Division records.",
         "confidence": "low"
+      },
+      {
+        "date": "1945-05-02",
+        "place": "Trieste",
+        "lng": 13.77028,
+        "lat": 45.65028,
+        "theater": "italy",
+        "note": "2 May 1945, Trieste. 2nd New Zealand Division crossed the Isonzo on 1 May and entered the city on 2 May as German forces in Italy surrendered. 22nd Battalion grain stays at Maleme. Last day of the Hub italy-end window.",
+        "source": "NZ History Faenza, Trieste and home (the Div crossed the Isonzo on 1 May and reached Trieste the next day). NZ History Italian campaign key dates (2 May 1945: Trieste captured). Wikipedia Trieste (45.65028 N, 13.77028 E). Confirm against 2nd New Zealand Division records.",
+        "confidence": "medium"
       }
     ]
   },
@@ -1032,7 +1212,7 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "north-africa",
-    "source": "Published commune locations at Tobruk and El Alamein.",
+    "source": "Published commune locations at Tobruk and El Alamein (First and Second).",
     "confidence": "low",
     "track": [
       {
@@ -1044,6 +1224,16 @@
         "note": "11 April 1941, Tobruk. Start of the siege. Coarser division pin.",
         "source": "Published commune location, Tobruk. Confirm against 9th Australian Division records.",
         "confidence": "low"
+      },
+      {
+        "date": "1942-07-04",
+        "place": "El Alamein",
+        "lng": 28.95,
+        "lat": 30.8333,
+        "theater": "north-africa",
+        "note": "4 July 1942, El Alamein. First Alamein. 9th Australian Division entered the northern line this day (Tel el Eisa later). Distinct from 2nd New Zealand already on the southern sector 1 July and from Second Alamein 23 October.",
+        "source": "Wikipedia First Battle of El Alamein (On 4 July, the Australian 9th Division had entered the line in the north). Published commune location, El Alamein. Confirm against 9th Australian Division records.",
+        "confidence": "medium"
       },
       {
         "date": "1942-10-23",
@@ -1066,7 +1256,7 @@
     "echelon": "army",
     "parent": "Not in this sample",
     "theater": "north-africa",
-    "source": "Published commune location, Sidi Barrani.",
+    "source": "Published commune locations at Sidi Barrani and Beda Fomm. Confirm against Italian 10th Army diaries (USSME).",
     "confidence": "low",
     "track": [
       {
@@ -1075,9 +1265,19 @@
         "lng": 25.9256,
         "lat": 31.6108,
         "theater": "north-africa",
-        "note": "9 December 1940, Sidi Barrani. Compass. The army is destroyed in the following weeks; Beda Fomm is not pinned.",
+        "note": "9 December 1940, Sidi Barrani. Compass opening. Camps around the town overrun; the army is destroyed at Beda Fomm in February.",
         "source": "Published commune location, Sidi Barrani. Confirm against Italian 10th Army records.",
         "confidence": "low"
+      },
+      {
+        "date": "1941-02-07",
+        "place": "Beda Fomm",
+        "lng": 20.30861,
+        "lat": 31.24111,
+        "theater": "north-africa",
+        "note": "7 February 1941, Beda Fomm. 10th Army surrendered after failing to break Combeforce on the Via Balbia. Compass window (to 9 February). Distinct from 6th Australian at Benghazi 6 February.",
+        "source": "Wikipedia Battle of Beda Fomm (6–7 February 1941; 10th Army surrendered 7 February). Wikipedia Beda Fomm (31.24111 N, 20.30861 E). Confirm against USSME 10th Army diaries.",
+        "confidence": "medium"
       }
     ]
   },
@@ -1225,8 +1425,18 @@
         "lng": 127.6792,
         "lat": 26.2122,
         "theater": "pacific",
-        "note": "1 April 1945, Naha. Okinawa. Coarser army pin on the commune.",
+        "note": "1 April 1945, Naha. Okinawa. Coarser army pin on the commune. Not the 27 May Shuri headquarters pin.",
         "source": "Published commune location, Naha. Confirm against 32nd Army records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1945-05-27",
+        "place": "Shuri",
+        "lng": 127.719475,
+        "lat": 26.217031,
+        "theater": "pacific",
+        "note": "27 May 1945, Shuri. 32nd Army underground headquarters under Shuri Castle; troops withdrew south to Mabuni that night. Distinct from the 1 April Naha pin. Inside the Hub okinawa window (1 April–22 June). Shuri was a separate city in 1945.",
+        "source": "Atlas Obscura / Kyodo, 32nd Army HQ tunnels (conference 21 May; withdrawal 27 May). Japanese Wikipedia 第32軍 (司令部 首里 → 摩文仁). Wikipedia Shuri, Okinawa (26.217007 N, 127.719423 E). Confirm against JACAR 32nd Army files.",
         "confidence": "medium"
       }
     ]
@@ -1309,6 +1519,16 @@
         "lat": 24.8074,
         "theater": "burma",
         "note": "8 March 1944, Imphal. Kohima is not a second pin until sourced on its own date.",
+        "source": "Published commune location, Imphal. Confirm against 14th Army records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-04-06",
+        "place": "Imphal",
+        "lng": 93.9384,
+        "lat": 24.8074,
+        "theater": "burma",
+        "note": "6 April 1944, Imphal. Fourteenth Army still on the Imphal plain during the Kohima–Imphal fighting. Same commune as the 8 March pin. Kohima is not a second pin until sourced on its own date.",
         "source": "Published commune location, Imphal. Confirm against 14th Army records.",
         "confidence": "medium"
       },
@@ -1456,7 +1676,7 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "nw-europe",
-    "source": "Published commune location, Arras. Not at Sedan.",
+    "source": "Published commune locations at Arras, Dunkirk, and Moscow. Not at Sedan. Confirm against 7th Panzer KTB.",
     "confidence": "medium",
     "track": [
       {
@@ -1467,6 +1687,26 @@
         "theater": "nw-europe",
         "note": "21 May 1940, Arras. Rommel's division met the BEF counter-attack. Not the Sedan Meuse crossing.",
         "source": "Published commune location, Arras. Confirm against 7th Panzer KTB.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1940-05-26",
+        "place": "Dunkirk",
+        "lng": 2.3775,
+        "lat": 51.0383,
+        "theater": "nw-europe",
+        "note": "26 May 1940, Dunkirk. 7th Panzer on the Channel after Arras. Coarser division pin on the evacuation commune. Not the Sedan Meuse crossing.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1941-10-02",
+        "place": "Moscow",
+        "lng": 37.6178,
+        "lat": 55.7558,
+        "theater": "eastern-front",
+        "note": "2 October 1941, Moscow. Typhoon with Panzer Group 3. Coarser division pin on the city. Brest is not this division's crossing.",
+        "source": "Published named-place location. Confirm against formation records.",
         "confidence": "medium"
       }
     ]
@@ -1523,8 +1763,18 @@
         "lng": 44.5147,
         "lat": 48.7086,
         "theater": "eastern-front",
-        "note": "17 July 1942, Stalingrad. 64th Army south of 62nd Army on the west bank.",
+        "note": "17 July 1942, Stalingrad. 64th Army south of 62nd Army on the west bank. Not the 2 February 1943 surrender pin.",
         "source": "Published commune location, Volgograd. Confirm against Soviet 64th Army records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1943-02-02",
+        "place": "Stalingrad",
+        "lng": 44.5147,
+        "lat": 48.7086,
+        "theater": "eastern-front",
+        "note": "2 February 1943, Stalingrad. 64th Army on the southern face of the pocket when 6th Army surrendered. Hub battleId stalingrad-surrender. Same named city as 17 July; not a Beketovka hamlet pin.",
+        "source": "Hub 64th Army card (southern sector / Beketovka; stalingrad-surrender). Published commune location, Volgograd. Confirm against TsAMO 64th Army combat journal.",
         "confidence": "medium"
       }
     ]
@@ -1739,7 +1989,7 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "nw-europe",
-    "source": "Published commune locations at Saint-Valery-en-Caux, El Alamein, and Pachino. Skip Caen / Charnwood. Confirm against TNA WO 171 51st (Highland) Division war diary.",
+    "source": "Published commune locations at Saint-Valery-en-Caux, El Alamein, Mareth, Pachino, and Rees. Skip Caen / Charnwood. Skip italy-end (division left Sicily for Overlord). Confirm against TNA WO 171 51st (Highland) Division war diary.",
     "confidence": "low",
     "track": [
       {
@@ -1763,6 +2013,16 @@
         "confidence": "low"
       },
       {
+        "date": "1943-03-20",
+        "place": "Mareth",
+        "lng": 10.3,
+        "lat": 33.633,
+        "theater": "north-africa",
+        "note": "20 March 1943, Mareth. 51st (Highland) with XXX Corps in Operation Pugilist against the Mareth Line. Hub tunisia. Distinct from 4th Indian / 1st Armoured at El Hamma. Not 50th Division (no Hub tunisia card).",
+        "source": "Wikipedia Battle of the Mareth Line (XXX Corps, 51st Highland). Wikipedia Mareth (33.633 N, 10.300 E). Confirm against TNA WO 169 51st (Highland) Division war diary.",
+        "confidence": "medium"
+      },
+      {
         "date": "1943-07-10",
         "place": "Pachino",
         "lng": 15.0906,
@@ -1771,6 +2031,16 @@
         "note": "10 July 1943, Pachino. 30 Corps landing on the peninsula with 1st Canadian Division.",
         "source": "Published commune location, Pachino. Confirm against TNA WO 171 51st (Highland) Division war diary.",
         "confidence": "low"
+      },
+      {
+        "date": "1945-03-23",
+        "place": "Rees",
+        "lng": 6.4,
+        "lat": 51.767,
+        "theater": "nw-europe",
+        "note": "23 March 1945, Rees. XXX Corps Operation Turnscrew: 51st (Highland) assault crossing at 2100. Street fighting in the town continued into 25–26 March. Distinct from 15th Scottish at Bislich 24 March and 52nd Lowland at Ringenberg 26 March. Inside the Hub rhine window (7–24 March).",
+        "source": "51hd.co.uk Rhine Crossing (divisional crossing began 2100 23 March at Rees). krieg-am-niederrhein.de The Assault Across the Rhine (51st Highland at Rees from 2100 23 March). Wikipedia Rees, Germany (51.767 N, 6.400 E). Confirm against TNA WO 171 51st (Highland) Division war diary.",
+        "confidence": "medium"
       }
     ]
   },
@@ -1783,9 +2053,19 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "nw-europe",
-    "source": "Published commune location, Bastogne, on the CCR relief date. Not the 19 December 101st pin. Confirm against 4th Armored Division records.",
+    "source": "Published commune locations at Coutances, Bastogne, and Worms. Confirm against 4th Armored Division AAR.",
     "confidence": "medium",
     "track": [
+      {
+        "date": "1944-07-28",
+        "place": "Coutances",
+        "lng": -1.445278,
+        "lat": 49.045278,
+        "theater": "normandy",
+        "note": "28 July 1944, Coutances. Combat Command B (Dager) through Périers; 4th Armored Division AAR records the city under control by 1800. Not the 26 December Bastogne pin.",
+        "source": "4th Armored Division AAR 28 Jul 1944; CMH Breakout and Pursuit (CCB Dager). Published commune location, Coutances (French Wikipedia / GeoHack 49.045278 N, 1.445278 W).",
+        "confidence": "medium"
+      },
       {
         "date": "1944-12-26",
         "place": "Bastogne",
@@ -1794,6 +2074,16 @@
         "theater": "nw-europe",
         "note": "26 December 1944, Bastogne. Combat Command R relief of the 101st. Not the 19 December pin.",
         "source": "Published commune location, Bastogne. Confirm against 4th Armored Division records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1945-03-21",
+        "place": "Worms",
+        "lng": 8.36528,
+        "lat": 49.63194,
+        "theater": "nw-europe",
+        "note": "21 March 1945, Worms. 4th Armored Division entered and seized Worms at 0135. Distinct from 5th Infantry Oppenheim 22 March. Not the Oppenheim bridgehead (4th Armored exploited through it 24 March).",
+        "source": "11th Armored Division AAR 21 Mar 1945 (4th AD seized Worms 0135). Published commune location, Worms, Germany (Wikipedia 49°37′55″N 08°21′55″E).",
         "confidence": "medium"
       }
     ]
@@ -1807,7 +2097,7 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "north-africa",
-    "source": "Published commune locations at Sidi Barrani, El Alamein, and Monte Cassino. Confirm against 4th Indian Division records.",
+    "source": "Published commune locations at Sidi Barrani, El Alamein, El Hamma, and Monte Cassino. Confirm against 4th Indian Division records.",
     "confidence": "low",
     "track": [
       {
@@ -1829,6 +2119,16 @@
         "note": "23 October 1942, El Alamein. Second Alamein.",
         "source": "Published commune location, El Alamein. Confirm against 4th Indian Division records.",
         "confidence": "low"
+      },
+      {
+        "date": "1943-03-26",
+        "place": "El Hamma",
+        "lng": 9.79507,
+        "lat": 33.8864,
+        "theater": "north-africa",
+        "note": "26 March 1943, El Hamma. 4th Indian with NZ Corps on the left hook that turned the Mareth Line. Hub tunisia. Distinct from 51st Highland at Mareth town. Not Wadi Akarit (a wadi, not a commune).",
+        "source": "Wikipedia Battle of El Hamma (21–31 March 1943; 4th Indian Division). Wikipedia El Hamma (33.8864 N, 9.79507 E). Confirm against 4th Indian Division records.",
+        "confidence": "medium"
       },
       {
         "date": "1944-03-15",
@@ -2013,9 +2313,19 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "north-africa",
-    "source": "Published commune locations at Tobruk, El Alamein, and Tunis. Do not continue this id as 15th Panzergrenadier in Italy. Confirm against 15th Panzer KTB.",
+    "source": "Published commune locations at Gazala, Tobruk, El Alamein, and Tunis. Do not continue this id as 15th Panzergrenadier in Italy. Confirm against 15th Panzer KTB.",
     "confidence": "low",
     "track": [
+      {
+        "date": "1942-05-26",
+        "place": "Ain el Gazala",
+        "lng": 23.357,
+        "lat": 32.147,
+        "theater": "north-africa",
+        "note": "26 May 1942, Ain el Gazala. 15th Panzer with Afrika Korps on the Gazala battle. Coarser division pin. Distinct from the 21 June Tobruk fall.",
+        "source": "Hub 15th Panzer Division (gazala). Published location, Ain el Gazala. Confirm against 15th Panzer KTB.",
+        "confidence": "medium"
+      },
       {
         "date": "1942-06-21",
         "place": "Tobruk",
@@ -2159,9 +2469,19 @@
     "echelon": "army",
     "parent": "Not in this sample",
     "theater": "eastern-front",
-    "source": "Published commune location, Berlin. Formed 16 April 1943 from 62nd Army; do not duplicate Stalingrad on this id. Confirm against 8th Guards Army records.",
+    "source": "Published commune locations at Warsaw and Berlin. Formed 16 April 1943 from 62nd Army; do not duplicate Stalingrad on this id. Confirm against 8th Guards Army records.",
     "confidence": "medium",
     "track": [
+      {
+        "date": "1945-01-12",
+        "place": "Warsaw",
+        "lng": 21.0111,
+        "lat": 52.23,
+        "theater": "eastern-front",
+        "note": "12 January 1945, Warsaw. 8th Guards Army with 1st Belorussian Front in the Vistula–Oder drive from the Magnuszew bridgehead. Coarser army pin on the capital. Stalingrad stays on su-62nd.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
+      },
       {
         "date": "1945-04-16",
         "place": "Berlin",
@@ -2228,7 +2548,7 @@
     "echelon": "army-group",
     "parent": "Not in this sample",
     "theater": "eastern-front",
-    "source": "Published commune locations at Kiev and Berlin. Confirm against 1st Ukrainian Front records.",
+    "source": "Published commune locations at Kiev, Korsun-Shevchenkivskyi, Lviv, Berlin, and Prague. Confirm against 1st Ukrainian Front records.",
     "confidence": "medium",
     "track": [
       {
@@ -2239,6 +2559,26 @@
         "theater": "eastern-front",
         "note": "6 November 1943, Kiev. Vatutin's liberation of the city. Not the 19 September 1941 6th Army pin.",
         "source": "Published commune location, Kiev. Confirm against 1st Ukrainian Front records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-01-24",
+        "place": "Korsun-Shevchenkivskyi",
+        "lng": 31.2589,
+        "lat": 49.4261,
+        "theater": "eastern-front",
+        "note": "24 January 1944, Korsun-Shevchenkivskyi. 1st Ukrainian Front northern pincer of the Korsun–Cherkassy pocket. Coarser front pin on the named town.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-07-13",
+        "place": "Lviv",
+        "lng": 24.0316,
+        "lat": 49.842,
+        "theater": "eastern-front",
+        "note": "13 July 1944, Lviv. 1st Ukrainian Front in the Lvov–Sandomierz offensive. Coarser front pin on the named city. Warsaw is not this front's Vistula–Oder pin.",
+        "source": "Published named-place location. Confirm against formation records.",
         "confidence": "medium"
       },
       {
@@ -2296,6 +2636,16 @@
         "confidence": "medium"
       },
       {
+        "date": "1944-04-06",
+        "place": "Imphal",
+        "lng": 93.9384,
+        "lat": 24.8074,
+        "theater": "burma",
+        "note": "6 April 1944, Imphal. 15th Army U-Go still directed at the Imphal plain. Same commune as the 8 March pin. Kohima is not a second pin.",
+        "source": "Published commune location, Imphal. Confirm against 15th Army records.",
+        "confidence": "medium"
+      },
+      {
         "date": "1945-03-04",
         "place": "Meiktila",
         "lng": 95.875,
@@ -2327,6 +2677,16 @@
         "theater": "pacific",
         "note": "2 January 1942, Manila. Homma entered the city.",
         "source": "Published commune location, Manila. Confirm against 14th Army records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1942-04-09",
+        "place": "Corregidor",
+        "lng": 120.582,
+        "lat": 14.386,
+        "theater": "pacific",
+        "note": "9 April 1942, Corregidor. Bataan surrendered this day; Corregidor still held. Bataan province is not a published commune pin. The island surrender remains the 6 May pin.",
+        "source": "Published location, Corregidor. Confirm against 14th Army records.",
         "confidence": "medium"
       },
       {
@@ -2488,9 +2848,19 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "north-africa",
-    "source": "Published commune location, Tobruk, on the Compass capture date. Not the 1941 siege pin. Confirm against AWM 6th Division records.",
+    "source": "Published commune locations at Bardia, Tobruk, and Benghazi. Compass assault, port capture, then Cyrenaica capital. Confirm against AWM 6th Division records.",
     "confidence": "medium",
     "track": [
+      {
+        "date": "1941-01-03",
+        "place": "Bardia",
+        "lng": 25.095,
+        "lat": 31.76,
+        "theater": "north-africa",
+        "note": "3 January 1941, Bardia. 6th Australian Division (Mackay) assaulted the Italian fortress at dawn, first Australian battle of the war. Compass. Distinct from the 22 January Tobruk capture.",
+        "source": "Wikipedia Battle of Bardia (6th Australian Division, 3–5 January 1941). Wikipedia Bardia. Confirm against AWM 6th Division records.",
+        "confidence": "medium"
+      },
       {
         "date": "1941-01-22",
         "place": "Tobruk",
@@ -2499,6 +2869,16 @@
         "theater": "north-africa",
         "note": "22 January 1941, Tobruk. Compass capture of the port. Not the 10 April 1941 siege.",
         "source": "Published commune location, Tobruk. Confirm against AWM 6th Division records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1941-02-06",
+        "place": "Benghazi",
+        "lng": 20.066667,
+        "lat": 32.116667,
+        "theater": "north-africa",
+        "note": "6 February 1941, Benghazi. 19th Australian Brigade entered the city unopposed that afternoon while 7th Armoured cut the Italian retreat at Beda Fomm. Compass. Not the Beda Fomm roadblock.",
+        "source": "Wikipedia Battle of Beda Fomm (19th Australian Brigade entered Benghazi the afternoon of 6 February). Wikipedia Benghazi (32°7′N 20°4′E). Confirm against AWM 6th Division records.",
         "confidence": "medium"
       }
     ]
@@ -2536,7 +2916,7 @@
     "echelon": "army",
     "parent": "Not in this sample",
     "theater": "eastern-front",
-    "source": "Published commune locations at Prokhorovka and Berlin. Confirm against 1st Guards Tank Army records.",
+    "source": "Published commune locations at Prokhorovka, Warsaw, and Berlin. Confirm against 1st Guards Tank Army records.",
     "confidence": "medium",
     "track": [
       {
@@ -2547,6 +2927,16 @@
         "theater": "eastern-front",
         "note": "12 July 1943, Prokhorovka. Southern face of Kursk. Coarser army pin on the named town.",
         "source": "Published commune location, Prokhorovka. Confirm against 1st Guards Tank Army records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1945-01-12",
+        "place": "Warsaw",
+        "lng": 21.0111,
+        "lat": 52.23,
+        "theater": "eastern-front",
+        "note": "12 January 1945, Warsaw. 1st Guards Tank Army with 1st Belorussian Front in the Vistula–Oder exploitation. Coarser army pin on the capital.",
+        "source": "Published named-place location. Confirm against formation records.",
         "confidence": "medium"
       },
       {
@@ -2720,6 +3110,16 @@
         "confidence": "medium"
       },
       {
+        "date": "1942-07-01",
+        "place": "El Alamein",
+        "lng": 28.95,
+        "lat": 30.8333,
+        "theater": "north-africa",
+        "note": "1 July 1942, El Alamein. First Alamein. Hub first-el-alamein. Second Alamein remains 23 October.",
+        "source": "Hub 1st SA Division card (first-el-alamein). Published commune location, El Alamein. Confirm against 1st SA Division records.",
+        "confidence": "medium"
+      },
+      {
         "date": "1942-10-23",
         "place": "El Alamein",
         "lng": 28.95,
@@ -2846,9 +3246,19 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "normandy",
-    "source": "Published commune location, Gela, before Elbeuf in the Normandy file. Confirm against 2nd Armored Division G-3.",
+    "source": "Published commune locations at Safi and Gela, before Elbeuf in the Normandy file. Confirm against 2nd Armored Division G-3.",
     "confidence": "medium",
     "track": [
+      {
+        "date": "1942-11-08",
+        "place": "Safi",
+        "lng": -9.233,
+        "lat": 32.283,
+        "theater": "north-africa",
+        "note": "8 November 1942, Safi. Sub-Task Force Blackstone (Maj. Gen. Harmon, 2nd Armored Division HQ, with 47th Infantry of 9th Division and 67th Armored) landed at Safi, the southern Torch beach. Coarser division pin on the named port. 47th Infantry grain stays off this id.",
+        "source": "CMH Northwest Africa: Seizing the Initiative in the West (Harmon commanded Sub-Task Force Blackstone at Safi, 8 November 1942). Wikipedia Safi, Morocco (32.283 N, 9.233 W). Confirm against 2nd Armored Division G-3.",
+        "confidence": "medium"
+      },
       {
         "date": "1943-07-10",
         "place": "Gela",
@@ -2928,9 +3338,19 @@
     "echelon": "army",
     "parent": "Not in this sample",
     "theater": "normandy",
-    "source": "Published commune locations at Cherbourg and Remagen. Confirm against First Army G-3.",
+    "source": "Published commune locations at Omaha / Saint-Laurent-sur-Mer, Cherbourg, and Remagen. Confirm against First Army G-3.",
     "confidence": "medium",
     "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Omaha / Saint-Laurent-sur-Mer",
+        "lng": -0.877,
+        "lat": 49.3594,
+        "theater": "normandy",
+        "note": "6 June 1944, Omaha / Saint-Laurent-sur-Mer. First Army assault landings on Omaha. Coarser army pin on the published commune. Cherbourg remains the 26 June pin.",
+        "source": "Published commune location, Saint-Laurent-sur-Mer. Confirm against First Army G-3.",
+        "confidence": "medium"
+      },
       {
         "date": "1944-06-26",
         "place": "Cherbourg",
@@ -3136,7 +3556,7 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "italy",
-    "source": "Published commune locations at Salerno and Cassino. Skip Anzio (not the Shingle landing force). Skip Bologna. Confirm against 36th Infantry Division records.",
+    "source": "Published commune locations at Salerno, San Pietro Infine, and Cassino. Skip Anzio (not the Shingle landing force). Skip Bologna. Confirm against 36th Infantry Division records.",
     "confidence": "medium",
     "track": [
       {
@@ -3145,8 +3565,18 @@
         "lng": 14.7594,
         "lat": 40.6806,
         "theater": "italy",
-        "note": "9 September 1943, Salerno. Paestum / Avalanche assault landing. Coarser division pin on the commune.",
+        "note": "9 September 1943, Salerno. Paestum / Avalanche assault landing. Coarser division pin on the commune. Paestum is the same calendar date and is not a second pin.",
         "source": "Published commune location, Salerno. Confirm against 36th Infantry Division records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1943-12-08",
+        "place": "San Pietro Infine",
+        "lng": 13.95861,
+        "lat": 41.44444,
+        "theater": "italy",
+        "note": "8 December 1943, San Pietro Infine. 36th Infantry Division (Walker) on the Bernhardt / Winter Line. Distinct from the 9 September Salerno landing and from the 17 January Rapido / Cassino pin.",
+        "source": "Wikipedia Battle of San Pietro Infine (36th Infantry Division, 8–17 December 1943). Wikipedia San Pietro Infine. Confirm against 36th Infantry Division records.",
         "confidence": "medium"
       },
       {
@@ -3218,9 +3648,19 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "north-africa",
-    "source": "Published commune location, El Alamein. Skip Dunkirk (the division fought south of the Somme). Confirm against TNA WO 169 1st Armoured Division records.",
-    "confidence": "low",
+    "source": "Published commune locations at Abbeville, El Alamein, and El Hamma. Skip Dunkirk (the division fought south of the Somme). Skip italy-end (disbanded October 1944). Confirm against TNA WO 167 / WO 169 1st Armoured Division records.",
+    "confidence": "medium",
     "track": [
+      {
+        "date": "1940-05-27",
+        "place": "Abbeville",
+        "lng": 1.835,
+        "lat": 50.106,
+        "theater": "nw-europe",
+        "note": "27 May 1940, Abbeville. 1st Armoured (Evans) attacked the German Somme bridgehead from the south at 0600 with 2nd and 3rd Armoured Brigades. Coarser division pin on the named commune of the battle; not a claim the division entered the town. Distinct from 1st Panzer's 20 May Channel reach. Not Dunkirk.",
+        "source": "Wikipedia Battle of Abbeville (1st Armoured Division, 27 May–4 June 1940; Allied attack began 0600 27 May). Ellis, The War in France and Flanders, ch. XVIII (attack launched 27 May). Published commune location, Abbeville (reuse pack). Confirm against TNA WO 167 1st Armoured Division records.",
+        "confidence": "medium"
+      },
       {
         "date": "1942-10-23",
         "place": "El Alamein",
@@ -3230,6 +3670,16 @@
         "note": "23 October 1942, El Alamein. Coarser division pin on the commune.",
         "source": "Published commune location, El Alamein. Confirm against TNA WO 169 1st Armoured Division records.",
         "confidence": "low"
+      },
+      {
+        "date": "1943-03-26",
+        "place": "El Hamma",
+        "lng": 9.79507,
+        "lat": 33.8864,
+        "theater": "north-africa",
+        "note": "26 March 1943, El Hamma. 1st Armoured exploited through after the NZ / 4th Indian left hook. Hub tunisia. Distinct from 51st Highland at Mareth town.",
+        "source": "Wikipedia Battle of El Hamma (1st Armoured Division). Wikipedia El Hamma (33.8864 N, 9.79507 E). Confirm against TNA WO 169 1st Armoured Division records.",
+        "confidence": "medium"
       }
     ]
   },
@@ -3242,7 +3692,7 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "nw-europe",
-    "source": "Published commune location, Dunkirk. Skip Gela (Eighth Army east-coast landing). Skip Remagen (US First Army). Confirm against TNA WO 167 5th Division records.",
+    "source": "Published commune locations at Dunkirk and Cassibile. Skip Remagen (US First Army). Skip italy-end (division had left Italy for NW Europe). Confirm against TNA WO 167 / WO 169 5th Division records.",
     "confidence": "medium",
     "track": [
       {
@@ -3253,6 +3703,16 @@
         "theater": "nw-europe",
         "note": "26 May 1940, Dunkirk. BEF perimeter. Coarser division pin on the commune.",
         "source": "Published commune location, Dunkirk. Confirm against TNA WO 167 5th Division records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1943-07-10",
+        "place": "Cassibile",
+        "lng": 15.1975,
+        "lat": 36.97639,
+        "theater": "italy",
+        "note": "10 July 1943, Cassibile. 5th Infantry Division (XIII Corps, Acid North) landed at Cassibile south of Syracuse and relieved the Ponte Grande glider force that evening. Distinct from 50th Division at Avola and 51st Highland at Pachino.",
+        "source": "Warfare History Network Sicilian Slugfest (5th Infantry Division coming ashore by boat at Cassibile). Italian Wikipedia Sbarco in Sicilia (5th Division sector; Commandos entered Cassibile). Wikipedia Cassibile (village) (36.97639 N, 15.19750 E). Confirm against TNA WO 169 5th Division records.",
         "confidence": "medium"
       }
     ]
@@ -3266,9 +3726,19 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "north-africa",
-    "source": "Published commune locations at Tunis and Monte Cassino. Confirm against TNA WO 169 / WO 170 78th Division records.",
+    "source": "Published commune locations at Heidous, Tunis, Centuripe, Termoli, and Monte Cassino. Confirm against TNA WO 169 / WO 170 78th Division records.",
     "confidence": "medium",
     "track": [
+      {
+        "date": "1943-04-22",
+        "place": "Heidous",
+        "lng": 9.58982,
+        "lat": 36.74249,
+        "theater": "north-africa",
+        "note": "22 April 1943, Heidous. 38th (Irish) Brigade of 78th Battleaxe Division captured the fortified village the evening the Longstop assault opened. Coarser division pin on the named village, not on Djebel el Ahmera.",
+        "source": "Wikipedia Battle of Longstop Hill (38th Irish Brigade captured Heidous 22 April 1943). London Irish Rifles Association Heidous April 1943 (orders 22 April, attack that evening). GeoNames Heidous 36.74249 N, 9.58982 E. Confirm against TNA WO 169 78th Division records.",
+        "confidence": "medium"
+      },
       {
         "date": "1943-05-13",
         "place": "Tunis",
@@ -3277,6 +3747,26 @@
         "theater": "north-africa",
         "note": "13 May 1943, Tunis. End of the Tunisia campaign. Coarser division pin on the city.",
         "source": "Published commune location, Tunis. Confirm against TNA WO 169 78th Division records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1943-08-02",
+        "place": "Centuripe",
+        "lng": 14.733,
+        "lat": 37.617,
+        "theater": "italy",
+        "note": "2 August 1943, Centuripe. 78th Battleaxe Division (Evelegh), 38th (Irish) Brigade, took the hill town on the Etna Line. Distinct from Tunis and from Cassino. Opposite Hermann Göring Kampfgruppe von Carnap.",
+        "source": "Wikipedia Battle of Centuripe (78th Infantry Division, 2–4 August 1943). Wikipedia Centuripe. Confirm against TNA WO 169 78th Division records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1943-10-03",
+        "place": "Termoli",
+        "lng": 14.98,
+        "lat": 42.0,
+        "theater": "italy",
+        "note": "3 October 1943, Termoli. Operation Devon. 78th Division brigades reinforced No. 3 Commando / 40 RM / SRS after the seaborne landing and held the town against 16th Panzer counter-attacks through 6 October. Grain vs No. 3 Commando on the same commune.",
+        "source": "Wikipedia Operation Devon (78th Infantry Division relief, 3–6 October 1943). Wikipedia Termoli. Confirm against TNA WO 170 78th Division records.",
         "confidence": "medium"
       },
       {
@@ -3464,9 +3954,19 @@
     "echelon": "army",
     "parent": "Not in this sample",
     "theater": "eastern-front",
-    "source": "Published commune location, Warsaw, on the siege surrender date. Skip Łódź and the Bzura until those communes are sourced. Confirm against 8th Army KTB.",
+    "source": "Published commune locations at Kutno and Warsaw. Confirm against 8th Army KTB.",
     "confidence": "low",
     "track": [
+      {
+        "date": "1939-09-09",
+        "place": "Kutno",
+        "lng": 19.3644,
+        "lat": 52.2309,
+        "theater": "eastern-front",
+        "note": "9 September 1939, Kutno. 8th Army took the Polish Bzura counter-offensive. Coarser army pin on the named town. Warsaw 28 Sep remains the siege pin.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
+      },
       {
         "date": "1939-09-28",
         "place": "Warsaw",
@@ -3614,7 +4114,7 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "normandy",
-    "source": "Published commune locations at Caen and Falaise. Skip Mortain, Arnhem, and Bastogne. Confirm against 9th SS KTB.",
+    "source": "Published commune locations at Caen, Falaise, and Arnhem. Skip Mortain and Bastogne. Confirm against 9th SS KTB.",
     "confidence": "low",
     "track": [
       {
@@ -3636,6 +4136,16 @@
         "note": "16 August 1944, Falaise. Pocket fighting. Coarser division pin on the commune.",
         "source": "Published commune location, Falaise. Confirm against 9th SS KTB.",
         "confidence": "low"
+      },
+      {
+        "date": "1944-09-17",
+        "place": "Arnhem",
+        "lng": 5.9167,
+        "lat": 51.9833,
+        "theater": "nw-europe",
+        "note": "17 September 1944, Arnhem. 9th SS with II SS Panzer Corps against 1st Airborne. Coarser division pin on the named commune. Skip Bastogne.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
       }
     ]
   },
@@ -3648,7 +4158,7 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "normandy",
-    "source": "Published commune locations at Caen, Falaise, and Remagen. Skip Arnhem and Berlin. Confirm against 10th SS KTB.",
+    "source": "Published commune locations at Caen, Falaise, Arnhem, and Remagen. Skip Berlin. Confirm against 10th SS KTB.",
     "confidence": "low",
     "track": [
       {
@@ -3670,6 +4180,16 @@
         "note": "16 August 1944, Falaise. Pocket fighting. Coarser division pin on the commune.",
         "source": "Published commune location, Falaise. Confirm against 10th SS KTB.",
         "confidence": "low"
+      },
+      {
+        "date": "1944-09-17",
+        "place": "Arnhem",
+        "lng": 5.9167,
+        "lat": 51.9833,
+        "theater": "nw-europe",
+        "note": "17 September 1944, Arnhem. 10th SS with II SS Panzer Corps on the Waal/Nijmegen–Arnhem axis. Coarser division pin on the named commune. Skip Berlin.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
       },
       {
         "date": "1945-03-07",
@@ -4592,16 +5112,26 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "pacific",
-    "source": "Published location, Corregidor. Bataan province is not pinned. Confirm against USAFFE / Philippine Division records.",
+    "source": "Published locations at Mariveles (Bataan surrender) and Corregidor. Confirm against USAFFE / Philippine Division records.",
     "confidence": "medium",
     "track": [
+      {
+        "date": "1942-04-09",
+        "place": "Mariveles",
+        "lng": 120.48,
+        "lat": 14.43,
+        "theater": "pacific",
+        "note": "9 April 1942, Mariveles. Bataan surrender. Philippine Division on the peninsula when King surrendered. Distinct from Corregidor 6 May. Abucay Line hamlets are not pinned.",
+        "source": "Wikipedia Battle of Bataan (7 January – 9 April 1942). Wikipedia Mariveles. Confirm against USAFFE / Philippine Division records.",
+        "confidence": "medium"
+      },
       {
         "date": "1942-05-06",
         "place": "Corregidor",
         "lng": 120.582,
         "lat": 14.386,
         "theater": "pacific",
-        "note": "6 May 1942, Corregidor. Fall of the island fortress after Bataan. Coarser division pin on the named island. Bataan province is not pinned.",
+        "note": "6 May 1942, Corregidor. Fall of the island fortress after Bataan. Coarser division pin on the named island.",
         "source": "Published location, Corregidor. Confirm against USAFFE / Philippine Division records.",
         "confidence": "medium"
       }
@@ -5764,7 +6294,7 @@
     "echelon": "army",
     "parent": "Not in this sample",
     "theater": "eastern-front",
-    "source": "Published commune locations at Kharkov and Kursk. Skip unnamed Voronezh. Confirm against Voronezh Front records.",
+    "source": "Published commune locations at Kharkov, Kursk, and Dnipro. Confirm against Voronezh Front records.",
     "confidence": "medium",
     "track": [
       {
@@ -5786,6 +6316,16 @@
         "note": "5 July 1943, Kursk. Southern face of Citadel. Coarser front pin on the city. Not the Prokhorovka pin.",
         "source": "Published commune location, Kursk. Confirm against Voronezh Front records.",
         "confidence": "medium"
+      },
+      {
+        "date": "1943-08-26",
+        "place": "Dnipro",
+        "lng": 35.0462,
+        "lat": 48.4647,
+        "theater": "eastern-front",
+        "note": "26 August 1943, Dnipro. Voronezh Front in the Dnieper campaign before the October rename to 1st Ukrainian Front. Coarser front pin on the named city.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
       }
     ]
   },
@@ -5798,7 +6338,7 @@
     "echelon": "army",
     "parent": "Not in this sample",
     "theater": "eastern-front",
-    "source": "Published commune location, Kursk. Confirm against Steppe Front records.",
+    "source": "Published commune locations at Kursk and Dnipro. Confirm against Steppe Front records.",
     "confidence": "medium",
     "track": [
       {
@@ -5809,6 +6349,16 @@
         "theater": "eastern-front",
         "note": "5 July 1943, Kursk. Stavka reserve behind the salient, committed in the counter-offensive. Coarser front pin on the city.",
         "source": "Published commune location, Kursk. Confirm against Steppe Front records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1943-08-26",
+        "place": "Dnipro",
+        "lng": 35.0462,
+        "lat": 48.4647,
+        "theater": "eastern-front",
+        "note": "26 August 1943, Dnipro. Steppe Front in the Dnieper campaign before the October rename to 2nd Ukrainian Front. Coarser front pin on the named city.",
+        "source": "Published named-place location. Confirm against formation records.",
         "confidence": "medium"
       }
     ]
@@ -5934,7 +6484,7 @@
     "echelon": "army",
     "parent": "Not in this sample",
     "theater": "eastern-front",
-    "source": "Published commune location, Stalingrad. Skip unnamed Korsun and Jassy. Confirm against 8th Air Army records.",
+    "source": "Published commune locations at Stalingrad, Korsun-Shevchenkivskyi, and Iași. Confirm against 8th Air Army records.",
     "confidence": "low",
     "track": [
       {
@@ -5946,6 +6496,26 @@
         "note": "17 July 1942, Stalingrad. Air army supporting the Stalingrad fronts. Coarser pin on the city.",
         "source": "Published commune location, Volgograd. Confirm against 8th Air Army records.",
         "confidence": "low"
+      },
+      {
+        "date": "1944-01-24",
+        "place": "Korsun-Shevchenkivskyi",
+        "lng": 31.2589,
+        "lat": 49.4261,
+        "theater": "eastern-front",
+        "note": "24 January 1944, Korsun-Shevchenkivskyi. 8th Air Army supporting the Korsun–Cherkassy operation. Coarser army pin on the named town.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-08-20",
+        "place": "Iași",
+        "lng": 27.6014,
+        "lat": 47.1585,
+        "theater": "eastern-front",
+        "note": "20 August 1944, Iași. 8th Air Army in the Jassy–Kishinev offensive. Coarser army pin on the named city.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
       }
     ]
   },
@@ -5958,7 +6528,7 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "eastern-front",
-    "source": "Published commune locations at Stalingrad, Kursk, and Berlin. Confirm against 13th Guards Rifle Division records.",
+    "source": "Published commune locations at Stalingrad, Kursk, Dnipro, and Berlin. Confirm against 13th Guards Rifle Division records.",
     "confidence": "medium",
     "track": [
       {
@@ -5979,6 +6549,16 @@
         "theater": "eastern-front",
         "note": "5 July 1943, Kursk. Coarser division pin on the city. Not the Prokhorovka pin.",
         "source": "Published commune location, Kursk. Confirm against 13th Guards Rifle Division records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1943-08-26",
+        "place": "Dnipro",
+        "lng": 35.0462,
+        "lat": 48.4647,
+        "theater": "eastern-front",
+        "note": "26 August 1943, Dnipro. 13th Guards Rifle Division in the Dnieper campaign. Coarser division pin on the named city. Warsaw is not this division's Vistula–Oder pin.",
+        "source": "Published named-place location. Confirm against formation records.",
         "confidence": "medium"
       },
       {
@@ -6122,7 +6702,7 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "nw-europe",
-    "source": "Published commune location, Bastogne. Skip unnamed Wesel (Varsity). Confirm against 17th Airborne Division records.",
+    "source": "Published commune locations at Bastogne and Wesel. Confirm against 17th Airborne Division records.",
     "confidence": "medium",
     "track": [
       {
@@ -6131,8 +6711,18 @@
         "lng": 5.72,
         "lat": 50.0042,
         "theater": "nw-europe",
-        "note": "29 December 1944, Bastogne. Committed in the Ardennes after arriving at Reims. Not the 19 December 101st pin. Varsity at Wesel is not a second pin.",
+        "note": "29 December 1944, Bastogne. Committed in the Ardennes after arriving at Reims. Not the 19 December 101st pin. Varsity at Wesel is a later pin.",
         "source": "Published commune location, Bastogne. Confirm against 17th Airborne Division records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1945-03-24",
+        "place": "Wesel",
+        "lng": 6.6178,
+        "lat": 51.6586,
+        "theater": "nw-europe",
+        "note": "24 March 1945, Wesel. Operation Varsity. 17th Airborne dropped north of the town (507th PIR intended DZ W, a clearing about 2 miles north of Wesel). Distinct from British 6th Airborne at Hamminkeln. Infobox midpoint between the two communes is not used.",
+        "source": "Wikipedia Operation Varsity; Wikipedia Wesel. Confirm against 17th Airborne Division records.",
         "confidence": "medium"
       }
     ]
@@ -6282,7 +6872,7 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "normandy",
-    "source": "Published commune location, Paris. Skip unnamed Hürtgen and the Ardennes communes that are not Bastogne. Confirm against 28th Infantry Division records.",
+    "source": "Published commune locations at Paris and Wiltz. Skip unnamed Hürtgen hamlets. Confirm against 28th Infantry Division records.",
     "confidence": "medium",
     "track": [
       {
@@ -6291,8 +6881,18 @@
         "lng": 2.3522,
         "lat": 48.8567,
         "theater": "normandy",
-        "note": "29 August 1944, Paris. Parade through the liberated city. Coarser division pin. Not a Bastogne pin (the division was on the northern Ardennes shoulder).",
+        "note": "29 August 1944, Paris. Parade through the liberated city. Coarser division pin. Not the 16 December Wiltz pin (Luxembourg / Our, not Bastogne).",
         "source": "Published commune location, Paris. Confirm against 28th Infantry Division records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-12-16",
+        "place": "Wiltz",
+        "lng": 5.9325,
+        "lat": 49.9661,
+        "theater": "nw-europe",
+        "note": "16 December 1944, Wiltz. 28th Infantry Division CP at Wiltz when the Ardennes offensive opened along the entire front. HQ transferred Wiltz to Sibret morning 19 December; Wiltz fell 19 December. Distinct from Bastogne. Not the 29 August Paris pin.",
+        "source": "CMH 28th Infantry Division combat chronicle (CP Wiltz; offensive 16 Dec). Wikipedia Wiltz (Cota left; last Americans evening 19 Dec). Published commune location, Wiltz, Luxembourg (Wikipedia 49°57′58″N 5°55′57″E).",
         "confidence": "medium"
       }
     ]
@@ -6600,8 +7200,8 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "normandy",
-    "source": "Published commune location, Caen. Hill 112 / Évrecy are not separate pins. Skip unnamed Rhine communes. Confirm against 15th (Scottish) Infantry Division records.",
-    "confidence": "low",
+    "source": "Published commune locations at Caen and Bislich. Hill 112 / Évrecy are not separate pins. Confirm against TNA WO 171 15th (Scottish) Infantry Division records.",
+    "confidence": "medium",
     "track": [
       {
         "date": "1944-06-26",
@@ -6612,6 +7212,16 @@
         "note": "26 June 1944, Caen. Epsom / Odon fighting. Coarser division pin on the named city. Not a claim the division entered Caen that day.",
         "source": "Published commune location, Caen. Confirm against 15th (Scottish) Infantry Division records.",
         "confidence": "low"
+      },
+      {
+        "date": "1945-03-24",
+        "place": "Bislich",
+        "lng": 6.49306,
+        "lat": 51.67917,
+        "theater": "nw-europe",
+        "note": "24 March 1945, Bislich. 15th (Scottish) Operation Torchlight: seven battalions crossed near Bislich in Buffalos at 0200 and seized the village in the early hours. Distinct from 17th Airborne at Wesel the same day and from 52nd Lowland at Ringenberg 26 March. Last day of the Hub rhine window (7–24 March).",
+        "source": "krieg-am-niederrhein.de The Assault Across the Rhine (seven battalions of 15th Scottish crossed near Bislich at 2 AM 24 March; Bislich seized in the early hours). German Wikipedia Bislich (51°40′45″ N, 6°29′35″ E; not Wesel city). Confirm against TNA WO 171 15th (Scottish) Infantry Division records.",
+        "confidence": "medium"
       }
     ]
   },
@@ -7440,7 +8050,7 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "normandy",
-    "source": "Published commune location, Mortain. Confirm against 30th Infantry Division records.",
+    "source": "Published commune locations at Mortain and Stavelot. Skip unnamed Rhine communes (Wallach / Ossenberg / Büderich). Confirm against 30th Infantry Division records.",
     "confidence": "medium",
     "track": [
       {
@@ -7451,6 +8061,16 @@
         "theater": "normandy",
         "note": "7 August 1944, Mortain. Old Hickory in the German counter-attack. Coarser division pin on the commune.",
         "source": "Published commune location, Mortain. Confirm against 30th Infantry Division records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-12-18",
+        "place": "Stavelot",
+        "lng": 5.933,
+        "lat": 50.383,
+        "theater": "nw-europe",
+        "note": "18 December 1944, Stavelot. 1/117 attacked south and by 1600 had seized two-thirds of the town northwest of the Amblève. Distinct from Kampfgruppe Peiper (Malmedy 17 December then La Gleize 24 December; Peiper at Stavelot stays skipped). Mortain 7 August stays.",
+        "source": "30th Infantry Division G-3 AAR December 1944 (EUCMH): 18 December 1/117 seized two-thirds of Stavelot northwest of the Amblève at 1600. Wikipedia Stavelot (50.383 N, 5.933 E). Confirm against 30th Infantry Division records.",
         "confidence": "medium"
       }
     ]
@@ -7512,9 +8132,19 @@
     "echelon": "division",
     "parent": "Not in this sample",
     "theater": "italy",
-    "source": "Published commune location, Bologna. Confirm against formation records.",
+    "source": "Published commune locations at Castel d'Aiano (Encore) and Bologna. Confirm against 10th Mountain Division records.",
     "confidence": "low",
     "track": [
+      {
+        "date": "1945-03-03",
+        "place": "Castel d'Aiano",
+        "lng": 11.0,
+        "lat": 44.267,
+        "theater": "italy",
+        "note": "3 March 1945, Castel d'Aiano. Operation Encore: 10th Mountain Division captured the Apennine crossroads (3–5 March) after the 18–25 February high-ground assault. Distinct from Bologna 21 April.",
+        "source": "Wikipedia Operation Encore (10th Mountain Division; Castel d'Aiano 3–5 March 1945). Wikipedia Castel d'Aiano. Confirm against 10th Mountain Division records.",
+        "confidence": "medium"
+      },
       {
         "date": "1945-04-21",
         "place": "Bologna",
@@ -8046,7 +8676,7 @@
     "echelon": "army-group",
     "parent": "Not in this sample",
     "theater": "eastern-front",
-    "source": "Published commune location. Confirm against formation records.",
+    "source": "Published commune locations at Shlisselburg and Veliky Novgorod. Confirm against Volkhov Front records.",
     "confidence": "medium",
     "track": [
       {
@@ -8057,6 +8687,16 @@
         "theater": "eastern-front",
         "note": "12 January 1943, Shlisselburg. Volkhov Front in Operation Iskra. Coarser front pin on the named fortress.",
         "source": "Published commune location. Confirm against formation records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-01-14",
+        "place": "Veliky Novgorod",
+        "lng": 31.2755,
+        "lat": 58.5213,
+        "theater": "eastern-front",
+        "note": "14 January 1944, Veliky Novgorod. Volkhov Front in the Leningrad–Novgorod offensive from the east. Coarser front pin on the named city. 2nd Shock stays on the Oranienbaum/Iskra axis.",
+        "source": "Published named-place location. Confirm against formation records.",
         "confidence": "medium"
       }
     ]
@@ -8166,7 +8806,7 @@
     "echelon": "army-group",
     "parent": "Not in this sample",
     "theater": "eastern-front",
-    "source": "Published commune location. Confirm against formation records.",
+    "source": "Published commune locations at Smolensk, Kursk, and Dnipro. Confirm against Central Front records.",
     "confidence": "medium",
     "track": [
       {
@@ -8187,6 +8827,16 @@
         "theater": "eastern-front",
         "note": "5 July 1943, Kursk. Central Front on the northern face. Coarser front pin on the city. Not Prokhorovka.",
         "source": "Published commune location. Confirm against formation records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1943-08-26",
+        "place": "Dnipro",
+        "lng": 35.0462,
+        "lat": 48.4647,
+        "theater": "eastern-front",
+        "note": "26 August 1943, Dnipro. Central Front in the Dnieper campaign. Coarser front pin on the named city.",
+        "source": "Published named-place location. Confirm against formation records.",
         "confidence": "medium"
       }
     ]
@@ -9050,7 +9700,7 @@
     "echelon": "army",
     "parent": "Not in this sample",
     "theater": "eastern-front",
-    "source": "Published commune location. Confirm against formation records.",
+    "source": "Published commune locations at Sevastopol, Stalingrad, and Riga. Confirm against 51st Army records.",
     "confidence": "medium",
     "track": [
       {
@@ -9081,6 +9731,16 @@
         "theater": "eastern-front",
         "note": "9 May 1944, Sevastopol. Crimean offensive. Coarser army pin.",
         "source": "Published commune location. Confirm against formation records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-09-14",
+        "place": "Riga",
+        "lng": 24.1052,
+        "lat": 56.9496,
+        "theater": "eastern-front",
+        "note": "14 September 1944, Riga. 51st Army in the Baltic offensive after the Crimea. Coarser army pin on the named city.",
+        "source": "Published named-place location. Confirm against formation records.",
         "confidence": "medium"
       }
     ]
@@ -9792,6 +10452,16 @@
         "lat": 24.7803,
         "theater": "pacific",
         "note": "19 February 1945, Iwo Jima. 109th Division defending the island. Coarser division pin.",
+        "source": "Published commune location. Confirm against formation records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1945-03-17",
+        "place": "Iwo Jima",
+        "lng": 141.3244,
+        "lat": 24.7803,
+        "theater": "pacific",
+        "note": "17 March 1945, Iwo Jima. 109th Division still on the island. Kuribayashi garrison reports continue from the same named place as the 19 February landing pin.",
         "source": "Published commune location. Confirm against formation records.",
         "confidence": "medium"
       }
@@ -14213,6 +14883,1380 @@
         "theater": "nw-europe",
         "note": "17 September 1944, Arnhem. Landstorm Nederland on the Market Garden card. Coarser division pin on the named commune.",
         "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "parent": "Not in this sample",
+    "source": "Published commune locations at Dunkirk, then Sword / Hermanville-sur-Mer in the Normandy file. Confirm against TNA WO 171 3rd Division war diary.",
+    "confidence": "low",
+    "id": "british-3rd-division",
+    "name": "British 3rd Division",
+    "abbr": "3 DIV",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "division",
+    "theater": "normandy",
+    "track": [
+      {
+        "date": "1940-05-26",
+        "place": "Dunkirk",
+        "lng": 2.3775,
+        "lat": 51.0383,
+        "theater": "nw-europe",
+        "note": "26 May 1940, Dunkirk. 3rd Division with the BEF. Sword Beach remains the Overlord pin.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "parent": "Not in this sample",
+    "source": "Published commune locations at Tilly-sur-Seulles in the Normandy file, then Bastogne. Confirm against Panzer Lehr KTB.",
+    "confidence": "low",
+    "id": "de-panzer-lehr",
+    "name": "Panzer Lehr Division",
+    "abbr": "LEHR",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "theater": "normandy",
+    "track": [
+      {
+        "date": "1944-12-16",
+        "place": "Bastogne",
+        "lng": 5.72,
+        "lat": 50.0042,
+        "theater": "nw-europe",
+        "note": "16 December 1944, Bastogne. Panzer Lehr with 5th Panzer Army on the Ardennes southern-centre drive toward the town. Coarser division pin on the named commune. Tilly remains the Normandy pin.",
+        "source": "Published named-place location. Confirm against formation records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "parent": "Not in this sample",
+    "source": "Published named-place location, Kokoda. Confirm against AWM52 7th Division war diaries.",
+    "confidence": "medium",
+    "id": "au-7th-div",
+    "name": "7th Australian Division",
+    "abbr": "7 AUS",
+    "nation": "Australia",
+    "side": "allied",
+    "echelon": "division",
+    "theater": "pacific",
+    "track": [
+      {
+        "date": "1942-11-02",
+        "place": "Kokoda",
+        "lng": 147.736,
+        "lat": -8.877,
+        "theater": "pacific",
+        "note": "2 November 1942, Kokoda. 21st Brigade, 7th Australian Division, reoccupied the station after the Japanese withdrawal. The 29 July 1942 Japanese capture of the village is the 18th Army pin, not this division.",
+        "source": "Published named-place location, Kokoda. Confirm against AWM52 7th Division war diaries.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-2-para",
+    "name": "2nd Battalion, The Parachute Regiment",
+    "abbr": "2 PARA",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "1st Airborne Division",
+    "theater": "nw-europe",
+    "source": "Pegasus Archive 2nd Battalion account and ParaData Arnhem Bridge: A Company seized the north end of the Arnhem road bridge about 2000 17 September. Confirm against TNA WO 171.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-09-17",
+        "place": "Arnhem",
+        "lng": 5.9167,
+        "lat": 51.9833,
+        "theater": "nw-europe",
+        "note": "17 September 1944, A Company reached the north end of the Arnhem road bridge about 2000. Battalion grain on the same commune as 1st Airborne's 17 September pin. 1st Airborne HQ later moves to Oosterbeek. 9th SS stays at Arnhem.",
+        "source": "Pegasus Archive, Account of the 2nd Battalion's Operations at Arnhem 17 September 1944. ParaData, Arnhem Bridge. Published commune location, Arnhem.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-504-pir",
+    "name": "504th Parachute Infantry Regiment",
+    "abbr": "504 PIR",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "82nd Airborne Division",
+    "theater": "italy",
+    "source": "82nd Airborne world track: 504th PIR reinforced Salerno 14 September 1943; Market Garden at Nijmegen 17 September 1944. Confirm against 504th PIR AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1943-09-14",
+        "place": "Salerno",
+        "lng": 14.7594,
+        "lat": 40.6806,
+        "theater": "italy",
+        "note": "14 September 1943, Salerno. 504th PIR dropped to reinforce the beachhead. Battalion grain on the same commune as 82nd Airborne that day.",
+        "source": "Published commune location, Salerno. 82nd Airborne world track (504th PIR reinforcement). Confirm against 504th PIR AAR.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-09-17",
+        "place": "Nijmegen",
+        "lng": 5.8528,
+        "lat": 51.8425,
+        "theater": "nw-europe",
+        "note": "17 September 1944, Nijmegen. Market Garden drop with 82nd Airborne. Not the Arnhem pin. 82nd Airborne stays on this commune. Guards Armoured reaches Nijmegen 20 September.",
+        "source": "Published commune location, Nijmegen. Confirm against 504th PIR AAR / 82nd Airborne G-3.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "de-1-fj",
+    "name": "1st Fallschirmjäger Division",
+    "abbr": "1 FJ",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "parent": "LI Mountain Corps",
+    "theater": "italy",
+    "source": "1st Fallschirmjäger occupied the Monte Cassino monastery ruins after the 15 February 1944 bombing and held them through the 15 March third battle. Confirm against division KTB.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-03-15",
+        "place": "Monte Cassino",
+        "lng": 13.8139,
+        "lat": 41.49,
+        "theater": "italy",
+        "note": "15 March 1944, Monte Cassino. Third battle (Operation Dickens); 1st Fallschirmjäger in the monastery ruins and the town. Opposite 2nd New Zealand Division and 4th Indian Division on the same commune. Polish II Corps later pin stays 18 May if sourced elsewhere.",
+        "source": "Published commune location, Monte Cassino. NS-Täter in Italien, 1. Fallschirm-Jäger-Division. Confirm against 1st Fallschirmjäger KTB.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "de-kg-peiper",
+    "name": "Kampfgruppe Peiper",
+    "abbr": "KG PEIPER",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "regiment",
+    "parent": "1st SS Panzer Division",
+    "theater": "nw-europe",
+    "source": "US Army The Ardennes: Battle of the Bulge, Chapter XVI: Peiper broke out of La Gleize on foot 24 December 1944. Wikipedia Malmedy (Baugnez hamlet in the Bévercé district) and Wikipedia La Gleize. Confirm against Peiper interrogation / 1st SS Panzer Regiment records.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-12-17",
+        "place": "Malmedy",
+        "lng": 6.017,
+        "lat": 50.417,
+        "theater": "nw-europe",
+        "note": "17 December 1944, Malmedy. Baugnez crossroads (Bévercé district of the Malmedy commune) on Kampfgruppe Peiper's column. Stavelot and Stoumont on later days are not pinned this pass. de-1-ss has no Bastogne pin.",
+        "source": "Wikipedia Malmedy; Wikipedia Malmedy massacre. Published commune location, Malmedy. Confirm against US Army The Ardennes, Chapter XVI / Peiper interrogation.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-12-24",
+        "place": "La Gleize",
+        "lng": 5.85,
+        "lat": 50.417,
+        "theater": "nw-europe",
+        "note": "24 December 1944, La Gleize. Kampfgruppe Peiper broke out on foot about 0100, leaving wounded and wrecked armour. Stavelot and Stoumont on earlier days are not pinned this pass. de-1-ss has no Bastogne pin. 101st Airborne stays at Bastogne.",
+        "source": "US Army, The Ardennes: Battle of the Bulge, Chapter XVI. Wikipedia La Gleize. Published village location, La Gleize.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-28-marines",
+    "name": "28th Marine Regiment",
+    "abbr": "28 MAR",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "5th Marine Division",
+    "theater": "pacific",
+    "source": "Wikipedia 28th Marine Regiment: landed Iwo Jima 19 February with 5th Marine Division; 2/28 raised the first flag on Mount Suribachi 23 February. Confirm against 28th Marines AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1945-02-23",
+        "place": "Iwo Jima",
+        "lng": 141.3244,
+        "lat": 24.7803,
+        "theater": "pacific",
+        "note": "23 February 1945, Iwo Jima. 2nd Battalion, 28th Marines, raised the flags on Mount Suribachi. 19 February landing on the same island is not a second pin. 5th Marine Division stays on the 19 February landing pin.",
+        "source": "Published location, Iwo Jima. Wikipedia 28th Marine Regiment, Battle of Iwo Jima. Confirm against 28th Marines AAR.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-506-pir",
+    "name": "506th PIR",
+    "abbr": "506 PIR",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "101st Airborne Division",
+    "theater": "normandy",
+    "source": "World extra date for Market Garden. Normandy file keeps Sainte-Marie-du-Mont / Carentan.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-09-17",
+        "place": "Eindhoven",
+        "lng": 5.46972,
+        "lat": 51.4416,
+        "theater": "nw-europe",
+        "note": "17 September 1944, Eindhoven. Market Garden with 101st Airborne on Hell's Highway (Son–Eindhoven). Not the Arnhem pin. 101st Airborne stays on this commune.",
+        "source": "Published commune location, Eindhoven. Confirm against 506th PIR S-3 / 101st G-3.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-327-gir",
+    "name": "327th Glider Infantry Regiment",
+    "abbr": "327 GIR",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "101st Airborne Division",
+    "theater": "normandy",
+    "source": "World extra date for Bastogne. Normandy file keeps Sainte-Marie-du-Mont 6 June.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-12-19",
+        "place": "Bastogne",
+        "lng": 5.72,
+        "lat": 50.0042,
+        "theater": "nw-europe",
+        "note": "19 December 1944, Bastogne. 327th GIR on the southern perimeter with 101st Airborne. Same commune as the division arrival pin. The 22 December Nuts reply from the 327th/401st perimeter is the 101st extra date, not a second pin here.",
+        "source": "Published commune location, Bastogne. Confirm against 327th GIR AAR / 101st G-3.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "pl-1-sbs",
+    "name": "Polish 1st Independent Parachute Brigade",
+    "abbr": "1 SBS",
+    "nation": "Poland",
+    "side": "allied",
+    "echelon": "brigade",
+    "parent": "1st Airborne Corps",
+    "theater": "nw-europe",
+    "source": "Wikipedia Driel: drop zone of the Polish 1st Independent Parachute Brigade 21 September 1944. Wikipedia 1st Independent Parachute Brigade. Confirm against Sosabowski / brigade war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-09-21",
+        "place": "Driel",
+        "lng": 5.817,
+        "lat": 51.967,
+        "theater": "nw-europe",
+        "note": "21 September 1944, Driel. Main parachute drop south of the Rhine after weather delays. 1st Airborne stays at Arnhem 17 September and Oosterbeek 19 September. 2nd Para stays at the Arnhem bridge. Glider elements into Arnhem on 18–19 September are not a second pin.",
+        "source": "Wikipedia Driel. Wikipedia 1st Independent Parachute Brigade. Published village location, Driel.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-irish-guards",
+    "name": "Irish Guards (Guards Armoured)",
+    "abbr": "IG",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "Guards Armoured Division",
+    "theater": "nw-europe",
+    "source": "XXX Corps ground thrust 17 September 1944: 2nd and 3rd Irish Guards reached Valkenswaard by the end of the day. Guards Armoured stays at Nijmegen 20 September. Confirm against TNA WO 171 Irish Guards / Guards Armoured war diaries.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-09-17",
+        "place": "Valkenswaard",
+        "lng": 5.467,
+        "lat": 51.35,
+        "theater": "nw-europe",
+        "note": "17 September 1944, Valkenswaard. Irish Guards Group led the XXX Corps breakout and held the town overnight. Joe's Bridge start line the same day is not a second pin. Guards Armoured stays at Nijmegen 20 September. 101st Airborne stays at Eindhoven.",
+        "source": "Wikipedia Valkenswaard. WartimeNI, Operation Market Garden: Irish Guards took Valkenswaard 17 September. Confirm against TNA WO 171.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-1-rangers",
+    "name": "1st Ranger Battalion",
+    "abbr": "1 RGR",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "Ranger Force (Darby)",
+    "theater": "italy",
+    "source": "Wikipedia Cisterna di Latina / Battle of Cisterna: 1st and 3rd Ranger Battalions destroyed 30 January 1944 on the Anzio breakout. Confirm against Ranger Force AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-01-30",
+        "place": "Cisterna di Latina",
+        "lng": 12.8283,
+        "lat": 41.5908,
+        "theater": "italy",
+        "note": "30 January 1944, Cisterna di Latina. 1st Ranger Battalion with 3rd Rangers on the Anzio breakout; the force was cut off and destroyed. Anzio beach landing 22 January is not a second pin. 3rd Infantry stays at Anzio. Devil's Brigade stays at Anzio.",
+        "source": "Wikipedia Cisterna di Latina. Wikipedia Battle of Cisterna. Published comune location, Cisterna di Latina. Confirm against Ranger Force AAR.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "pl-3-carpathian",
+    "name": "3rd Carpathian Rifle Division",
+    "abbr": "3 DSK",
+    "nation": "Poland",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "Polish II Corps",
+    "theater": "italy",
+    "source": "Polish II Corps took the Monte Cassino abbey 18 May 1944; 3rd Carpathian Rifle Division led the assault. Grain vs pl-ii-corps on the same commune. Confirm against II Corps records.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-05-18",
+        "place": "Monte Cassino",
+        "lng": 13.8139,
+        "lat": 41.49,
+        "theater": "italy",
+        "note": "18 May 1944, Monte Cassino. 3rd Carpathian Rifle Division on the abbey heights with Polish II Corps. Grain vs the corps pin that day. 1st Fallschirmjäger stays on the 15 March pin. 2nd New Zealand / 4th Indian stay on the March fight.",
+        "source": "Published location, Monte Cassino. Polish II Corps world track (18 May abbey). Confirm against 3rd Carpathian Rifle Division / II Corps records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-8-marines",
+    "name": "8th Marine Regiment",
+    "abbr": "8 MAR",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "2nd Marine Division",
+    "theater": "pacific",
+    "source": "8th Marines landed Betio 20 November 1943 with 2nd Marine Division. Grain vs the division Betio pin. Confirm against 8th Marines AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1943-11-20",
+        "place": "Betio",
+        "lng": 172.9333,
+        "lat": 1.35,
+        "theater": "pacific",
+        "note": "20 November 1943, Betio, Tarawa Atoll. 8th Marines with 2nd Marine Division. Grain vs the division pin. Saipan on this regiment is not pinned this pass. 2nd Marine Division stays on Betio 20 November and Saipan 15 June.",
+        "source": "Published location, Betio. Wikipedia Battle of Tarawa / 8th Marine Regiment. Confirm against 8th Marines AAR.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-505-pir",
+    "name": "505th PIR",
+    "abbr": "505 PIR",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "82nd Airborne Division",
+    "theater": "normandy",
+    "source": "World extra date for Market Garden. Normandy file keeps Sainte-Mère-Église 6 June.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-09-17",
+        "place": "Groesbeek",
+        "lng": 5.933,
+        "lat": 51.783,
+        "theater": "nw-europe",
+        "note": "17 September 1944, Groesbeek. 505th PIR dropped on the Groesbeek heights and seized the town. Distinct from 504th PIR at Nijmegen. 82nd Airborne stays at Nijmegen. Normandy file keeps Sainte-Mère-Église.",
+        "source": "Wikipedia Groesbeek (82nd Airborne landing). 505th PIR Field Order No. 1, 13 September 1944 (Vrijheidsmuseum copy: regiment to operate at Groesbeek). Confirm against 505th PIR AAR.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-501-pir",
+    "name": "501st PIR",
+    "abbr": "501 PIR",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "101st Airborne Division",
+    "theater": "normandy",
+    "source": "World extra date for Bastogne. Normandy file keeps Angoville-au-Plain 6 June.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-12-19",
+        "place": "Bastogne",
+        "lng": 5.72,
+        "lat": 50.0042,
+        "theater": "nw-europe",
+        "note": "19 December 1944, Bastogne. 501st PIR with 101st Airborne on the eastern approaches. Grain vs 101st and 327th GIR on the same commune. Normandy file keeps Angoville-au-Plain.",
+        "source": "Published commune location, Bastogne. Confirm against 501st PIR AAR / 101st G-3.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "british-6th-airborne",
+    "name": "British 6th Airborne Division",
+    "abbr": "6 AB",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "I Corps",
+    "theater": "normandy",
+    "source": "World extra date for Operation Varsity. Normandy file keeps Ranville 6 June.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1945-03-24",
+        "place": "Hamminkeln",
+        "lng": 6.5908,
+        "lat": 51.7319,
+        "theater": "nw-europe",
+        "note": "24 March 1945, Hamminkeln. Operation Varsity. 6th Airborne captured Schnappenberg and Hamminkeln and cleared the Diersfordter Wald and Issel bridges. Distinct from US 17th Airborne at Wesel. Infobox midpoint is not used. Normandy file keeps Ranville.",
+        "source": "Wikipedia Operation Varsity; Wikipedia Hamminkeln. Confirm against TNA WO 171 6th Airborne Division war diary.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-2nd-infantry",
+    "name": "US 2nd Infantry Division",
+    "abbr": "2 INF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "V Corps",
+    "theater": "normandy",
+    "source": "World extra date for the Ardennes. Normandy file keeps Saint-Laurent-sur-Mer 7 June.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-12-17",
+        "place": "Büllingen",
+        "lng": 6.25,
+        "lat": 50.4,
+        "theater": "nw-europe",
+        "note": "17 December 1944, Büllingen municipality (Rocherath, Krinkelt, Wirtzfeld). 2nd Infantry on the northern shoulder. Distinct from 99th Infantry at Elsenborn. Rocherath hamlet coords are not invented. Normandy file keeps Saint-Laurent-sur-Mer.",
+        "source": "Wikipedia Büllingen (Battle of the Bulge role; contains Rocherath and Krinkelt). Confirm against 2nd Infantry Division G-3.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-4-commando",
+    "name": "No. 4 Commando",
+    "abbr": "4 CDO",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "1st Special Service Brigade",
+    "theater": "normandy",
+    "source": "World extra date for Dieppe. Normandy file keeps Ouistreham 6 June. Map-only (Hub uk-commandos maps to 47 RM).",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1942-08-19",
+        "place": "Varengeville-sur-Mer",
+        "lng": 0.9956,
+        "lat": 49.9067,
+        "theater": "nw-europe",
+        "note": "19 August 1942, Orange Beach / battery Hess at Varengeville-sur-Mer. No. 4 Commando (Lovat) silenced the six 150 mm guns; the only full success of Jubilee. Distinct from 2nd Canadian Division at Dieppe town and South Saskatchewan at Pourville. Normandy file keeps Ouistreham.",
+        "source": "Wikipedia Dieppe Raid (Orange beach / Varengeville); Wikipedia No. 4 Commando. Confirm against the commando war diary.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "de-7-flieger",
+    "name": "7th Flieger Division",
+    "abbr": "7 FL",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "parent": "XI Fliegerkorps",
+    "theater": "italy",
+    "source": "7th Air Division (7. Flieger-Division) took Maleme airfield in the Battle of Crete, 20 May 1941. Renamed 1st Fallschirmjäger Division in 1943; Cassino stays on de-1-fj. Confirm against XI Fliegerkorps records.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1941-05-20",
+        "place": "Maleme",
+        "lng": 23.8475,
+        "lat": 35.5222,
+        "theater": "italy",
+        "note": "20 May 1941, Maleme airfield, Crete. 7th Flieger Division / West Group (Meindl) glider and parachute assault. Opposite 22nd New Zealand Battalion on Hill 107. Explicit italy tag: Maleme sits south of the Italy bound and inside North Africa. Do not alias to 1st Fallschirmjäger (Cassino).",
+        "source": "Wikipedia Battle of Maleme; Wikipedia 1st Parachute Division (raised as 7th Air Division). Wikipedia Maleme. Confirm against XI Fliegerkorps records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-30-bde",
+    "name": "30th Infantry Brigade",
+    "abbr": "30 BDE",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "brigade",
+    "parent": "BEF",
+    "theater": "nw-europe",
+    "source": "30th Infantry Brigade (Nicholson) reinforced Calais 23 May 1940; the siege began as the brigade retired to the old walls. Distinct from Dunkirk. Confirm against brigade war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1940-05-23",
+        "place": "Calais",
+        "lng": 1.8564,
+        "lat": 50.9481,
+        "theater": "nw-europe",
+        "note": "23 May 1940, Calais. 30th Infantry Brigade and 3rd RTR began to retire to the old Calais walls; the siege opened 24 May. Distinct from the Dunkirk pin on 3rd Division.",
+        "source": "Wikipedia Siege of Calais (1940); Wikipedia Calais. Confirm against 30th Infantry Brigade war diary.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "cdn-ssr",
+    "name": "South Saskatchewan Regiment",
+    "abbr": "SSR",
+    "nation": "Canada",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "2nd Canadian Division",
+    "theater": "nw-europe",
+    "source": "South Saskatchewan Regiment landed Green Beach / Pourville 19 August 1942. Pourville is in Hautot-sur-Mer commune. Confirm against the battalion war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1942-08-19",
+        "place": "Hautot-sur-Mer",
+        "lng": 1.0347,
+        "lat": 49.8975,
+        "theater": "nw-europe",
+        "note": "19 August 1942, Green Beach, Pourville (Hautot-sur-Mer commune). 1st Battalion South Saskatchewan beached 04:52. Distinct from 2nd Canadian Division at Dieppe town and No. 4 Commando at Varengeville.",
+        "source": "Wikipedia Dieppe Raid (Green Beach / Pourville); Wikipedia South Saskatchewan Regiment; Wikipedia Hautot-sur-Mer. Confirm against the battalion war diary.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-7th-marines",
+    "name": "7th Marine Regiment",
+    "abbr": "7 MAR",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "1st Marine Division",
+    "theater": "pacific",
+    "source": "7th Marines at Guadalcanal, Cape Gloucester, and Peleliu. Map-only (Hub us-1st-marines is Guadalcanal-only and stays on that id; do not extra Cape Gloucester onto 1st Marines). Confirm against 7th Marines AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1942-09-18",
+        "place": "Honiara",
+        "lng": 159.9556,
+        "lat": -9.4319,
+        "theater": "pacific",
+        "note": "18 September 1942, Guadalcanal. 7th Marines, reassigned to 1st Marine Division, landed in the Solomons. Grain vs 1st Marines on the Honiara pin.",
+        "source": "Wikipedia 7th Marine Regiment (landed Guadalcanal 18 September 1942). Published location, Honiara. Confirm against 7th Marines AAR.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1943-12-26",
+        "place": "Cape Gloucester",
+        "lng": 148.417,
+        "lat": -5.45,
+        "theater": "pacific",
+        "note": "26 December 1943, Cape Gloucester, New Britain. 7th Marines with 1st Marine Division (Operation Backhander). Distinct from Honiara and from Peleliu. Do not extra this date onto Hub us-1st-marines (Guadalcanal-only card).",
+        "source": "Wikipedia Battle of Cape Gloucester (7th Marine Regiment in 1st Marine Division, 26 December 1943). Wikipedia 7th Marine Regiment. Confirm against 7th Marines AAR.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-09-15",
+        "place": "Peleliu",
+        "lng": 134.25,
+        "lat": 6.998,
+        "theater": "pacific",
+        "note": "15 September 1944, Peleliu. 7th Marines landed Orange Beach 3; 1st Marines White, 5th Marines Orange centre. Grain vs 1st Marines already on this commune. Okinawa (Dakeshi / Wana) is not pinned until a distinct named commune is sourced.",
+        "source": "Wikipedia Battle of Peleliu (7th Marines landed Orange Beach 3, 15 September 1944). Wikipedia 7th Marine Regiment. Published location, Peleliu. Confirm against 7th Marines AAR.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-27-marines",
+    "name": "27th Marine Regiment",
+    "abbr": "27 MAR",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "5th Marine Division",
+    "theater": "pacific",
+    "source": "27th Marines first saw action on Iwo Jima with 5th Marine Division, which landed Red 1, Red 2, and Green 1 on 19 February 1945. 26th Marines was the afternoon reserve; 28th Marines is the Suribachi 23 February pin. Confirm against 27th Marines AAR.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1945-02-19",
+        "place": "Iwo Jima",
+        "lng": 141.3244,
+        "lat": 24.7803,
+        "theater": "pacific",
+        "note": "19 February 1945, Iwo Jima. 27th Marines with 5th Marine Division on the Red/Green landing beaches at the base of Suribachi. Grain vs 28th Marines (Suribachi 23 February) and the 4th/5th Marine Division landing pins. 26th Marines was released as division reserve that afternoon.",
+        "source": "Wikipedia 27th Marine Regiment (first action Iwo Jima); Wikipedia 5th Marine Division (landed Red 1, Red 2, Green 1 on 19 February 1945). Confirm against 27th Marines AAR.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uss-oklahoma",
+    "name": "USS Oklahoma",
+    "abbr": "OKLAHOMA",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "army",
+    "parent": "Not in this sample",
+    "theater": "pacific",
+    "source": "USS Oklahoma (BB-37) capsized on Battleship Row, Pearl Harbor, 7 December 1941. Harbour pin matches Arizona; do not use the 1947 tow-sinking position. Confirm against US Navy after-action reports.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1941-12-07",
+        "place": "Pearl Harbor",
+        "lng": -157.9771,
+        "lat": 21.3679,
+        "theater": "pacific",
+        "note": "7 December 1941, Pearl Harbor. Capsized on Battleship Row. Coarser pin on the harbour, same as Arizona. Infobox 24°58′N 150°6′W is the 1947 hulk sinking under tow, not this pin.",
+        "source": "Wikipedia USS Oklahoma (BB-37); published location, Pearl Harbor. Confirm against US Navy after-action reports.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uss-west-virginia",
+    "name": "USS West Virginia",
+    "abbr": "W VIRGINIA",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "army",
+    "parent": "Not in this sample",
+    "theater": "pacific",
+    "source": "USS West Virginia (BB-48) was moored on Battleship Row on 7 December 1941, sank in shallow water, and was later rebuilt. Harbour pin matches Arizona. Confirm against US Navy after-action reports.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1941-12-07",
+        "place": "Pearl Harbor",
+        "lng": -157.9771,
+        "lat": 21.3679,
+        "theater": "pacific",
+        "note": "7 December 1941, Pearl Harbor. Moored on Battleship Row; torpedoed and sank in shallow water. Coarser pin on the harbour, same as Arizona. Surigao Strait / Iwo / Okinawa on this ship are not pinned this pass.",
+        "source": "Wikipedia USS West Virginia (BB-48); published location, Pearl Harbor. Confirm against US Navy after-action reports.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "jp-31st-div",
+    "name": "31st Division (IJA)",
+    "abbr": "31 DIV",
+    "nation": "Japan",
+    "side": "japanese",
+    "echelon": "division",
+    "parent": "15th Army",
+    "theater": "burma",
+    "source": "IJA 31st Division (Furious / Retsu Heidan) at Kohima. Distinct from Hub jp-31st-army (Marianas garrison). Confirm against 31st Division records.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-04-05",
+        "place": "Kohima",
+        "lng": 94.1086,
+        "lat": 25.6747,
+        "theater": "burma",
+        "note": "5 April 1944, Kohima. Miyazaki's probe 3 April; siege preparations 6 April. Opposite 7th Indian Division on the same commune. Do not alias to Hub jp-31st-army (Saipan/Guam/Tinian).",
+        "source": "Wikipedia 31st Division (Imperial Japanese Army), Battle of Kohima. Published commune location, Kohima. Confirm against 31st Division records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "de-90-light",
+    "name": "90th Light Afrika Division",
+    "abbr": "90 LE",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "parent": "Panzer Army Africa",
+    "theater": "north-africa",
+    "source": "90th Light Infantry Division (90th Light Afrika) fought at First and Second El Alamein and surrendered in Tunisia. Grain vs 21st Panzer and Ariete on the same commune. Confirm against division KTB.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1942-07-01",
+        "place": "El Alamein",
+        "lng": 28.95,
+        "lat": 30.8333,
+        "theater": "north-africa",
+        "note": "1 July 1942, El Alamein. 90th Light attacked along the coast toward the Alamein position at First Alamein. Hub first-el-alamein. Second Alamein remains 23 October.",
+        "source": "Hub 90th Light Africa Division (first-el-alamein). Wikipedia 90th Light Infantry Division (First El Alamein). Published commune location, El Alamein. Confirm against 90th Light KTB.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1942-10-23",
+        "place": "El Alamein",
+        "lng": 28.95,
+        "lat": 30.8333,
+        "theater": "north-africa",
+        "note": "23 October 1942, El Alamein. 90th Light with Panzer Army Africa at Second Alamein. Grain vs 21st Panzer, Ariete, and 2nd New Zealand Division on the same commune.",
+        "source": "Wikipedia 90th Light Infantry Division (First and Second El Alamein). Published commune location, El Alamein. Confirm against 90th Light KTB.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1943-05-13",
+        "place": "Tunis",
+        "lng": 10.1817,
+        "lat": 36.8064,
+        "theater": "north-africa",
+        "note": "13 May 1943, Tunis. Surrender in Tunisia. Do not continue this id as 90th Panzergrenadier in Italy.",
+        "source": "Hub 90th Light Africa Division (tunisia). Published commune location, Tunis (reuse pack 10.1817, 36.8064). Confirm against 90th Light KTB.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "de-hg",
+    "name": "Hermann Göring Division",
+    "abbr": "HG",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "parent": "Not in this sample",
+    "theater": "italy",
+    "source": "Panzer-Division Hermann Göring counter-attacked the Gela beachhead 11 July 1943 and fought the Battle of Cisterna 30 January 1944 opposite US Rangers and 3rd Infantry. Confirm against division KTB.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1943-07-11",
+        "place": "Gela",
+        "lng": 14.25,
+        "lat": 37.0667,
+        "theater": "italy",
+        "note": "11 July 1943, Gela beachhead. HG with Livorno Division in the amphibious counter-attack, forced back by naval gunfire. Grain vs US 1st Infantry on Gela 10 July.",
+        "source": "Wikipedia 1st Fallschirm-Panzer Division Hermann Göring (Battle of Gela 10–11 July 1943). Published commune location, Gela. Confirm against HG KTB.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-01-30",
+        "place": "Cisterna di Latina",
+        "lng": 12.8283,
+        "lat": 41.5908,
+        "theater": "italy",
+        "note": "30 January 1944, Cisterna di Latina. HG on the German left flank of the Battle of Cisterna, facing US 3rd Infantry and 1st/3rd Rangers. Opposite us-1-rangers on the same commune.",
+        "source": "Wikipedia 1st Fallschirm-Panzer Division Hermann Göring (Battle of Cisterna). Published commune location, Cisterna di Latina. Confirm against HG KTB.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "nz-22-bn",
+    "name": "22nd Battalion (New Zealand)",
+    "abbr": "22 BN",
+    "nation": "New Zealand",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "2nd New Zealand Division",
+    "theater": "italy",
+    "source": "22nd Battalion (Andrew) was the main New Zealand unit at Maleme airfield, 20 May 1941. Do not smear 2nd New Zealand Division onto the airfield. Confirm against the battalion war diary.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1941-05-20",
+        "place": "Maleme",
+        "lng": 23.8475,
+        "lat": 35.5222,
+        "theater": "italy",
+        "note": "20 May 1941, Maleme. 22nd Battalion held Hill 107 covering the airfield; Andrew withdrew that night. Opposite 7th Flieger Division. Explicit italy tag: Maleme sits south of the Italy bound. 2nd New Zealand Division stays on El Alamein / Cassino.",
+        "source": "Wikipedia Battle of Maleme (main New Zealand unit at Maleme was 22nd Battalion). Wikipedia Maleme. Confirm against 22nd Battalion war diary.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-3-commando",
+    "name": "No. 3 Commando",
+    "abbr": "3 CDO",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "2nd Special Service Brigade",
+    "theater": "normandy",
+    "source": "World extra date for Operation Devon. Normandy file keeps Amfreville 6 June. Map-only (Hub uk-commandos maps to 47 RM).",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1943-10-03",
+        "place": "Termoli",
+        "lng": 14.98,
+        "lat": 42.0,
+        "theater": "italy",
+        "note": "3 October 1943, Termoli. Operation Devon seaborne landing with No. 40 RM Commando and the Special Raiding Squadron; 78th Division brigades arrived as relief. Distinct from 78th Division on the same commune. Normandy file keeps Amfreville.",
+        "source": "Wikipedia Operation Devon (No. 3 Commando, 3–6 October 1943). Wikipedia Termoli. Confirm against the commando war diary.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "fr-1-bfl",
+    "name": "1re Brigade Française Libre",
+    "abbr": "1 BFL",
+    "nation": "France",
+    "side": "allied",
+    "echelon": "brigade",
+    "parent": "Free French",
+    "theater": "north-africa",
+    "source": "1re Brigade Française Libre (Koenig) held Bir Hakeim, 26 May – 11 June 1942. Do not extra onto Hub fr-1e-dfl (tunisia / Cassino / italy-end only). Confirm against Free French records.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1942-05-26",
+        "place": "Bir Hakeim",
+        "lng": 23.4798,
+        "lat": 31.5939,
+        "theater": "north-africa",
+        "note": "26 May 1942, Bir Hakeim. 1re BFL (Koenig) opened the Gazala southern-box defence against Ariete, then Trieste and 90th Light. Map-only: Hub 1re DFL stays Tunis / Cassino.",
+        "source": "Wikipedia Battle of Bir Hakeim (Free French under Koenig, 26 May – 11 June 1942). Wikipedia Bir Hakeim. Confirm against Free French records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-1-raiders",
+    "name": "1st Marine Raider Battalion",
+    "abbr": "1 RAID",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "1st Marine Division",
+    "theater": "pacific",
+    "source": "Edson's 1st Raider Battalion landed Tulagi 7 August 1942. Do not smear onto Hub us-2nd-marines (2nd Marine Division at Betio / Saipan). Confirm against 1st Raider Battalion records.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1942-08-07",
+        "place": "Tulagi",
+        "lng": 160.1467,
+        "lat": -9.1014,
+        "theater": "pacific",
+        "note": "7 August 1942, Tulagi. 1st Marine Raider Battalion (Edson) landed as the opening of Watchtower. Distinct from 1st Marines at Honiara and from 2nd Marine Division (Betio / Saipan). 2nd Marines 1/2 on Florida Island that morning is not pinned on the division id.",
+        "source": "Wikipedia Battle of Tulagi and Gavutu–Tanambogo; Wikipedia Marine Raiders (Edson's 1st Raider Battalion landed Tulagi 7 August 1942). Wikipedia Tulagi. Confirm against 1st Raider Battalion records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-1st-def-bn",
+    "name": "1st Marine Defense Battalion",
+    "abbr": "1 DEF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "Not in this sample",
+    "theater": "pacific",
+    "source": "1st Marine Defense Battalion (Devereux) garrisoned Wake Island when the Japanese attack opened 8 December 1941 (7 December Hawaii time). Confirm against 1st Defense Battalion records.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1941-12-08",
+        "place": "Wake Island",
+        "lng": 166.601,
+        "lat": 19.29,
+        "theater": "pacific",
+        "note": "8 December 1941, Wake Island. 1st Marine Defense Battalion opened the defence the same calendar day as Pearl (west of the date line). Surrender is 23 December, not a second pin.",
+        "source": "Wikipedia Battle of Wake Island (1st Marine Defense Battalion, 8–23 December 1941). Wikipedia Wake Island. Confirm against 1st Defense Battalion records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "it-livorno",
+    "name": "4th Infantry Division Livorno",
+    "abbr": "LIVORNO",
+    "nation": "Italy",
+    "side": "axis",
+    "echelon": "division",
+    "parent": "Not in this sample",
+    "theater": "italy",
+    "source": "Livorno Division counter-attacked the Gela beachhead 11 July 1943. Opposite 1st Infantry Division. Confirm against Italian Army Historical Branch.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1943-07-11",
+        "place": "Gela",
+        "lng": 14.25,
+        "lat": 37.0667,
+        "theater": "italy",
+        "note": "11 July 1943, Gela. Livorno Division three-prong infantry/tank counter-attack on the Husky beachhead, same day as Hermann Göring. Opposite US 1st Infantry Division (Gela 10 July landing pin).",
+        "source": "Wikipedia Battle of Gela (1943) (Livorno Division counter-attack 11 July). Published commune location, Gela. Confirm against Italian Army Historical Branch.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "de-4-fj",
+    "name": "4th Fallschirmjäger Division",
+    "abbr": "4 FJ",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "parent": "I Fallschirmkorps",
+    "theater": "italy",
+    "source": "4. Fallschirmjäger-Division first combat was against the Anzio landings, January 1944. Distinct from 1st FJ at Cassino. Confirm against I Fallschirmkorps records.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-01-22",
+        "place": "Anzio",
+        "lng": 12.629,
+        "lat": 41.447,
+        "theater": "italy",
+        "note": "22 January 1944, Anzio. 4th Fallschirmjäger Division (Trettner), I Fallschirmkorps, first combat against Operation Shingle. Distinct from 1st FJ at Cassino and from HG at Cisterna 30 January. Coarser division pin on the beachhead commune.",
+        "source": "Wikipedia 4th Parachute Division (first combat Anzio, January 1944). Published location, Anzio. Confirm against I Fallschirmkorps records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "au-18-bde",
+    "name": "18th Australian Brigade",
+    "abbr": "18 BDE",
+    "nation": "Australia",
+    "side": "allied",
+    "echelon": "brigade",
+    "parent": "7th Australian Division",
+    "theater": "north-africa",
+    "source": "18th Brigade (7th Australian Division) at Giarabub, Milne Bay, Sanananda, and Balikpapan. Map-only grain vs Hub au-7th-div (Kokoda-only card). Confirm against AWM 18th Brigade records.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1941-03-21",
+        "place": "Jaghbub",
+        "lng": 24.51694,
+        "lat": 29.7425,
+        "theater": "north-africa",
+        "note": "21 March 1941, Jaghbub (Giarabub). 2/9th Battalion led the assault on the Italian fortress; the garrison surrendered the same afternoon. First combat pin of the brigade.",
+        "source": "Wikipedia 18th Brigade (Australia) (Giarabub assault 21 March 1941). Wikipedia Jaghbub. Confirm against AWM 18th Brigade records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1942-08-27",
+        "place": "Alotau",
+        "lng": 150.458,
+        "lat": -10.3167,
+        "theater": "pacific",
+        "note": "27 August 1942, Alotau / Milne Bay. 18th Brigade (Wootten) in the land battle through 7 September, the first major Japanese land defeat of the war. Grain vs Japanese 18th Army on the same published town. Do not extra onto Hub au-7th-div (Kokoda-only card).",
+        "source": "Wikipedia 18th Brigade (Australia) (Milne Bay 27 August–7 September 1942). Wikipedia Battle of Milne Bay. Published named-place location, Alotau (same pin as jp-18th-army). Confirm against AWM 18th Brigade records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1943-01-21",
+        "place": "Sanananda",
+        "lng": 148.367,
+        "lat": -8.633,
+        "theater": "pacific",
+        "note": "21 January 1943, Sanananda. 18th Brigade captured the Papuan beachhead with US 163rd Infantry. Distinct from Milne Bay.",
+        "source": "Wikipedia 18th Brigade (Australia) (captured Sanananda 21 January 1943). Wikipedia Sanananda. Confirm against AWM 18th Brigade records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1945-07-01",
+        "place": "Balikpapan",
+        "lng": 116.8277,
+        "lat": -1.2768,
+        "theater": "pacific",
+        "note": "1 July 1945, Balikpapan. 18th Brigade in the first wave around Klandasan; took the town 3 July. Last sourced pin of the brigade.",
+        "source": "Wikipedia 18th Brigade (Australia) (landed Balikpapan 1 July 1945). Wikipedia Balikpapan. Confirm against AWM 18th Brigade records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-172-inf",
+    "name": "172nd Infantry Regiment",
+    "abbr": "172 INF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "43rd Infantry Division",
+    "theater": "pacific",
+    "source": "172nd Infantry (43rd Infantry Division) in the capture of Munda airfield, 5 August 1943. Map-only: Hub us-43rd-inf is Guadalcanal-only. Confirm against 43rd Infantry Division records.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1943-08-05",
+        "place": "Munda",
+        "lng": 157.27083,
+        "lat": -8.32806,
+        "theater": "pacific",
+        "note": "5 August 1943, Munda. 172nd Infantry, 43rd Infantry Division (Winged Victory), in the capture of Munda Point airfield ending the Battle of Munda Point. Map-only regiment grain: do not extra Munda onto Hub us-43rd-inf (Guadalcanal-only card).",
+        "source": "Wikipedia Battle of Munda Point (airfield captured 5 August 1943; 43rd Infantry Division from 2 July). Wikipedia Munda, Solomon Islands. CMH 43d Infantry Division combat chronicle. Confirm against 172nd Infantry Regiment records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-148-inf",
+    "name": "148th Infantry Regiment",
+    "abbr": "148 INF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "regiment",
+    "parent": "37th Infantry Division",
+    "theater": "pacific",
+    "source": "148th Infantry (37th Infantry Division) landed at Cape Torokina 8 November 1943. Map-only: Hub us-37th-inf and us-3rd-marines do not list Bougainville. Confirm against 37th Infantry Division records.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1943-11-08",
+        "place": "Cape Torokina",
+        "lng": 155.035,
+        "lat": -6.235,
+        "theater": "pacific",
+        "note": "8 November 1943, Cape Torokina. 148th Infantry, 37th Infantry Division (Buckeye), first Army regiment ashore at Empress Augusta Bay, following 3rd Marine Division's 1 November landing. Map-only: do not extra Torokina onto Hub us-3rd-marines (Guadalcanal + Iwo) or us-37th-inf (Guadalcanal-only card).",
+        "source": "Wikipedia Landings at Cape Torokina (6.235 S, 155.035 E). US Army photo caption 37th Division troops for Bougainville beach 8 November 1943. armydivs.com 37th Infantry Division (148th Infantry landed 8 November). Confirm against 148th Infantry Regiment records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-52nd-lowland",
+    "name": "British 52nd (Lowland) Infantry Division",
+    "abbr": "52 LOW",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "Not in this sample",
+    "theater": "nw-europe",
+    "source": "52nd (Lowland) at Cherbourg 15 June 1940 (Operation Aerial) and Ringenberg 26 March 1945 (Rhine breakout). Hub lists dunkirk + rhine. Confirm against TNA WO 167 / WO 171 52nd Division records.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1940-06-15",
+        "place": "Cherbourg",
+        "lng": -1.625,
+        "lat": 49.639,
+        "theater": "nw-europe",
+        "note": "15 June 1940, Cherbourg. 52nd (Lowland) of the Second BEF embarked 15–17 June during Operation Aerial, covering the withdrawal after Dunkirk. Not the Dunkirk town pin. Explicit nw-europe: Cherbourg also sits in the Normandy frame.",
+        "source": "Wikipedia 52nd (Lowland) Infantry Division (2BEF, Operation Aerial near Cherbourg). Wikipedia Operation Aerial (most of 52nd embarked Cherbourg 15–17 June 1940). Published commune location, Cherbourg-en-Cotentin. Confirm against TNA WO 167 52nd Division records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1945-03-26",
+        "place": "Ringenberg",
+        "lng": 6.610831,
+        "lat": 51.741699,
+        "theater": "nw-europe",
+        "note": "26 March 1945, Ringenberg. 52nd (Lowland) advanced from the Bislich Rhine bridgehead and captured the village by evening. Distinct from 15th Scottish Division's 24 March Bislich assault crossing. Not Dunkirk town.",
+        "source": "krieg-am-niederrhein.de The Assault Across the Rhine (52nd Scottish Infantry Division from Bislich captured Ringenberg by the evening of 26 March 1945). German Wikipedia Ringenberg (51.741699 N, 6.610831 E). Confirm against TNA WO 171 52nd Division records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "de-14-ss",
+    "name": "14th Waffen Grenadier Division of the SS",
+    "abbr": "14 SS",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "parent": "XIII Army Corps",
+    "theater": "eastern-front",
+    "source": "14. Waffen-Grenadier-Division der SS (galizische Nr. 1) in the Brody pocket, July 1944. Hub battleId bagration (card names Brody). Confirm against Bundesarchiv Militärarchiv.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-07-13",
+        "place": "Brody",
+        "lng": 25.147651,
+        "lat": 50.083141,
+        "theater": "eastern-front",
+        "note": "13 July 1944, Brody. 14th SS (Galicia) holding the XIII Corps sector when 1st Ukrainian Front opened the Lviv–Sandomierz offensive; the Brody pocket closed 18 July. Distinct from 1st Ukrainian Front at Lviv. Coarser division pin on the town.",
+        "source": "Wikipedia 14th Waffen Grenadier Division of the SS (1st Galician) (Brody, July 1944). Wikipedia Brody. Ukrainian Wikipedia Battle of Brody 13–22 July 1944. Confirm against Bundesarchiv Militärarchiv.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "pl-army-prusy",
+    "name": "Polish Army Prusy",
+    "abbr": "PRUSY",
+    "nation": "Poland",
+    "side": "allied",
+    "echelon": "army",
+    "parent": "Not in this sample",
+    "theater": "eastern-front",
+    "source": "Army Prusy northern group fought at Tomaszów Mazowiecki 5–6 September 1939. Hub battleId invasion-of-poland. Confirm against Polish Army Prusy records.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-05",
+        "place": "Tomaszów Mazowiecki",
+        "lng": 20.017,
+        "lat": 51.517,
+        "theater": "eastern-front",
+        "note": "5 September 1939, Tomaszów Mazowiecki. Army Prusy northern group (13th, 19th, 29th Infantry and Wilno Cavalry) in the Piotrków–Tomaszów battles 5–6 September against German XVI Panzer Corps. Still assembling on 1 September; this is the combat pin.",
+        "source": "Wikipedia Prussian Army (Polish Armed Forces) (battles of Piotrków and Tomaszów Mazowiecki 5–6 September). Wikipedia Tomaszów Mazowiecki (51.517 N, 20.017 E). Confirm against Polish Army Prusy records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "pl-army-karpaty",
+    "name": "Polish Army Karpaty",
+    "abbr": "KARPATY",
+    "nation": "Poland",
+    "side": "allied",
+    "echelon": "army",
+    "parent": "Not in this sample",
+    "theater": "eastern-front",
+    "source": "Karpaty Army attacked at Czorsztyn on 1 September 1939. Hub battleId invasion-of-poland. Confirm against Polish Army Karpaty records.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "place": "Czorsztyn",
+        "lng": 20.317,
+        "lat": 49.433,
+        "theater": "eastern-front",
+        "note": "1 September 1939, Czorsztyn. Karpaty Army attacked in the morning by German 4th Light Division supported by 2nd Mountain Division on the Carpathian frontier. Coarser army pin on the named village.",
+        "source": "Wikipedia Carpathian Army (attacked in the area of Czorsztyn on 1 September by 4th Light Division). Wikipedia Czorsztyn (49.433 N, 20.317 E). Confirm against Polish Army Karpaty records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "pl-nog-narew",
+    "name": "Independent Operational Group Narew",
+    "abbr": "NAREW",
+    "nation": "Poland",
+    "side": "allied",
+    "echelon": "army",
+    "parent": "Not in this sample",
+    "theater": "eastern-front",
+    "source": "SGO Narew manned the Narew line at Łomża on 1 September 1939. Hub battleId invasion-of-poland. Confirm against SGO Narew records.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1939-09-01",
+        "place": "Łomża",
+        "lng": 22.07306,
+        "lat": 53.17639,
+        "theater": "eastern-front",
+        "note": "1 September 1939, Łomża. Independent Operational Group Narew manned the Narew river line from dawn, with HQ in Łomża ready to move to Śniadowo. Coarser army pin on the named town. Wizna 7–10 September is a later fight.",
+        "source": "Wikipedia Battle of Łomża (1939) (Narew line manned by SGO Narew; Łomża on the southern bank). Polish Wikipedia SGO Narew (HQ in Łomża 31 August, positions occupied at dawn 1 September). Wikipedia Łomża (53.17639 N, 22.07306 E). Confirm against SGO Narew records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-5th-inf",
+    "name": "US 5th Infantry Division",
+    "abbr": "5 INF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "Not in this sample",
+    "theater": "normandy",
+    "source": "CMH 5th Infantry Division combat chronicle: Caumont 13 July 1944, Angers 9–10 August, Echternach 26 December, Oppenheim Rhine crossing 22 March 1945. Hub battleIds normandy, bulge, rhine. Confirm against 5th Infantry Division records.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-07-13",
+        "place": "Caumont-l'Éventé",
+        "lng": -0.8039,
+        "lat": 49.0911,
+        "theater": "normandy",
+        "note": "13 July 1944, Caumont-l'Éventé. 5th Infantry Division landed Utah Beach 9 July (beach, not a commune) and four days later took up defensive positions in the vicinity of Caumont. Coarser division pin on the named commune.",
+        "source": "CMH 5th Infantry Division combat chronicle (landed Utah Beach 9 July 1944; four days later defensive positions in the vicinity of Caumont). Wikipedia Caumont-l'Éventé (49.0911 N, 0.8039 W). Confirm against 5th Infantry Division records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-08-09",
+        "place": "Angers",
+        "lng": -0.55194,
+        "lat": 47.47111,
+        "theater": "nw-europe",
+        "note": "9 August 1944, Angers. Division captured the city 9–10 August after the Cobra breakout. South of the Normandy camera frame; tagged nw-europe.",
+        "source": "CMH 5th Infantry Division combat chronicle (attacked and captured Angers, 9–10 August 1944). Wikipedia Angers (47.47111 N, 0.55194 W). Confirm against 5th Infantry Division records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-12-26",
+        "place": "Echternach",
+        "lng": 6.4216667,
+        "lat": 49.8116667,
+        "theater": "nw-europe",
+        "note": "26 December 1944, Echternach. 10th Infantry of 5th Infantry Division walked into the town in the early hours after XII Corps' southern-shoulder attack from 22 December. Distinct from 4th Infantry, which held Echternach on 16 December.",
+        "source": "Army Historical Foundation, The Battle for Echternach (10th Infantry walked into Echternach in the early hours of 26 December 1944). CMH 5th Infantry Division combat chronicle (thrown in against the southern flank of the Bulge 18 December). Wikipedia Echternach (49.8116667 N, 6.4216667 E). Confirm against 5th Infantry Division records.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1945-03-22",
+        "place": "Oppenheim",
+        "lng": 8.36028,
+        "lat": 49.85556,
+        "theater": "nw-europe",
+        "note": "22 March 1945, Oppenheim. 5th Infantry Division made the Third Army assault crossing of the Rhine at 2200, first US assault crossing of the river. Inside the Hub rhine window (7–24 March).",
+        "source": "CMH 5th Infantry Division combat chronicle (reached and crossed the Rhine, 22 March 1945). US Army CSI Rhine River crossing study (11th Infantry at Oppenheim 2200 22 March). Wikipedia Oppenheim (49.85556 N, 8.36028 E). Confirm against 5th Infantry Division records.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "us-29th-infantry",
+    "name": "US 29th Infantry Division",
+    "abbr": "29 INF",
+    "nation": "United States",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "V Corps",
+    "theater": "normandy",
+    "source": "World extra date for Saint-Lô. Normandy file keeps Omaha / Vierville-sur-Mer 6 June.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-07-18",
+        "place": "Saint-Lô",
+        "lng": -1.09,
+        "lat": 49.12,
+        "theater": "normandy",
+        "note": "18 July 1944, Saint-Lô. Task Force Cota entered the town about 1800 after 43 days from Omaha. Distinct from 3rd Armored Cobra pin 25 July. Normandy file keeps Vierville-sur-Mer 6 June.",
+        "source": "CMH American Forces in Action, St-Lô (Task Force C of the 29th Division secured the city 18 July). Saint-Lô city liberation itinerary (29th Division entered 18 July). Published commune location, Saint-Lô (reuse pack −1.09, 49.12).",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "fr-2e-db",
+    "name": "2e Division Blindée",
+    "abbr": "2e DB",
+    "nation": "France",
+    "side": "allied",
+    "echelon": "division",
+    "parent": "Not in this sample",
+    "theater": "normandy",
+    "source": "World extra date for Alençon. Normandy file keeps Paris 24–25 August.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-08-12",
+        "place": "Alençon",
+        "lng": 0.0931,
+        "lat": 48.4306,
+        "theater": "normandy",
+        "note": "12 August 1944, Alençon. 2e DB took the town overnight 11–12 August. Not Argentan (the division was stopped short of that town). Normandy file keeps Paris 24–25 August.",
+        "source": "Wikipedia 2nd Armored Division (France) (Argentan–Falaise 12–21 August). Voie de la 2e DB / local Alençon liberation (night 11–12 August). Wikipedia Alençon (48.4306 N, 0.0931 E). Confirm against SHD JMO 2e DB.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-1-worcesters",
+    "name": "1st Battalion, Worcestershire Regiment",
+    "abbr": "1 WORC",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "214th Infantry Brigade",
+    "theater": "normandy",
+    "source": "TNA WO 171/1396, 1st Bn Worcestershire Regiment war diary, 22 June 1944. Map-only; do not smear onto British 3rd Division at Sword / Hermanville. 43rd (Wessex) parent.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-22",
+        "place": "Crépon",
+        "lng": -0.5492,
+        "lat": 49.3169,
+        "theater": "normandy",
+        "note": "22 June 1944, Crépon. Marching party disembarked LCA at Mont Fleury 1715 and marched to the assembly area at Crépon. Mont Fleury is a hamlet of Ver-sur-Mer (Green Howards stay there). Night move to La Rosière is a lieu-dit, not a second pin. Not British 3rd Division at Hermanville.",
+        "source": "WO 171/1396 (worcestershireregiment.com transcription: Mont Fleury 1715 then assembly Crépon). Hub diary wo171-worcestershire-june. Wikipedia Crépon (49.3169 N, 0.5492 W).",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "de-302-inf",
+    "name": "302nd Infantry Division",
+    "abbr": "302 INF",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "parent": "Not in this sample",
+    "theater": "nw-europe",
+    "source": "Bundesarchiv RH 26-302 KTB Anlagen Unternehmen Dieppe, 19 August 1942. Map-only German opposite of 2nd Canadian at Dieppe town.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1942-08-19",
+        "place": "Dieppe",
+        "lng": 1.077,
+        "lat": 49.922,
+        "theater": "nw-europe",
+        "note": "19 August 1942, Dieppe. 302nd Infantry Division was the coastal garrison; KTB Ia Nr. 3 is the Gefechtsbericht on the landing at and on both sides of Dieppe. Distinct from 2nd Canadian Division (assault force) and No. 4 Commando at Varengeville. Tagged nw-europe (1942, not the Normandy camera).",
+        "source": "Bundesarchiv RH 26-302/16 Anlagen zum KTB Ia Nr. 3 (Unternehmen Dieppe), 19 Aug 1942. AHQ Report No. 10 (Stacey, German war diaries). Published commune location, Dieppe (reuse pack 1.077, 49.922).",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "de-164-inf",
+    "name": "164th Light Africa Division",
+    "abbr": "164 LE",
+    "nation": "Germany",
+    "side": "axis",
+    "echelon": "division",
+    "parent": "Panzer Army Africa",
+    "theater": "north-africa",
+    "source": "Hub 164th Light Africa Division (second-el-alamein, tunisia). Previously 164th Infantry / Fortress Division Kreta. Confirm against division KTB.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1942-10-23",
+        "place": "El Alamein",
+        "lng": 28.95,
+        "lat": 30.8333,
+        "theater": "north-africa",
+        "note": "23 October 1942, El Alamein. 164th Light Africa with Panzer Army Africa at Second Alamein. Grain vs 90th Light and 21st Panzer on the same commune. Not Fortress Division Kreta.",
+        "source": "Hub 164th Light Africa Division (second-el-alamein). Wikipedia 164th Light Afrika Division. Published commune location, El Alamein. Confirm against 164th Light KTB.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1943-05-13",
+        "place": "Tunis",
+        "lng": 10.1817,
+        "lat": 36.8064,
+        "theater": "north-africa",
+        "note": "13 May 1943, Tunis. Surrender in Tunisia. Do not continue this id as 164th Infantry in Italy.",
+        "source": "Hub 164th Light Africa Division (tunisia). Wikipedia 164th Light Afrika Division. Published commune location, Tunis (reuse pack 10.1817, 36.8064).",
         "confidence": "medium"
       }
     ]
