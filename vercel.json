@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/((?!assets/|data/|cesium/|favicon.svg).*)", "destination": "/index.html" }
+  ]
+}
