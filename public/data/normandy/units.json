@@ -1299,6 +1299,15 @@
         "note": "6 June, first glider at Bénouville Bridge (Pegasus) 00:16. D Company, 2nd Ox and Bucks, seized the Caen Canal bridge. The 6th Airborne division pin stays at Ranville.",
         "source": "TNA WO 171/1357 2nd Ox and Bucks war diary (Hub wo171-ox-bucks). Published commune location, Bénouville, Calvados.",
         "confidence": "medium"
+      },
+      {
+        "date": "1944-06-07",
+        "place": "Hérouvillette",
+        "lng": -0.2428,
+        "lat": 49.2225,
+        "note": "7 June, occupied Hérouvillette by 0830 (C Company firm base). Advanced into Escoville from 1000; Kampfgruppe von Luck counter-attack forced a withdrawal to Hérouvillette that afternoon. Escoville same calendar day is not a second pin (they did not hold it overnight). Bénouville stays 6 June. Grain vs 6th Airborne / 12 Para / 13 Para / 1 RUR at Ranville.",
+        "source": "TNA WO 171/1357 2nd Ox and Bucks war diary, 7 June 1944 (paradata / Pegasus Archive transcription). Lightbobs, Escoville and Hérouvillette 6–13 June. Wikipedia Hérouvillette.",
+        "confidence": "medium"
       }
     ]
   },
@@ -1390,6 +1399,15 @@
         "lat": 49.3356,
         "note": "6 June, Nan Green, Courseulles. A Company reported touchdown 08:09; B Company 08:15. 1st Hussars fought at Graye-sur-Mer (separate pin). The 3rd Canadian division pin stays at Courseulles.",
         "source": "Wikipedia Juno Beach (Stacey 1966). Published commune location, Courseulles-sur-Mer.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-07",
+        "place": "Bretteville-l'Orgueilleuse",
+        "lng": -0.5125,
+        "lat": 49.2119,
+        "note": "7 June, A and C Companies occupied Bretteville-l'Orgueilleuse (Germans had vacated); Battalion HQ arrived about noon. Courseulles landing stays 6 June. The night 8–9 June Panther raid is the same commune, not a second pin. Norrey-en-Bessin is not pinned this pass.",
+        "source": "D-Day Overlord, Bretteville-l'Orgueilleuse: Regina Rifles entered 7 June. Wikipedia Bretteville-l'Orgueilleuse. Confirm against Regina Rifles war diary (LAC / Saskatchewan Archives).",
         "confidence": "medium"
       }
     ]
@@ -1914,6 +1932,15 @@
         "note": "6 June, eastern Omaha, Saint-Laurent-sur-Mer. Regiment grain on the same commune as the 1st Infantry division pin.",
         "source": "Wikipedia 16th Infantry Regiment (United States), World War II. Published commune location, Saint-Laurent-sur-Mer.",
         "confidence": "medium"
+      },
+      {
+        "date": "1944-06-07",
+        "place": "Colleville-sur-Mer",
+        "lng": -0.8422,
+        "lat": 49.3492,
+        "note": "7 June, 2nd Battalion ordered to capture Colleville-sur-Mer in the morning; G Company in the houses about 1000; village under control by evening (snipers residual; secured 8 June on the same commune). Saint-Laurent-sur-Mer stays 6 June. Grain vs 18th Infantry and 26th Infantry already on this commune 6 June. Distinct from Colleville-Montgomery (Sword).",
+        "source": "D-Day Overlord, Colleville-sur-Mer. US Army Omaha Beachhead (6 June–13 June 1944). Wikipedia Colleville-sur-Mer.",
+        "confidence": "medium"
       }
     ]
   },
@@ -1936,6 +1963,24 @@
         "lat": 49.374,
         "note": "6 June, western Omaha, Vierville-sur-Mer. Regiment grain on the same commune as the 29th Infantry division pin.",
         "source": "Wikipedia 116th Infantry Regiment (United States), World War II. Published commune location, Vierville-sur-Mer.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-07",
+        "place": "Pointe du Hoc",
+        "lng": -0.9872,
+        "lat": 49.3964,
+        "note": "7 June, 1st Battalion moved back to Pointe du Hoc against German resistance to assist the Rangers, and dug in there for the rest of the day. Vierville-sur-Mer stays 6 June. Grain vs 2nd Rangers and GR 914 on this commune.",
+        "source": "Wikipedia 116th Infantry Regiment (United States), World War II. Published location of Pointe du Hoc.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-08",
+        "place": "Grandcamp-Maisy",
+        "lng": -1.04,
+        "lat": 49.39,
+        "note": "8 June, 2nd and 3rd Battalions joined 1st at Pointe du Hoc during the day; Company K captured Grandcamp (Peregory Medal of Honor); 1st Battalion continued toward Maisy, the same commune. Pointe du Hoc stay is 7 June. 9 June bivouac on this commune is not a second pin.",
+        "source": "Wikipedia 116th Infantry Regiment (United States), World War II. Wikipedia Grandcamp-Maisy.",
         "confidence": "medium"
       }
     ]
@@ -2383,6 +2428,15 @@
         "note": "6 June, 1st and 2nd Battalions reached Saint-Germain-de-Varreville and relieved 502 PIR. 3rd Battalion clearing beach strongpoints on the same calendar day is not a second pin. Distinct from Saint-Martin-de-Varreville (502 PIR). 8th Infantry stays at La Madeleine.",
         "source": "US Army, Utah Beach to Cherbourg (6 June–27 June 1944), Historical Division. Published commune location, Saint-Germain-de-Varreville.",
         "confidence": "medium"
+      },
+      {
+        "date": "1944-06-09",
+        "place": "Azeville",
+        "lng": -1.3134,
+        "lat": 49.4592,
+        "note": "9 June, 3rd Battalion (less Company K) captured the Azeville battery after the 7–8 June assaults were driven back. Those failed attacks are not a second pin. Crisbecq / Saint-Marcouf same-week fighting is omitted this pass so last-reported does not park there. Saint-Germain-de-Varreville stays 6 June.",
+        "source": "Headquarters 22nd Infantry After Action Report, June 1944 (NARA NAID 12004460). US Army, Utah Beach to Cherbourg. Wikipedia Azeville (battery fell 9 June 1944). Published commune location, Azeville.",
+        "confidence": "medium"
       }
     ]
   },
@@ -2681,6 +2735,472 @@
         "lat": 49.3492,
         "note": "6 June, landed about 2100 near E-3 on the Colleville-sur-Mer coast. Formigny / Tour-en-Bessin on later days are not pinned this pass. 16th Infantry stays at Saint-Laurent. 18th Infantry stays on this commune. de-352nd stays at Formigny.",
         "source": "D-Day Overlord, Colleville-sur-Mer. US Army Omaha Beachhead (6 June–13 June 1944). Wikipedia Colleville-sur-Mer. Confirm against 26th Infantry AAR.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-2-lincolns",
+    "name": "2nd Battalion, Lincolnshire Regiment",
+    "abbr": "2 LINCS",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "9th Infantry Brigade",
+    "theater": "normandy",
+    "source": "TNA WO 171/1334 2nd Lincolnshire Regiment war diary, June 1944 (Normandy War Guide). Sword follow-up; night 6 June at Lion-sur-Mer. Confirm against Kew.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Lion-sur-Mer",
+        "lng": -0.3175,
+        "lat": 49.3019,
+        "note": "6 June, landed about 1200 and assembled on the southern outskirts of Lion-sur-Mer. A Company patrol failed to reach Cresserons because of the Lion strongpoint; that is not a second pin. Night spent in the assembly area. 41 RM Commando stays on this commune. British 3rd Division stays at Hermanville-sur-Mer.",
+        "source": "TNA WO 171/1334 2nd Lincolnshire Regiment war diary, 6 June 1944 (Normandy War Guide). Published commune location, Lion-sur-Mer.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-07",
+        "place": "Saint-Aubin-d'Arquenay",
+        "lng": -0.2875,
+        "lat": 49.2631,
+        "note": "7 June, attack on the Lion-sur-Mer strongpoint (Phase 1 Château) then moved at short notice to Saint-Aubin-d'Arquenay to cover the Orne left flank. Grain vs 2nd East Yorks on this commune. Cazelle wood later days are omitted so last-reported does not park at that hamlet.",
+        "source": "TNA WO 171/1334 2nd Lincolnshire Regiment war diary, 7 June 1944 (Normandy War Guide). Published commune location, Saint-Aubin-d'Arquenay.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-2-rur",
+    "name": "2nd Battalion, Royal Ulster Rifles",
+    "abbr": "2 RUR",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "9th Infantry Brigade",
+    "theater": "normandy",
+    "source": "TNA WO 171/1384 2nd Royal Ulster Rifles war diary, June 1944 (Normandy War Guide). Sword follow-up; night 6 June north-east of Périers-sur-le-Dan. Distinct from 1st RUR (airlanding). Confirm against Kew.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Périers-sur-le-Dan",
+        "lng": -0.3414,
+        "lat": 49.2589,
+        "note": "6 June, touched down at Lion-sur-Mer about 1200 then ordered to occupy the high ground slightly north-east of Périers-sur-le-Dan and dug in for the night. Lion landing on the same calendar day is not a second pin. 2nd Lincolns stay at Lion. 1 KOSB stays at Saint-Aubin-d'Arquenay.",
+        "source": "TNA WO 171/1384 2nd Royal Ulster Rifles war diary, 6 June 1944 (Normandy War Guide). Wikipedia Périers-sur-le-Dan. Published commune location, Périers-sur-le-Dan.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-09",
+        "place": "Cambes-en-Plaine",
+        "lng": -0.3836,
+        "lat": 49.2333,
+        "note": "9 June, battalion attack on Cambes after the 7 June D Company probe and 8 June recce. Le Mesnil wood on 7–8 June is a hamlet, not pinned. Grain vs 1 KOSB on this commune that afternoon.",
+        "source": "TNA WO 171/1384 2nd Royal Ulster Rifles war diary, 9 June 1944 (Normandy War Guide). TNA WO 171/1318 1st KOSB, 9 June. Wikipedia Cambes-en-Plaine.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-1-kosb",
+    "name": "1st Battalion, King's Own Scottish Borderers",
+    "abbr": "1 KOSB",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "9th Infantry Brigade",
+    "theater": "normandy",
+    "source": "TNA WO 171/1318 1st King's Own Scottish Borderers war diary, June 1944 (Normandy War Guide). Sword follow-up; night 6 June at Saint-Aubin-d'Arquenay. Confirm against Kew.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Saint-Aubin-d'Arquenay",
+        "lng": -0.2875,
+        "lat": 49.2631,
+        "note": "6 June, landed 1145–1445, assembled north of Hermanville, then spent the night at Saint-Aubin-d'Arquenay. Hermanville assembly on the same calendar day is not a second pin. Grain vs 2nd East Yorks. 2nd Lincolns stay at Lion-sur-Mer until 7 June.",
+        "source": "TNA WO 171/1318 1st KOSB war diary, 6 June 1944 (Normandy War Guide). Published commune location, Saint-Aubin-d'Arquenay.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-09",
+        "place": "Cambes-en-Plaine",
+        "lng": -0.3836,
+        "lat": 49.2333,
+        "note": "9 June, two companies put in on Cambes after 2 RUR were pinned; contact and consolidation with 2 RUR. Périers-sur-le-Dan and Le Mesnil wood on 7–8 June are omitted this pass (wood is a hamlet). Grain vs 2 RUR on this commune.",
+        "source": "TNA WO 171/1318 1st KOSB war diary, 9 June 1944 (Normandy War Guide). Wikipedia Cambes-en-Plaine.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-6-dli",
+    "name": "6th Battalion, Durham Light Infantry",
+    "abbr": "6 DLI",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "151st Infantry Brigade",
+    "theater": "normandy",
+    "source": "TNA WO 171/1290 6th Durham Light Infantry war diary, June 1944 (Normandy War Guide). Gold follow-up inland to Esquay-sur-Seulles. Confirm against Kew.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Esquay-sur-Seulles",
+        "lng": -0.6211,
+        "lat": 49.2733,
+        "note": "6 June, landed about 1100; assembly near Ver-sur-Mer 9085 is the same calendar day, not a second pin. Reached Esquay-sur-Seulles 8479 at 2030 and dug in. First prisoners were from 642 Ost-Bataillon. 6th Green Howards stay at Ver-sur-Mer.",
+        "source": "TNA WO 171/1290 6th DLI war diary, 6 June 1944 (Normandy War Guide). Wikipedia Esquay-sur-Seulles.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-07",
+        "place": "Condé-sur-Seulles",
+        "lng": -0.6339,
+        "lat": 49.2256,
+        "note": "7 June, advanced from 0500 to Condé-sur-Seulles 8274; main body on the objective by 0900. Joint post at Condé 8373 was driven out and reoccupied that evening. Esquay stays 6 June.",
+        "source": "TNA WO 171/1290 6th DLI war diary, 7 June 1944 (Normandy War Guide). Wikipedia Condé-sur-Seulles.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-8-dli",
+    "name": "8th Battalion, Durham Light Infantry",
+    "abbr": "8 DLI",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "151st Infantry Brigade",
+    "theater": "normandy",
+    "source": "TNA WO 171 8th Durham Light Infantry war diary, June 1944 (Normandy War Guide). Gold reserve battalion; night 6 June at Sommervieu. Confirm against Kew.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Sommervieu",
+        "lng": -0.6464,
+        "lat": 49.2942,
+        "note": "6 June, beached on King about 1130, passed Meuvaines, and spent the night at Sommervieu (7 June 0700 the companies moved from that area). King / Ver assembly on the same calendar day is not a second pin. Grain vs 9 DLI on this commune.",
+        "source": "TNA WO 171 8th DLI war diary, 6–7 June 1944 (Normandy War Guide). Wikipedia Sommervieu.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-09",
+        "place": "Point 103 / Saint-Pierre",
+        "lng": -0.622,
+        "lat": 49.186,
+        "note": "9 June, under 8th Armoured Brigade; reached Saint-Pierre and remained three days. La Bergerie 7 June is a hamlet, not pinned. Grain vs Sherwood Rangers Yeomanry on Point 103 / Saint-Pierre. Tilly-sur-Seulles is not a second pin.",
+        "source": "TNA WO 171 8th DLI war diary, June 1944 (Normandy War Guide). WO 223/33 8th DLI report, June 1944. Published location of Point 103 near Saint-Pierre, Calvados.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-9-dli",
+    "name": "9th Battalion, Durham Light Infantry",
+    "abbr": "9 DLI",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "151st Infantry Brigade",
+    "theater": "normandy",
+    "source": "TNA WO 171 151st Durham Infantry Brigade HQ war diary, June 1944 (Normandy War Guide): 9 DLI reached Sommervieu on the evening of 6 June and Lingèvres on 14 June. Confirm against the battalion file.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Sommervieu",
+        "lng": -0.6464,
+        "lat": 49.2942,
+        "note": "6 June, 151st Brigade HQ: 9 DLI reported forward troops in Sommervieu at 1820, then opposition west of the village. Meuvaines on the approach is the same calendar day, not a second pin. Grain vs 8 DLI on this commune. 6 DLI stays at Esquay-sur-Seulles.",
+        "source": "TNA WO 171 151st Infantry Brigade HQ war diary, 6 June 1944 (Normandy War Guide). Wikipedia Sommervieu.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-14",
+        "place": "Lingèvres",
+        "lng": -0.6717,
+        "lat": 49.1756,
+        "note": "14 June, 151st Brigade HQ: 9 DLI on the right reached area Lingèvres 804684 at 1130; reforming there 1515; last-light relief by 2 Glosters, concentrated in the Lingèvres area 815695. Sommervieu stays 6 June. Grain vs 1 Hants on this commune (1 Hants is 19 June). Own battalion file still missing.",
+        "source": "TNA WO 171 151st Infantry Brigade HQ war diary, 14 June 1944 (Normandy War Guide). Wikipedia Lingèvres.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-2-essex",
+    "name": "2nd Battalion, Essex Regiment",
+    "abbr": "2 ESSEX",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "56th Infantry Brigade",
+    "theater": "normandy",
+    "source": "TNA WO 171/1295 2nd Essex Regiment war diary, June 1944 (Normandy War Guide). Gold follow-up; entered Bayeux 7 June. Confirm against Kew.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-07",
+        "place": "Bayeux",
+        "lng": -0.7039,
+        "lat": 49.2761,
+        "note": "7 June, entered Bayeux from the south-east at 1300 without opposition, supported by Sherwood Rangers tanks. 6 June Saint-Sulpice crossroads 8181 is omitted: the 1944 commune has no English Wikipedia article (later merged). 1 Hants take-over on 9 June is the same commune, not a second pin. Grain vs SRY and 2nd Glosters on Bayeux.",
+        "source": "TNA WO 171/1295 2nd Essex Regiment war diary, 7 June 1944 (Normandy War Guide). Published commune location, Bayeux.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-10",
+        "place": "Juaye-Mondaye",
+        "lng": -0.6867,
+        "lat": 49.2072,
+        "note": "10 June, D then A Company attacked the monastery at Juaye-Mondaye 7972; the monastery area was cleared by 1930. Point 112 / Butte du Gros Orme and the intended Bernières-Bocage harbour are the same calendar day, not a second pin. Bayeux stays 7 June. Verrières wood on 11 June is a wood, not pinned.",
+        "source": "TNA WO 171/1295 2nd Essex Regiment war diary, 10 June 1944 (Normandy War Guide). Wikipedia Juaye-Mondaye.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-2-glosters",
+    "name": "2nd Battalion, Gloucestershire Regiment",
+    "abbr": "2 GLOS",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "56th Infantry Brigade",
+    "theater": "normandy",
+    "source": "TNA WO 171 2nd Gloucestershire Regiment war diary, June 1944 (Normandy War Guide). Gold follow-up; entered Bayeux 7 June. Confirm against Kew.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-07",
+        "place": "Bayeux",
+        "lng": -0.7039,
+        "lat": 49.2761,
+        "note": "7 June, entered Bayeux at 1220 while 2nd Essex cleared the railway station; dug in on the high ground south-west of the town. Gold landing on 6 June is not a second pin. Grain vs 2nd Essex and SRY. 2nd South Wales Borderers are a separate pin at Vaux-sur-Aure / Sully.",
+        "source": "TNA WO 171 2nd Gloucestershire Regiment war diary, 7 June 1944 (Normandy War Guide). Published commune location, Bayeux.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-14",
+        "place": "Lingèvres",
+        "lng": -0.6717,
+        "lat": 49.1756,
+        "note": "14 June, 151st Brigade HQ: 2 Glosters (56th Brigade) relieved 9 DLI at last light in the Lingèvres area. Bayeux stays 7 June. Grain vs 9 DLI and 1 Hants on this commune.",
+        "source": "TNA WO 171 151st Infantry Brigade HQ war diary, 14 June 1944 (Normandy War Guide). Wikipedia Lingèvres.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "cdn-hli",
+    "name": "Highland Light Infantry of Canada",
+    "abbr": "HLI C",
+    "nation": "Canada",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "9th Canadian Infantry Brigade",
+    "theater": "normandy",
+    "source": "Highland Light Infantry of Canada war diary, 6 June 1944 (LAC; quoted in the Military Communications and Electronics Museum compilation). Night position at Villons-les-Buissons. Confirm against the LAC scan.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Villons-les-Buissons",
+        "lng": -0.4081,
+        "lat": 49.2411,
+        "note": "6 June, 9th Brigade: North Novas to stop at Villons-les-Buissons with the SD&Gs on their right and the HLI in the rear; the battalion dug in around the village after 2145. Bernières landing and Bény assembly on the same calendar day are not a second pin. Grain vs North Nova Scotia Highlanders. Stormont, Dundas and Glengarry stay off the map until their own Place column names a distinct commune.",
+        "source": "HLI of Canada war diary, 6 June 1944 (LAC), quoted in Military Communications and Electronics Museum, The Despatch, June 2024. Published commune location, Villons-les-Buissons.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-2-swb",
+    "name": "2nd Battalion, South Wales Borderers",
+    "abbr": "2 SWB",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "56th Infantry Brigade",
+    "theater": "normandy",
+    "source": "TNA WO 171/1380 2nd South Wales Borderers war diary, June 1944 (Normandy War Guide). Gold follow-up; night 6 June at Vaux-sur-Aure. Confirm against Kew.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Vaux-sur-Aure",
+        "lng": -0.7008,
+        "lat": 49.3031,
+        "note": "6 June, landed about 1200 one mile east of Arromanches; forward body captured the bridge at Vaux-sur-Aure 2350 and the battalion established a defensive locality there. Gold / Asnelles landing on the same calendar day is not a second pin. The RDF station at 814837 is a map ref, not a second pin. Grain vs 2nd Essex / 2nd Glosters inland of Bayeux.",
+        "source": "TNA WO 171/1380 2nd South Wales Borderers war diary, 6 June 1944 (Normandy War Guide). Wikipedia Vaux-sur-Aure.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-08",
+        "place": "Sully",
+        "lng": -0.7358,
+        "lat": 49.3003,
+        "note": "8 June, A and B Companies attacked the château at Sully from 1215; they withdrew east of the river that evening and C Company held the position overnight. The Germans vacated the château by the morning of 9 June; 9 June contact with 1st US Division at Sully is the same commune, not a second pin. 7 June A Company recce was driven back to the battalion area, not pinned. Vaux-sur-Aure stays 6 June.",
+        "source": "TNA WO 171/1380 2nd South Wales Borderers war diary, 8 June 1944 (Normandy War Guide). Wikipedia Sully, Calvados.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-10",
+        "place": "Ellon",
+        "lng": -0.6781,
+        "lat": 49.2214,
+        "note": "10 June, under 7th Armoured Division; battalion moved forward to concentration area Ellon 8073 at 2030 after companies took over bridges from the armour. Sully stays 8 June.",
+        "source": "TNA WO 171/1380 2nd South Wales Borderers war diary, 10 June 1944 (Normandy War Guide). Wikipedia Ellon, Calvados.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-11",
+        "place": "Bucéels",
+        "lng": -0.6394,
+        "lat": 49.1922,
+        "note": "11 June, battalion moved into a pivot position in the Bucéels area at 2230. La Belle Épine is a crossroads, not pinned. Ellon stays 10 June. 12 June rest at Jerusalem then return to Bucéels is the same commune, not a second pin.",
+        "source": "TNA WO 171/1380 2nd South Wales Borderers war diary, 11 June 1944 (Normandy War Guide). Wikipedia Bucéels.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-2-warwicks",
+    "name": "2nd Battalion, Royal Warwickshire Regiment",
+    "abbr": "2 WARWICK",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "185th Infantry Brigade",
+    "theater": "normandy",
+    "source": "TNA WO 171/1387 2nd Royal Warwickshire Regiment war diary, June 1944 (TracesOfWar transcript). Sword 185th Brigade; night 6 June on the outskirts of Blainville-sur-Orne. Confirm against Kew.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Blainville-sur-Orne",
+        "lng": -0.2989,
+        "lat": 49.2297,
+        "note": "6 June, after the axis was switched Colleville-sur-Orne–Bénouville–Blainville, A Company attacked Bénouville about 1830 and D Company took over the Orne bridges from 6th Airborne; the rest of the battalion halted for the night on the outskirts of Blainville at midnight. Bénouville on the same calendar day is not a second pin (Ox and Bucks / 7 Para stay there). Hermanville assembly is not a second pin. 2 KSLI and 1 Norfolks stay at Biéville-Beuville.",
+        "source": "TNA WO 171/1387 2nd Royal Warwickshire Regiment war diary, 6 June 1944 (TracesOfWar). Wikipedia Blainville-sur-Orne.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-10",
+        "place": "Biéville-Beuville",
+        "lng": -0.3258,
+        "lat": 49.2364,
+        "note": "10 June, took over the forward positions at Biéville from 2 KSLI during the day and night. Grain vs 2 KSLI / 1 Norfolks / Staffordshire Yeomanry on this commune. Blainville-sur-Orne stays 6 June.",
+        "source": "TNA WO 171/1387 2nd Royal Warwickshire Regiment war diary, 10 June 1944 (TracesOfWar). Wikipedia Biéville-Beuville.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-1-rur",
+    "name": "1st Battalion, Royal Ulster Rifles",
+    "abbr": "1 RUR",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "6th Airlanding Brigade",
+    "theater": "normandy",
+    "source": "TNA WO 171/1383 1st Royal Ulster Rifles war diary, June 1944 (Pegasus Archive). Airlanding; Place Ranville 6 June. Distinct from 2nd RUR (Sword follow-up). Confirm against Kew.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-06",
+        "place": "Ranville",
+        "lng": -0.256,
+        "lat": 49.231,
+        "note": "6 June, Place Ranville. First glider touched down LZ N 2100; battalion HQ established Le Bas de Ranville 2230. Le Bas de Ranville and Longueval (7–13 June) are hamlets of Ranville, not a second pin. Distinct from 2nd RUR at Périers-sur-le-Dan. Grain vs 6th Airborne / 12 Para / 13 Para on this commune.",
+        "source": "TNA WO 171/1383 1st Royal Ulster Rifles war diary, 6 June 1944 (Pegasus Archive). TNA WO 223/26 1st RUR Normandy campaign account. Published commune location, Ranville.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-14",
+        "place": "Bréville-les-Monts",
+        "lng": -0.2261,
+        "lat": 49.2408,
+        "note": "14 June, Place Breville. Battalion complete less D Company on the move from Longueval 0830; entered Bréville across LZ N and took over from 12 Para by 1130. Ranville / Longueval stay 6 June. Grain vs 3 Commando at Amfreville, Calvados.",
+        "source": "TNA WO 171/1383 1st Royal Ulster Rifles war diary, 14 June 1944 (Pegasus Archive). Wikipedia Bréville-les-Monts.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-12-devons",
+    "name": "12th Battalion, Devonshire Regiment",
+    "abbr": "12 DEVON",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "6th Airlanding Brigade",
+    "theater": "normandy",
+    "source": "TNA WO 223/27 12th Devonshire Regiment historical diary of events, June 1944 (Normandy War Guide). Airlanding seaborne main body; 7 June at Le Bas de Ranville. Distinct from 2nd Devons (Gold). Confirm against Kew.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-07",
+        "place": "Ranville",
+        "lng": -0.256,
+        "lat": 49.231,
+        "note": "7 June, seaborne main body beached Queen (Lion-sur-Mer) about 1000 then moved into Le Bas de Ranville from 1700 to relieve 12 Para. Le Bas de Ranville is a hamlet of Ranville, not a second pin. A Company glider element on 6 June is not a battalion night pin. Grain vs 12 Para / 1 RUR / 6th Airborne. 2nd Devons stay at Ryes / Longues-sur-Mer.",
+        "source": "TNA WO 223/27 12th Devonshire Regiment historical diary of events, 7 June 1944 (Normandy War Guide). Published commune location, Ranville.",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "uk-10-dli",
+    "name": "10th Battalion, Durham Light Infantry",
+    "abbr": "10 DLI",
+    "nation": "United Kingdom",
+    "side": "allied",
+    "echelon": "battalion",
+    "parent": "70th Infantry Brigade",
+    "theater": "normandy",
+    "source": "TNA WO 171/1292 10th Durham Light Infantry war diary, June 1944 (Normandy War Guide). 49th (West Riding) follow-up; concentrated Saint-Gabriel-Brécy 12 June. Confirm against Kew.",
+    "confidence": "medium",
+    "track": [
+      {
+        "date": "1944-06-12",
+        "place": "Saint-Gabriel-Brécy",
+        "lng": -0.5639,
+        "lat": 49.2786,
+        "note": "12 June, marching troops ashore at Le Hamel; battalion fully concentrated in the St Gabriel area by 1700. Le Hamel / Asnelles landing on the same calendar day is not a second pin. Vehicles joined the morning of 13 June; that stay is last-reported on this commune.",
+        "source": "TNA WO 171/1292 10th DLI war diary, 12–13 June 1944 (Normandy War Guide). Wikipedia Saint-Gabriel-Brécy.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-14",
+        "place": "Condé-sur-Seulles",
+        "lng": -0.6339,
+        "lat": 49.2256,
+        "note": "14 June, temporarily under 146th Brigade, moved up in the afternoon to Condé-sur-Seulles. Remained 15 June (last-reported, not a second pin). Saint-Gabriel-Brécy stays 12 June. Grain vs 6 DLI on this commune (6 DLI is 7 June).",
+        "source": "TNA WO 171/1292 10th DLI war diary, 14 June 1944 (Normandy War Guide). Wikipedia Condé-sur-Seulles.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-17",
+        "place": "Point 103 / Saint-Pierre",
+        "lng": -0.622,
+        "lat": 49.186,
+        "note": "17 June, attacked Saint-Pierre at 1600 after a morning patrol found it empty except for snipers; held the village that night under mortar and Spandau fire. Le Pont Roc 16 June is a farm, not pinned. Grain vs 8 DLI / SRY on Point 103 / Saint-Pierre.",
+        "source": "TNA WO 171/1292 10th DLI war diary, 16–17 June 1944 (Normandy War Guide). Published location of Point 103 near Saint-Pierre, Calvados.",
+        "confidence": "medium"
+      },
+      {
+        "date": "1944-06-28",
+        "place": "Tessel / Rauray",
+        "lng": -0.5731,
+        "lat": 49.1533,
+        "note": "28 June, advanced to Rauray at 1000 after 11 DLI's attack stopped on the far edge of the village; dug in on the objectives with Sherwood Rangers in support. Rauray is a hamlet of Tessel; pin is the parent commune. Fontenay 27 June then St Nicholas farm that night is a farm, not pinned. Parc du Boislonde 30 June is not a commune.",
+        "source": "TNA WO 171/1292 10th DLI war diary, 28 June 1944 (Normandy War Guide). Wikipedia Tessel.",
         "confidence": "medium"
       }
     ]
